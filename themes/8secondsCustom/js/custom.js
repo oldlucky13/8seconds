@@ -75,22 +75,27 @@ jQuery(window).on('load', function($) { // makes sure the whole site is loaded
 jQuery(document).ready(function( $ ) {
 
 
+  $(window).mousewheel(function(event) {
+      console.log(event.deltaX, event.deltaY, event.deltaFactor);
+  });
+
+
 // run test on initial page load
- checkSize();
+ // checkSize();
 // // run test on resize of the window
- $(window).resize(checkSize);
-
-
-function checkSize(){
-
-	if($(window).innerWidth() <= 990){
-		$('#story-desktop').insertAfter('#story-title');
-
-	}else{
-		$('#story-desktop').insertAfter('#story-row .col-md-4');
-	}
-
-}// checksize
+//  $(window).resize(checkSize);
+//
+//
+// function checkSize(){
+//
+// 	if($(window).innerWidth() <= 990){
+// 		$('#story-desktop').insertAfter('#story-title');
+//
+// 	}else{
+// 		$('#story-desktop').insertAfter('#story-row .col-md-4');
+// 	}
+//
+// }// checksize
 
 
 /***************
@@ -111,18 +116,18 @@ else{
   		showClose: false
 	});
 
-	$.fn.fullpage.setAllowScrolling(false);
-	$.fn.fullpage.setKeyboardScrolling(false);
+	// $(.fn.fullpage).setAllowScrolling(false);
+	// $(.fn.fullpage).setKeyboardScrolling(false);
 
-	$('.fullpage-wrapper,#the-nav').addClass('blur');
+	// $('.fullpage-wrapper,#the-nav').addClass('blur');
 
 	$('#over21, #under21').click(function () {
 		if (this.id == 'over21') {
 			Cookies.set('drinkingAge','over21', { expires: 31 });
-			$(".fullpage-wrapper,#the-nav").removeClass('blur');
+			// $(".fullpage-wrapper,#the-nav").removeClass('blur');
 			$.modal.close();
-			$.fn.fullpage.setAllowScrolling(true);
-			$.fn.fullpage.setKeyboardScrolling(true);
+			// $.fn.fullpage.setAllowScrolling(true);
+			// $.fn.fullpage.setKeyboardScrolling(true);
 
 
 		}

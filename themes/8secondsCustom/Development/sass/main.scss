@@ -8,4 +8,6 @@
 @import 'third/bourbon/bourbon';
 @import 'third/bootstrap';
 
-
+@import "partials/_reset.scss";
+@import "partials/_variables.scss";
+@import "partials/_main-split.scss";

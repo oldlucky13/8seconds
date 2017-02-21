@@ -5628,5 +5628,10 @@ button.close {
   .hidden-print {
     display: none !important; } }
 /*# sourceMappingURL=bootstrap.min.css.map */
+#main-header {
+  display: none; }
+
+#mobile-logo {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
