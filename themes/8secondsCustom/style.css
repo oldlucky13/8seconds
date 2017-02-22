@@ -5637,23 +5637,46 @@ button.close {
 #one {
   background-color: blue; }
 
+#one-img {
+  background-image: url("pic1.jpg"); }
+
 #two {
   background-color: red; }
+
+#two-img {
+  background-image: url("pic2.png"); }
 
 #three {
   background-color: yellow; }
 
+#three-img {
+  background-image: url("pic3.jpg"); }
+
 #four {
   background-color: green; }
+
+#four-img {
+  background-image: url("pic4.jpg"); }
 
 #five {
   background-color: orange; }
 
+#five-img {
+  background-image: url("pic5.jpg"); }
+
 #six {
   background-color: purple; }
+
+#six-img {
+  background-image: url("pic6.jpg"); }
 
 .main-page-row {
   height: 100vh;
   position: absolute; }
+
+.main-page-img {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 /*# sourceMappingURL=style.css.map */

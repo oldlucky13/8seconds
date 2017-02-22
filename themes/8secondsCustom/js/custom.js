@@ -70,6 +70,7 @@
 jQuery(window).on('load', function($) { // makes sure the whole site is loaded
   jQuery('#status').fadeOut(); // will first fade out the loading animation
   jQuery('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+  jQuery('#two, #three, #four, #five, #six').fadeOut();
 })
 
 jQuery(document).ready(function( $ ) {
@@ -96,10 +97,12 @@ function handleMainPageScroll(scrollDir) {
     if (mainIdx === 0 && scrollDir > 0) {
       return;
     } else if (scrollDir > 0) {
+      $('.main-page-container').children().eq(mainIdx).fadeOut();
       mainIdx -= 1;
     } else if (scrollDir < 0 && mainIdx === 5) {
       return;
     } else {
+      $('.main-page-container').children().eq(mainIdx + 1).fadeIn();
       mainIdx += 1;
     }
     console.log("mainIdx = " + mainIdx);
