@@ -5634,4 +5634,26 @@ button.close {
 #mobile-logo {
   display: none; }
 
+#one {
+  background-color: blue; }
+
+#two {
+  background-color: red; }
+
+#three {
+  background-color: yellow; }
+
+#four {
+  background-color: green; }
+
+#five {
+  background-color: orange; }
+
+#six {
+  background-color: purple; }
+
+.main-page-row {
+  height: 100vh;
+  position: absolute; }
+
 /*# sourceMappingURL=style.css.map */

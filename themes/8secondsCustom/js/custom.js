@@ -74,11 +74,46 @@ jQuery(window).on('load', function($) { // makes sure the whole site is loaded
 
 jQuery(document).ready(function( $ ) {
 
+  // variables
+  $mainPageContainer = $(".container-fluid");
+  var mainIdx = 0;
+  var mainScrollUnlocked = true;
 
-  $(window).mousewheel(function(event) {
-      console.log(event.deltaX, event.deltaY, event.deltaFactor);
+  $mainPageContainer.mousewheel(function(event) {
+    handleMainPageScroll(event.deltaY);
+      // console.log(event.deltaX, event.deltaY, event.deltaFactor);
   });
 
+
+/***************
+handleMainPageScroll
+***************/
+
+function handleMainPageScroll(scrollDir) {
+  if (mainScrollUnlocked) {
+    mainScrollUnlocked = false;
+    setTimeout(unlockMainScroll, 1000);
+    if (mainIdx === 0 && scrollDir > 0) {
+      return;
+    } else if (scrollDir > 0) {
+      mainIdx -= 1;
+    } else if (scrollDir < 0 && mainIdx === 5) {
+      return;
+    } else {
+      mainIdx += 1;
+    }
+    console.log("mainIdx = " + mainIdx);
+  }
+}
+
+function unlockMainScroll() {
+  mainScrollUnlocked = true;
+}
+
+
+/***************
+Resize
+***************/
 
 // run test on initial page load
  // checkSize();
@@ -96,7 +131,6 @@ jQuery(document).ready(function( $ ) {
 // 	}
 //
 // }// checksize
-
 
 /***************
 Age Gate
