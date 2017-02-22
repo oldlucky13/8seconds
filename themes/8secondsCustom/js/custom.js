@@ -70,7 +70,7 @@
 jQuery(window).on('load', function($) { // makes sure the whole site is loaded
   jQuery('#status').fadeOut(); // will first fade out the loading animation
   jQuery('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-  jQuery('#two, #three, #four, #five, #six').fadeOut();
+  jQuery('#six, #five, #four, #three, #two').fadeOut(); // prep slides for scrolling
 })
 
 jQuery(document).ready(function( $ ) {
@@ -87,7 +87,7 @@ jQuery(document).ready(function( $ ) {
 
 
 /***************
-handleMainPageScroll
+Scroll Logic
 ***************/
 
 function handleMainPageScroll(scrollDir) {
@@ -98,20 +98,29 @@ function handleMainPageScroll(scrollDir) {
       return;
     } else if (scrollDir > 0) {
       $('.main-page-container').children().eq(mainIdx).fadeOut();
+      TweenMax.to($('.main-page-title-group').find(".h2-child").eq(mainIdx - 1), 1, {y:"0%"});
+      TweenMax.to($('.main-page-title-group').find(".h2-child").eq(mainIdx), 1, {y:"100%"});
       mainIdx -= 1;
     } else if (scrollDir < 0 && mainIdx === 5) {
       return;
     } else {
       $('.main-page-container').children().eq(mainIdx + 1).fadeIn();
+      TweenMax.to($('.main-page-title-group').find(".h2-child").eq(mainIdx), 1, {y:"-100%"});
+      TweenMax.to($('.main-page-title-group').find(".h2-child").eq(mainIdx + 1), 1, {y:"0%"});
       mainIdx += 1;
     }
-    console.log("mainIdx = " + mainIdx);
   }
 }
 
 function unlockMainScroll() {
   mainScrollUnlocked = true;
 }
+
+/***************
+Title Tweens
+***************/
+
+// var lowerTweens = TweenMax.to("#quicktest", 2, {y:"100%"});
 
 
 /***************

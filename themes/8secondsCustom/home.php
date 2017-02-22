@@ -19,8 +19,30 @@ get_header();
       <span class="middle"></span>
       <span class="bottom"></span>
     </div>
+    <div id="main-page-breadcrumbs">
+    </div>
+    <!-- <div class="main-page-title-group">
+      <div id="quicktest" class="main-page-slide-title">
+        <h2 class="h2-child">test 1</h2>
+      </div>
+      <div class="main-page-slide-title">
+        <h2 class="h2-child">test 2</h2>
+      </div>
+      <div class="main-page-slide-title">
+        <h2 class="h2-child">test 3</h2>
+      </div>
+      <div class="main-page-slide-title">
+        <h2 class="h2-child">test 4</h2>
+      </div>
+      <div class="main-page-slide-title">
+        <h2 class="h2-child">test 5</h2>
+      </div>
+      <div class="main-page-slide-title">
+        <h2 class="h2-child">test 6</h2>
+      </div>
+    </div> -->
     <div class="main-page-container container-fluid">
-      <div id="one" class="show-off row main-page-row">
+      <div id="one" class="show-off row main-page-slide">
         <div class="col-md-6">
           <h1>one</h1>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -29,7 +51,7 @@ get_header();
 
         </div>
       </div>
-      <div id="two" class="show-off row main-page-row">
+      <div id="two" class="show-off row main-page-slide">
         <div class="col-md-6">
           <h1>two</h1>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -38,7 +60,7 @@ get_header();
 
         </div>
       </div>
-      <div id="three" class="show-off row main-page-row">
+      <div id="three" class="show-off row main-page-slide">
         <div class="col-md-6">
           <h1>three</h1>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -47,7 +69,7 @@ get_header();
 
         </div>
       </div>
-      <div id="four" class="about row main-page-row">
+      <div id="four" class="about row main-page-slide">
         <div class="col-md-6">
           <h1>four</h1>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -56,7 +78,7 @@ get_header();
 
         </div>
       </div>
-      <div id="five" class="story row main-page-row">
+      <div id="five" class="story row main-page-slide">
         <div class="col-md-6">
           <h1>five</h1>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -65,7 +87,7 @@ get_header();
 
         </div>
       </div>
-      <div id="six" class="contact row main-page-row">
+      <div id="six" class="contact row main-page-slide">
         <div class="col-md-6">
           <h1>six</h1>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -73,6 +95,36 @@ get_header();
         <div id="six-img" class="main-page-img col-md-6">
 
         </div>
+      </div>
+    </div>
+    <div class="main-page-title-group">
+      <div id="quicktest" class="main-page-slide-title">
+        <h2 id="first-h2-child" class="h2-child">One</h2>
+      </div>
+    </div>
+    <div class="main-page-title-group">
+      <div class="main-page-slide-title">
+        <h2 class="h2-child">Two</h2>
+      </div>
+    </div>
+    <div class="main-page-title-group">
+      <div class="main-page-slide-title">
+        <h2 class="h2-child">Three</h2>
+      </div>
+    </div>
+    <div class="main-page-title-group">
+      <div class="main-page-slide-title">
+        <h2 class="h2-child">Four</h2>
+      </div>
+    </div>
+    <div class="main-page-title-group">
+      <div class="main-page-slide-title">
+        <h2 class="h2-child">Five</h2>
+      </div>
+    </div>
+    <div class="main-page-title-group">
+      <div class="main-page-slide-title">
+        <h2 class="h2-child">Six</h2>
       </div>
     </div>
     <div class="menuOverlay" id="overlayMenu">
