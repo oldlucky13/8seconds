@@ -5650,10 +5650,10 @@ body {
   background-image: url("pic2.png"); }
 
 #three {
-  background-color: yellow; }
+  background-color: purple; }
 
 #three-img {
-  background-image: url("pic3.jpg"); }
+  background-image: url("pic6.jpg"); }
 
 #four {
   background-color: green; }
@@ -5668,10 +5668,10 @@ body {
   background-image: url("pic5.jpg"); }
 
 #six {
-  background-color: purple; }
+  background-color: black; }
 
 #six-img {
-  background-image: url("pic6.jpg"); }
+  background-image: url("pic3.jpg"); }
 
 .main-page-slide {
   height: 100vh;

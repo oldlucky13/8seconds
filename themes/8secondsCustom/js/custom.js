@@ -21,6 +21,10 @@
 
 
 
+
+
+
+
 /*!
  * VERSION: 0.14.1
  * DATE: 2015-09-05
@@ -82,7 +86,6 @@ jQuery(document).ready(function( $ ) {
 
   $mainPageContainer.mousewheel(function(event) {
     handleMainPageScroll(event.deltaY);
-      // console.log(event.deltaX, event.deltaY, event.deltaFactor);
   });
 
 
@@ -97,16 +100,16 @@ function handleMainPageScroll(scrollDir) {
     if (mainIdx === 0 && scrollDir > 0) {
       return;
     } else if (scrollDir > 0) {
+      TweenMax.to($('.main-page-title-group').find(".h2-child").eq(mainIdx), .9, {y:"100%"});
       $('.main-page-container').children().eq(mainIdx).fadeOut();
-      TweenMax.to($('.main-page-title-group').find(".h2-child").eq(mainIdx - 1), 1, {y:"0%"});
-      TweenMax.to($('.main-page-title-group').find(".h2-child").eq(mainIdx), 1, {y:"100%"});
+      TweenMax.to($('.main-page-title-group').find(".h2-child").eq(mainIdx - 1), .9, {y:"0%", delay:.25});
       mainIdx -= 1;
     } else if (scrollDir < 0 && mainIdx === 5) {
       return;
     } else {
+      TweenMax.to($('.main-page-title-group').find(".h2-child").eq(mainIdx), .9, {y:"-100%"});
       $('.main-page-container').children().eq(mainIdx + 1).fadeIn();
-      TweenMax.to($('.main-page-title-group').find(".h2-child").eq(mainIdx), 1, {y:"-100%"});
-      TweenMax.to($('.main-page-title-group').find(".h2-child").eq(mainIdx + 1), 1, {y:"0%"});
+      TweenMax.to($('.main-page-title-group').find(".h2-child").eq(mainIdx + 1), .9, {y:"0%", delay:.25});
       mainIdx += 1;
     }
   }
@@ -115,12 +118,6 @@ function handleMainPageScroll(scrollDir) {
 function unlockMainScroll() {
   mainScrollUnlocked = true;
 }
-
-/***************
-Title Tweens
-***************/
-
-// var lowerTweens = TweenMax.to("#quicktest", 2, {y:"100%"});
 
 
 /***************

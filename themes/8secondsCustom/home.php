@@ -21,26 +21,6 @@ get_header();
     </div>
     <div id="main-page-breadcrumbs">
     </div>
-    <!-- <div class="main-page-title-group">
-      <div id="quicktest" class="main-page-slide-title">
-        <h2 class="h2-child">test 1</h2>
-      </div>
-      <div class="main-page-slide-title">
-        <h2 class="h2-child">test 2</h2>
-      </div>
-      <div class="main-page-slide-title">
-        <h2 class="h2-child">test 3</h2>
-      </div>
-      <div class="main-page-slide-title">
-        <h2 class="h2-child">test 4</h2>
-      </div>
-      <div class="main-page-slide-title">
-        <h2 class="h2-child">test 5</h2>
-      </div>
-      <div class="main-page-slide-title">
-        <h2 class="h2-child">test 6</h2>
-      </div>
-    </div> -->
     <div class="main-page-container container-fluid">
       <div id="one" class="show-off row main-page-slide">
         <div class="col-md-6">
