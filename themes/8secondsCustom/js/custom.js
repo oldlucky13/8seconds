@@ -98,24 +98,24 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
   if (mainScrollUnlocked) {
     mainScrollUnlocked = false;
     setTimeout(unlockMainScroll, 1000);
-    if (mainIdx === 0 && scrollDir > 0) {
+    if (mainIdx === 0 && scrollDir > 0) { // can't scroll up at first slide
       return;
-    } else if (scrollDir > 0) { //scrolling up
-      if (newMainIdx >= 0) {
+    } else if (scrollDir > 0) { // scroll up
+      if (newMainIdx >= 0) { // user clicked a breadcrumb
         jumpToSlide(mainIdx, newMainIdx);
         mainIdx = newMainIdx;
-      } else {
+      } else { // user scrolled normally
         mainIdx -= 1;
         previousSlide(mainIdx);
       }
       updateBreadcrumb(mainIdx);
-    } else if (scrollDir < 0 && mainIdx === 5) { //scrolling down
+    } else if (scrollDir < 0 && mainIdx === 5) { // can't scroll down at last slide
       return;
-    } else {
-      if (newMainIdx) { //jumpTo is getting the right values
+    } else { // scroll down
+      if (newMainIdx) { // user clicked a breadcrumb
         jumpToSlide(mainIdx, newMainIdx);
         mainIdx = newMainIdx;
-      } else {
+      } else { // user scrolled normally
         mainIdx += 1;
         nextSlide(mainIdx);
       }
@@ -124,27 +124,46 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
   }
 }
 
-function nextSlide(idx) {
+function nextSlide(idx, callback) {
   TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx - 1), .9, {y:"-100%"});
   $('.main-page-container').children().eq(idx).fadeIn();
-  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx), .9, {y:"0%"}); //, delay:.25
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx), .9, {y:"0%", onComplete: function () {
+    if (typeof callback === "function") {
+      callback();
+    }
+  }}); //, delay:.25
 }
 
-function previousSlide(idx) {
+function previousSlide(idx, callback) {
   TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx + 1), .9, {y:"100%"});
   $('.main-page-container').children().eq(idx + 1).fadeOut();
-  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx), .9, {y:"0%"}); //, delay:.25
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx), .9, {y:"0%", onComplete: function () {
+    if (typeof callback === "function") {
+      callback();
+    }
+  }}); //, delay:.25
 }
 
 function jumpToSlide(oldIdx, newIdx) {
-  console.log("oldIdx = " + oldIdx + " newIdx = " + newIdx);
   if (oldIdx < newIdx) {
+    var nextTitles = $('.main-page-title-group').find(".h2-child").slice(oldIdx + 1, newIdx);
+    nextTitles.css("visibility", "hidden");
     for (var i = oldIdx + 1; i <= newIdx; i++) {
-      nextSlide(i);
+      if (i === newIdx) {
+        nextSlide(i, function() {revealTitles(nextTitles)});
+      } else {
+        nextSlide(i);
+      }
     }
   } else if (oldIdx > newIdx) {
+    var previousTitles = $('.main-page-title-group').find(".h2-child").slice(newIdx + 1, oldIdx);
+    previousTitles.css("visibility", "hidden");
     for (var j = oldIdx; j >= newIdx; j--) {
-      previousSlide(j);
+      if (j === newIdx) {
+        previousSlide(j, function() {revealTitles(previousTitles)});
+      } else {
+        previousSlide(j);
+      }
     }
   }
 }
@@ -174,6 +193,9 @@ $('.breadcrumb').click(function(e) {
   }
 })
 
+function revealTitles(titles) {
+  titles.css("visibility", "visible");
+}
 
 /***************
 Resize
