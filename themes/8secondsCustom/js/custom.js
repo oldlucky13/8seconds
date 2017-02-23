@@ -84,8 +84,9 @@ jQuery(document).ready(function( $ ) {
   var mainIdx = 0;
   var mainScrollUnlocked = true;
 
-  $mainPageContainer.mousewheel(function(event) {
+  $('body').mousewheel(function(event) {
     handleMainPageScroll(event.deltaY);
+    // console.log(event.deltaX, event.deltaY, event.deltaFactor);
   });
 
 
@@ -93,31 +94,85 @@ jQuery(document).ready(function( $ ) {
 Scroll Logic
 ***************/
 
-function handleMainPageScroll(scrollDir) {
+function handleMainPageScroll(scrollDir, newMainIdx) {
   if (mainScrollUnlocked) {
     mainScrollUnlocked = false;
     setTimeout(unlockMainScroll, 1000);
     if (mainIdx === 0 && scrollDir > 0) {
       return;
-    } else if (scrollDir > 0) {
-      TweenMax.to($('.main-page-title-group').find(".h2-child").eq(mainIdx), .9, {y:"100%"});
-      $('.main-page-container').children().eq(mainIdx).fadeOut();
-      TweenMax.to($('.main-page-title-group').find(".h2-child").eq(mainIdx - 1), .9, {y:"0%", delay:.25});
-      mainIdx -= 1;
-    } else if (scrollDir < 0 && mainIdx === 5) {
+    } else if (scrollDir > 0) { //scrolling up
+      if (newMainIdx >= 0) {
+        jumpToSlide(mainIdx, newMainIdx);
+        mainIdx = newMainIdx;
+      } else {
+        mainIdx -= 1;
+        previousSlide(mainIdx);
+      }
+      updateBreadcrumb(mainIdx);
+    } else if (scrollDir < 0 && mainIdx === 5) { //scrolling down
       return;
     } else {
-      TweenMax.to($('.main-page-title-group').find(".h2-child").eq(mainIdx), .9, {y:"-100%"});
-      $('.main-page-container').children().eq(mainIdx + 1).fadeIn();
-      TweenMax.to($('.main-page-title-group').find(".h2-child").eq(mainIdx + 1), .9, {y:"0%", delay:.25});
-      mainIdx += 1;
+      if (newMainIdx) { //jumpTo is getting the right values
+        jumpToSlide(mainIdx, newMainIdx);
+        mainIdx = newMainIdx;
+      } else {
+        mainIdx += 1;
+        nextSlide(mainIdx);
+      }
+      updateBreadcrumb(mainIdx);
     }
   }
+}
+
+function nextSlide(idx) {
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx - 1), .9, {y:"-100%"});
+  $('.main-page-container').children().eq(idx).fadeIn();
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx), .9, {y:"0%"}); //, delay:.25
+}
+
+function previousSlide(idx) {
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx + 1), .9, {y:"100%"});
+  $('.main-page-container').children().eq(idx + 1).fadeOut();
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx), .9, {y:"0%"}); //, delay:.25
+}
+
+function jumpToSlide(oldIdx, newIdx) {
+  console.log("oldIdx = " + oldIdx + " newIdx = " + newIdx);
+  if (oldIdx < newIdx) {
+    for (var i = oldIdx + 1; i <= newIdx; i++) {
+      nextSlide(i);
+    }
+  } else if (oldIdx > newIdx) {
+    for (var j = oldIdx; j >= newIdx; j--) {
+      previousSlide(j);
+    }
+  }
+}
+// $('.main-page-title-group').find(".h2-child").slice(oldIdx, newIdx + 1).each( function () {
+//   console.log($(this));
+//   // $(this).fadeIn();
+// })
+// $('.main-page-container').children().slice(oldIdx + 1, newIdx + 1).each( function () {
+//   $(this).fadeIn();
+// })
+
+function updateBreadcrumb(idx) {
+  $('.breadcrumb-active').removeClass('breadcrumb-active');
+  $('#breadcrumb-group').children().eq(idx).addClass('breadcrumb-active');
 }
 
 function unlockMainScroll() {
   mainScrollUnlocked = true;
 }
+
+$('.breadcrumb').click(function(e) {
+  var clickedIdx = $(this).index();
+  if (mainIdx < clickedIdx) {
+    handleMainPageScroll(-1, clickedIdx);
+  } else if (mainIdx > clickedIdx) {
+    handleMainPageScroll(1, clickedIdx);
+  }
+})
 
 
 /***************

@@ -19,7 +19,43 @@ get_header();
       <span class="middle"></span>
       <span class="bottom"></span>
     </div>
-    <div id="main-page-breadcrumbs">
+    <ol id="breadcrumb-group">
+      <li id="breadcrumb-one" class="breadcrumb breadcrumb-active"></li>
+      <li id="breadcrumb-two" class="breadcrumb"></li>
+      <li id="breadcrumb-three" class="breadcrumb"></li>
+      <li id="breadcrumb-four" class="breadcrumb"></li>
+      <li id="breadcrumb-five" class="breadcrumb"></li>
+      <li id="breadcrumb-six" class="breadcrumb"></li>
+    </ol>
+    <div class="main-page-title-group">
+      <div class="main-page-slide-title">
+        <h2 id="first-h2-child" class="h2-child">One</h2>
+      </div>
+    </div>
+    <div class="main-page-title-group">
+      <div class="main-page-slide-title">
+        <h2 id="second-h2-child" class="h2-child">Two</h2>
+      </div>
+    </div>
+    <div class="main-page-title-group">
+      <div class="main-page-slide-title">
+        <h2 id="third-h2-child" class="h2-child">Three</h2>
+      </div>
+    </div>
+    <div class="main-page-title-group">
+      <div class="main-page-slide-title">
+        <h2 id="fourth-h2-child" class="h2-child">Four</h2>
+      </div>
+    </div>
+    <div class="main-page-title-group">
+      <div class="main-page-slide-title">
+        <h2 id="fifth-h2-child" class="h2-child">Five</h2>
+      </div>
+    </div>
+    <div class="main-page-title-group">
+      <div class="main-page-slide-title">
+        <h2 id="sixth-h2-child" class="h2-child">Six</h2>
+      </div>
     </div>
     <div class="main-page-container container-fluid">
       <div id="one" class="show-off row main-page-slide">
@@ -77,45 +113,13 @@ get_header();
         </div>
       </div>
     </div>
-    <div class="main-page-title-group">
-      <div id="quicktest" class="main-page-slide-title">
-        <h2 id="first-h2-child" class="h2-child">One</h2>
-      </div>
-    </div>
-    <div class="main-page-title-group">
-      <div class="main-page-slide-title">
-        <h2 class="h2-child">Two</h2>
-      </div>
-    </div>
-    <div class="main-page-title-group">
-      <div class="main-page-slide-title">
-        <h2 class="h2-child">Three</h2>
-      </div>
-    </div>
-    <div class="main-page-title-group">
-      <div class="main-page-slide-title">
-        <h2 class="h2-child">Four</h2>
-      </div>
-    </div>
-    <div class="main-page-title-group">
-      <div class="main-page-slide-title">
-        <h2 class="h2-child">Five</h2>
-      </div>
-    </div>
-    <div class="main-page-title-group">
-      <div class="main-page-slide-title">
-        <h2 class="h2-child">Six</h2>
-      </div>
-    </div>
     <div class="menuOverlay" id="overlayMenu">
       <nav class="overlay-menu">
         <ul id="nav-menu">
-
         </ul>
       </nav>
     </div>
   </div>
-
   <!-- <div id="ageGate" class="modal">
       <img src="/wp-content/uploads/2017/01/Jseeds-ageGate_mini.png">
       <h1>Are you over 21 years old?</h1>
