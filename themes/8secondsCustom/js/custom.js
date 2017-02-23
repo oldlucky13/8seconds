@@ -21,6 +21,10 @@
 
 
 
+
+
+
+
 /*!
  * VERSION: 0.14.1
  * DATE: 2015-09-05
@@ -70,28 +74,149 @@
 jQuery(window).on('load', function($) { // makes sure the whole site is loaded
   jQuery('#status').fadeOut(); // will first fade out the loading animation
   jQuery('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+  jQuery('#six, #five, #four, #three, #two').fadeOut(); // prep slides for scrolling
 })
 
 jQuery(document).ready(function( $ ) {
 
+  // variables
+  $mainPageContainer = $(".container-fluid");
+  var mainIdx = 0;
+  var mainScrollUnlocked = true;
+
+  $('body').mousewheel(function(event) {
+    handleMainPageScroll(event.deltaY);
+    // console.log(event.deltaX, event.deltaY, event.deltaFactor);
+  });
+
+
+/***************
+Scroll Logic
+***************/
+
+function handleMainPageScroll(scrollDir, newMainIdx) {
+  if (mainScrollUnlocked) {
+    mainScrollUnlocked = false;
+    setTimeout(unlockMainScroll, 1000);
+    if (mainIdx === 0 && scrollDir > 0) { // can't scroll up at first slide
+      return;
+    } else if (scrollDir > 0) { // scroll up
+      if (newMainIdx >= 0) { // user clicked a breadcrumb
+        jumpToSlide(mainIdx, newMainIdx);
+        mainIdx = newMainIdx;
+      } else { // user scrolled normally
+        mainIdx -= 1;
+        previousSlide(mainIdx);
+      }
+      updateBreadcrumb(mainIdx);
+    } else if (scrollDir < 0 && mainIdx === 5) { // can't scroll down at last slide
+      return;
+    } else { // scroll down
+      if (newMainIdx) { // user clicked a breadcrumb
+        jumpToSlide(mainIdx, newMainIdx);
+        mainIdx = newMainIdx;
+      } else { // user scrolled normally
+        mainIdx += 1;
+        nextSlide(mainIdx);
+      }
+      updateBreadcrumb(mainIdx);
+    }
+  }
+}
+
+function nextSlide(idx, callback) {
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx - 1), .9, {y:"-100%"});
+  $('.main-page-container').children().eq(idx).fadeIn();
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx), .9, {y:"0%", onComplete: function () {
+    if (typeof callback === "function") {
+      callback();
+    }
+  }}); //, delay:.25
+}
+
+function previousSlide(idx, callback) {
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx + 1), .9, {y:"100%"});
+  $('.main-page-container').children().eq(idx + 1).fadeOut();
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx), .9, {y:"0%", onComplete: function () {
+    if (typeof callback === "function") {
+      callback();
+    }
+  }}); //, delay:.25
+}
+
+function jumpToSlide(oldIdx, newIdx) {
+  if (oldIdx < newIdx) {
+    var nextTitles = $('.main-page-title-group').find(".h2-child").slice(oldIdx + 1, newIdx);
+    nextTitles.css("visibility", "hidden");
+    for (var i = oldIdx + 1; i <= newIdx; i++) {
+      if (i === newIdx) {
+        nextSlide(i, function() {revealTitles(nextTitles)});
+      } else {
+        nextSlide(i);
+      }
+    }
+  } else if (oldIdx > newIdx) {
+    var previousTitles = $('.main-page-title-group').find(".h2-child").slice(newIdx + 1, oldIdx);
+    previousTitles.css("visibility", "hidden");
+    for (var j = oldIdx; j >= newIdx; j--) {
+      if (j === newIdx) {
+        previousSlide(j, function() {revealTitles(previousTitles)});
+      } else {
+        previousSlide(j);
+      }
+    }
+  }
+}
+// $('.main-page-title-group').find(".h2-child").slice(oldIdx, newIdx + 1).each( function () {
+//   console.log($(this));
+//   // $(this).fadeIn();
+// })
+// $('.main-page-container').children().slice(oldIdx + 1, newIdx + 1).each( function () {
+//   $(this).fadeIn();
+// })
+
+function updateBreadcrumb(idx) {
+  $('.breadcrumb-active').removeClass('breadcrumb-active');
+  $('#breadcrumb-group').children().eq(idx).addClass('breadcrumb-active');
+}
+
+function unlockMainScroll() {
+  mainScrollUnlocked = true;
+}
+
+$('.breadcrumb').click(function(e) {
+  var clickedIdx = $(this).index();
+  if (mainIdx < clickedIdx) {
+    handleMainPageScroll(-1, clickedIdx);
+  } else if (mainIdx > clickedIdx) {
+    handleMainPageScroll(1, clickedIdx);
+  }
+})
+
+function revealTitles(titles) {
+  titles.css("visibility", "visible");
+}
+
+/***************
+Resize
+***************/
 
 // run test on initial page load
- checkSize();
+ // checkSize();
 // // run test on resize of the window
- $(window).resize(checkSize);
-
-
-function checkSize(){
-
-	if($(window).innerWidth() <= 990){
-		$('#story-desktop').insertAfter('#story-title');
-
-	}else{
-		$('#story-desktop').insertAfter('#story-row .col-md-4');
-	}
-
-}// checksize
-
+//  $(window).resize(checkSize);
+//
+//
+// function checkSize(){
+//
+// 	if($(window).innerWidth() <= 990){
+// 		$('#story-desktop').insertAfter('#story-title');
+//
+// 	}else{
+// 		$('#story-desktop').insertAfter('#story-row .col-md-4');
+// 	}
+//
+// }// checksize
 
 /***************
 Age Gate
@@ -111,18 +236,18 @@ else{
   		showClose: false
 	});
 
-	$.fn.fullpage.setAllowScrolling(false);
-	$.fn.fullpage.setKeyboardScrolling(false);
+	// $(.fn.fullpage).setAllowScrolling(false);
+	// $(.fn.fullpage).setKeyboardScrolling(false);
 
-	$('.fullpage-wrapper,#the-nav').addClass('blur');
+	// $('.fullpage-wrapper,#the-nav').addClass('blur');
 
 	$('#over21, #under21').click(function () {
 		if (this.id == 'over21') {
 			Cookies.set('drinkingAge','over21', { expires: 31 });
-			$(".fullpage-wrapper,#the-nav").removeClass('blur');
+			// $(".fullpage-wrapper,#the-nav").removeClass('blur');
 			$.modal.close();
-			$.fn.fullpage.setAllowScrolling(true);
-			$.fn.fullpage.setKeyboardScrolling(true);
+			// $.fn.fullpage.setAllowScrolling(true);
+			// $.fn.fullpage.setKeyboardScrolling(true);
 
 
 		}
