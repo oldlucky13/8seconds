@@ -20,12 +20,12 @@ get_header();
       <span class="bottom"></span>
     </div>
     <ol id="breadcrumb-group">
-      <li id="breadcrumb-one" class="breadcrumb breadcrumb-active"></li>
-      <li id="breadcrumb-two" class="breadcrumb"></li>
-      <li id="breadcrumb-three" class="breadcrumb"></li>
-      <li id="breadcrumb-four" class="breadcrumb"></li>
-      <li id="breadcrumb-five" class="breadcrumb"></li>
-      <li id="breadcrumb-six" class="breadcrumb"></li>
+      <li class="breadcrumb breadcrumb-active"></li>
+      <li class="breadcrumb"></li>
+      <li class="breadcrumb"></li>
+      <li class="breadcrumb"></li>
+      <li class="breadcrumb"></li>
+      <li class="breadcrumb"></li>
     </ol>
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
@@ -34,27 +34,27 @@ get_header();
     </div>
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
-        <h2 id="second-h2-child" class="h2-child">Two</h2>
+        <h2 class="h2-child">Two</h2>
       </div>
     </div>
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
-        <h2 id="third-h2-child" class="h2-child">Three</h2>
+        <h2 class="h2-child">Three</h2>
       </div>
     </div>
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
-        <h2 id="fourth-h2-child" class="h2-child">Four</h2>
+        <h2 class="h2-child">Four</h2>
       </div>
     </div>
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
-        <h2 id="fifth-h2-child" class="h2-child">Five</h2>
+        <h2 class="h2-child">Five</h2>
       </div>
     </div>
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
-        <h2 id="sixth-h2-child" class="h2-child">Six</h2>
+        <h2 class="h2-child">Six</h2>
       </div>
     </div>
     <div class="main-page-container container-fluid">
