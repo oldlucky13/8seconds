@@ -5733,4 +5733,7 @@ body {
 .breadcrumb-active {
   background-color: yellow; }
 
+.ajaxAboutSection {
+  position: absolute; }
+
 /*# sourceMappingURL=style.css.map */
