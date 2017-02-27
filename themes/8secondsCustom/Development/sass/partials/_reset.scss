@@ -6,6 +6,11 @@
   display: none;
 }
 
+html, body, #et-main-area, #main-content, .main-page-container, {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   overflow: hidden;
 }

@@ -5634,6 +5634,10 @@ button.close {
 #mobile-logo {
   display: none; }
 
+html, body, #et-main-area, #main-content, .main-page-container {
+  height: 100%;
+  width: 100%; }
+
 body {
   overflow: hidden; }
 
@@ -5688,7 +5692,7 @@ body {
 .main-page-title-group {
   position: absolute;
   left: 90px;
-  top: 52%;
+  top: 200%;
   width: 100%;
   box-sizing: border-box;
   z-index: 2; }
@@ -5714,7 +5718,7 @@ body {
 
 #breadcrumb-group {
   position: absolute;
-  right: 2%;
+  right: 6%;
   width: 50px;
   top: 37%;
   z-index: 3; }
@@ -5734,6 +5738,10 @@ body {
   background-color: yellow; }
 
 .ajaxAboutSection {
-  position: absolute; }
+  position: absolute;
+  right: -100%;
+  background-color: pink;
+  height: 100%;
+  overflow-y: auto; }
 
 /*# sourceMappingURL=style.css.map */
