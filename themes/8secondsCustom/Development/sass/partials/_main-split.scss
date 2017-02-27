@@ -9,6 +9,7 @@
 }
 #two-img {
   background-image: url("pic2.png");
+  background-position-x: -400px;
 }
 #three {
   background-color: purple;
@@ -21,12 +22,14 @@
 }
 #four-img {
   background-image: url("pic4.jpg");
+  background-position-x: -225px;
 }
 #five {
   background-color: orange;
 }
 #five-img {
   background-image: url("pic5.jpg");
+  background-position-x: -350px;
 }
 #six {
   background-color: black;

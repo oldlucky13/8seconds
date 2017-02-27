@@ -7,12 +7,12 @@ get_header();
 
 ?>
 
-<div id="preloader">
+<!-- <div id="preloader">
   <div id="status">&nbsp;</div>
-</div>
+</div> -->
 
 <div id="main-content">
-  <div id="the-nav">
+  <!-- <div id="the-nav"> -->
     <!-- <img id="mobile-logo" src="/wp-content/uploads/2017/01/NavBarLogo.png" /> -->
     <div class="button_container" id="toggle">
       <span class="top"></span>
@@ -119,7 +119,7 @@ get_header();
         </ul>
       </nav>
     </div>
-  </div>
+  <!-- </div> -->
   <!-- <div id="ageGate" class="modal">
       <img src="/wp-content/uploads/2017/01/Jseeds-ageGate_mini.png">
       <h1>Are you over 21 years old?</h1>
