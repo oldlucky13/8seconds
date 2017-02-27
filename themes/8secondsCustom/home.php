@@ -7,9 +7,9 @@ get_header();
 
 ?>
 
-<div id="preloader">
+<!-- <div id="preloader">
   <div id="status">&nbsp;</div>
-</div>
+</div> -->
 
 <div id="main-content">
   <div id="the-nav">
