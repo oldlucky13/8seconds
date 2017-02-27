@@ -125,23 +125,23 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
 }
 
 function nextSlide(idx, callback) {
-  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx - 1), .9, {y:"-100%"});
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx - 1), .9, {y:"-100%", onComplete: nextTitle(idx, callback)});
   $('.main-page-container').children().eq(idx).fadeIn();
-  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx), .9, {y:"0%", onComplete: function () {
-    if (typeof callback === "function") {
-      callback();
-    }
-  }}); //, delay:.25
+  // TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx), .9, {y:"0%", onComplete: function () {
+  //   if (typeof callback === "function") {
+  //     callback();
+  //   }
+  // }}); //, delay:.25
 }
 
 function previousSlide(idx, callback) {
-  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx + 1), .9, {y:"100%"});
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx + 1), .9, {y:"100%", onComplete: nextTitle(idx, callback)});
   $('.main-page-container').children().eq(idx + 1).fadeOut();
-  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx), .9, {y:"0%", onComplete: function () {
-    if (typeof callback === "function") {
-      callback();
-    }
-  }}); //, delay:.25
+  // TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx), .9, {y:"0%", onComplete: function () {
+  //   if (typeof callback === "function") {
+  //     callback();
+  //   }
+  // }}); //, delay:.25
 }
 
 function jumpToSlide(oldIdx, newIdx) {
@@ -174,6 +174,14 @@ function jumpToSlide(oldIdx, newIdx) {
 // $('.main-page-container').children().slice(oldIdx + 1, newIdx + 1).each( function () {
 //   $(this).fadeIn();
 // })
+
+function nextTitle(idx, callback) {
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx), .9, {y:"0%", onComplete: function () {
+    if (typeof callback === "function") {
+      callback();
+    }
+  }});
+}
 
 function updateBreadcrumb(idx) {
   $('.breadcrumb-active').removeClass('breadcrumb-active');
