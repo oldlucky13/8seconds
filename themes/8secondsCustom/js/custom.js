@@ -85,15 +85,21 @@ jQuery(document).ready(function( $ ) {
 
   $body = $('body');
   $mainPageContainer = $('.main-page-container');
-  $mainPageAll = $mainPageContainer.children().addBack();
+  $mainPageAll = $mainPageContainer.children() //.addBack();
   $breadcrumbGroup = $('#breadcrumb-group');
   $ajaxAboutSection = $('.ajaxAboutSection');
   var mainIdx = 0;
   var mainScrollUnlocked = true;
+  var onMainPage = true;
+  var onAboutPage = false;
 
   $body.mousewheel(function(event) {
-    handleMainPageScroll(event.deltaY);
     // console.log(event.deltaX, event.deltaY, event.deltaFactor);
+    if (onMainPage) {
+      handleMainPageScroll(event.deltaY);
+    } else if (onAboutPage) {
+      handleAboutScrolling(event.deltaY, event.deltaFactor);
+    }
   });
 
 
@@ -195,12 +201,12 @@ function revealTitles(titles) {
   titles.css("visibility", "visible");
 }
 
-
 /***************
 Ajax loading
 ***************/
 var mainAreaTl = new TimelineMax({paused: true});
-mainAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -25, onComplete: unbindScrolling}, 0);
+mainAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerAbout}, 0);
+// mainAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -25, onComplete: triggerAbout}, 0);
 mainAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
 mainAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
 mainAreaTl.to($ajaxAboutSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
@@ -208,45 +214,28 @@ mainAreaTl.to($ajaxAboutSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
 var ajaxAboutTl = new TimelineMax({paused: true});
 ajaxAboutTl.to($ajaxAboutSection, 1.7, {ease: Power4.easeInOut, right: "-50%"}, 0);
 
-
 $('#about-btn-fwd').click(function () {
   mainAreaTl.play();
-  // ajaxAboutTl.play();
-  // $body.unmousewheel();
-  // $body.css("overflow", "initial");
-  unbindScrolling();
+  triggerAbout();
 })
 
 $('#about-btn-bk').click(function () {
-  // ajaxAboutTl.reverse();
   mainAreaTl.reverse();
-  rebindScrolling();
+  triggerMain();
 })
 
-function unbindScrolling() {
-  $body.unmousewheel();
-  // $body.css("overflow", "initial");
-   var target = $(".ajaxAboutSection");
-   $("#four-img").scroll(function() {
-     console.log("hi");
-     target.prop("scrollTop", this.scrollTop)
-           .prop("scrollLeft", this.scrollLeft);
-   });
+function triggerAbout() {
+  onMainPage = false;
+  onAboutPage = true;
 }
 
-(function() {
-   var ajaxAboutSection = $("#ajaxAboutSection");
-   $(".main-page-slide").scroll(function() {
-     console.log("hey");
-     ajaxAboutSection.prop("scrollTop", this.scrollTop)
-           .prop("scrollLeft", this.scrollLeft);
-   });
- })();
+function handleAboutScrolling(dY, dF) {
+  $ajaxAboutSection[0].scrollTop += (-dY * dF);
+}
 
-function rebindScrolling() {
-  $body.mousewheel(function(event) {
-    handleMainPageScroll(event.deltaY);
-  });
+function triggerMain() {
+  onMainPage = true;
+  onAboutPage = false;
 }
 
 /***************
