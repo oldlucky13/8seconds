@@ -96,8 +96,6 @@ jQuery(document).ready(function( $ ) {
   var onRecipesPage = false;
 
   $body.mousewheel(function(event) {
-    // console.log(event.deltaX, event.deltaY, event.deltaFactor);
-    console.log("Main:" + onMainPage + "About:" + onAboutPage + "Recipes:" + onRecipesPage);
     if (onMainPage) {
       handleMainPageScroll(event.deltaY);
     } else if (onAboutPage) {
@@ -209,17 +207,20 @@ function revealTitles(titles) {
 /***************
 Ajax loading
 ***************/
-var mainAreaTl = new TimelineMax({paused: true});
-mainAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("about")}, 0);
-mainAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
-mainAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
-mainAreaTl.to($ajaxAboutSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
+var aboutAreaTl = new TimelineMax({paused: true});
+aboutAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("about")}, 0);
+aboutAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
+aboutAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
+aboutAreaTl.to($ajaxAboutSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
+// aboutAreaTl.to($ajaxAboutSection[0], .1, {ease: Power4.easeOut, scrollTo: 0}, 0);
 
 var recipesAreaTl = new TimelineMax({paused: true});
 recipesAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("recipes")}, 0);
 recipesAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
 recipesAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
 recipesAreaTl.to($ajaxRecipesSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
+// recipesAreaTl.to($ajaxRecipesSection[0], .1, {ease: Power4.easeOut, scrollTo: 0}, 0);
+
 
 var ajaxAboutTl = new TimelineMax({paused: true});
 ajaxAboutTl.to($ajaxAboutSection, 1.7, {ease: Power4.easeInOut, right: "-50%"}, 0);
@@ -232,16 +233,20 @@ $('#recipes-btn-fwd').click(function () {
 $('#recipes-btn-bk').click(function () {
   recipesAreaTl.reverse();
   triggerSection("main");
+  TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+  // $ajaxRecipesSection[0].scrollTop = 0;
 })
 
 $('#about-btn-fwd').click(function () {
-  mainAreaTl.play();
+  aboutAreaTl.play();
   triggerSection("about");
 })
 
 $('#about-btn-bk').click(function () {
-  mainAreaTl.reverse();
+  aboutAreaTl.reverse();
   triggerSection("main");
+  TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+  // $ajaxAboutSection[0].scrollTop = 0;
 })
 
 function triggerSection(section) {
