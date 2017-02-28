@@ -5737,11 +5737,16 @@ body {
 .breadcrumb-active {
   background-color: yellow; }
 
-.ajaxAboutSection {
+.ajaxSection {
   position: absolute;
   right: -100%;
-  background-color: pink;
   height: 100%;
   overflow-y: auto; }
+
+.ajaxAboutSection {
+  background-color: pink; }
+
+.ajaxRecipesSection {
+  background-color: purple; }
 
 /*# sourceMappingURL=style.css.map */
