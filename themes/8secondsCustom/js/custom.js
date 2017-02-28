@@ -195,6 +195,7 @@ function revealTitles(titles) {
   titles.css("visibility", "visible");
 }
 
+
 /***************
 Ajax loading
 ***************/
@@ -202,22 +203,36 @@ var mainAreaTl = new TimelineMax({paused: true});
 mainAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -25, onComplete: unbindScrolling}, 0);
 mainAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
 mainAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
+mainAreaTl.to($ajaxAboutSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
 
 var ajaxAboutTl = new TimelineMax({paused: true});
-ajaxAboutTl.to($ajaxAboutSection, 1.75, {ease: Power4.easeInOut, right: 0,});
+ajaxAboutTl.to($ajaxAboutSection, 1.7, {ease: Power4.easeInOut, right: "-50%"}, 0);
 
 
-$('#about-btn').click(function () {
+$('#about-btn-fwd').click(function () {
   mainAreaTl.play();
-  ajaxAboutTl.play();
+  // ajaxAboutTl.play();
   // $body.unmousewheel();
   // $body.css("overflow", "initial");
+  unbindScrolling();
+})
 
+$('#about-btn-bk').click(function () {
+  // ajaxAboutTl.reverse();
+  mainAreaTl.reverse();
+  rebindScrolling();
 })
 
 function unbindScrolling() {
   $body.unmousewheel();
   // $body.css("overflow", "initial");
+}
+
+function rebindScrolling() {
+  console.log("happening");
+  $body.mousewheel(function(event) {
+    handleMainPageScroll(event.deltaY);
+  });
 }
 
 /***************
