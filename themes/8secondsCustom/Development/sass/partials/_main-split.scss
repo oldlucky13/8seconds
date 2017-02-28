@@ -9,6 +9,7 @@
 }
 #two-img {
   background-image: url("pic2.png");
+  background-position-x: -400px;
 }
 #three {
   background-color: purple;
@@ -21,12 +22,14 @@
 }
 #four-img {
   background-image: url("pic4.jpg");
+  background-position-x: -225px;
 }
 #five {
   background-color: orange;
 }
 #five-img {
   background-image: url("pic5.jpg");
+  background-position-x: -350px;
 }
 #six {
   background-color: black;
@@ -49,7 +52,8 @@
 .main-page-title-group {
   position: absolute;
   left: 90px;
-  top: 52%;
+  top: 200%;
+  // top: 52%;
   width: 100%;
   box-sizing: border-box;
   z-index: 2;
@@ -79,7 +83,8 @@
 
 #breadcrumb-group {
   position: absolute;
-  right: 2%;
+  right: 6%;
+  // right: 2%;
   width: 50px;
   top: 37%;
   z-index: 3;

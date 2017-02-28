@@ -79,14 +79,27 @@ jQuery(window).on('load', function($) { // makes sure the whole site is loaded
 
 jQuery(document).ready(function( $ ) {
 
-  // variables
-  $mainPageContainer = $(".container-fluid");
+  /***************
+  Variables/Mousewheel
+  ***************/
+
+  $body = $('body');
+  $mainPageContainer = $('.main-page-container');
+  $mainPageAll = $mainPageContainer.children() //.addBack();
+  $breadcrumbGroup = $('#breadcrumb-group');
+  $ajaxAboutSection = $('.ajaxAboutSection');
   var mainIdx = 0;
   var mainScrollUnlocked = true;
+  var onMainPage = true;
+  var onAboutPage = false;
 
-  $('body').mousewheel(function(event) {
-    handleMainPageScroll(event.deltaY);
+  $body.mousewheel(function(event) {
     // console.log(event.deltaX, event.deltaY, event.deltaFactor);
+    if (onMainPage) {
+      handleMainPageScroll(event.deltaY);
+    } else if (onAboutPage) {
+      handleAboutScrolling(event.deltaY, event.deltaFactor);
+    }
   });
 
 
@@ -125,23 +138,13 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
 }
 
 function nextSlide(idx, callback) {
-  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx - 1), .9, {y:"-100%"});
-  $('.main-page-container').children().eq(idx).fadeIn();
-  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx), .9, {y:"0%", onComplete: function () {
-    if (typeof callback === "function") {
-      callback();
-    }
-  }}); //, delay:.25
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx - 1), .9, {y:"-100%", onComplete: nextTitle(idx, callback)});
+  $('.main-page-slide-group').children().eq(idx).fadeIn();
 }
 
 function previousSlide(idx, callback) {
-  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx + 1), .9, {y:"100%"});
-  $('.main-page-container').children().eq(idx + 1).fadeOut();
-  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx), .9, {y:"0%", onComplete: function () {
-    if (typeof callback === "function") {
-      callback();
-    }
-  }}); //, delay:.25
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx + 1), .9, {y:"100%", onComplete: nextTitle(idx, callback)});
+  $('.main-page-slide-group').children().eq(idx + 1).fadeOut();
 }
 
 function jumpToSlide(oldIdx, newIdx) {
@@ -167,17 +170,18 @@ function jumpToSlide(oldIdx, newIdx) {
     }
   }
 }
-// $('.main-page-title-group').find(".h2-child").slice(oldIdx, newIdx + 1).each( function () {
-//   console.log($(this));
-//   // $(this).fadeIn();
-// })
-// $('.main-page-container').children().slice(oldIdx + 1, newIdx + 1).each( function () {
-//   $(this).fadeIn();
-// })
+
+function nextTitle(idx, callback) {
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx), .9, {y:"0%", onComplete: function () {
+    if (typeof callback === "function") {
+      callback();
+    }
+  }});
+}
 
 function updateBreadcrumb(idx) {
   $('.breadcrumb-active').removeClass('breadcrumb-active');
-  $('#breadcrumb-group').children().eq(idx).addClass('breadcrumb-active');
+  $breadcrumbGroup.children().eq(idx).addClass('breadcrumb-active');
 }
 
 function unlockMainScroll() {
@@ -195,6 +199,43 @@ $('.breadcrumb').click(function(e) {
 
 function revealTitles(titles) {
   titles.css("visibility", "visible");
+}
+
+/***************
+Ajax loading
+***************/
+var mainAreaTl = new TimelineMax({paused: true});
+mainAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerAbout}, 0);
+// mainAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -25, onComplete: triggerAbout}, 0);
+mainAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
+mainAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
+mainAreaTl.to($ajaxAboutSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
+
+var ajaxAboutTl = new TimelineMax({paused: true});
+ajaxAboutTl.to($ajaxAboutSection, 1.7, {ease: Power4.easeInOut, right: "-50%"}, 0);
+
+$('#about-btn-fwd').click(function () {
+  mainAreaTl.play();
+  triggerAbout();
+})
+
+$('#about-btn-bk').click(function () {
+  mainAreaTl.reverse();
+  triggerMain();
+})
+
+function triggerAbout() {
+  onMainPage = false;
+  onAboutPage = true;
+}
+
+function handleAboutScrolling(dY, dF) {
+  $ajaxAboutSection[0].scrollTop += (-dY * dF);
+}
+
+function triggerMain() {
+  onMainPage = true;
+  onAboutPage = false;
 }
 
 /***************
