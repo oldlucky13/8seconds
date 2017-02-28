@@ -226,10 +226,24 @@ $('#about-btn-bk').click(function () {
 function unbindScrolling() {
   $body.unmousewheel();
   // $body.css("overflow", "initial");
+   var target = $(".ajaxAboutSection");
+   $("#four-img").scroll(function() {
+     console.log("hi");
+     target.prop("scrollTop", this.scrollTop)
+           .prop("scrollLeft", this.scrollLeft);
+   });
 }
 
+(function() {
+   var ajaxAboutSection = $("#ajaxAboutSection");
+   $(".main-page-slide").scroll(function() {
+     console.log("hey");
+     ajaxAboutSection.prop("scrollTop", this.scrollTop)
+           .prop("scrollLeft", this.scrollLeft);
+   });
+ })();
+
 function rebindScrolling() {
-  console.log("happening");
   $body.mousewheel(function(event) {
     handleMainPageScroll(event.deltaY);
   });
