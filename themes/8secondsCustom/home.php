@@ -23,10 +23,10 @@ get_header();
     <!-- <div class="ajaxAboutSection">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-6">
+          <div class="no-mobile-col col-md-6">
 
           </div>
-          <div class="col-md-6">
+          <div class="no-mobile-col col-md-6">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
           </div>
@@ -36,7 +36,7 @@ get_header();
     <div class="main-page-container container-fluid">
       <div class="main-page-slide-group">
         <div id="one" class="show-off row main-page-slide">
-          <div class="col-md-6">
+          <div class="no-mobile-col col-md-6">
             <h1>one</h1>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             <div class="main-page-title-group">
@@ -70,7 +70,7 @@ get_header();
               </div>
             </div>
           </div>
-          <div id="one-img" class="main-page-img col-md-6">
+          <div id="one-img" class="main-page-img no-mobile-col col-md-6">
             <ol id="breadcrumb-group">
               <li class="breadcrumb breadcrumb-active"></li>
               <li class="breadcrumb"></li>
@@ -82,33 +82,37 @@ get_header();
           </div>
         </div>
         <div id="two" class="show-off row main-page-slide">
-          <div class="col-md-6">
+          <div class="no-mobile-col col-md-6">
             <h1>two</h1>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </div>
-          <div id="two-img" class="main-page-img col-md-6">
+          <div id="two-img" class="main-page-img no-mobile-col col-md-6">
 
           </div>
         </div>
         <div id="three" class="show-off row main-page-slide">
-          <div class="col-md-6">
+          <div class="no-mobile-col col-md-6">
             <h1>three</h1>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </div>
-          <div id="three-img" class="main-page-img col-md-6">
+          <div id="three-img" class="main-page-img no-mobile-col col-md-6">
 
           </div>
         </div>
         <div id="four" class="about row main-page-slide">
-          <div class="col-md-6">
+          <div class="no-mobile-col col-md-6 main-page-txt">
             <h1>four</h1>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            <button id="about-btn-fwd" type="button" class="btn btn-primary">See More</button>
+            <button id="about-btn-fwd-desk" type="button" class="btn btn-primary">See More</button>
           </div>
-          <div id="four-img" class="main-page-img col-md-6">
-
+          <div id="four-img" class="main-page-img no-mobile-col col-md-6">
+            <div class="no-mobile-col col-md-6 main-page-txt-mobile">
+              <h1>four</h1>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              <button id="about-btn-fwd-mobile" type="button" class="btn btn-primary">See More</button>
+            </div>
           </div>
-          <div class="ajaxSection ajaxAboutSection col-md-6">
+          <div class="ajaxSection ajaxAboutSection no-mobile-col col-md-6">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -132,16 +136,16 @@ get_header();
           </div>
         </div>
         <div id="five" class="story row main-page-slide">
-          <div class="col-md-6">
+          <div class="no-mobile-col col-md-6">
             <h1>five</h1>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             <button id="recipes-btn-fwd" type="button" class="btn btn-primary">See More</button>
 
           </div>
-          <div id="five-img" class="main-page-img col-md-6">
+          <div id="five-img" class="main-page-img no-mobile-col col-md-6">
 
           </div>
-          <div class="ajaxSection ajaxRecipesSection col-md-6">
+          <div class="ajaxSection ajaxRecipesSection no-mobile-col col-md-6">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -165,11 +169,11 @@ get_header();
           </div>
         </div>
         <div id="six" class="contact row main-page-slide">
-          <div class="col-md-6">
+          <div class="no-mobile-col col-md-6">
             <h1>six</h1>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </div>
-          <div id="six-img" class="main-page-img col-md-6">
+          <div id="six-img" class="main-page-img no-mobile-col col-md-6">
 
           </div>
         </div>

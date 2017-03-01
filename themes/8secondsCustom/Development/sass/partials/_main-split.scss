@@ -49,6 +49,20 @@
   background-size: cover;
 }
 
+.main-page-txt {
+  display: none;
+  @media screen and (min-width: 992px){
+    display: block;
+  }
+}
+
+.main-page-txt-mobile {
+  display: inline-block;
+  @media screen and (min-width: 992px){
+    display: none;
+  }
+}
+
 .main-page-title-group {
   position: absolute;
   left: 90px;

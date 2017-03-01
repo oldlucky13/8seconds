@@ -89,6 +89,7 @@ jQuery(document).ready(function( $ ) {
   $breadcrumbGroup = $('#breadcrumb-group');
   $ajaxAboutSection = $('.ajaxAboutSection');
   $ajaxRecipesSection = $('.ajaxRecipesSection');
+  $noMobileCol = $('.no-mobile-col');
   var mainIdx = 0;
   var mainScrollUnlocked = true;
   var onMainPage = true;
@@ -214,6 +215,12 @@ aboutAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0,
 aboutAreaTl.to($ajaxAboutSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
 // aboutAreaTl.to($ajaxAboutSection[0], .1, {ease: Power4.easeOut, scrollTo: 0}, 0);
 
+var aboutAreaTlMobile = new TimelineMax({paused: true});
+aboutAreaTlMobile.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -100, onComplete: triggerSection.bind("about")}, 0);
+aboutAreaTlMobile.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
+aboutAreaTlMobile.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
+aboutAreaTlMobile.to($ajaxAboutSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
+
 var recipesAreaTl = new TimelineMax({paused: true});
 recipesAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("recipes")}, 0);
 recipesAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
@@ -237,8 +244,13 @@ $('#recipes-btn-bk').click(function () {
   // $ajaxRecipesSection[0].scrollTop = 0;
 })
 
-$('#about-btn-fwd').click(function () {
+$('#about-btn-fwd-desk').click(function () {
   aboutAreaTl.play();
+  triggerSection("about");
+})
+
+$('#about-btn-fwd-mobile').click(function () {
+  aboutAreaTlMobile.play();
   triggerSection("about");
 })
 
@@ -275,21 +287,23 @@ Resize
 ***************/
 
 // run test on initial page load
- // checkSize();
+ checkSize();
 // // run test on resize of the window
-//  $(window).resize(checkSize);
+ $(window).resize(checkSize);
 //
 //
-// function checkSize(){
-//
-// 	if($(window).innerWidth() <= 990){
-// 		$('#story-desktop').insertAfter('#story-title');
-//
-// 	}else{
-// 		$('#story-desktop').insertAfter('#story-row .col-md-4');
-// 	}
-//
-// }// checksize
+function checkSize(){
+	if($(window).innerWidth() <= 991){
+		$noMobileCol.each(function () {
+		  $(this).removeClass('col-md-6');
+		})
+	}else{
+    $noMobileCol.each(function () {
+		  $(this).addClass('col-md-6');
+		})
+	}
+
+}// checksize
 
 /***************
 Age Gate
