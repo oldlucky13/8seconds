@@ -119,3 +119,16 @@
 .breadcrumb-active {
   background-color: yellow;
 }
+
+.desk-btn {
+  @media screen and (max-width: 991px){
+    display: none;
+  }
+}
+
+
+.mobile-btn {
+  @media screen and (min-width: 992px){
+    display: none;
+  }
+}
