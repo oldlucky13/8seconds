@@ -95,6 +95,7 @@ jQuery(document).ready(function( $ ) {
   var onMainPage = true;
   var onAboutPage = false;
   var onRecipesPage = false;
+  var deskClassAdded = false;
 
   $body.mousewheel(function(event) {
     if (onMainPage) {
@@ -142,12 +143,12 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
 }
 
 function nextSlide(idx, callback) {
-  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx - 1), .9, {y:"-100%", onComplete: nextTitle(idx, callback)});
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx - 1), 1, {y:"-100%", onComplete: nextTitle(idx, callback)});
   $('.main-page-slide-group').children().eq(idx).fadeIn();
 }
 
 function previousSlide(idx, callback) {
-  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx + 1), .9, {y:"100%", onComplete: nextTitle(idx, callback)});
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx + 1), 1, {y:"100%", onComplete: nextTitle(idx, callback)});
   $('.main-page-slide-group').children().eq(idx + 1).fadeOut();
 }
 
@@ -176,7 +177,7 @@ function jumpToSlide(oldIdx, newIdx) {
 }
 
 function nextTitle(idx, callback) {
-  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx), .9, {y:"0%", onComplete: function () {
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx), 1, {y:"0%", onComplete: function () {
     if (typeof callback === "function") {
       callback();
     }
@@ -229,17 +230,32 @@ recipesAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 
 // recipesAreaTl.to($ajaxRecipesSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
 // recipesAreaTl.to($ajaxRecipesSection[0], .1, {ease: Power4.easeOut, scrollTo: 0}, 0);
 
+var recipesAreaTlMobile = new TimelineMax({paused: true});
+recipesAreaTlMobile.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -100, onComplete: triggerSection.bind("recipes")}, 0);
+recipesAreaTlMobile.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
+
 
 var ajaxAboutTl = new TimelineMax({paused: true});
 ajaxAboutTl.to($ajaxAboutSection, 1.7, {ease: Power4.easeInOut, right: "-50%"}, 0);
 
-$('#recipes-btn-fwd').click(function () {
+$('#recipes-btn-fwd-desk').click(function () {
   recipesAreaTl.play();
   triggerSection("recipes");
 })
+$('#recipes-btn-fwd-mobile').click(function () {
+  recipesAreaTlMobile.play();
+  triggerSection("recipes");
+})
 
-$('#recipes-btn-bk').click(function () {
+$('#recipes-btn-bk-desk').click(function () {
   recipesAreaTl.reverse();
+  triggerSection("main");
+  TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+  // $ajaxRecipesSection[0].scrollTop = 0;
+})
+
+$('#recipes-btn-bk-mobile').click(function () {
+  recipesAreaTlMobile.reverse();
   triggerSection("main");
   TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
   // $ajaxRecipesSection[0].scrollTop = 0;
@@ -299,14 +315,16 @@ Resize
 //
 //
 function checkSize(){
-	if($(window).innerWidth() <= 991){
+	if($(window).innerWidth() <= 991 && deskClassAdded){
 		$noMobileCol.each(function () {
 		  $(this).removeClass('col-md-6');
 		})
-	}else{
+    deskClassAdded = false;
+	}else if($(window).innerWidth() > 991 && !deskClassAdded) {
     $noMobileCol.each(function () {
 		  $(this).addClass('col-md-6');
 		})
+    deskClassAdded = true;
 	}
 
 }// checksize

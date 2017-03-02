@@ -5651,8 +5651,7 @@ body {
   background-color: red; }
 
 #two-img {
-  background-image: url("pic2.png");
-  background-position-x: -400px; }
+  background-image: url("pic2.jpg"); }
 
 #three {
   background-color: purple; }
@@ -5664,15 +5663,13 @@ body {
   background-color: green; }
 
 #four-img {
-  background-image: url("pic4.jpg");
-  background-position-x: -225px; }
+  background-image: url("pic4.jpg"); }
 
 #five {
   background-color: orange; }
 
 #five-img {
-  background-image: url("pic5.jpg");
-  background-position-x: -350px; }
+  background-image: url("pic5.jpg"); }
 
 #six {
   background-color: black; }
@@ -5704,7 +5701,7 @@ body {
 .main-page-title-group {
   position: absolute;
   left: 90px;
-  top: 200%;
+  top: 45%;
   width: 100%;
   box-sizing: border-box;
   z-index: 2; }
@@ -5730,7 +5727,7 @@ body {
 
 #breadcrumb-group {
   position: absolute;
-  right: 6%;
+  right: 2%;
   width: 50px;
   top: 37%;
   z-index: 3; }
