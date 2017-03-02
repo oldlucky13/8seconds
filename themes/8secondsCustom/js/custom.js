@@ -82,7 +82,6 @@ jQuery(document).ready(function( $ ) {
   /***************
   Variables/Mousewheel
   ***************/
-
   $body = $('body');
   $mainPageContainer = $('.main-page-container');
   $mainPageAll = $mainPageContainer.children(); //.addBack();
@@ -90,6 +89,8 @@ jQuery(document).ready(function( $ ) {
   $ajaxAboutSection = $('.ajaxAboutSection');
   $ajaxRecipesSection = $('.ajaxRecipesSection');
   $noMobileCol = $('.no-mobile-col');
+  $aboutImg = $('#four-img');
+
   var mainIdx = 0;
   var mainScrollUnlocked = true;
   var onMainPage = true;
@@ -272,12 +273,22 @@ $('#about-btn-fwd-mobile').click(function () {
 })
 
 $('#about-btn-bk-desk').click(function () {
+  $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+  // $aboutImg.fadeOut(function() {
+  //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+  // })
+  // .fadeIn();
   aboutAreaTl.reverse();
   triggerSection("main");
   TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
 })
 
 $('#about-btn-bk-mobile').click(function () {
+  $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+  // $aboutImg.fadeOut(function() {
+  //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+  // })
+  // .fadeIn();
   aboutAreaTlMobile.reverse();
   triggerSection("main");
   TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
@@ -300,7 +311,37 @@ function triggerSection(section) {
 }
 
 function handleOtherScrolling(section, dY, dF) {
-  section[0].scrollTop += (-dY * dF);
+  var scrollPosition = section[0].scrollTop += (-dY * dF);
+  if (section === $ajaxAboutSection) {
+    var aboutOne = $('#about-one').offset().top;
+    var aboutTwo = $('#about-two').offset().top;
+    var aboutThree = $('#about-three').offset().top;
+    console.log("aboutThree = " + aboutThree);
+    console.log("aboutTwo = " + aboutTwo);
+    console.log("scrollPosition = " + scrollPosition);
+    if ((scrollPosition + $(window).height()) > aboutThree) {
+      $aboutImg.css('background-image','url(http://media4.s-nbcnews.com/j/newscms/2016_36/1685951/ss-160826-twip-05_8cf6d4cb83758449fd400c7c3d71aa1f.nbcnews-ux-2880-1000.jpg)');
+    } else if ((scrollPosition + $(window).height()) > aboutTwo) {
+      $aboutImg.css('background-image','url(http://animal-dream.com/data_images/panda/panda7.jpg)');
+    } else {
+      $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+    // }
+
+    // console.log("sP = " + scrollPosition);
+    // console.log("dY = " + dY);
+    // if (scrollPosition === 400 && dY > 0) {
+    //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+    //   // $aboutImg.fadeOut(function() {
+    //   //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+    //   // })
+    //   // .fadeIn();
+    // } else if (scrollPosition === 800) {
+    //   $aboutImg.css('background-image','url(http://media4.s-nbcnews.com/j/newscms/2016_36/1685951/ss-160826-twip-05_8cf6d4cb83758449fd400c7c3d71aa1f.nbcnews-ux-2880-1000.jpg)');
+    // } else if (scrollPosition === 1000 && dY < 0) {
+    //   $aboutImg.css('background-image','url(http://cdn.hexjam.com/editorial_service/bases/images/000/004/799/xlarge/pandarockinghorsefeature.jpg.jpg?1404188201)');
+
+    }
+  }
 }
 
 

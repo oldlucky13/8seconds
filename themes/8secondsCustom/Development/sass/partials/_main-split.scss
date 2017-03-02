@@ -23,6 +23,7 @@
 #four-img {
   background-image: url("pic4.jpg");
   // background-position-x: -225px;
+  @include transition(all 500ms ease-out);
 }
 #five {
   background-color: orange;
@@ -47,6 +48,7 @@
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
 }
 
 .main-page-txt {

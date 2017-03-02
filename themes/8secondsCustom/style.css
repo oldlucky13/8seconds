@@ -5663,7 +5663,10 @@ body {
   background-color: green; }
 
 #four-img {
-  background-image: url("pic4.jpg"); }
+  background-image: url("pic4.jpg");
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  transition: all 500ms ease-out; }
 
 #five {
   background-color: orange; }
@@ -5684,7 +5687,8 @@ body {
 .main-page-img {
   height: 100%;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-position: center center; }
 
 .main-page-txt {
   display: none; }
