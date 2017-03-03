@@ -80,7 +80,7 @@ jQuery(window).on('load', function($) { // makes sure the whole site is loaded
 jQuery(document).ready(function( $ ) {
 
   /***************
-  Variables/Mousewheel
+  Variables
   ***************/
   $body = $('body');
   $mainPageContainer = $('.main-page-container');
@@ -97,6 +97,11 @@ jQuery(document).ready(function( $ ) {
   var onAboutPage = false;
   var onRecipesPage = false;
   var deskClassAdded = false;
+  var startingSideWidth = null;
+
+  /***************
+  Mousewheel
+  ***************/
 
   $body.mousewheel(function(event) {
     if (onMainPage) {
@@ -110,7 +115,7 @@ jQuery(document).ready(function( $ ) {
 
 
 /***************
-Scroll Logic
+Main Scroll Logic
 ***************/
 
 function handleMainPageScroll(scrollDir, newMainIdx) {
@@ -299,14 +304,17 @@ function triggerSection(section) {
     onMainPage = true;
     onAboutPage = false;
     onRecipesPage = false;
+    startingSideWidth = null;
   } else if (section === "about") {
     onMainPage = false;
     onAboutPage = true;
     onRecipesPage =  false;
+    startingSideWidth = $(window).width();
   } else if (section === "recipes") {
     onMainPage = false;
     onAboutPage = false;
     onRecipesPage =  true;
+    startingSideWidth = $(window).width();
   }
 }
 
@@ -316,9 +324,6 @@ function handleOtherScrolling(section, dY, dF) {
     var aboutOne = $('#about-one').offset().top;
     var aboutTwo = $('#about-two').offset().top;
     var aboutThree = $('#about-three').offset().top;
-    console.log("aboutThree = " + aboutThree);
-    console.log("aboutTwo = " + aboutTwo);
-    console.log("scrollPosition = " + scrollPosition);
     if ((scrollPosition + $(window).height()) > aboutThree) {
       $aboutImg.css('background-image','url(http://media4.s-nbcnews.com/j/newscms/2016_36/1685951/ss-160826-twip-05_8cf6d4cb83758449fd400c7c3d71aa1f.nbcnews-ux-2880-1000.jpg)');
     } else if ((scrollPosition + $(window).height()) > aboutTwo) {
@@ -353,22 +358,51 @@ Resize
  checkSize();
 // // run test on resize of the window
  $(window).resize(checkSize);
-//
-//
+
 function checkSize(){
-	if($(window).innerWidth() <= 991 && deskClassAdded){
+	if (deskClassAdded && $(window).innerWidth() <= 991){
 		$noMobileCol.each(function () {
 		  $(this).removeClass('col-md-6');
 		})
     deskClassAdded = false;
-	}else if($(window).innerWidth() > 991 && !deskClassAdded) {
+	}else if (!deskClassAdded && $(window).innerWidth() > 991) {
     $noMobileCol.each(function () {
 		  $(this).addClass('col-md-6');
 		})
     deskClassAdded = true;
 	}
 
-}// checksize
+  if (onAboutPage && startingSideWidth < 992) {
+    console.log("hey");
+    if ($(window).width() >= 992) {
+      console.log("hi");
+      $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+      aboutAreaTlMobile.progress(0).pause();
+      // aboutAreaTlMobile.reverse();
+      triggerSection("main");
+      TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    }
+  } else if (onAboutPage && startingSideWidth >= 992) {
+    if ($(window).width() < 992) {
+      $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+      aboutAreaTl.reverse();
+      triggerSection("main");
+      TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    }
+  } else if (onRecipesPage && startingSideWidth < 992) {
+    if ($(window).width() >= 992) {
+      recipesAreaTlMobile.reverse();
+      triggerSection("main");
+      TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    }
+  } else if (onRecipesPage && startingSideWidth >= 992) {
+    if ($(window).width() < 992) {
+      recipesAreaTl.reverse();
+      triggerSection("main");
+      TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    }
+  }
+}
 
 /***************
 Age Gate
