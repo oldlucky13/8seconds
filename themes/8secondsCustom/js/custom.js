@@ -380,6 +380,17 @@ function handleOtherScrolling(section, dY, dF) {
 }
 
 
+$("ajax-breadcrumb").hover(over, out);
+
+function over() {
+  console.log(this);
+}
+
+function out() {
+
+}
+
+
 /***************
 Resize
 ***************/
