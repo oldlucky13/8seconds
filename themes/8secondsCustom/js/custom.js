@@ -90,6 +90,8 @@ jQuery(document).ready(function( $ ) {
   $ajaxRecipesSection = $('.ajaxRecipesSection');
   $noMobileCol = $('.no-mobile-col');
   $aboutImg = $('#four-img');
+  $aboutBreadcrumbs = $('#about-ajax-breadcrumb-group');
+  $aboutBreadcrumbText = $('.about-breadcrumb-text');
 
   var mainIdx = 0;
   var mainScrollUnlocked = true;
@@ -219,6 +221,8 @@ var aboutAreaTl = new TimelineMax({paused: true});
 aboutAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("about")}, 0);
 aboutAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
 aboutAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
+aboutAreaTl.to($aboutBreadcrumbs, .1, {display: "block"}, 0);
+aboutAreaTl.to($aboutBreadcrumbs, .5, {ease: Power4.easeInOut, opacity: 1});
 // aboutAreaTl.to($ajaxAboutSection, 1.75, {ease: Power4.easeOut, left: "50%"}, 1);
 // aboutAreaTl.to($ajaxAboutSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
 // aboutAreaTl.to($ajaxAboutSection[0], .1, {ease: Power4.easeOut, scrollTo: 0}, 0);
@@ -318,6 +322,24 @@ function triggerSection(section) {
   }
 }
 
+/***************
+Other scrolling
+***************/
+
+var aboutBreadcrumbOne = new TimelineMax({paused: true});
+aboutBreadcrumbOne.to($aboutBreadcrumbs.children()[0], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+aboutBreadcrumbOne.to($aboutBreadcrumbText[0], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
+var aboutBreadcrumbTwo = new TimelineMax({paused: true});
+aboutBreadcrumbTwo.to($aboutBreadcrumbs.children()[1], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+aboutBreadcrumbTwo.to($aboutBreadcrumbText[1], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
+var aboutBreadcrumbThree = new TimelineMax({paused: true});
+aboutBreadcrumbThree.to($aboutBreadcrumbs.children()[2], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+aboutBreadcrumbThree.to($aboutBreadcrumbText[2], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+// var aboutBreadcrumbTwo = $aboutBreadcrumbText[1];
+// var aboutBreadcrumbThree = $aboutBreadcrumbText[2];
+
 function handleOtherScrolling(section, dY, dF) {
   var scrollPosition = section[0].scrollTop += (-dY * dF);
   if (section === $ajaxAboutSection) {
@@ -326,10 +348,18 @@ function handleOtherScrolling(section, dY, dF) {
     var aboutThree = $('#about-three').offset().top;
     if ((scrollPosition + $(window).height()) > aboutThree) {
       $aboutImg.css('background-image','url(http://media4.s-nbcnews.com/j/newscms/2016_36/1685951/ss-160826-twip-05_8cf6d4cb83758449fd400c7c3d71aa1f.nbcnews-ux-2880-1000.jpg)');
+      aboutBreadcrumbTwo.reverse();
+      aboutBreadcrumbThree.play();
+      // $aboutBreadcrumbs.find(aboutBreadcrumbThree).fadeIn();
     } else if ((scrollPosition + $(window).height()) > aboutTwo) {
       $aboutImg.css('background-image','url(http://animal-dream.com/data_images/panda/panda7.jpg)');
+      aboutBreadcrumbOne.reverse()
+      aboutBreadcrumbThree.reverse();
+      aboutBreadcrumbTwo.play();
     } else {
       $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+      aboutBreadcrumbTwo.reverse();
+      aboutBreadcrumbOne.play();
     // }
 
     // console.log("sP = " + scrollPosition);

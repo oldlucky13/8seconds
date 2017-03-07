@@ -41,8 +41,10 @@ get_header();
         <div id="one" class="show-off row main-page-slide">
           <div class="no-mobile-col col-md-6 main-page-txt">
             <h1>one</h1>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="icon-section">
+              <p class="icon-section-line"></p>
+            </div>
           </div>
           <div id="one-img" class="main-page-img no-mobile-col col-md-6">
             <div class="no-mobile-col col-md-6 main-page-txt-mobile">
@@ -83,13 +85,22 @@ get_header();
             <button id="about-btn-fwd-desk" type="button" class="btn btn-primary">See More</button>
           </div>
           <div id="four-img" class="main-page-img no-mobile-col col-md-6">
+
             <div class="no-mobile-col col-md-6 main-page-txt-mobile">
               <h1>four</h1>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               <button id="about-btn-fwd-mobile" type="button" class="btn btn-primary">See More</button>
             </div>
+            <ol id="about-ajax-breadcrumb-group">
+              <li class="ajax-breadcrumb"><h5 class="about-breadcrumb-text">16TH CENTURY</h5><hr class="ajax-breadcrumb-line"></li>
+              <li class="ajax-breadcrumb"><h5 class="about-breadcrumb-text">1850'S</h5><hr class="ajax-breadcrumb-line"></li>
+              <li class="ajax-breadcrumb"><h5 class="about-breadcrumb-text">1936</h5><hr class="ajax-breadcrumb-line"></li>
+              <li class="ajax-breadcrumb"><h5 class="about-breadcrumb-text">1992</h5><hr class="ajax-breadcrumb-line"></li>
+              <li class="ajax-breadcrumb"><h5 class="about-breadcrumb-text">TODAY</h5><hr class="ajax-breadcrumb-line"></li>
+            </ol>
           </div>
           <div class="ajaxSection ajaxAboutSection no-mobile-col col-md-6">
+
             <p><a id="about-one"></a>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br><br>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br><br>
@@ -139,6 +150,7 @@ get_header();
             </div>
           </div>
           <div class="ajaxSection ajaxRecipesSection no-mobile-col col-md-6">
+
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br><br>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br><br>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br><br>
@@ -174,6 +186,7 @@ get_header();
             </div>
           </div>
         </div>
+
       </div>
 
       <div class="main-page-title-group">
@@ -215,7 +228,13 @@ get_header();
         <li class="breadcrumb"></li>
         <li class="breadcrumb"></li>
       </ol>
+
+
     </div>
+
+
+
+
 
     <div class="menuOverlay" id="overlayMenu">
       <nav class="overlay-menu">
