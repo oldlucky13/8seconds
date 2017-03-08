@@ -222,7 +222,7 @@ aboutAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onCom
 aboutAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
 aboutAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
 aboutAreaTl.to($aboutBreadcrumbs, .1, {display: "block"}, 0);
-aboutAreaTl.to($aboutBreadcrumbs, .5, {ease: Power4.easeInOut, opacity: 1});
+aboutAreaTl.to($aboutBreadcrumbs, 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 // aboutAreaTl.to($ajaxAboutSection, 1.75, {ease: Power4.easeOut, left: "50%"}, 1);
 // aboutAreaTl.to($ajaxAboutSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
 // aboutAreaTl.to($ajaxAboutSection[0], .1, {ease: Power4.easeOut, scrollTo: 0}, 0);
@@ -290,6 +290,9 @@ $('#about-btn-bk-desk').click(function () {
   aboutAreaTl.reverse();
   triggerSection("main");
   TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+  aboutBreadcrumbThree.reverse();
+  aboutBreadcrumbTwo.reverse();
+  aboutBreadcrumbOne.reverse();
 })
 
 $('#about-btn-bk-mobile').click(function () {
@@ -347,19 +350,19 @@ function handleOtherScrolling(section, dY, dF) {
     var aboutTwo = $('#about-two').offset().top;
     var aboutThree = $('#about-three').offset().top;
     if ((scrollPosition + $(window).height()) > aboutThree) {
-      $aboutImg.css('background-image','url(http://media4.s-nbcnews.com/j/newscms/2016_36/1685951/ss-160826-twip-05_8cf6d4cb83758449fd400c7c3d71aa1f.nbcnews-ux-2880-1000.jpg)');
       aboutBreadcrumbTwo.reverse();
       aboutBreadcrumbThree.play();
+      $aboutImg.css('background-image','url(http://media4.s-nbcnews.com/j/newscms/2016_36/1685951/ss-160826-twip-05_8cf6d4cb83758449fd400c7c3d71aa1f.nbcnews-ux-2880-1000.jpg)');
       // $aboutBreadcrumbs.find(aboutBreadcrumbThree).fadeIn();
     } else if ((scrollPosition + $(window).height()) > aboutTwo) {
-      $aboutImg.css('background-image','url(http://animal-dream.com/data_images/panda/panda7.jpg)');
       aboutBreadcrumbOne.reverse()
       aboutBreadcrumbThree.reverse();
       aboutBreadcrumbTwo.play();
+      $aboutImg.css('background-image','url(http://animal-dream.com/data_images/panda/panda7.jpg)');
     } else {
-      $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
       aboutBreadcrumbTwo.reverse();
       aboutBreadcrumbOne.play();
+      $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
     // }
 
     // console.log("sP = " + scrollPosition);
@@ -379,16 +382,6 @@ function handleOtherScrolling(section, dY, dF) {
   }
 }
 
-
-$("ajax-breadcrumb").hover(over, out);
-
-function over() {
-  console.log(this);
-}
-
-function out() {
-
-}
 
 
 /***************
@@ -444,6 +437,17 @@ function checkSize(){
     }
   }
 }
+
+/***************
+Menu
+***************/
+
+$('#toggle').click(function() {
+   $(this).toggleClass('active');
+   $('#overlayMenu').toggleClass('open');
+   mainScrollUnlocked = !mainScrollUnlocked;
+ });
+
 
 /***************
 Age Gate
