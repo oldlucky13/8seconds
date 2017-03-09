@@ -92,6 +92,8 @@ jQuery(document).ready(function( $ ) {
   $aboutImg = $('#four-img');
   $aboutBreadcrumbs = $('#about-ajax-breadcrumb-group');
   $aboutBreadcrumbText = $('.about-breadcrumb-text');
+  $menuOverlay = $('.menuOverlay');
+  $overlayMenu = $('.overlay-menu');
 
   var mainIdx = 0;
   var mainScrollUnlocked = true;
@@ -441,11 +443,30 @@ function checkSize(){
 /***************
 Menu
 ***************/
+$menuOverlay.fadeOut('ease');
+
+var menuOpened = false;
+
+var openMenu = new TimelineLite({paused: true});
+openMenu.from($overlayMenu, 1.75, {ease: Power4.easeInOut, xPercent: "-100%", onComplete: function() {
+  menuOpened = !menuOpened;
+}});
+openMenu.to($menuOverlay, .2, {ease: Power4.easeInOut, opacity: 1});
 
 $('#toggle').click(function() {
    $(this).toggleClass('active');
-   $('#overlayMenu').toggleClass('open');
+  //  $('#overlayMenu').toggleClass('open');
+   TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
    mainScrollUnlocked = !mainScrollUnlocked;
+   if (menuOpened) {
+     console.log("reverse");
+     openMenu.reverse();
+   } else {
+     console.log("play");
+     openMenu.play();
+   }
+  //  openMenu.reversed() ? openMenu.reverse() : openMenu.play();
+   $menuOverlay.fadeToggle('ease');
  });
 
 
