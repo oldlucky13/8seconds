@@ -19,23 +19,6 @@ get_header();
       <span class="middle"></span>
       <span class="bottom"></span>
     </div>
-  <!-- </div> -->
-    <!-- <div class="ajaxAboutSection">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="no-mobile-col col-md-6">
-
-          </div>
-          <div class="no-mobile-col col-md-6">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-
-
     <div class="main-page-container container-fluid">
       <div class="main-page-slide-group">
         <div id="one" class="show-off row main-page-slide">
@@ -236,8 +219,8 @@ get_header();
 
 
 
-    <div class="menuOverlay" id="overlayMenu">
-      <nav class="overlay-menu">
+    <div class="menu-container" id="overlayMenu">
+      <nav class="menu-left">
         <div id="nav-menu">
          <div class="square" data-menuanchor="premium" class="nav-menu-link mobile-menu">
            <div class="square-content">

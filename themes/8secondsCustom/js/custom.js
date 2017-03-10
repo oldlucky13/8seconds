@@ -92,8 +92,8 @@ jQuery(document).ready(function( $ ) {
   $aboutImg = $('#four-img');
   $aboutBreadcrumbs = $('#about-ajax-breadcrumb-group');
   $aboutBreadcrumbText = $('.about-breadcrumb-text');
-  $menuOverlay = $('.menuOverlay');
-  $overlayMenu = $('.overlay-menu');
+  $menuContainer = $('.menu-container');
+  $menuLeft = $('.menu-left');
 
   var mainIdx = 0;
   var mainScrollUnlocked = true;
@@ -443,30 +443,36 @@ function checkSize(){
 /***************
 Menu
 ***************/
-$menuOverlay.fadeOut('ease');
+// $menuContainer.fadeOut('ease');
 
 var menuOpened = false;
 
 var openMenu = new TimelineLite({paused: true});
-openMenu.from($overlayMenu, 1.75, {ease: Power4.easeInOut, xPercent: "-100%", onComplete: function() {
+openMenu.to($menuContainer, 0, {display: 'block'});
+openMenu.to($menuContainer, .6, {ease: Power4.easeInOut, opacity: 1});
+openMenu.to($menuLeft, 1.75, {ease: Power4.easeInOut, left: "0%", onComplete: function () {
   menuOpened = !menuOpened;
-}});
-openMenu.to($menuOverlay, .2, {ease: Power4.easeInOut, opacity: 1});
+}})
+// openMenu.from($menuLeft, 1.75, {ease: Power4.easeInOut, left: "0%", onComplete: function() {
+//   menuOpened = !menuOpened;
+// }});
 
 $('#toggle').click(function() {
    $(this).toggleClass('active');
   //  $('#overlayMenu').toggleClass('open');
    TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
    mainScrollUnlocked = !mainScrollUnlocked;
-   if (menuOpened) {
-     console.log("reverse");
-     openMenu.reverse();
-   } else {
-     console.log("play");
-     openMenu.play();
-   }
   //  openMenu.reversed() ? openMenu.reverse() : openMenu.play();
-   $menuOverlay.fadeToggle('ease');
+  menuOpened ? openMenu.reverse() : openMenu.play();
+  //  if (menuOpened) {
+  //    openMenu.reverse();
+  //    menuOpened = !menuOpened;
+  //  } else {
+  //    openMenu.play();
+  //    menuOpened = !menuOpened;
+  //  }
+  //  openMenu.reversed() ? openMenu.reverse() : openMenu.play();
+  //  $menuContainer.fadeToggle('ease');
  });
 
 
