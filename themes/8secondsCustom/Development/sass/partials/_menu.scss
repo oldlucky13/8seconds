@@ -55,14 +55,14 @@
 
 .menu-container {
     position: fixed;
-    background: rgba(0, 0, 0, 0.6);
+    // background: rgba(0, 0, 0, 0.6);
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     // height: 0%;
-    opacity: 0;
-    display: none;
+    // opacity: 0;
+    // display: none;
     // visibility: hidden;
     // @include transition(opacity .35s, visibility .35s, height .35s);
     overflow: hidden;

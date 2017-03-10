@@ -448,11 +448,24 @@ Menu
 var menuOpened = false;
 
 var openMenu = new TimelineLite({paused: true});
-openMenu.to($menuContainer, 0, {display: 'block'});
-openMenu.to($menuContainer, .6, {ease: Power4.easeInOut, opacity: 1});
-openMenu.to($menuLeft, 1.75, {ease: Power4.easeInOut, left: "0%", onComplete: function () {
-  menuOpened = !menuOpened;
-}})
+// openMenu.to($menuContainer, 0, {display: 'block'});
+// openMenu.to($menuContainer, .6, {ease: Power4.easeInOut, opacity: 1}, 1);
+// openMenu.to($menuContainer, 0, {display: 'block'});
+
+
+// openMenu.to($menuContainer, .4, {ease: Power4.easeInOut, opacity: 1}, 0);
+openMenu.to($menuLeft, 1.75, {ease: Power4.easeInOut, left: "0%"}, 0);
+openMenu.to($menuContainer, 1.8, {ease: Power4.easeInOut, background: "rgba(0, 0, 0, 0.6)"}, 0);
+
+
+// openMenu.to($menuContainer, 1.75, {ease: Power4.easeInOut, left: "0%", opacity: 1, onComplete: function () {
+//   menuOpened = !menuOpened;
+// }}, 1);
+// openMenu.to($menuContainer, 0, {display: 'block'});
+// openMenu.to($menuContainer, .6, {ease: Power4.easeInOut, opacity: 1}, 1);
+// openMenu.to($menuLeft, 1.75, {ease: Power4.easeInOut, left: "0%", onComplete: function () {
+//   menuOpened = !menuOpened;
+// }}, 1);
 // openMenu.from($menuLeft, 1.75, {ease: Power4.easeInOut, left: "0%", onComplete: function() {
 //   menuOpened = !menuOpened;
 // }});
@@ -460,17 +473,17 @@ openMenu.to($menuLeft, 1.75, {ease: Power4.easeInOut, left: "0%", onComplete: fu
 $('#toggle').click(function() {
    $(this).toggleClass('active');
   //  $('#overlayMenu').toggleClass('open');
-   TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+  //  TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
    mainScrollUnlocked = !mainScrollUnlocked;
   //  openMenu.reversed() ? openMenu.reverse() : openMenu.play();
-  menuOpened ? openMenu.reverse() : openMenu.play();
-  //  if (menuOpened) {
-  //    openMenu.reverse();
-  //    menuOpened = !menuOpened;
-  //  } else {
-  //    openMenu.play();
-  //    menuOpened = !menuOpened;
-  //  }
+  // menuOpened ? openMenu.reverse() : openMenu.play();
+   if (menuOpened) {
+     openMenu.reverse();
+     menuOpened = !menuOpened;
+   } else {
+     openMenu.play();
+     menuOpened = !menuOpened;
+   }
   //  openMenu.reversed() ? openMenu.reverse() : openMenu.play();
   //  $menuContainer.fadeToggle('ease');
  });

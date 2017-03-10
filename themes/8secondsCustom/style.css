@@ -5850,13 +5850,10 @@ body {
 
 .menu-container {
   position: fixed;
-  background: rgba(0, 0, 0, 0.6);
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  display: none;
   overflow: hidden;
   z-index: 99; }
   .menu-container.open li:nth-of-type(2) {
