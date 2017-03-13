@@ -94,6 +94,7 @@ jQuery(document).ready(function( $ ) {
   $aboutBreadcrumbText = $('.about-breadcrumb-text');
   $menuContainer = $('.menu-container');
   $menuLeft = $('.menu-left');
+  $menuGrey = $('.menu-grey');
 
   var mainIdx = 0;
   var mainScrollUnlocked = true;
@@ -454,8 +455,11 @@ var openMenu = new TimelineLite({paused: true});
 
 
 // openMenu.to($menuContainer, .4, {ease: Power4.easeInOut, opacity: 1}, 0);
-openMenu.to($menuLeft, 1.75, {ease: Power4.easeInOut, left: "0%"}, 0);
-openMenu.to($menuContainer, 1.8, {ease: Power4.easeInOut, background: "rgba(0, 0, 0, 0.6)"}, 0);
+openMenu.to($menuLeft, 1.75, {ease: Power4.easeOut, left: "0%"}, 0);
+openMenu.to($menuContainer, 0, {display: "block"}, 0);
+openMenu.to($menuContainer, .2, {ease: Power4.easeInOut, opacity: 1, visibility: "visible"}, 0);
+openMenu.to($menuGrey, 1, {opacity: 1}, "-=1.2");
+// openMenu.to($menuContainer, .5, {ease: Power4.easeInOut, background: "rgba(0, 0, 0, 0.6)"}, 0);
 
 
 // openMenu.to($menuContainer, 1.75, {ease: Power4.easeInOut, left: "0%", opacity: 1, onComplete: function () {

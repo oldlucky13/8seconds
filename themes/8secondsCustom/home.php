@@ -220,6 +220,9 @@ get_header();
 
 
     <div class="menu-container" id="overlayMenu">
+      <div class="menu-grey">
+
+      </div>
       <nav class="menu-left">
         <div id="nav-menu">
          <div class="square" data-menuanchor="premium" class="nav-menu-link mobile-menu">

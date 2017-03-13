@@ -5854,6 +5854,9 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  opacity: 0;
+  display: none;
+  visibility: hidden;
   overflow: hidden;
   z-index: 99; }
   .menu-container.open li:nth-of-type(2) {
@@ -5952,5 +5955,12 @@ body {
           text-decoration: none; }
           .square .square-content .table .table-cell a:hover {
             text-decoration: none; }
+
+.menu-grey {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+  opacity: 0; }
 
 /*# sourceMappingURL=style.css.map */
