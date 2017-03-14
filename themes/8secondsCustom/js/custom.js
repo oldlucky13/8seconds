@@ -251,20 +251,27 @@ recipesAreaTlMobile.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "
 var ajaxAboutTl = new TimelineMax({paused: true});
 ajaxAboutTl.to($ajaxAboutSection, 1.7, {ease: Power4.easeInOut, right: "-50%"}, 0);
 
-$('#recipes-btn-fwd-desk').click(function () {
-  recipesAreaTl.play();
-  triggerSection("recipes");
+$('#recipes-btn').click(function () {
+  if ($(this).hasClass("fwd")) {
+    recipesAreaTl.play();
+    triggerSection("recipes");
+    $(this).removeClass("fwd");
+    $(this).addClass("bk");
+    $(this).children().removeClass("fa-chevron-right");
+    $(this).children().addClass("fa-chevron-left");
+  } else if ($(this).hasClass("bk")) {
+    recipesAreaTl.reverse();
+    triggerSection("main");
+    TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    $(this).removeClass("bk");
+    $(this).addClass("fwd");
+    $(this).children().removeClass("fa-chevron-left");
+    $(this).children().addClass("fa-chevron-right");
+  }
 })
 $('#recipes-btn-fwd-mobile').click(function () {
   recipesAreaTlMobile.play();
   triggerSection("recipes");
-})
-
-$('#recipes-btn-bk-desk').click(function () {
-  recipesAreaTl.reverse();
-  triggerSection("main");
-  TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-  // $ajaxRecipesSection[0].scrollTop = 0;
 })
 
 $('#recipes-btn-bk-mobile').click(function () {
@@ -274,29 +281,70 @@ $('#recipes-btn-bk-mobile').click(function () {
   // $ajaxRecipesSection[0].scrollTop = 0;
 })
 
-$('#about-btn-fwd-desk').click(function () {
-  aboutAreaTl.play();
-  triggerSection("about");
+$('#about-btn').click(function () {
+  if ($(this).hasClass("fwd")) {
+    aboutAreaTl.play();
+    triggerSection("about");
+    $(this).removeClass("fwd");
+    $(this).addClass("bk");
+    // TweenMax.to($(this).children(), 1, {className: "-=fa-chevron-right", className: "+=fa-chevron-left"});
+    // $(this).children().switchClass( "fa-chevron-right", "fa-chevron-left", 1000, "easeInOutQuad" );
+
+    // TweenMax.to($(this).children()[0], 1, {display: "none", opacity: 0, visibility: "hidden"});
+    // TweenMax.to($(this).children()[1], 1, {display: "inline-block", opacity: 1, visibility: "visibile"});
+
+    // $(this).children().eq(0).addClass("hidden");
+    // $(this).children().eq(1).removeClass("hidden");
+
+    // $("fa-chevron-right").addClass("hidden");
+    // $("fa-chevron-left").removeClass("hidden");
+
+    $(this).children().removeClass("fa-chevron-right");
+    $(this).children().addClass("fa-chevron-left");
+  } else if ($(this).hasClass("bk")) {
+    $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
+    aboutAreaTl.reverse();
+    triggerSection("main");
+    TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    aboutBreadcrumbThree.reverse();
+    aboutBreadcrumbTwo.reverse();
+    aboutBreadcrumbOne.reverse();
+    $(this).removeClass("bk");
+    $(this).addClass("fwd");
+        // $(this).switchClass( "fa-chevron-left", "fa-chevron-right", 1000, "easeInOutQuad" );
+    // $("fa-chevron-left").addClass("hidden");
+    // $("fa-chevron-right").removeClass("hidden");
+
+    $(this).children().removeClass("fa-chevron-left");
+    $(this).children().addClass("fa-chevron-right");
+
+  }
 })
+// $('#about-btn-fwd-desk').click(function () {
+//   aboutAreaTl.play();
+//   triggerSection("about");
+// })
 
 $('#about-btn-fwd-mobile').click(function () {
   aboutAreaTlMobile.play();
   triggerSection("about");
 })
 
-$('#about-btn-bk-desk').click(function () {
-  $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
-  // $aboutImg.fadeOut(function() {
-  //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
-  // })
-  // .fadeIn();
-  aboutAreaTl.reverse();
-  triggerSection("main");
-  TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-  aboutBreadcrumbThree.reverse();
-  aboutBreadcrumbTwo.reverse();
-  aboutBreadcrumbOne.reverse();
-})
+// $('#about-btn-bk-desk').click(function () {
+//   $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
+//   // ==start old
+//   // $aboutImg.fadeOut(function() {
+//   //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+//   // })
+//   // .fadeIn();
+//   // end old==
+//   aboutAreaTl.reverse();
+//   triggerSection("main");
+//   TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+//   aboutBreadcrumbThree.reverse();
+//   aboutBreadcrumbTwo.reverse();
+//   aboutBreadcrumbOne.reverse();
+// })
 
 $('#about-btn-bk-mobile').click(function () {
   $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');

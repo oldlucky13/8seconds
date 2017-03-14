@@ -5753,6 +5753,28 @@ body {
   .mobile-btn {
     display: none; } }
 
+.slide-button {
+  position: absolute;
+  top: 50%;
+  left: 4%;
+  background: #e8e5dd;
+  border: 3px solid #81754e;
+  padding: 9px 16px;
+  border-radius: 22px; }
+  .slide-button i {
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease; }
+
+.btn.focus, .btn:focus, .btn:hover {
+  color: #1e1e1e;
+  text-decoration: none; }
+
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+  outline: none !important;
+  outline-offset: 0px; }
+
 .ajaxSection {
   position: absolute;
   left: 100%;
