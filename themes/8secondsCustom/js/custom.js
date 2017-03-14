@@ -285,7 +285,7 @@ $('#about-btn-fwd-mobile').click(function () {
 })
 
 $('#about-btn-bk-desk').click(function () {
-  $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+  $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
   // $aboutImg.fadeOut(function() {
   //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
   // })
@@ -299,7 +299,7 @@ $('#about-btn-bk-desk').click(function () {
 })
 
 $('#about-btn-bk-mobile').click(function () {
-  $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+  $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
   // $aboutImg.fadeOut(function() {
   //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
   // })

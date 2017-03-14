@@ -5641,44 +5641,26 @@ html, body, #et-main-area, #main-content, .main-page-container {
 body {
   overflow: hidden; }
 
-#one {
-  background-color: blue; }
-
 #one-img {
-  background-image: url("pic1.jpg"); }
-
-#two {
-  background-color: red; }
+  background-image: url("/wp-content/uploads/2017/03/home-bottle-premium.jpg"); }
 
 #two-img {
-  background-image: url("pic2.jpg"); }
-
-#three {
-  background-color: purple; }
+  background-image: url("/wp-content/uploads/2017/03/home-bottle-black.jpg"); }
 
 #three-img {
-  background-image: url("pic6.jpg"); }
-
-#four {
-  background-color: green; }
+  background-image: url("/wp-content/uploads/2017/03/home-bottle-cinnamon.jpg"); }
 
 #four-img {
-  background-image: url("pic4.jpg");
+  background-image: url("/wp-content/uploads/2017/03/home-story-boots.jpg");
   -webkit-transition: all 500ms ease-out;
   -moz-transition: all 500ms ease-out;
   transition: all 500ms ease-out; }
 
-#five {
-  background-color: orange; }
-
 #five-img {
-  background-image: url("pic5.jpg"); }
-
-#six {
-  background-color: black; }
+  background-image: url("/wp-content/uploads/2017/03/home-drinks-manhattan.jpg"); }
 
 #six-img {
-  background-image: url("pic3.jpg"); }
+  background-image: url("/wp-content/uploads/2017/03/home-contact.jpg"); }
 
 .main-page-slide {
   height: 100vh;
@@ -5691,7 +5673,12 @@ body {
   background-position: center center; }
 
 .main-page-txt {
-  display: none; }
+  display: none;
+  background: url("/wp-content/uploads/2017/03/home-background-texture-grey.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; }
   @media screen and (min-width: 992px) {
     .main-page-txt {
       display: block; } }
