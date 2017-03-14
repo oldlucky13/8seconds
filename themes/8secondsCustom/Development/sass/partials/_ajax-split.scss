@@ -4,7 +4,10 @@
   // right: -100%;
   height: 100%;
   overflow-y: auto;
-
+  background: $main-texture;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   @media screen and (max-width: 991px){
     top: 0;
     width: 100%;
@@ -13,12 +16,12 @@
 
 
 .ajaxAboutSection {
-  background-color: pink;
+  // background-color: pink;
   left: 100%;
 }
 
 .ajaxRecipesSection {
-  background-color: purple;
+  // background-color: purple;
 }
 
 #about-ajax-breadcrumb-group {

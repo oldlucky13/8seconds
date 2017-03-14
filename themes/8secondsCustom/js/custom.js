@@ -269,6 +269,7 @@ $('#recipes-btn').click(function () {
     $(this).children().addClass("fa-chevron-right");
   }
 })
+
 $('#recipes-btn-fwd-mobile').click(function () {
   recipesAreaTlMobile.play();
   triggerSection("recipes");
@@ -306,6 +307,8 @@ $('#about-btn').click(function () {
     aboutAreaTl.reverse();
     triggerSection("main");
     TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    aboutBreadcrumbFive.reverse();
+    aboutBreadcrumbFour.reverse();
     aboutBreadcrumbThree.reverse();
     aboutBreadcrumbTwo.reverse();
     aboutBreadcrumbOne.reverse();
@@ -391,6 +394,14 @@ aboutBreadcrumbTwo.to($aboutBreadcrumbText[1], 1, {ease: Power4.easeInOut, opaci
 var aboutBreadcrumbThree = new TimelineMax({paused: true});
 aboutBreadcrumbThree.to($aboutBreadcrumbs.children()[2], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
 aboutBreadcrumbThree.to($aboutBreadcrumbText[2], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
+var aboutBreadcrumbFour = new TimelineMax({paused: true});
+aboutBreadcrumbFour.to($aboutBreadcrumbs.children()[3], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+aboutBreadcrumbFour.to($aboutBreadcrumbText[3], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
+var aboutBreadcrumbFive = new TimelineMax({paused: true});
+aboutBreadcrumbFive.to($aboutBreadcrumbs.children()[4], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+aboutBreadcrumbFive.to($aboutBreadcrumbText[4], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 // var aboutBreadcrumbTwo = $aboutBreadcrumbText[1];
 // var aboutBreadcrumbThree = $aboutBreadcrumbText[2];
 
@@ -400,20 +411,34 @@ function handleOtherScrolling(section, dY, dF) {
     var aboutOne = $('#about-one').offset().top;
     var aboutTwo = $('#about-two').offset().top;
     var aboutThree = $('#about-three').offset().top;
-    if ((scrollPosition + $(window).height()) > aboutThree) {
+    var aboutFour = $('#about-four').offset().top;
+    var aboutFive = $('#about-five').offset().top;
+    if ((scrollPosition + $(window).height()) > aboutFive) {
+      aboutBreadcrumbFour.reverse();
+      aboutBreadcrumbFive.play();
+      $aboutImg.css('background-image', 'url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
+    } else if ((scrollPosition + $(window).height()) > aboutFour) {
+      aboutBreadcrumbFive.reverse();
+      aboutBreadcrumbThree.reverse();
+      aboutBreadcrumbFour.play();
+      $aboutImg.css('background-image', 'url(/wp-content/uploads/2017/03/story-vintagebull.jpg)');
+    } else if ((scrollPosition + $(window).height()) > aboutThree) {
       aboutBreadcrumbTwo.reverse();
+      aboutBreadcrumbFour.reverse();
       aboutBreadcrumbThree.play();
-      $aboutImg.css('background-image','url(http://media4.s-nbcnews.com/j/newscms/2016_36/1685951/ss-160826-twip-05_8cf6d4cb83758449fd400c7c3d71aa1f.nbcnews-ux-2880-1000.jpg)');
-      // $aboutBreadcrumbs.find(aboutBreadcrumbThree).fadeIn();
+      $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/story-gloves.jpg)');
     } else if ((scrollPosition + $(window).height()) > aboutTwo) {
       aboutBreadcrumbOne.reverse()
       aboutBreadcrumbThree.reverse();
       aboutBreadcrumbTwo.play();
-      $aboutImg.css('background-image','url(http://animal-dream.com/data_images/panda/panda7.jpg)');
-    } else {
+      $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/story-bullrider.jpg)');
+    } else if ((scrollPosition + $(window).height()) > aboutOne) {
       aboutBreadcrumbTwo.reverse();
       aboutBreadcrumbOne.play();
-      $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+      $aboutImg.css('background-image', 'url(/wp-content/uploads/2017/03/story-matador.jpg)');
+    } else {
+      aboutBreadcrumbOne.reverse();
+      $aboutImg.css('background-image', 'url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
     // }
 
     // console.log("sP = " + scrollPosition);

@@ -21,7 +21,7 @@
 //   background-color: green;
 // }
 #four-img {
-  background-image: url("/wp-content/uploads/2017/03/home-story-boots.jpg");
+  background-image: $story-main;
   // background-position-x: -225px;
   @include transition(all 500ms ease-out);
 }
@@ -53,7 +53,7 @@
 
 .main-page-txt {
   display: none;
-  background: url("/wp-content/uploads/2017/03/home-background-texture-grey.jpg");
+  background: $main-texture;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

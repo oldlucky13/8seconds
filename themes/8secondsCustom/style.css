@@ -5779,18 +5779,18 @@ body {
   position: absolute;
   left: 100%;
   height: 100%;
-  overflow-y: auto; }
+  overflow-y: auto;
+  background: url("/wp-content/uploads/2017/03/home-background-texture-grey.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
   @media screen and (max-width: 991px) {
     .ajaxSection {
       top: 0;
       width: 100%; } }
 
 .ajaxAboutSection {
-  background-color: pink;
   left: 100%; }
-
-.ajaxRecipesSection {
-  background-color: purple; }
 
 #about-ajax-breadcrumb-group {
   position: absolute;
