@@ -23,15 +23,18 @@ get_header();
       <div class="main-page-slide-group">
         <div id="one" class="show-off row main-page-slide">
           <div class="no-mobile-col col-md-6 main-page-txt">
-            <h1 style="text-align: center">one</h1>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+            <!-- <img src="wp-content/uploads/2017/03/home-premium-title_v3.svg" alt=""> -->
+            <p>This unique Candadian Whisky developed elegant nuances from its aging  in oak barrels and has become one of the smoothest, most refined Canadian Whiskies on the market today.</p>
             <div class="icon-section">
               <p class="icon-section-line"></p>
+            </div>
+            <div class="filler">
             </div>
           </div>
           <div id="one-img" class="main-page-img no-mobile-col col-md-6">
             <div class="no-mobile-col col-md-6 main-page-txt-mobile">
-              <h1 style="text-align: center">one</h1>
+              <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
             </div>
@@ -39,39 +42,46 @@ get_header();
         </div>
         <div id="two" class="show-off row main-page-slide">
           <div class="no-mobile-col col-md-6 main-page-txt">
-            <h1 style="text-align: center">two</h1>
+            <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <div class="filler">
+            </div>
           </div>
           <div id="two-img" class="main-page-img no-mobile-col col-md-6">
             <div class="no-mobile-col col-md-6 main-page-txt-mobile">
-              <h1 style="text-align: center">two</h1>
+              <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </div>
           </div>
         </div>
         <div id="three" class="show-off row main-page-slide">
           <div class="no-mobile-col col-md-6 main-page-txt">
-            <h1 style="text-align: center">three</h1>
+            <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <div class="filler">
+            </div>
           </div>
           <div id="three-img" class="main-page-img no-mobile-col col-md-6">
             <div class="no-mobile-col col-md-6 main-page-txt-mobile">
-              <h1 style="text-align: center">three</h1>
+              <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </div>
           </div>
         </div>
         <div id="four" class="about row main-page-slide">
           <div class="no-mobile-col col-md-6 main-page-txt">
-            <h1 style="text-align: center">four</h1>
+            <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             <!-- <button id="about-btn-fwd-desk" type="button" class="btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></button> -->
+            <div class="filler">
+
+            </div>
           </div>
           <div id="four-img" class="main-page-img no-mobile-col col-md-6">
             <button id="about-btn" type="button" class="btn slide-button fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
             <!-- <button id="about-btn" type="button" class="btn slide-button fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i><i class="fa fa-chevron-left initial-hide" aria-hidden="true"></i></button> -->
             <div class="no-mobile-col col-md-6 main-page-txt-mobile">
-              <h1 style="text-align: center">four</h1>
+              <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               <button id="about-btn-fwd-mobile" type="button" class="btn btn-primary">See More</button>
             </div>
@@ -159,14 +169,15 @@ get_header();
         </div>
         <div id="five" class="story row main-page-slide">
           <div class="no-mobile-col col-md-6 main-page-txt">
-            <h1 style="text-align: center">five</h1>
+            <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+            <div class="filler">
+            </div>
           </div>
           <div id="five-img" class="main-page-img no-mobile-col col-md-6">
             <button id="recipes-btn" type="button" class="btn slide-button fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
             <div class="no-mobile-col col-md-6 main-page-txt-mobile">
-              <h1 style="text-align: center">five</h1>
+              <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               <button id="recipes-btn-fwd-mobile" type="button" class="btn btn-primary">See More</button>
             </div>
@@ -283,12 +294,14 @@ get_header();
         </div>
         <div id="six" class="contact row main-page-slide">
           <div class="no-mobile-col col-md-6 main-page-txt">
-            <h1 style="text-align: center">six</h1>
+            <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <div class="filler">
+            </div>
           </div>
           <div id="six-img" class="main-page-img no-mobile-col col-md-6">
             <div class="no-mobile-col col-md-6 main-page-txt-mobile">
-              <h1 style="text-align: center">six</h1>
+              <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </div>
           </div>
@@ -298,7 +311,7 @@ get_header();
 
       <div class="main-page-title-group">
         <div class="main-page-slide-title">
-          <h2 id="first-h2-child" class="h2-child">One</h2>
+          <h2 id="first-h2-child" class="h2-child"><img src="wp-content/uploads/2017/03/home-premium-title_v3.svg" alt=""></h2>
         </div>
       </div>
       <div class="main-page-title-group">

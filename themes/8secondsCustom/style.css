@@ -5675,16 +5675,27 @@ body {
   background-size: cover;
   background-position: center center; }
 
+.icon-mini {
+  height: 67px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px; }
+
 .main-page-txt {
   display: none;
+  height: 100vh;
   background: url("/wp-content/uploads/2017/03/home-background-texture-grey.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh; }
+  color: #EAE6DE; }
   @media screen and (min-width: 992px) {
     .main-page-txt {
       display: block; } }
+  .main-page-txt h1 {
+    text-align: center; }
+  .main-page-txt p {
+    text-align: center; }
 
 .main-page-txt-mobile {
   display: inline-block; }
@@ -5711,6 +5722,9 @@ body {
   overflow: hidden;
   height: 50px; }
 
+.filler {
+  width: 100vw; }
+
 .h2-child {
   transform: translateY(100%);
   margin: 0;
@@ -5731,7 +5745,7 @@ body {
   margin-bottom: 20px;
   list-style: none;
   background-color: transparent;
-  border: 1px solid #81754e;
+  border: 1px solid #86754D;
   border-radius: 10px;
   width: 10px;
   height: 10px;
@@ -5739,14 +5753,14 @@ body {
   transition: all 1s ease; }
 
 .breadcrumb-active {
-  background-color: #81754e; }
+  background-color: #86754D; }
 
 .icon-section {
   width: 33.33%;
   height: 200px;
   margin: 0 auto;
-  border-top: 1px solid #81754e;
-  border-bottom: 1px solid #81754e; }
+  border-top: 1px solid #86754D;
+  border-bottom: 1px solid #86754D; }
 
 @media screen and (max-width: 991px) {
   .desk-btn {
@@ -5761,7 +5775,7 @@ body {
   top: 50%;
   left: 4%;
   background: #e8e5dd;
-  border: 3px solid #81754e;
+  border: 3px solid #86754D;
   padding: 9px 16px;
   border-radius: 22px; }
   .slide-button i {
@@ -5831,7 +5845,7 @@ body {
 
 .button_container {
   position: absolute;
-  top: 2%;
+  top: 4%;
   left: 2%;
   height: 27px;
   width: 35px;
@@ -5856,7 +5870,7 @@ body {
     -o-transform: translateY(-11px) translateX(0) rotate(-45deg);
     transform: translateY(-11px) translateX(0) rotate(-45deg); }
   .button_container span {
-    background: #81754e;
+    background: #86754D;
     border: none;
     height: 2px;
     width: 100%;
