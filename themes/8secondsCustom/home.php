@@ -324,50 +324,62 @@ get_header();
 
       <div class="main-page-title-group">
         <div class="main-page-slide-title">
-          <h2 id="first-h2-child" class="h2-child">
-            <!-- <img src="wp-content/uploads/2017/03/home-premium-title_v3.svg" alt=""> -->
+          <!-- <h2 id="first-h2-child" class="h2-child"> -->
+            <img id="first-h2-child" class="h2-child" src="wp-content/uploads/2017/03/home-premium-title_v3.svg" alt="">
+            <!-- <img class="h2-child" src="wp-content/uploads/2017/03/home-premium-title_v3.svg" alt=""> -->
+            <!-- <h2 id="first-h2-child" class="h2-child">
             testtestest
-          </h2>
+          </h2> -->
         </div>
       </div>
       <div class="main-page-title-group">
         <div class="main-page-slide-title">
-          <h2 class="h2-child">
-            <!-- <img src="/wp-content/uploads/2017/03/home-black-title.svg" alt=""> -->
+          <!-- <h2 class="h2-child"> -->
+            <img class="h2-child" src="/wp-content/uploads/2017/03/home-black-title.svg" alt="">
+            <!-- <img class="h2-child" src="/wp-content/uploads/2017/03/home-black-title.svg" alt=""> -->
+            <!-- <h2 class="h2-child">
             testtestest
-          </h2>
+          </h2> -->
         </div>
       </div>
       <div class="main-page-title-group">
         <div class="main-page-slide-title">
-          <h2 class="h2-child">
-            <!-- <img src="wp-content/uploads/2017/03/home-honey-cinnamon.svg" alt=""> -->
+          <!-- <h2 class="h2-child"> -->
+            <img class="h2-child" src="wp-content/uploads/2017/03/home-honey-cinnamon.svg" alt="">
+            <!-- <img class="h2-child" src="wp-content/uploads/2017/03/home-honey-cinnamon.svg" alt=""> -->
+            <!-- <h2 class="h2-child">
             testtestest
-          </h2>
+          </h2> -->
         </div>
       </div>
       <div class="main-page-title-group">
         <div class="main-page-slide-title">
-          <h2 class="h2-child">
-            <!-- <img src="wp-content/uploads/2017/03/home-story-title.svg" alt=""> -->
+          <!-- <h2 class="h2-child"> -->
+            <img class="h2-child" src="wp-content/uploads/2017/03/home-story-title.svg" alt="">
+            <!-- <img class="h2-child" src="wp-content/uploads/2017/03/home-story-title.svg" alt=""> -->
+            <!-- <h2 class="h2-child">
             testtestest
-          </h2>
+          </h2> -->
         </div>
       </div>
       <div class="main-page-title-group">
         <div class="main-page-slide-title">
-          <h2 class="h2-child">
-            <!-- <img src="wp-content/uploads/2017/03/home-recipes-title.svg" alt=""> -->
+          <!-- <h2 class="h2-child"> -->
+            <img class="h2-child" src="wp-content/uploads/2017/03/home-recipes-title.svg" alt="">
+            <!-- <img class="h2-child" src="wp-content/uploads/2017/03/home-recipes-title.svg" alt=""> -->
+            <!-- <h2 class="h2-child">
             testtestest
-          </h2>
+          </h2> -->
         </div>
           </div>
       <div class="main-page-title-group">
         <div class="main-page-slide-title">
-          <h2 class="h2-child">
-            <!-- <img src="wp-content/uploads/2017/03/home-contact-title.svg" alt=""> -->
+          <!-- <h2 class="h2-child"> -->
+            <img class="h2-child" src="wp-content/uploads/2017/03/home-contact-title.svg" alt="">
+            <!-- <img class="h2-child" src="wp-content/uploads/2017/03/home-contact-title.svg" alt=""> -->
+            <!-- <h2 class="h2-child">
             testtestest
-          </h2>
+          </h2> -->
         </div>
       </div>
 

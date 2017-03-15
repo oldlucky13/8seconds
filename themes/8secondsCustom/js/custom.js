@@ -268,6 +268,13 @@ $('#recipes-btn').click(function () {
     recipesAreaTl.reverse();
     triggerSection("main");
     TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    recipesBreadcrumbSeven.reverse();
+    recipesBreadcrumbSix.reverse();
+    recipesBreadcrumbFive.reverse();
+    recipesBreadcrumbFour.reverse();
+    recipesBreadcrumbThree.reverse();
+    recipesBreadcrumbTwo.reverse();
+    recipesBreadcrumbOne.reverse();
     $(this).removeClass("bk");
     $(this).addClass("fwd");
     $(this).children().removeClass("fa-chevron-left");

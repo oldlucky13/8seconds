@@ -107,12 +107,14 @@
   color: #fff;
   overflow: hidden;
   // height: 50px;
-  h2 {
-    img {
-      height: 300px;
-      width: 500px;
-    }
-  }
+
+  // testonlyoff
+  // h2 {
+  //   img {
+  //     height: 300px;
+  //     width: 500px;
+  //   }
+  // }
 }
 
 .filler {
@@ -123,6 +125,10 @@
   transform: translateY(100%);
   margin: 0;
   font-size: 50px;
+
+  // testonly
+  height: 300px;
+  width: 500px;
 }
 
 #first-h2-child {
