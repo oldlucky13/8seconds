@@ -35,6 +35,17 @@
   opacity: 0;
 }
 
+#recipes-ajax-breadcrumb-group {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  color: white;
+  list-style: none;
+  text-align: right;
+  display: none;
+  opacity: 0;
+}
+
 .ajax-breadcrumb {
   position: relative;
   margin-right: 10px;

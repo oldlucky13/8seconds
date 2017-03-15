@@ -92,6 +92,9 @@ jQuery(document).ready(function( $ ) {
   $aboutImg = $('#four-img');
   $aboutBreadcrumbs = $('#about-ajax-breadcrumb-group');
   $aboutBreadcrumbText = $('.about-breadcrumb-text');
+  $recipesImg = $('#five-img');
+  $recipesBreadcrumbs = $('#recipes-ajax-breadcrumb-group');
+  $recipesBreadcrumbText = $('.recipes-breadcrumb-text');
   $menuContainer = $('.menu-container');
   $menuLeft = $('.menu-left');
   $menuGrey = $('.menu-grey');
@@ -240,6 +243,8 @@ var recipesAreaTl = new TimelineMax({paused: true});
 recipesAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("recipes")}, 0);
 recipesAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
 recipesAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
+recipesAreaTl.to($recipesBreadcrumbs, .1, {display: "block"}, 0);
+recipesAreaTl.to($recipesBreadcrumbs, 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 // recipesAreaTl.to($ajaxRecipesSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
 // recipesAreaTl.to($ajaxRecipesSection[0], .1, {ease: Power4.easeOut, scrollTo: 0}, 0);
 
@@ -405,6 +410,34 @@ aboutBreadcrumbFive.to($aboutBreadcrumbText[4], 1, {ease: Power4.easeInOut, opac
 // var aboutBreadcrumbTwo = $aboutBreadcrumbText[1];
 // var aboutBreadcrumbThree = $aboutBreadcrumbText[2];
 
+var recipesBreadcrumbOne = new TimelineMax({paused: true});
+recipesBreadcrumbOne.to($recipesBreadcrumbs.children()[0], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbOne.to($recipesBreadcrumbText[0], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
+var recipesBreadcrumbTwo = new TimelineMax({paused: true});
+recipesBreadcrumbTwo.to($recipesBreadcrumbs.children()[1], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbTwo.to($recipesBreadcrumbText[1], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
+var recipesBreadcrumbThree = new TimelineMax({paused: true});
+recipesBreadcrumbThree.to($recipesBreadcrumbs.children()[2], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbThree.to($recipesBreadcrumbText[2], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
+var recipesBreadcrumbFour = new TimelineMax({paused: true});
+recipesBreadcrumbFour.to($recipesBreadcrumbs.children()[3], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbFour.to($recipesBreadcrumbText[3], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
+var recipesBreadcrumbFive = new TimelineMax({paused: true});
+recipesBreadcrumbFive.to($recipesBreadcrumbs.children()[4], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbFive.to($recipesBreadcrumbText[4], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
+var recipesBreadcrumbSix = new TimelineMax({paused: true});
+recipesBreadcrumbSix.to($recipesBreadcrumbs.children()[5], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbSix.to($recipesBreadcrumbText[5], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
+var recipesBreadcrumbSeven = new TimelineMax({paused: true});
+recipesBreadcrumbSeven.to($recipesBreadcrumbs.children()[6], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbSeven.to($recipesBreadcrumbText[6], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
 function handleOtherScrolling(section, dY, dF) {
   var scrollPosition = section[0].scrollTop += (-dY * dF);
   if (section === $ajaxAboutSection) {
@@ -454,6 +487,48 @@ function handleOtherScrolling(section, dY, dF) {
     // } else if (scrollPosition === 1000 && dY < 0) {
     //   $aboutImg.css('background-image','url(http://cdn.hexjam.com/editorial_service/bases/images/000/004/799/xlarge/pandarockinghorsefeature.jpg.jpg?1404188201)');
 
+    }
+  } else if (section === $ajaxRecipesSection) {
+    var recipesOne = $('#recipes-one').offset().top;
+    var recipesTwo = $('#recipes-two').offset().top;
+    var recipesThree = $('#recipes-three').offset().top;
+    var recipesFour = $('#recipes-four').offset().top;
+    var recipesFive = $('#recipes-five').offset().top;
+    var recipesSix = $('#recipes-six').offset().top;
+    var recipesSeven = $('#recipes-seven').offset().top;
+    if ((scrollPosition + $(window).height()) > recipesSeven){
+      recipesBreadcrumbSix.reverse();
+      recipesBreadcrumbSeven.play();
+      $recipesImg.css('background-image', 'url(/wp-content/uploads/2017/03/drinks-neat.jpg)');
+    } else if ((scrollPosition + $(window).height()) > recipesSix) {
+      recipesBreadcrumbSeven.reverse();
+      recipesBreadcrumbFive.reverse();
+      recipesBreadcrumbSix.play();
+      $recipesImg.css('background-image', 'url(/wp-content/uploads/2017/03/drinks-shooters.jpg)');
+    } else if ((scrollPosition + $(window).height()) > recipesFive) {
+      recipesBreadcrumbSix.reverse();
+      recipesBreadcrumbFour.reverse();
+      recipesBreadcrumbFive.play();
+      $recipesImg.css('background-image', 'url(/wp-content/uploads/2017/03/drinks-whiskeyginger.jpg)');
+    } else if ((scrollPosition + $(window).height()) > recipesFour) {
+      recipesBreadcrumbFive.reverse();
+      recipesBreadcrumbThree.reverse();
+      recipesBreadcrumbFour.play();
+      $recipesImg.css('background-image', 'url(/wp-content/uploads/2017/03/drinks-cowboy.jpg)');
+    } else if ((scrollPosition + $(window).height()) > recipesThree) {
+      recipesBreadcrumbFour.reverse();
+      recipesBreadcrumbTwo.reverse();
+      recipesBreadcrumbThree.play();
+      $recipesImg.css('background-image','url(/wp-content/uploads/2017/03/drinks-oldfashioned.jpg)');
+    } else if ((scrollPosition + $(window).height()) > recipesTwo) {
+      recipesBreadcrumbThree.reverse();
+      recipesBreadcrumbOne.reverse()
+      recipesBreadcrumbTwo.play();
+      $recipesImg.css('background-image','url(/wp-content/uploads/2017/03/drinks-whiskeycola.jpg)');
+    } else {
+      recipesBreadcrumbTwo.reverse();
+      recipesBreadcrumbOne.play();
+      $recipesImg.css('background-image', 'url(/wp-content/uploads/2017/03/home-drinks-manhattan.jpg)');
     }
   }
 }

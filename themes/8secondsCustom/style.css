@@ -5657,7 +5657,10 @@ body {
   transition: all 500ms ease-out; }
 
 #five-img {
-  background-image: url("/wp-content/uploads/2017/03/home-drinks-manhattan.jpg"); }
+  background-image: url("/wp-content/uploads/2017/03/home-drinks-manhattan.jpg");
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  transition: all 500ms ease-out; }
 
 #six-img {
   background-image: url("/wp-content/uploads/2017/03/home-contact.jpg"); }
@@ -5793,6 +5796,16 @@ body {
   left: 100%; }
 
 #about-ajax-breadcrumb-group {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  color: white;
+  list-style: none;
+  text-align: right;
+  display: none;
+  opacity: 0; }
+
+#recipes-ajax-breadcrumb-group {
   position: absolute;
   top: 50%;
   right: 30px;

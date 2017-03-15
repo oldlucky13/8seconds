@@ -31,6 +31,7 @@
 #five-img {
   background-image: url("/wp-content/uploads/2017/03/home-drinks-manhattan.jpg");
   // background-position-x: -350px;
+  @include transition(all 500ms ease-out);
 }
 // #six {
 //   background-color: black;
