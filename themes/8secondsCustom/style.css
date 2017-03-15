@@ -5695,7 +5695,8 @@ body {
   .main-page-txt h1 {
     text-align: center; }
   .main-page-txt p {
-    text-align: center; }
+    text-align: center;
+    margin-top: 50%; }
 
 .main-page-txt-mobile {
   display: inline-block; }
@@ -5705,9 +5706,8 @@ body {
 
 .main-page-title-group {
   position: absolute;
-  left: 90px;
-  top: 45%;
-  width: 100%;
+  left: calc((100%/4) - 250px);
+  top: 18%;
   box-sizing: border-box;
   z-index: 2; }
 
@@ -5719,8 +5719,10 @@ body {
   text-transform: uppercase;
   line-height: 31pt;
   color: #fff;
-  overflow: hidden;
-  height: 50px; }
+  overflow: hidden; }
+  .main-page-slide-title h2 img {
+    height: 300px;
+    width: 500px; }
 
 .filler {
   width: 100vw; }

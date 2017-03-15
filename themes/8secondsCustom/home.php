@@ -25,7 +25,9 @@ get_header();
           <div class="no-mobile-col col-md-6 main-page-txt">
             <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             <!-- <img src="wp-content/uploads/2017/03/home-premium-title_v3.svg" alt=""> -->
-            <p>This unique Candadian Whisky developed elegant nuances from its aging  in oak barrels and has become one of the smoothest, most refined Canadian Whiskies on the market today.</p>
+            <p>
+              This unique Candadian Whisky developed elegant nuances from its aging  in oak barrels and has become one of the smoothest, most refined Canadian Whiskies on the market today.
+            </p>
             <div class="icon-section">
               <p class="icon-section-line"></p>
             </div>
@@ -43,7 +45,9 @@ get_header();
         <div id="two" class="show-off row main-page-slide">
           <div class="no-mobile-col col-md-6 main-page-txt">
             <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <p>
+              Aged for 8 years, 8 Seconds Black is a rich and full flavored Canadian Whisky. A tad darker than the original 8 Seconds Premium, it is an excellent sipper.
+            </p>
             <div class="filler">
             </div>
           </div>
@@ -57,7 +61,9 @@ get_header();
         <div id="three" class="show-off row main-page-slide">
           <div class="no-mobile-col col-md-6 main-page-txt">
             <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <p>
+              With the curative powers of honey-cinnamon in mind, we took aged Canadian Whisky, blended it with natural honey-cinnamon extract and provided you a superb, smooth tasting blend.
+            </p>
             <div class="filler">
             </div>
           </div>
@@ -71,7 +77,9 @@ get_header();
         <div id="four" class="about row main-page-slide">
           <div class="no-mobile-col col-md-6 main-page-txt">
             <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <p>
+              When cowboys originally would ride a bull to death, the 8 seconds standard has helped bull riding evolve into America’s fastest growing sport.
+            </p>
             <!-- <button id="about-btn-fwd-desk" type="button" class="btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></button> -->
             <div class="filler">
 
@@ -170,7 +178,10 @@ get_header();
         <div id="five" class="story row main-page-slide">
           <div class="no-mobile-col col-md-6 main-page-txt">
             <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <p>
+              "Too much of anything is bad, but too much of a good whiskey is never enough." <br>
+              - Mark Twain
+            </p>
             <div class="filler">
             </div>
           </div>
@@ -295,7 +306,9 @@ get_header();
         <div id="six" class="contact row main-page-slide">
           <div class="no-mobile-col col-md-6 main-page-txt">
             <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
             <div class="filler">
             </div>
           </div>
@@ -311,32 +324,50 @@ get_header();
 
       <div class="main-page-title-group">
         <div class="main-page-slide-title">
-          <h2 id="first-h2-child" class="h2-child"><img src="wp-content/uploads/2017/03/home-premium-title_v3.svg" alt=""></h2>
+          <h2 id="first-h2-child" class="h2-child">
+            <!-- <img src="wp-content/uploads/2017/03/home-premium-title_v3.svg" alt=""> -->
+            testtestest
+          </h2>
         </div>
       </div>
       <div class="main-page-title-group">
         <div class="main-page-slide-title">
-          <h2 class="h2-child">Two</h2>
+          <h2 class="h2-child">
+            <!-- <img src="/wp-content/uploads/2017/03/home-black-title.svg" alt=""> -->
+            testtestest
+          </h2>
         </div>
       </div>
       <div class="main-page-title-group">
         <div class="main-page-slide-title">
-          <h2 class="h2-child">Three</h2>
+          <h2 class="h2-child">
+            <!-- <img src="wp-content/uploads/2017/03/home-honey-cinnamon.svg" alt=""> -->
+            testtestest
+          </h2>
         </div>
       </div>
       <div class="main-page-title-group">
         <div class="main-page-slide-title">
-          <h2 class="h2-child">Four</h2>
+          <h2 class="h2-child">
+            <!-- <img src="wp-content/uploads/2017/03/home-story-title.svg" alt=""> -->
+            testtestest
+          </h2>
         </div>
       </div>
       <div class="main-page-title-group">
         <div class="main-page-slide-title">
-          <h2 class="h2-child">Five</h2>
+          <h2 class="h2-child">
+            <!-- <img src="wp-content/uploads/2017/03/home-recipes-title.svg" alt=""> -->
+            testtestest
+          </h2>
         </div>
-      </div>
+          </div>
       <div class="main-page-title-group">
         <div class="main-page-slide-title">
-          <h2 class="h2-child">Six</h2>
+          <h2 class="h2-child">
+            <!-- <img src="wp-content/uploads/2017/03/home-contact-title.svg" alt=""> -->
+            testtestest
+          </h2>
         </div>
       </div>
 
