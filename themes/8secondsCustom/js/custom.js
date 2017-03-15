@@ -80,24 +80,38 @@ jQuery(window).on('load', function($) { // makes sure the whole site is loaded
 jQuery(document).ready(function( $ ) {
 
   /***************
-  Variables/Mousewheel
+  Variables
   ***************/
-
   $body = $('body');
   $mainPageContainer = $('.main-page-container');
-  $mainPageAll = $mainPageContainer.children() //.addBack();
+  $mainPageAll = $mainPageContainer.children(); //.addBack();
   $breadcrumbGroup = $('#breadcrumb-group');
   $ajaxAboutSection = $('.ajaxAboutSection');
   $ajaxRecipesSection = $('.ajaxRecipesSection');
+  $noMobileCol = $('.no-mobile-col');
+  $aboutImg = $('#four-img');
+  $aboutBreadcrumbs = $('#about-ajax-breadcrumb-group');
+  $aboutBreadcrumbText = $('.about-breadcrumb-text');
+  $recipesImg = $('#five-img');
+  $recipesBreadcrumbs = $('#recipes-ajax-breadcrumb-group');
+  $recipesBreadcrumbText = $('.recipes-breadcrumb-text');
+  $menuContainer = $('.menu-container');
+  $menuLeft = $('.menu-left');
+  $menuGrey = $('.menu-grey');
+
   var mainIdx = 0;
   var mainScrollUnlocked = true;
   var onMainPage = true;
   var onAboutPage = false;
   var onRecipesPage = false;
+  var deskClassAdded = false;
+  var startingSideWidth = null;
+
+  /***************
+  Mousewheel
+  ***************/
 
   $body.mousewheel(function(event) {
-    // console.log(event.deltaX, event.deltaY, event.deltaFactor);
-    console.log("Main:" + onMainPage + "About:" + onAboutPage + "Recipes:" + onRecipesPage);
     if (onMainPage) {
       handleMainPageScroll(event.deltaY);
     } else if (onAboutPage) {
@@ -109,7 +123,7 @@ jQuery(document).ready(function( $ ) {
 
 
 /***************
-Scroll Logic
+Main Scroll Logic
 ***************/
 
 function handleMainPageScroll(scrollDir, newMainIdx) {
@@ -143,12 +157,12 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
 }
 
 function nextSlide(idx, callback) {
-  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx - 1), .9, {y:"-100%", onComplete: nextTitle(idx, callback)});
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx - 1), 1, {y:"-100%", onComplete: nextTitle(idx, callback)});
   $('.main-page-slide-group').children().eq(idx).fadeIn();
 }
 
 function previousSlide(idx, callback) {
-  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx + 1), .9, {y:"100%", onComplete: nextTitle(idx, callback)});
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx + 1), 1, {y:"100%", onComplete: nextTitle(idx, callback)});
   $('.main-page-slide-group').children().eq(idx + 1).fadeOut();
 }
 
@@ -177,7 +191,7 @@ function jumpToSlide(oldIdx, newIdx) {
 }
 
 function nextTitle(idx, callback) {
-  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx), .9, {y:"0%", onComplete: function () {
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx), 1, {y:"0%", onComplete: function () {
     if (typeof callback === "function") {
       callback();
     }
@@ -209,39 +223,146 @@ function revealTitles(titles) {
 /***************
 Ajax loading
 ***************/
-var mainAreaTl = new TimelineMax({paused: true});
-mainAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("about")}, 0);
-mainAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
-mainAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
-mainAreaTl.to($ajaxAboutSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
+var aboutAreaTl = new TimelineMax({paused: true});
+aboutAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("about")}, 0);
+aboutAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
+aboutAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
+aboutAreaTl.to($aboutBreadcrumbs, .1, {display: "block"}, 0);
+aboutAreaTl.to($aboutBreadcrumbs, 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+// aboutAreaTl.to($ajaxAboutSection, 1.75, {ease: Power4.easeOut, left: "50%"}, 1);
+// aboutAreaTl.to($ajaxAboutSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
+// aboutAreaTl.to($ajaxAboutSection[0], .1, {ease: Power4.easeOut, scrollTo: 0}, 0);
+
+var aboutAreaTlMobile = new TimelineMax({paused: true});
+aboutAreaTlMobile.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -100, onComplete: triggerSection.bind("about")}, 0);
+aboutAreaTlMobile.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
+// aboutAreaTlMobile.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
+// aboutAreaTlMobile.to($ajaxAboutSection, .7, {ease: Power4.easeOut, left: "50%"}, 0);
 
 var recipesAreaTl = new TimelineMax({paused: true});
 recipesAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("recipes")}, 0);
 recipesAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
 recipesAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
-recipesAreaTl.to($ajaxRecipesSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
+recipesAreaTl.to($recipesBreadcrumbs, .1, {display: "block"}, 0);
+recipesAreaTl.to($recipesBreadcrumbs, 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+// recipesAreaTl.to($ajaxRecipesSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
+// recipesAreaTl.to($ajaxRecipesSection[0], .1, {ease: Power4.easeOut, scrollTo: 0}, 0);
+
+var recipesAreaTlMobile = new TimelineMax({paused: true});
+recipesAreaTlMobile.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -100, onComplete: triggerSection.bind("recipes")}, 0);
+recipesAreaTlMobile.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
+
 
 var ajaxAboutTl = new TimelineMax({paused: true});
 ajaxAboutTl.to($ajaxAboutSection, 1.7, {ease: Power4.easeInOut, right: "-50%"}, 0);
 
-$('#recipes-btn-fwd').click(function () {
-  recipesAreaTl.play();
+$('#recipes-btn').click(function () {
+  if ($(this).hasClass("fwd")) {
+    recipesAreaTl.play();
+    triggerSection("recipes");
+    $(this).removeClass("fwd");
+    $(this).addClass("bk");
+    $(this).children().removeClass("fa-chevron-right");
+    $(this).children().addClass("fa-chevron-left");
+  } else if ($(this).hasClass("bk")) {
+    recipesAreaTl.reverse();
+    triggerSection("main");
+    TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    $(this).removeClass("bk");
+    $(this).addClass("fwd");
+    $(this).children().removeClass("fa-chevron-left");
+    $(this).children().addClass("fa-chevron-right");
+  }
+})
+
+$('#recipes-btn-fwd-mobile').click(function () {
+  recipesAreaTlMobile.play();
   triggerSection("recipes");
 })
 
-$('#recipes-btn-bk').click(function () {
-  recipesAreaTl.reverse();
+$('#recipes-btn-bk-mobile').click(function () {
+  recipesAreaTlMobile.reverse();
   triggerSection("main");
+  TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+  // $ajaxRecipesSection[0].scrollTop = 0;
 })
 
-$('#about-btn-fwd').click(function () {
-  mainAreaTl.play();
+$('#about-btn').click(function () {
+  if ($(this).hasClass("fwd")) {
+    aboutAreaTl.play();
+    triggerSection("about");
+    $(this).removeClass("fwd");
+    $(this).addClass("bk");
+    // TweenMax.to($(this).children(), 1, {className: "-=fa-chevron-right", className: "+=fa-chevron-left"});
+    // $(this).children().switchClass( "fa-chevron-right", "fa-chevron-left", 1000, "easeInOutQuad" );
+
+    // TweenMax.to($(this).children()[0], 1, {display: "none", opacity: 0, visibility: "hidden"});
+    // TweenMax.to($(this).children()[1], 1, {display: "inline-block", opacity: 1, visibility: "visibile"});
+
+    // $(this).children().eq(0).addClass("hidden");
+    // $(this).children().eq(1).removeClass("hidden");
+
+    // $("fa-chevron-right").addClass("hidden");
+    // $("fa-chevron-left").removeClass("hidden");
+
+    $(this).children().removeClass("fa-chevron-right");
+    $(this).children().addClass("fa-chevron-left");
+  } else if ($(this).hasClass("bk")) {
+    $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
+    aboutAreaTl.reverse();
+    triggerSection("main");
+    TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    aboutBreadcrumbFive.reverse();
+    aboutBreadcrumbFour.reverse();
+    aboutBreadcrumbThree.reverse();
+    aboutBreadcrumbTwo.reverse();
+    aboutBreadcrumbOne.reverse();
+    $(this).removeClass("bk");
+    $(this).addClass("fwd");
+        // $(this).switchClass( "fa-chevron-left", "fa-chevron-right", 1000, "easeInOutQuad" );
+    // $("fa-chevron-left").addClass("hidden");
+    // $("fa-chevron-right").removeClass("hidden");
+
+    $(this).children().removeClass("fa-chevron-left");
+    $(this).children().addClass("fa-chevron-right");
+
+  }
+})
+// $('#about-btn-fwd-desk').click(function () {
+//   aboutAreaTl.play();
+//   triggerSection("about");
+// })
+
+$('#about-btn-fwd-mobile').click(function () {
+  aboutAreaTlMobile.play();
   triggerSection("about");
 })
 
-$('#about-btn-bk').click(function () {
-  mainAreaTl.reverse();
+// $('#about-btn-bk-desk').click(function () {
+//   $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
+//   // ==start old
+//   // $aboutImg.fadeOut(function() {
+//   //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+//   // })
+//   // .fadeIn();
+//   // end old==
+//   aboutAreaTl.reverse();
+//   triggerSection("main");
+//   TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+//   aboutBreadcrumbThree.reverse();
+//   aboutBreadcrumbTwo.reverse();
+//   aboutBreadcrumbOne.reverse();
+// })
+
+$('#about-btn-bk-mobile').click(function () {
+  $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
+  // $aboutImg.fadeOut(function() {
+  //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+  // })
+  // .fadeIn();
+  aboutAreaTlMobile.reverse();
   triggerSection("main");
+  TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
 })
 
 function triggerSection(section) {
@@ -249,20 +370,169 @@ function triggerSection(section) {
     onMainPage = true;
     onAboutPage = false;
     onRecipesPage = false;
+    startingSideWidth = null;
   } else if (section === "about") {
     onMainPage = false;
     onAboutPage = true;
     onRecipesPage =  false;
+    startingSideWidth = $(window).width();
   } else if (section === "recipes") {
     onMainPage = false;
     onAboutPage = false;
     onRecipesPage =  true;
+    startingSideWidth = $(window).width();
   }
 }
 
+/***************
+Other scrolling
+***************/
+
+var aboutBreadcrumbOne = new TimelineMax({paused: true});
+aboutBreadcrumbOne.to($aboutBreadcrumbs.children()[0], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+aboutBreadcrumbOne.to($aboutBreadcrumbText[0], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
+var aboutBreadcrumbTwo = new TimelineMax({paused: true});
+aboutBreadcrumbTwo.to($aboutBreadcrumbs.children()[1], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+aboutBreadcrumbTwo.to($aboutBreadcrumbText[1], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
+var aboutBreadcrumbThree = new TimelineMax({paused: true});
+aboutBreadcrumbThree.to($aboutBreadcrumbs.children()[2], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+aboutBreadcrumbThree.to($aboutBreadcrumbText[2], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
+var aboutBreadcrumbFour = new TimelineMax({paused: true});
+aboutBreadcrumbFour.to($aboutBreadcrumbs.children()[3], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+aboutBreadcrumbFour.to($aboutBreadcrumbText[3], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
+var aboutBreadcrumbFive = new TimelineMax({paused: true});
+aboutBreadcrumbFive.to($aboutBreadcrumbs.children()[4], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+aboutBreadcrumbFive.to($aboutBreadcrumbText[4], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+// var aboutBreadcrumbTwo = $aboutBreadcrumbText[1];
+// var aboutBreadcrumbThree = $aboutBreadcrumbText[2];
+
+var recipesBreadcrumbOne = new TimelineMax({paused: true});
+recipesBreadcrumbOne.to($recipesBreadcrumbs.children()[0], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbOne.to($recipesBreadcrumbText[0], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
+var recipesBreadcrumbTwo = new TimelineMax({paused: true});
+recipesBreadcrumbTwo.to($recipesBreadcrumbs.children()[1], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbTwo.to($recipesBreadcrumbText[1], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
+var recipesBreadcrumbThree = new TimelineMax({paused: true});
+recipesBreadcrumbThree.to($recipesBreadcrumbs.children()[2], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbThree.to($recipesBreadcrumbText[2], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
+var recipesBreadcrumbFour = new TimelineMax({paused: true});
+recipesBreadcrumbFour.to($recipesBreadcrumbs.children()[3], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbFour.to($recipesBreadcrumbText[3], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
+var recipesBreadcrumbFive = new TimelineMax({paused: true});
+recipesBreadcrumbFive.to($recipesBreadcrumbs.children()[4], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbFive.to($recipesBreadcrumbText[4], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
+var recipesBreadcrumbSix = new TimelineMax({paused: true});
+recipesBreadcrumbSix.to($recipesBreadcrumbs.children()[5], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbSix.to($recipesBreadcrumbText[5], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
+var recipesBreadcrumbSeven = new TimelineMax({paused: true});
+recipesBreadcrumbSeven.to($recipesBreadcrumbs.children()[6], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbSeven.to($recipesBreadcrumbText[6], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
+
 function handleOtherScrolling(section, dY, dF) {
-  section[0].scrollTop += (-dY * dF);
+  var scrollPosition = section[0].scrollTop += (-dY * dF);
+  if (section === $ajaxAboutSection) {
+    var aboutOne = $('#about-one').offset().top;
+    var aboutTwo = $('#about-two').offset().top;
+    var aboutThree = $('#about-three').offset().top;
+    var aboutFour = $('#about-four').offset().top;
+    var aboutFive = $('#about-five').offset().top;
+    if ((scrollPosition + $(window).height()) > aboutFive) {
+      aboutBreadcrumbFour.reverse();
+      aboutBreadcrumbFive.play();
+      $aboutImg.css('background-image', 'url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
+    } else if ((scrollPosition + $(window).height()) > aboutFour) {
+      aboutBreadcrumbFive.reverse();
+      aboutBreadcrumbThree.reverse();
+      aboutBreadcrumbFour.play();
+      $aboutImg.css('background-image', 'url(/wp-content/uploads/2017/03/story-vintagebull.jpg)');
+    } else if ((scrollPosition + $(window).height()) > aboutThree) {
+      aboutBreadcrumbTwo.reverse();
+      aboutBreadcrumbFour.reverse();
+      aboutBreadcrumbThree.play();
+      $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/story-gloves.jpg)');
+    } else if ((scrollPosition + $(window).height()) > aboutTwo) {
+      aboutBreadcrumbOne.reverse()
+      aboutBreadcrumbThree.reverse();
+      aboutBreadcrumbTwo.play();
+      $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/story-bullrider.jpg)');
+    } else if ((scrollPosition + $(window).height()) > aboutOne) {
+      aboutBreadcrumbTwo.reverse();
+      aboutBreadcrumbOne.play();
+      $aboutImg.css('background-image', 'url(/wp-content/uploads/2017/03/story-matador.jpg)');
+    } else {
+      aboutBreadcrumbOne.reverse();
+      $aboutImg.css('background-image', 'url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
+    // }
+
+    // console.log("sP = " + scrollPosition);
+    // console.log("dY = " + dY);
+    // if (scrollPosition === 400 && dY > 0) {
+    //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+    //   // $aboutImg.fadeOut(function() {
+    //   //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+    //   // })
+    //   // .fadeIn();
+    // } else if (scrollPosition === 800) {
+    //   $aboutImg.css('background-image','url(http://media4.s-nbcnews.com/j/newscms/2016_36/1685951/ss-160826-twip-05_8cf6d4cb83758449fd400c7c3d71aa1f.nbcnews-ux-2880-1000.jpg)');
+    // } else if (scrollPosition === 1000 && dY < 0) {
+    //   $aboutImg.css('background-image','url(http://cdn.hexjam.com/editorial_service/bases/images/000/004/799/xlarge/pandarockinghorsefeature.jpg.jpg?1404188201)');
+
+    }
+  } else if (section === $ajaxRecipesSection) {
+    var recipesOne = $('#recipes-one').offset().top;
+    var recipesTwo = $('#recipes-two').offset().top;
+    var recipesThree = $('#recipes-three').offset().top;
+    var recipesFour = $('#recipes-four').offset().top;
+    var recipesFive = $('#recipes-five').offset().top;
+    var recipesSix = $('#recipes-six').offset().top;
+    var recipesSeven = $('#recipes-seven').offset().top;
+    if ((scrollPosition + $(window).height()) > recipesSeven){
+      recipesBreadcrumbSix.reverse();
+      recipesBreadcrumbSeven.play();
+      $recipesImg.css('background-image', 'url(/wp-content/uploads/2017/03/drinks-neat.jpg)');
+    } else if ((scrollPosition + $(window).height()) > recipesSix) {
+      recipesBreadcrumbSeven.reverse();
+      recipesBreadcrumbFive.reverse();
+      recipesBreadcrumbSix.play();
+      $recipesImg.css('background-image', 'url(/wp-content/uploads/2017/03/drinks-shooters.jpg)');
+    } else if ((scrollPosition + $(window).height()) > recipesFive) {
+      recipesBreadcrumbSix.reverse();
+      recipesBreadcrumbFour.reverse();
+      recipesBreadcrumbFive.play();
+      $recipesImg.css('background-image', 'url(/wp-content/uploads/2017/03/drinks-whiskeyginger.jpg)');
+    } else if ((scrollPosition + $(window).height()) > recipesFour) {
+      recipesBreadcrumbFive.reverse();
+      recipesBreadcrumbThree.reverse();
+      recipesBreadcrumbFour.play();
+      $recipesImg.css('background-image', 'url(/wp-content/uploads/2017/03/drinks-cowboy.jpg)');
+    } else if ((scrollPosition + $(window).height()) > recipesThree) {
+      recipesBreadcrumbFour.reverse();
+      recipesBreadcrumbTwo.reverse();
+      recipesBreadcrumbThree.play();
+      $recipesImg.css('background-image','url(/wp-content/uploads/2017/03/drinks-oldfashioned.jpg)');
+    } else if ((scrollPosition + $(window).height()) > recipesTwo) {
+      recipesBreadcrumbThree.reverse();
+      recipesBreadcrumbOne.reverse()
+      recipesBreadcrumbTwo.play();
+      $recipesImg.css('background-image','url(/wp-content/uploads/2017/03/drinks-whiskeycola.jpg)');
+    } else {
+      recipesBreadcrumbTwo.reverse();
+      recipesBreadcrumbOne.play();
+      $recipesImg.css('background-image', 'url(/wp-content/uploads/2017/03/home-drinks-manhattan.jpg)');
+    }
+  }
 }
+
 
 
 /***************
@@ -270,21 +540,106 @@ Resize
 ***************/
 
 // run test on initial page load
- // checkSize();
+ checkSize();
 // // run test on resize of the window
-//  $(window).resize(checkSize);
-//
-//
-// function checkSize(){
-//
-// 	if($(window).innerWidth() <= 990){
-// 		$('#story-desktop').insertAfter('#story-title');
-//
-// 	}else{
-// 		$('#story-desktop').insertAfter('#story-row .col-md-4');
-// 	}
-//
-// }// checksize
+ $(window).resize(checkSize);
+
+function checkSize(){
+	if (deskClassAdded && $(window).innerWidth() <= 991){
+		$noMobileCol.each(function () {
+		  $(this).removeClass('col-md-6');
+		})
+    deskClassAdded = false;
+	}else if (!deskClassAdded && $(window).innerWidth() > 991) {
+    $noMobileCol.each(function () {
+		  $(this).addClass('col-md-6');
+		})
+    deskClassAdded = true;
+	}
+
+  if (onAboutPage && startingSideWidth < 992) {
+    console.log("hey");
+    if ($(window).width() >= 992) {
+      console.log("hi");
+      $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+      aboutAreaTlMobile.progress(0).pause();
+      // aboutAreaTlMobile.reverse();
+      triggerSection("main");
+      TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    }
+  } else if (onAboutPage && startingSideWidth >= 992) {
+    if ($(window).width() < 992) {
+      $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+      aboutAreaTl.reverse();
+      triggerSection("main");
+      TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    }
+  } else if (onRecipesPage && startingSideWidth < 992) {
+    if ($(window).width() >= 992) {
+      recipesAreaTlMobile.reverse();
+      triggerSection("main");
+      TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    }
+  } else if (onRecipesPage && startingSideWidth >= 992) {
+    if ($(window).width() < 992) {
+      recipesAreaTl.reverse();
+      triggerSection("main");
+      TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    }
+  }
+}
+
+/***************
+Menu
+***************/
+// $menuContainer.fadeOut('ease');
+
+var menuOpened = false;
+
+var openMenu = new TimelineLite({paused: true});
+// openMenu.to($menuContainer, 0, {display: 'block'});
+// openMenu.to($menuContainer, .6, {ease: Power4.easeInOut, opacity: 1}, 1);
+// openMenu.to($menuContainer, 0, {display: 'block'});
+
+
+// openMenu.to($menuContainer, .4, {ease: Power4.easeInOut, opacity: 1}, 0);
+openMenu.to($menuLeft, 1.75, {ease: Power4.easeOut, left: "0%"}, 0);
+openMenu.to($menuContainer, 0, {display: "block"}, 0);
+openMenu.to($menuContainer, .2, {ease: Power4.easeInOut, opacity: 1, visibility: "visible"}, 0);
+openMenu.to($menuGrey, 1, {opacity: 1}, "-=1.2");
+// openMenu.to($menuContainer, .5, {ease: Power4.easeInOut, background: "rgba(0, 0, 0, 0.6)"}, 0);
+
+
+// openMenu.to($menuContainer, 1.75, {ease: Power4.easeInOut, left: "0%", opacity: 1, onComplete: function () {
+//   menuOpened = !menuOpened;
+// }}, 1);
+// openMenu.to($menuContainer, 0, {display: 'block'});
+// openMenu.to($menuContainer, .6, {ease: Power4.easeInOut, opacity: 1}, 1);
+// openMenu.to($menuLeft, 1.75, {ease: Power4.easeInOut, left: "0%", onComplete: function () {
+//   menuOpened = !menuOpened;
+// }}, 1);
+// openMenu.from($menuLeft, 1.75, {ease: Power4.easeInOut, left: "0%", onComplete: function() {
+//   menuOpened = !menuOpened;
+// }});
+
+$('#toggle').click(function() {
+   $(this).toggleClass('active');
+  //  $('#overlayMenu').toggleClass('open');
+  //  TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+   mainScrollUnlocked = !mainScrollUnlocked;
+  //  openMenu.reversed() ? openMenu.reverse() : openMenu.play();
+  // menuOpened ? openMenu.reverse() : openMenu.play();
+   if (menuOpened) {
+     openMenu.reverse();
+     menuOpened = !menuOpened;
+   } else {
+     openMenu.play();
+     menuOpened = !menuOpened;
+   }
+  //  openMenu.reversed() ? openMenu.reverse() : openMenu.play();
+  //  $menuContainer.fadeToggle('ease');
+ });
+
 
 /***************
 Age Gate
