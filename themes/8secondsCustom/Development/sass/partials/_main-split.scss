@@ -75,7 +75,7 @@
   h1 {
     text-align: center;
   }
-  p {
+  .main-text-content {
     text-align: center;
     margin-top: 50%;
   }
@@ -160,13 +160,6 @@
   background-color: $icon-color;
 }
 
-.icon-section {
-  width: 33.33%;
-  height: 200px;
-  margin: 0 auto;
-  border-top: 1px solid $icon-color;
-  border-bottom: 1px solid $icon-color;
-}
 
 .desk-btn {
   @media screen and (max-width: 991px){

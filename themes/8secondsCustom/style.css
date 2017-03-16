@@ -5694,7 +5694,7 @@ body {
       display: block; } }
   .main-page-txt h1 {
     text-align: center; }
-  .main-page-txt p {
+  .main-page-txt .main-text-content {
     text-align: center;
     margin-top: 50%; }
 
@@ -5755,13 +5755,6 @@ body {
 
 .breadcrumb-active {
   background-color: #86754D; }
-
-.icon-section {
-  width: 33.33%;
-  height: 200px;
-  margin: 0 auto;
-  border-top: 1px solid #86754D;
-  border-bottom: 1px solid #86754D; }
 
 @media screen and (max-width: 991px) {
   .desk-btn {
@@ -5999,5 +5992,20 @@ body {
   height: 100%;
   width: 100%;
   opacity: 0; }
+
+.icon-section {
+  width: 33.33%;
+  padding: 10px 0px;
+  margin: 0 auto;
+  border-top: 1px solid #86754D;
+  border-bottom: 1px solid #86754D;
+  margin-top: 40px; }
+
+.icon-text {
+  padding-left: 5px;
+  font-size: 0.9em; }
+
+.drink-icon {
+  height: 20px; }
 
 /*# sourceMappingURL=style.css.map */
