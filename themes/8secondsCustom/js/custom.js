@@ -157,12 +157,12 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
 }
 
 function nextSlide(idx, callback) {
-  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx - 1), 1, {y:"-100%", onComplete: nextTitle(idx, callback)});
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx - 1), 1, {y:"-100%", force3D: true, onComplete: nextTitle(idx, callback)});
   $('.main-page-slide-group').children().eq(idx).fadeIn();
 }
 
 function previousSlide(idx, callback) {
-  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx + 1), 1, {y:"100%", onComplete: nextTitle(idx, callback)});
+  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx + 1), 1, {y:"100%", force3D: true, onComplete: nextTitle(idx, callback)});
   $('.main-page-slide-group').children().eq(idx + 1).fadeOut();
 }
 
