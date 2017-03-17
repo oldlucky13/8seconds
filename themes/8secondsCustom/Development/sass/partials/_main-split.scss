@@ -42,6 +42,7 @@
 
 .main-page-slide {
   height: 100vh;
+  // width: 100%; can't do this because part of slide section shows on main after click
   position: absolute;
 }
 
@@ -52,15 +53,40 @@
   background-position: center center;
 }
 
+.icon-mini {
+  height: 67px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
 .main-page-txt {
   display: none;
+  height: 100vh;
   background: $main-texture;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  color: $font-color;
   @media screen and (min-width: 992px){
     display: block;
+  }
+
+  h1 {
+    text-align: center;
+  }
+  .main-text-content {
+    font-family: $bot;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50%;
+    font-size: 1em;
+    // EXPERIMENTAL, NEED TO USE SCREEN WIDTH:HEIGHT RATIO MEDIA QUERIES
+    // @media all and (max-width: 1500px) {
+    //   margin-top: 50%;
+    // }
+
   }
 }
 
@@ -73,10 +99,9 @@
 
 .main-page-title-group {
   position: absolute;
-  left: 90px;
-  top: 45%;
-  // top: 52%;
-  width: 100%;
+  left: calc((100%/4) - 250px);
+  top: 18%;
+  // width: 100%; leave this undone for now
   box-sizing: border-box;
   z-index: 2;
 }
@@ -90,13 +115,29 @@
   line-height: 31pt;
   color: #fff;
   overflow: hidden;
-  height: 50px;
+  // height: 50px;
+
+  // testonlyoff
+  // h2 {
+  //   img {
+  //     height: 300px;
+  //     width: 500px;
+  //   }
+  // }
+}
+
+.filler {
+  width: 100vw;
 }
 
 .h2-child {
   transform: translateY(100%);
   margin: 0;
   font-size: 50px;
+
+  // testonly
+  height: 300px;
+  width: 500px;
 }
 
 #first-h2-child {
@@ -128,13 +169,6 @@
   background-color: $icon-color;
 }
 
-.icon-section {
-  width: 33.33%;
-  height: 200px;
-  margin: 0 auto;
-  border-top: 1px solid $icon-color;
-  border-bottom: 1px solid $icon-color;
-}
 
 .desk-btn {
   @media screen and (max-width: 991px){
