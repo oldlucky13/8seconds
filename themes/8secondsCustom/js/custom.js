@@ -98,6 +98,7 @@ jQuery(document).ready(function( $ ) {
   $menuContainer = $('.menu-container');
   $menuLeft = $('.menu-left');
   $menuGrey = $('.menu-grey');
+  $allTitles = $('.main-page-title-group');
 
   var mainIdx = 0;
   var mainScrollUnlocked = true;
@@ -157,18 +158,18 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
 }
 
 function nextSlide(idx, callback) {
-  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx - 1), 1, {y:"-100%", force3D: true, onComplete: nextTitle(idx, callback)});
+  TweenMax.to($allTitles.find(".h2-child").eq(idx - 1), 1, {y:"-100%", force3D: true, onComplete: nextTitle(idx, callback)});
   $('.main-page-slide-group').children().eq(idx).fadeIn();
 }
 
 function previousSlide(idx, callback) {
-  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx + 1), 1, {y:"100%", force3D: true, onComplete: nextTitle(idx, callback)});
+  TweenMax.to($allTitles.find(".h2-child").eq(idx + 1), 1, {y:"100%", force3D: true, onComplete: nextTitle(idx, callback)});
   $('.main-page-slide-group').children().eq(idx + 1).fadeOut();
 }
 
 function jumpToSlide(oldIdx, newIdx) {
   if (oldIdx < newIdx) {
-    var nextTitles = $('.main-page-title-group').find(".h2-child").slice(oldIdx + 1, newIdx);
+    var nextTitles = $allTitles.find(".h2-child").slice(oldIdx + 1, newIdx);
     nextTitles.css("visibility", "hidden");
     for (var i = oldIdx + 1; i <= newIdx; i++) {
       if (i === newIdx) {
@@ -178,7 +179,7 @@ function jumpToSlide(oldIdx, newIdx) {
       }
     }
   } else if (oldIdx > newIdx) {
-    var previousTitles = $('.main-page-title-group').find(".h2-child").slice(newIdx + 1, oldIdx);
+    var previousTitles = $allTitles.find(".h2-child").slice(newIdx + 1, oldIdx);
     previousTitles.css("visibility", "hidden");
     for (var j = oldIdx; j >= newIdx; j--) {
       if (j === newIdx) {
@@ -191,7 +192,7 @@ function jumpToSlide(oldIdx, newIdx) {
 }
 
 function nextTitle(idx, callback) {
-  TweenMax.to($('.main-page-title-group').find(".h2-child").eq(idx), 1, {y:"0%", onComplete: function () {
+  TweenMax.to($allTitles.find(".h2-child").eq(idx), 1, {y:"0%", onComplete: function () {
     if (typeof callback === "function") {
       callback();
     }
@@ -220,11 +221,16 @@ function revealTitles(titles) {
   titles.css("visibility", "visible");
 }
 
+console.log($mainPageAll);
+console.log($mainPageContainer.children());
+
 /***************
 Ajax loading
 ***************/
 var aboutAreaTl = new TimelineMax({paused: true});
 aboutAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("about")}, 0);
+// wip: should just be able to include under $mainPageAll
+aboutAreaTl.to($allTitles, 1.75, {ease: Power4.easeInOut, xPercent: -200}, 0);
 aboutAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
 aboutAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
 aboutAreaTl.to($aboutBreadcrumbs, .1, {display: "block"}, 0);
@@ -241,6 +247,8 @@ aboutAreaTlMobile.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "no
 
 var recipesAreaTl = new TimelineMax({paused: true});
 recipesAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("recipes")}, 0);
+// wip: should just be able to include under $mainPageAll
+recipesAreaTl.to($allTitles, 1.75, {ease: Power4.easeInOut, xPercent: -200}, 0);
 recipesAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
 recipesAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
 recipesAreaTl.to($recipesBreadcrumbs, .1, {display: "block"}, 0);
@@ -264,6 +272,7 @@ $('#recipes-btn').click(function () {
     $(this).addClass("bk");
     $(this).children().removeClass("fa-chevron-right");
     $(this).children().addClass("fa-chevron-left");
+    $recipesImg.addClass('lateral-img');
   } else if ($(this).hasClass("bk")) {
     recipesAreaTl.reverse();
     triggerSection("main");
@@ -279,6 +288,7 @@ $('#recipes-btn').click(function () {
     $(this).addClass("fwd");
     $(this).children().removeClass("fa-chevron-left");
     $(this).children().addClass("fa-chevron-right");
+    $recipesImg.removeClass('lateral-img');
   }
 })
 
@@ -314,6 +324,7 @@ $('#about-btn').click(function () {
 
     $(this).children().removeClass("fa-chevron-right");
     $(this).children().addClass("fa-chevron-left");
+    $aboutImg.css('padding-left', '0 !important');
   } else if ($(this).hasClass("bk")) {
     $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
     aboutAreaTl.reverse();
@@ -332,7 +343,8 @@ $('#about-btn').click(function () {
 
     $(this).children().removeClass("fa-chevron-left");
     $(this).children().addClass("fa-chevron-right");
-
+    $aboutImg.css('padding-left', '15px');
+    // $aboutImg.removeClass('lateral-img')
   }
 })
 // $('#about-btn-fwd-desk').click(function () {

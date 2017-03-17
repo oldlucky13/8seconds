@@ -92,7 +92,7 @@ get_header();
             <p class="main-text-content">
               When cowboys originally would ride a bull to death, the 8 seconds standard has helped bull riding evolve into America’s fastest growing sport.
             </p>
-            
+
             <!-- <button id="about-btn-fwd-desk" type="button" class="btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></button> -->
             <div class="filler">
 

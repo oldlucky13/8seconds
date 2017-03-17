@@ -76,8 +76,17 @@
     text-align: center;
   }
   .main-text-content {
+    font-family: $bot;
     text-align: center;
+    width: 50%;
+    margin: 0 auto;
     margin-top: 50%;
+    font-size: 1em;
+    // EXPERIMENTAL, NEED TO USE SCREEN WIDTH:HEIGHT RATIO MEDIA QUERIES
+    // @media all and (max-width: 1500px) {
+    //   margin-top: 50%;
+    // }
+
   }
 }
 
