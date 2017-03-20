@@ -5808,7 +5808,9 @@ body {
   margin: 0 auto;
   margin-top: 80px;
   transition: all .2s ease;
-  cursor: pointer; }
+  cursor: pointer;
+  background: transparent;
+  display: block; }
 
 .ajaxSection {
   position: absolute;
@@ -5890,6 +5892,34 @@ body {
   border-radius: 15px;
   margin-top: 5%;
   display: block; }
+
+.vertical-line {
+  width: 50%;
+  border-right: 1px solid #86754D; }
+
+.s-text {
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  width: 50%; }
+
+.s-header {
+  font-family: "Wheat Aged", "Sans Serif";
+  font-size: 3em; }
+
+.s-paragraph {
+  font-family: "Boton", "Sans Serif";
+  font-size: 1em; }
+
+.v0 {
+  height: 10%; }
+
+.v1 {
+  margin-top: 3%;
+  height: 57%; }
+
+.v2 {
+  height: 20%; }
 
 .button_container {
   position: absolute;
