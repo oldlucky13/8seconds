@@ -99,6 +99,8 @@ jQuery(document).ready(function( $ ) {
   $menuLeft = $('.menu-left');
   $menuGrey = $('.menu-grey');
   $allTitles = $('.main-page-title-group');
+  $aboutBtn = $('.about-btn');
+  $btnAbout = $('#btn-about');
 
   var mainIdx = 0;
   var mainScrollUnlocked = true;
@@ -221,8 +223,8 @@ function revealTitles(titles) {
   titles.css("visibility", "visible");
 }
 
-console.log($mainPageAll);
-console.log($mainPageContainer.children());
+// console.log($mainPageAll);
+// console.log($mainPageContainer.children());
 
 /***************
 Ajax loading
@@ -292,6 +294,64 @@ $('#recipes-btn').click(function () {
   }
 })
 
+// function handleRecipeTrigger() {
+//   if ($recipeBtn.hasClass("fwd")) {
+//     recipesAreaTl.play();
+//     triggerSection("recipes");
+//     $recipeBtn.removeClass("fwd");
+//     $recipeBtn.addClass("bk");
+//     $btnRecipe.children().removeClass("fa-chevron-right");
+//     $btnRecipe.children().addClass("fa-chevron-left");
+//     $recipesImg.addClass('lateral-img');
+//   } else if ($btnRecipe.hasClass("bk")) {
+//     recipesAreaTl.reverse();
+//     triggerSection("main");
+//     TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+//     recipesBreadcrumbSeven.reverse();
+//     recipesBreadcrumbSix.reverse();
+//     recipesBreadcrumbFive.reverse();
+//     recipesBreadcrumbFour.reverse();
+//     recipesBreadcrumbThree.reverse();
+//     recipesBreadcrumbTwo.reverse();
+//     recipesBreadcrumbOne.reverse();
+//     $recipeBtn.removeClass("bk");
+//     $recipeBtn.addClass("fwd");
+//     $btnRecipe.children().removeClass("fa-chevron-left");
+//     $btnRecipe.children().addClass("fa-chevron-right");
+//     $recipesImg.removeClass('lateral-img');
+//   }
+// }
+
+function handleAboutTrigger() {
+  console.log($aboutBtn);
+  if ($btnAbout.hasClass("fwd")) {
+    aboutAreaTl.play();
+    triggerSection("about");
+    $aboutBtn.removeClass("fwd");
+    $aboutBtn.addClass("bk");
+    $btnAbout.children().removeClass("fa-chevron-right");
+    $btnAbout.children().addClass("fa-chevron-left");
+    $aboutImg.addClass('lateral-img');
+    $aboutImg.css('padding-left', '0 !important');
+  } else if ($btnAbout.hasClass("bk")) {
+    $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
+    aboutAreaTl.reverse();
+    triggerSection("main");
+    TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    aboutBreadcrumbFive.reverse();
+    aboutBreadcrumbFour.reverse();
+    aboutBreadcrumbThree.reverse();
+    aboutBreadcrumbTwo.reverse();
+    aboutBreadcrumbOne.reverse();
+    $aboutBtn.removeClass("bk");
+    $aboutBtn.addClass("fwd");
+    $btnAbout.children().removeClass("fa-chevron-left");
+    $btnAbout.children().addClass("fa-chevron-right");
+    $aboutImg.removeClass('lateral-img');
+    $aboutImg.css('padding-left', '15px');
+  }
+}
+
 $('#recipes-btn-fwd-mobile').click(function () {
   recipesAreaTlMobile.play();
   triggerSection("recipes");
@@ -304,48 +364,51 @@ $('#recipes-btn-bk-mobile').click(function () {
   // $ajaxRecipesSection[0].scrollTop = 0;
 })
 
-$('#about-btn').click(function () {
-  if ($(this).hasClass("fwd")) {
-    aboutAreaTl.play();
-    triggerSection("about");
-    $(this).removeClass("fwd");
-    $(this).addClass("bk");
-    // TweenMax.to($(this).children(), 1, {className: "-=fa-chevron-right", className: "+=fa-chevron-left"});
-    // $(this).children().switchClass( "fa-chevron-right", "fa-chevron-left", 1000, "easeInOutQuad" );
-
-    // TweenMax.to($(this).children()[0], 1, {display: "none", opacity: 0, visibility: "hidden"});
-    // TweenMax.to($(this).children()[1], 1, {display: "inline-block", opacity: 1, visibility: "visibile"});
-
-    // $(this).children().eq(0).addClass("hidden");
-    // $(this).children().eq(1).removeClass("hidden");
-
-    // $("fa-chevron-right").addClass("hidden");
-    // $("fa-chevron-left").removeClass("hidden");
-
-    $(this).children().removeClass("fa-chevron-right");
-    $(this).children().addClass("fa-chevron-left");
-    $aboutImg.css('padding-left', '0 !important');
-  } else if ($(this).hasClass("bk")) {
-    $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
-    aboutAreaTl.reverse();
-    triggerSection("main");
-    TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-    aboutBreadcrumbFive.reverse();
-    aboutBreadcrumbFour.reverse();
-    aboutBreadcrumbThree.reverse();
-    aboutBreadcrumbTwo.reverse();
-    aboutBreadcrumbOne.reverse();
-    $(this).removeClass("bk");
-    $(this).addClass("fwd");
-        // $(this).switchClass( "fa-chevron-left", "fa-chevron-right", 1000, "easeInOutQuad" );
-    // $("fa-chevron-left").addClass("hidden");
-    // $("fa-chevron-right").removeClass("hidden");
-
-    $(this).children().removeClass("fa-chevron-left");
-    $(this).children().addClass("fa-chevron-right");
-    $aboutImg.css('padding-left', '15px');
-    // $aboutImg.removeClass('lateral-img')
-  }
+$aboutBtn.click(function () {
+  triggerSection("about");
+  handleAboutTrigger();
+  // if ($(this).hasClass("fwd")) {
+  //   // aboutAreaTl.play();
+  //   // triggerSection("about");
+  //   // handleAboutTrigger();
+  //   // $(this).removeClass("fwd");
+  //   // $(this).addClass("bk");
+  //   // TweenMax.to($(this).children(), 1, {className: "-=fa-chevron-right", className: "+=fa-chevron-left"});
+  //   // $(this).children().switchClass( "fa-chevron-right", "fa-chevron-left", 1000, "easeInOutQuad" );
+  //
+  //   // TweenMax.to($(this).children()[0], 1, {display: "none", opacity: 0, visibility: "hidden"});
+  //   // TweenMax.to($(this).children()[1], 1, {display: "inline-block", opacity: 1, visibility: "visibile"});
+  //
+  //   // $(this).children().eq(0).addClass("hidden");
+  //   // $(this).children().eq(1).removeClass("hidden");
+  //
+  //   // $("fa-chevron-right").addClass("hidden");
+  //   // $("fa-chevron-left").removeClass("hidden");
+  //
+  //   // $(btnAbout).children().removeClass("fa-chevron-right");
+  //   // $(btnAbout).children().addClass("fa-chevron-left");
+  //   $aboutImg.css('padding-left', '0 !important');
+  // } else if ($(this).hasClass("bk")) {
+  //   $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
+  //   aboutAreaTl.reverse();
+  //   triggerSection("main");
+  //   TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+  //   aboutBreadcrumbFive.reverse();
+  //   aboutBreadcrumbFour.reverse();
+  //   aboutBreadcrumbThree.reverse();
+  //   aboutBreadcrumbTwo.reverse();
+  //   aboutBreadcrumbOne.reverse();
+  //   $(this).removeClass("bk");
+  //   $(this).addClass("fwd");
+  //       // $(this).switchClass( "fa-chevron-left", "fa-chevron-right", 1000, "easeInOutQuad" );
+  //   // $("fa-chevron-left").addClass("hidden");
+  //   // $("fa-chevron-right").removeClass("hidden");
+  //
+  //   $(this).children().removeClass("fa-chevron-left");
+  //   $(this).children().addClass("fa-chevron-right");
+  //   $aboutImg.css('padding-left', '15px');
+  //   // $aboutImg.removeClass('lateral-img')
+  // }
 })
 // $('#about-btn-fwd-desk').click(function () {
 //   aboutAreaTl.play();
@@ -577,9 +640,7 @@ function checkSize(){
 	}
 
   if (onAboutPage && startingSideWidth < 992) {
-    console.log("hey");
     if ($(window).width() >= 992) {
-      console.log("hi");
       $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
       aboutAreaTlMobile.progress(0).pause();
       // aboutAreaTlMobile.reverse();

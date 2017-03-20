@@ -92,14 +92,16 @@ get_header();
             <p class="main-text-content">
               When cowboys originally would ride a bull to death, the 8 seconds standard has helped bull riding evolve into America’s fastest growing sport.
             </p>
-
+            <div class="empty-button about-btn fwd">
+              LEARN MORE
+            </div>
             <!-- <button id="about-btn-fwd-desk" type="button" class="btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></button> -->
             <div class="filler">
 
             </div>
           </div>
           <div id="four-img" class="main-page-img no-mobile-col col-md-6">
-            <button id="about-btn" type="button" class="btn slide-button fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+            <button id="btn-about" type="button" class="btn slide-button about-btn fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
             <!-- <button id="about-btn" type="button" class="btn slide-button fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i><i class="fa fa-chevron-left initial-hide" aria-hidden="true"></i></button> -->
             <div class="no-mobile-col col-md-6 main-page-txt-mobile">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">

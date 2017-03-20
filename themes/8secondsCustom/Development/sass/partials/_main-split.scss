@@ -213,3 +213,24 @@
     outline: none !important;
     outline-offset: 0px
 }
+
+.empty-button {
+  font-family: $baraged;
+  color: $icon-color;
+  border-style: solid;
+  border-width: 15px 22px 18px 19px;
+  -moz-border-image: url('/wp-content/uploads/2017/03/emptybutton.png') 15 22 18 19 repeat;
+  -webkit-border-image: url('/wp-content/uploads/2017/03/emptybutton.png') 15 22 18 19 repeat;
+  -o-border-image: url('/wp-content/uploads/2017/03/emptybutton.png') 15 22 18 19 repeat;
+  border-image: url('/wp-content/uploads/2017/03/emptybutton.png') 15 22 18 19 fill repeat;
+  text-align: center;
+  width: 33.33%;
+  margin: 0 auto;
+  margin-top: 80px;
+  transition: all .2s ease;
+  cursor: pointer;
+  // &:hover {
+  //   background-color: $icon-color;
+  //   color: $font-color;
+  // }
+}
