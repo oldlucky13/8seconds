@@ -197,11 +197,14 @@ get_header();
               "Too much of anything is bad, but too much of a good whiskey is never enough." <br>
               - Mark Twain
             </p>
+            <div class="empty-button recipes-btn fwd">
+              LEARN MORE
+            </div>
             <div class="filler">
             </div>
           </div>
           <div id="five-img" class="main-page-img no-mobile-col col-md-6">
-            <button id="recipes-btn" type="button" class="btn slide-button fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+            <button id="btn-recipes" type="button" class="btn slide-button recipes-btn fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
             <div class="no-mobile-col col-md-6 main-page-txt-mobile">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

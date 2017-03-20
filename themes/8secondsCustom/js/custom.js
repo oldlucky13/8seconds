@@ -101,6 +101,8 @@ jQuery(document).ready(function( $ ) {
   $allTitles = $('.main-page-title-group');
   $aboutBtn = $('.about-btn');
   $btnAbout = $('#btn-about');
+  $recipesBtn = $('.recipes-btn');
+  $btnRecipes = $('#btn-recipes');
 
   var mainIdx = 0;
   var mainScrollUnlocked = true;
@@ -266,16 +268,16 @@ recipesAreaTlMobile.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "
 var ajaxAboutTl = new TimelineMax({paused: true});
 ajaxAboutTl.to($ajaxAboutSection, 1.7, {ease: Power4.easeInOut, right: "-50%"}, 0);
 
-$('#recipes-btn').click(function () {
-  if ($(this).hasClass("fwd")) {
+function handleRecipesTrigger() {
+  if ($recipesBtn.hasClass("fwd")) {
     recipesAreaTl.play();
     triggerSection("recipes");
-    $(this).removeClass("fwd");
-    $(this).addClass("bk");
-    $(this).children().removeClass("fa-chevron-right");
-    $(this).children().addClass("fa-chevron-left");
+    $recipesBtn.removeClass("fwd");
+    $recipesBtn.addClass("bk");
+    $btnRecipes.children().removeClass("fa-chevron-right");
+    $btnRecipes.children().addClass("fa-chevron-left");
     $recipesImg.addClass('lateral-img');
-  } else if ($(this).hasClass("bk")) {
+  } else if ($btnRecipes.hasClass("bk")) {
     recipesAreaTl.reverse();
     triggerSection("main");
     TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
@@ -286,44 +288,15 @@ $('#recipes-btn').click(function () {
     recipesBreadcrumbThree.reverse();
     recipesBreadcrumbTwo.reverse();
     recipesBreadcrumbOne.reverse();
-    $(this).removeClass("bk");
-    $(this).addClass("fwd");
-    $(this).children().removeClass("fa-chevron-left");
-    $(this).children().addClass("fa-chevron-right");
+    $recipesBtn.removeClass("bk");
+    $recipesBtn.addClass("fwd");
+    $btnRecipes.children().removeClass("fa-chevron-left");
+    $btnRecipes.children().addClass("fa-chevron-right");
     $recipesImg.removeClass('lateral-img');
   }
-})
-
-// function handleRecipeTrigger() {
-//   if ($recipeBtn.hasClass("fwd")) {
-//     recipesAreaTl.play();
-//     triggerSection("recipes");
-//     $recipeBtn.removeClass("fwd");
-//     $recipeBtn.addClass("bk");
-//     $btnRecipe.children().removeClass("fa-chevron-right");
-//     $btnRecipe.children().addClass("fa-chevron-left");
-//     $recipesImg.addClass('lateral-img');
-//   } else if ($btnRecipe.hasClass("bk")) {
-//     recipesAreaTl.reverse();
-//     triggerSection("main");
-//     TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-//     recipesBreadcrumbSeven.reverse();
-//     recipesBreadcrumbSix.reverse();
-//     recipesBreadcrumbFive.reverse();
-//     recipesBreadcrumbFour.reverse();
-//     recipesBreadcrumbThree.reverse();
-//     recipesBreadcrumbTwo.reverse();
-//     recipesBreadcrumbOne.reverse();
-//     $recipeBtn.removeClass("bk");
-//     $recipeBtn.addClass("fwd");
-//     $btnRecipe.children().removeClass("fa-chevron-left");
-//     $btnRecipe.children().addClass("fa-chevron-right");
-//     $recipesImg.removeClass('lateral-img');
-//   }
-// }
+}
 
 function handleAboutTrigger() {
-  console.log($aboutBtn);
   if ($btnAbout.hasClass("fwd")) {
     aboutAreaTl.play();
     triggerSection("about");
@@ -332,7 +305,6 @@ function handleAboutTrigger() {
     $btnAbout.children().removeClass("fa-chevron-right");
     $btnAbout.children().addClass("fa-chevron-left");
     $aboutImg.addClass('lateral-img');
-    $aboutImg.css('padding-left', '0 !important');
   } else if ($btnAbout.hasClass("bk")) {
     $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
     aboutAreaTl.reverse();
@@ -348,9 +320,18 @@ function handleAboutTrigger() {
     $btnAbout.children().removeClass("fa-chevron-left");
     $btnAbout.children().addClass("fa-chevron-right");
     $aboutImg.removeClass('lateral-img');
-    $aboutImg.css('padding-left', '15px');
   }
 }
+
+$recipesBtn.click(function () {
+  triggerSection("recipes");
+  handleRecipesTrigger();
+})
+
+$aboutBtn.click(function () {
+  triggerSection("about");
+  handleAboutTrigger();
+})
 
 $('#recipes-btn-fwd-mobile').click(function () {
   recipesAreaTlMobile.play();
@@ -364,52 +345,6 @@ $('#recipes-btn-bk-mobile').click(function () {
   // $ajaxRecipesSection[0].scrollTop = 0;
 })
 
-$aboutBtn.click(function () {
-  triggerSection("about");
-  handleAboutTrigger();
-  // if ($(this).hasClass("fwd")) {
-  //   // aboutAreaTl.play();
-  //   // triggerSection("about");
-  //   // handleAboutTrigger();
-  //   // $(this).removeClass("fwd");
-  //   // $(this).addClass("bk");
-  //   // TweenMax.to($(this).children(), 1, {className: "-=fa-chevron-right", className: "+=fa-chevron-left"});
-  //   // $(this).children().switchClass( "fa-chevron-right", "fa-chevron-left", 1000, "easeInOutQuad" );
-  //
-  //   // TweenMax.to($(this).children()[0], 1, {display: "none", opacity: 0, visibility: "hidden"});
-  //   // TweenMax.to($(this).children()[1], 1, {display: "inline-block", opacity: 1, visibility: "visibile"});
-  //
-  //   // $(this).children().eq(0).addClass("hidden");
-  //   // $(this).children().eq(1).removeClass("hidden");
-  //
-  //   // $("fa-chevron-right").addClass("hidden");
-  //   // $("fa-chevron-left").removeClass("hidden");
-  //
-  //   // $(btnAbout).children().removeClass("fa-chevron-right");
-  //   // $(btnAbout).children().addClass("fa-chevron-left");
-  //   $aboutImg.css('padding-left', '0 !important');
-  // } else if ($(this).hasClass("bk")) {
-  //   $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
-  //   aboutAreaTl.reverse();
-  //   triggerSection("main");
-  //   TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-  //   aboutBreadcrumbFive.reverse();
-  //   aboutBreadcrumbFour.reverse();
-  //   aboutBreadcrumbThree.reverse();
-  //   aboutBreadcrumbTwo.reverse();
-  //   aboutBreadcrumbOne.reverse();
-  //   $(this).removeClass("bk");
-  //   $(this).addClass("fwd");
-  //       // $(this).switchClass( "fa-chevron-left", "fa-chevron-right", 1000, "easeInOutQuad" );
-  //   // $("fa-chevron-left").addClass("hidden");
-  //   // $("fa-chevron-right").removeClass("hidden");
-  //
-  //   $(this).children().removeClass("fa-chevron-left");
-  //   $(this).children().addClass("fa-chevron-right");
-  //   $aboutImg.css('padding-left', '15px');
-  //   // $aboutImg.removeClass('lateral-img')
-  // }
-})
 // $('#about-btn-fwd-desk').click(function () {
 //   aboutAreaTl.play();
 //   triggerSection("about");
@@ -458,11 +393,13 @@ function triggerSection(section) {
     onAboutPage = true;
     onRecipesPage =  false;
     startingSideWidth = $(window).width();
+    // handleAboutTrigger();
   } else if (section === "recipes") {
     onMainPage = false;
     onAboutPage = false;
     onRecipesPage =  true;
     startingSideWidth = $(window).width();
+    // handleRecipesTrigger();
   }
 }
 
