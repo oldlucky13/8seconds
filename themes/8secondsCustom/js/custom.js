@@ -322,7 +322,7 @@ function handleAboutTrigger() {
     $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
     aboutAreaTl.reverse();
     triggerSection("main");
-    TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
     aboutBreadcrumbFive.reverse();
     aboutBreadcrumbFour.reverse();
     aboutBreadcrumbThree.reverse();
