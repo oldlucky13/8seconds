@@ -67,3 +67,37 @@
 .lateral-img {
   padding-left: 0 !important;
 }
+
+.s-section {
+  height: 100vh;
+}
+
+.s-title {
+  // position: absolute;
+  // left: calc((100%/4) - 250px);
+  // top: 14%;
+  height: 300px;
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+  margin-top: calc(14% - 82px);
+}
+
+.s-tagline {
+  font-family: $baraged;
+  color: $icon-color;
+  margin: 0 auto;
+  margin-top: 40%;
+  text-align: center;
+}
+
+.s-down-btn {
+  padding: 4px 10px;
+  border: 1px solid $icon-color;
+  color: #fff;
+  margin: 0 auto;
+  background: transparent;
+  border-radius: 15px;
+  margin-top: 5%;
+  display: block;
+}

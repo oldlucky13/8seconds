@@ -100,7 +100,7 @@
 .main-page-title-group {
   position: absolute;
   left: calc((100%/4) - 250px);
-  top: 18%;
+  top: 14%;
   // width: 100%; leave this undone for now
   box-sizing: border-box;
   z-index: 2;
@@ -204,7 +204,12 @@
   }
 }
 
-.btn.focus, .btn:focus, .btn:hover {
+.s-btn.focus, .s-btn:focus, .s-btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.p-btn.focus, .p-btn:focus, .p-btn:hover {
     color: rgb(30, 30, 30);
     text-decoration: none;
 }

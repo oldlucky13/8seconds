@@ -5711,7 +5711,7 @@ body {
 .main-page-title-group {
   position: absolute;
   left: calc((100%/4) - 250px);
-  top: 18%;
+  top: 14%;
   box-sizing: border-box;
   z-index: 2; }
 
@@ -5782,7 +5782,11 @@ body {
     -o-transition: all 2s ease;
     transition: all 2s ease; }
 
-.btn.focus, .btn:focus, .btn:hover {
+.s-btn.focus, .s-btn:focus, .s-btn:hover {
+  color: #fff;
+  text-decoration: none; }
+
+.p-btn.focus, .p-btn:focus, .p-btn:hover {
   color: #1e1e1e;
   text-decoration: none; }
 
@@ -5859,6 +5863,33 @@ body {
 
 .lateral-img {
   padding-left: 0 !important; }
+
+.s-section {
+  height: 100vh; }
+
+.s-title {
+  height: 300px;
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+  margin-top: calc(14% - 82px); }
+
+.s-tagline {
+  font-family: "Barley Aged", "Sans Serif";
+  color: #86754D;
+  margin: 0 auto;
+  margin-top: 40%;
+  text-align: center; }
+
+.s-down-btn {
+  padding: 4px 10px;
+  border: 1px solid #86754D;
+  color: #fff;
+  margin: 0 auto;
+  background: transparent;
+  border-radius: 15px;
+  margin-top: 5%;
+  display: block; }
 
 .button_container {
   position: absolute;
