@@ -112,6 +112,19 @@ jQuery(document).ready(function( $ ) {
   var deskClassAdded = false;
   var startingSideWidth = null;
 
+  aboutOne = $('#about-one').offset().top;
+  aboutTwo = $('#about-two').offset().top;
+  aboutThree = $('#about-three').offset().top;
+  aboutFour = $('#about-four').offset().top;
+  aboutFive = $('#about-five').offset().top;
+  recipesOne = $('#recipes-one').offset().top;
+  recipesTwo = $('#recipes-two').offset().top;
+  recipesThree = $('#recipes-three').offset().top;
+  recipesFour = $('#recipes-four').offset().top;
+  recipesFive = $('#recipes-five').offset().top;
+  recipesSix = $('#recipes-six').offset().top;
+  recipesSeven = $('#recipes-seven').offset().top;
+
   /***************
   Mousewheel
   ***************/
@@ -460,17 +473,12 @@ recipesBreadcrumbSeven.to($recipesBreadcrumbText[6], 1, {ease: Power4.easeInOut,
 function handleOtherScrolling(section, dY, dF) {
   var scrollPosition = section[0].scrollTop += (-dY * dF);
   if (section === $ajaxAboutSection) {
-    var aboutOne = $('#about-one').offset().top;
-    var aboutTwo = $('#about-two').offset().top;
-    var aboutThree = $('#about-three').offset().top;
-    var aboutFour = $('#about-four').offset().top;
-    var aboutFive = $('#about-five').offset().top;
-    console.log(testvar = $('#about-two'));
-    console.log(testvar.offset().top);
-    console.log("------- scroll position is: ");
-    console.log(scrollPosition);
-    console.log("------- window height position is: ");
-    console.log($(window).height());
+    // console.log(testvar = $('#about-two'));
+    // console.log(testvar.offset().top);
+    // console.log("------- scroll position is: ");
+    // console.log(scrollPosition);
+    // console.log("------- window height position is: ");
+    // console.log($(window).height());
     if ((scrollPosition + $(window).height()) > aboutFive) {
       aboutBreadcrumbFour.reverse();
       aboutBreadcrumbFive.play();
@@ -514,13 +522,6 @@ function handleOtherScrolling(section, dY, dF) {
 
     }
   } else if (section === $ajaxRecipesSection) {
-    var recipesOne = $('#recipes-one').offset().top;
-    var recipesTwo = $('#recipes-two').offset().top;
-    var recipesThree = $('#recipes-three').offset().top;
-    var recipesFour = $('#recipes-four').offset().top;
-    var recipesFive = $('#recipes-five').offset().top;
-    var recipesSix = $('#recipes-six').offset().top;
-    var recipesSeven = $('#recipes-seven').offset().top;
     if ((scrollPosition + $(window).height()) > recipesSeven){
       recipesBreadcrumbSix.reverse();
       recipesBreadcrumbSeven.play();
@@ -610,6 +611,18 @@ function checkSize(){
       TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
     }
   }
+  aboutOne = $('#about-one').offset().top;
+  aboutTwo = $('#about-two').offset().top;
+  aboutThree = $('#about-three').offset().top;
+  aboutFour = $('#about-four').offset().top;
+  aboutFive = $('#about-five').offset().top;
+  recipesOne = $('#recipes-one').offset().top;
+  recipesTwo = $('#recipes-two').offset().top;
+  recipesThree = $('#recipes-three').offset().top;
+  recipesFour = $('#recipes-four').offset().top;
+  recipesFive = $('#recipes-five').offset().top;
+  recipesSix = $('#recipes-six').offset().top;
+  recipesSeven = $('#recipes-seven').offset().top;
 }
 
 /***************
