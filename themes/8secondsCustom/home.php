@@ -264,13 +264,30 @@ get_header();
           </div>
           <div class="ajaxSection ajaxRecipesSection no-mobile-col col-md-6">
             <div class="s-section">
-              <div class="s-text">
+                <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+              <div id="first-recipe" class="s-text">
                 <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-1.svg" alt="">
                 <h2 class="s-header">MANHATTAN</h2>
                 <a id="recipes-one"></a>
                 <p class="s-paragraph">A classic with a twist.</p>
               </div>
-              <div class="v1 vertical-line">
+              <div class="drink-guide">
+                <div class="drink-half">
+                  <h5 class="drink-guide-title">INGREDIENTS</h5>
+                  <p>2<sup>1</sup>&frasl;<sub>2</sub> oz 8 Seconds Canadian Whiskey</p>
+                  <p><sup>3</sup>&frasl;<sub>4</sub> oz Sweet Vermouth</p>
+                  <p>1 dash Angostura &reg; Bitters</p>
+                  <p>1 Maraschino Cherry</p>
+                  <p>1 Twisted Orange Peel</p>
+                </div>
+                <div class="drink-half">
+                  <h5 class="drink-guide-title">DIRECTIONS</h5>
+                  <p>Combine 8 Seconds Canadian Whiskey, Vermouth, and bitters with 2-3 ice cubes in a mixing glass &amp; stir.</p>
+                  <p>Place the cherry in a chilled cocktail glass and strain whiskey mixture over the cheery.</p>
+                  <p>Rub the cut edge of the orange peel over the rim of the glass and twist it over the dirnk to release the oils. Do not drop it in.</p>
+                </div>
+              </div>
+              <div class="v3 vertical-line">
                 <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
               </div>
             </div>
@@ -283,6 +300,18 @@ get_header();
                 <h2 class="s-header">8 SECONDS COLA</h2>
                 <a id="recipes-two"></a>
                 <p class="s-paragraph">Nothing wrong with a go-to.</p>
+              </div>
+              <div class="drink-guide">
+                <div class="drink-half">
+                  <h5 class="drink-guide-title">INGREDIENTS</h5>
+                  <p>2<sup>1</sup>&frasl;<sub>2</sub> parts 8 Seconds Whisky</p>
+                  <p>4 parts Cola</p>
+                </div>
+                <div class="drink-half">
+                  <h5 class="drink-guide-title">DIRECTIONS</h5>
+                  <p>Pour 8 Seconds Whisky over ice and add cola.</p>
+                  <p>Enjoy!</p>
+                </div>
               </div>
               <div class="v1 vertical-line">
                 <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
@@ -298,6 +327,23 @@ get_header();
                 <a id="recipes-three"></a>
                 <p class="s-paragraph">For channeling your inner Mad Men.</p>
               </div>
+              <div class="drink-guide">
+                <div class="drink-half">
+                  <h5 class="drink-guide-title">INGREDIENTS</h5>
+                  <p>2 oz 8 Seconds Canadian Whisky</p>
+                  <p>1 sugar cube</p>
+                  <p>1 teaspoon water</p>
+                  <p>2 dashes Angostura&reg; Bitters</p>
+                  <p>Lemon or Orange Twist</p>
+                  <p>1 Maraschino Cherry</p>
+                </div>
+                <div class="drink-half">
+                  <h5 class="drink-guide-title">DIRECTIONS</h5>
+                  <p>Pour 8 Seconds Whisky In an old-fashioned or rocks glass, add sugar cube to bottom of glass with water and bitters. Muddle ingredients together.</p>
+                  <p>Add ice cubes. Fill with 8 Seconds Whisky and stir well.</p>
+                  <p>Garnish with orange twist and cherry.</p>
+                </div>
+              </div>
               <div class="v1 vertical-line">
                 <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
               </div>
@@ -312,6 +358,24 @@ get_header();
                 <a id="recipes-four"></a>
                 <p class="s-paragraph">Cool with a kick.</p>
               </div>
+              <div class="drink-guide">
+                <div class="drink-half">
+                  <h5 class="drink-guide-title">INGREDIENTS</h5>
+                  <p>2 sugar cubes (+ splash of water) or 1 oz simple syrup</p>
+                  <p>4-5 mint sprigs</p>
+                  <p>2<sup>1</sup>&frasl;<sub>2</sub> oz 8 Seconds Whisky</p>
+                  <p>Splash of pomegranate juice</p>
+                  <p>Crushed Ice</p>
+                  <p>Mint for garnish</p>
+                </div>
+                <div class="drink-half">
+                  <h5 class="drink-guide-title">DIRECTIONS</h5>
+                  <p>In a Collins glass/highball glass place sugar cubes or simple syrup with mint.</p>
+                  <p>Muddle well to dissolve the sugar and release the mint aroma.</p>
+                  <p>Add 8 Seconds Whisky and a splash of pomegranate juice, then fill with crushed ice. Stir well.</p>
+                  <p>Garnish with a mint sprig.</p>
+                </div>
+              </div>
               <div class="v1 vertical-line">
                 <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
               </div>
@@ -325,6 +389,19 @@ get_header();
                 <h2 class="s-header">8 SECONDS GINER</h2>
                 <a id="recipes-five"></a>
                 <p class="s-paragraph">Not for the urban cowboy.</p>
+              </div>
+              <div class="drink-guide">
+                <div class="drink-half">
+                  <h5 class="drink-guide-title">INGREDIENTS</h5>
+                  <p>1 part 8 Seconds Whisky</p>
+                  <p>3 parts Ginger Ale</p>
+                  <p>Lime wedge to garnish</p>
+                </div>
+                <div class="drink-half">
+                  <h5 class="drink-guide-title">DIRECTIONS</h5>
+                  <p>In a glass with ice, add 8 Seconds Whisky & ginger ale.</p>
+                  <p>Garnish with lime wedge.</p>
+                </div>
               </div>
               <div class="v1 vertical-line">
                 <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
