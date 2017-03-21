@@ -559,6 +559,25 @@ function handleOtherScrolling(section, dY, dF) {
   }
 }
 
+$('.back-to-top').click(function () {
+  if (onAboutPage) {
+    TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    aboutBreadcrumbFive.reverse();
+    aboutBreadcrumbFour.reverse();
+    aboutBreadcrumbThree.reverse();
+    aboutBreadcrumbTwo.reverse();
+    aboutBreadcrumbOne.reverse();
+  } else if (onRecipesPage) {
+    TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    recipesBreadcrumbSeven.reverse();
+    recipesBreadcrumbSix.reverse();
+    recipesBreadcrumbFive.reverse();
+    recipesBreadcrumbFour.reverse();
+    recipesBreadcrumbThree.reverse();
+    recipesBreadcrumbTwo.reverse();
+    recipesBreadcrumbOne.reverse();
+  }
+})
 
 
 /***************
