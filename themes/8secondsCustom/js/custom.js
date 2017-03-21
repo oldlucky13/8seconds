@@ -103,6 +103,8 @@ jQuery(document).ready(function( $ ) {
   $btnAbout = $('#btn-about');
   $recipesBtn = $('.recipes-btn');
   $btnRecipes = $('#btn-recipes');
+  $aboutSection = $('.about');
+  $recipesSection = $('.recipes');
 
   var mainIdx = 0;
   var mainScrollUnlocked = true;
@@ -246,7 +248,7 @@ Ajax loading
 ***************/
 var aboutAreaTl = new TimelineMax({paused: true});
 aboutAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("about")}, 0);
-// wip: should just be able to include under $mainPageAll
+// wip: weird title sliding, should just be able to include under $mainPageAll
 aboutAreaTl.to($allTitles, 1.75, {ease: Power4.easeInOut, xPercent: -200}, 0);
 aboutAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
 aboutAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
@@ -285,11 +287,13 @@ function handleRecipesTrigger() {
   if ($recipesBtn.hasClass("fwd")) {
     recipesAreaTl.play();
     triggerSection("recipes");
+    // wip: all of these below should be in GSAP
     $recipesBtn.removeClass("fwd");
     $recipesBtn.addClass("bk");
     $btnRecipes.children().removeClass("fa-chevron-right");
     $btnRecipes.children().addClass("fa-chevron-left");
     $recipesImg.addClass('lateral-img');
+    // $recipesSection.addClass('initial-lateral-img');  removed because too choppy, although it does solve padding issue
   } else if ($btnRecipes.hasClass("bk")) {
     recipesAreaTl.reverse();
     triggerSection("main");
@@ -306,6 +310,7 @@ function handleRecipesTrigger() {
     $btnRecipes.children().removeClass("fa-chevron-left");
     $btnRecipes.children().addClass("fa-chevron-right");
     $recipesImg.removeClass('lateral-img');
+    // $recipesSection.removeClass('initial-lateral-img'); removed because too choppy, although it does solve padding issue
   }
 }
 
@@ -318,6 +323,7 @@ function handleAboutTrigger() {
     $btnAbout.children().removeClass("fa-chevron-right");
     $btnAbout.children().addClass("fa-chevron-left");
     $aboutImg.addClass('lateral-img');
+    // $aboutSection.addClass('initial-lateral-img');
   } else if ($btnAbout.hasClass("bk")) {
     $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
     aboutAreaTl.reverse();
@@ -333,6 +339,7 @@ function handleAboutTrigger() {
     $btnAbout.children().removeClass("fa-chevron-left");
     $btnAbout.children().addClass("fa-chevron-right");
     $aboutImg.removeClass('lateral-img');
+    // $aboutSection.removeClass('initial-lateral-img');
   }
 }
 
@@ -630,6 +637,8 @@ function checkSize(){
       TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
     }
   }
+  // wip: these don't actually recalculate on resize. secondary image change on scroll is not responsive.
+  // update: as it currently stands these only work when you navigate to the secondary section and then navigate back to main. then you can resize, go back to secondary and it will work. if you resize first without loading secondary, aboutOne returns 0. if you resize while on secondary the whole page breaks.
   aboutOne = $('#about-one').offset().top;
   aboutTwo = $('#about-two').offset().top;
   aboutThree = $('#about-three').offset().top;
