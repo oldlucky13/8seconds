@@ -178,12 +178,12 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
 
 function nextSlide(idx, callback) {
   TweenMax.to($allTitles.find(".h2-child").eq(idx - 1), 1, {y:"-100%", force3D: true, onComplete: nextTitle(idx, callback)});
-  $('.main-page-slide-group').children().eq(idx).fadeIn();
+  $('.main-page-slide-group').children().eq(idx).fadeIn(1100);
 }
 
 function previousSlide(idx, callback) {
   TweenMax.to($allTitles.find(".h2-child").eq(idx + 1), 1, {y:"100%", force3D: true, onComplete: nextTitle(idx, callback)});
-  $('.main-page-slide-group').children().eq(idx + 1).fadeOut();
+  $('.main-page-slide-group').children().eq(idx + 1).fadeOut(1100);
 }
 
 function jumpToSlide(oldIdx, newIdx) {
