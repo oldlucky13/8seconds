@@ -544,62 +544,71 @@ get_header();
       </div>
       <nav class="menu-left">
         <div id="nav-menu">
-          <div id="premium-cell" class="square dr" data-menuanchor="premium" class="nav-menu-link mobile-menu">
-            <div class="square-content">
-              <div class="table">
-                <div class="table-cell">
-                  <p>PREMIUM</p>
+          <div id="menu-row-first" class="menu-row">
+            <div id="premium-square" class="square dr" data-menuanchor="premium" class="nav-menu-link mobile-menu">
+              <div class="square-content">
+                <div class="table">
+                  <div class="table-cell">
+                    <p>PREMIUM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="story-square" class="square dl" data-menuanchor="story" class="nav-menu-link mobile-menu">
+              <div class="square-content">
+                <div class="table">
+                  <div class="table-cell">
+                    <p>STORY</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="square dl" data-menuanchor="story" class="nav-menu-link mobile-menu">
-            <div class="square-content">
-              <div class="table">
-                <div id="story-cell" class="table-cell">
-                  <p>STORY</p>
+          <div class="menu-row">
+            <div id="black-square" class="square left" data-menuanchor="black" class="nav-menu-link mobile-menu">
+              <div class="square-content">
+                <div class="table">
+                  <div id="black-cell" class="table-cell">
+                    <p>BLACK</p>
+                  </div>
                 </div>
               </div>
             </div>
+            <div id="recipes-square" class="square right" data-menuanchor="recipes" class="nav-menu-link mobile-menu">
+              <div class="square-content">
+                <div class="table">
+                  <div class="table-cell">
+                    <p>RECIPES</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div id="menu-row-last" class="menu-row">
+            <div id="honey-cinnamon-square" class="square dl" data-menuanchor="honey-cinnamon" class="nav-menu-link mobile-menu">
+              <div class="square-content">
+                <div class="table">
+                  <div id="honey-cinnamon-cell" class="table-cell">
+                    <p>HONEY</p>
+                    <p>CINNAMON</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="contact-square" class="square dr" data-menuanchor="contact" class="nav-menu-link mobile-menu">
+              <div class="square-content">
+                <div class="table">
+                  <div id="contact-cell" class="table-cell">
+                    <p>CONTACT</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
-          <div class="square left" data-menuanchor="black" class="nav-menu-link mobile-menu">
-            <div class="square-content">
-              <div class="table">
-                <div id="black-cell" class="table-cell">
-                  <p>BLACK</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="recipes-cell" class="square right" data-menuanchor="recipes" class="nav-menu-link mobile-menu">
-            <div class="square-content">
-              <div class="table">
-                <div class="table-cell">
-                  <p>RECIPES</p>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="square dl" data-menuanchor="honey-cinnamon" class="nav-menu-link mobile-menu">
-            <div class="square-content">
-              <div class="table">
-                <div id="honey-cinnamon-cell" class="table-cell">
-                  <p>HONEY CINNAMON</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="square dr" data-menuanchor="contact" class="nav-menu-link mobile-menu">
-            <div class="square-content">
-              <div class="table">
-                <div id="contact-cell" class="table-cell">
-                  <p>CONTACT</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         <!-- <table class="table table-bordered">
     <thead>

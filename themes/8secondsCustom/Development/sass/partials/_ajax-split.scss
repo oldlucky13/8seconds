@@ -54,6 +54,7 @@
 .ajax-breadcrumb {
   position: relative;
   margin-right: 10px;
+  opacity: 0.55;
   h5 {
     display: inline;
     padding-right: 5px;
@@ -68,6 +69,7 @@
     border-top: 2px solid #fff;
     position: absolute;
     top: -50%;
+    // opacity: 0.55;
   }
 }
 

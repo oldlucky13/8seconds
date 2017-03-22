@@ -428,53 +428,53 @@ Other scrolling
 ***************/
 
 var aboutBreadcrumbOne = new TimelineMax({paused: true});
-aboutBreadcrumbOne.to($aboutBreadcrumbs.children()[0], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+aboutBreadcrumbOne.to($aboutBreadcrumbs.children()[0], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 aboutBreadcrumbOne.to($aboutBreadcrumbText[0], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 var aboutBreadcrumbTwo = new TimelineMax({paused: true});
-aboutBreadcrumbTwo.to($aboutBreadcrumbs.children()[1], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+aboutBreadcrumbTwo.to($aboutBreadcrumbs.children()[1], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 aboutBreadcrumbTwo.to($aboutBreadcrumbText[1], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 var aboutBreadcrumbThree = new TimelineMax({paused: true});
-aboutBreadcrumbThree.to($aboutBreadcrumbs.children()[2], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+aboutBreadcrumbThree.to($aboutBreadcrumbs.children()[2], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 aboutBreadcrumbThree.to($aboutBreadcrumbText[2], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 var aboutBreadcrumbFour = new TimelineMax({paused: true});
-aboutBreadcrumbFour.to($aboutBreadcrumbs.children()[3], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+aboutBreadcrumbFour.to($aboutBreadcrumbs.children()[3], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 aboutBreadcrumbFour.to($aboutBreadcrumbText[3], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 var aboutBreadcrumbFive = new TimelineMax({paused: true});
-aboutBreadcrumbFive.to($aboutBreadcrumbs.children()[4], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+aboutBreadcrumbFive.to($aboutBreadcrumbs.children()[4], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 aboutBreadcrumbFive.to($aboutBreadcrumbText[4], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 // var aboutBreadcrumbTwo = $aboutBreadcrumbText[1];
 // var aboutBreadcrumbThree = $aboutBreadcrumbText[2];
 
 var recipesBreadcrumbOne = new TimelineMax({paused: true});
-recipesBreadcrumbOne.to($recipesBreadcrumbs.children()[0], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbOne.to($recipesBreadcrumbs.children()[0], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 recipesBreadcrumbOne.to($recipesBreadcrumbText[0], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 var recipesBreadcrumbTwo = new TimelineMax({paused: true});
-recipesBreadcrumbTwo.to($recipesBreadcrumbs.children()[1], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbTwo.to($recipesBreadcrumbs.children()[1], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 recipesBreadcrumbTwo.to($recipesBreadcrumbText[1], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 var recipesBreadcrumbThree = new TimelineMax({paused: true});
-recipesBreadcrumbThree.to($recipesBreadcrumbs.children()[2], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbThree.to($recipesBreadcrumbs.children()[2], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 recipesBreadcrumbThree.to($recipesBreadcrumbText[2], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 var recipesBreadcrumbFour = new TimelineMax({paused: true});
-recipesBreadcrumbFour.to($recipesBreadcrumbs.children()[3], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbFour.to($recipesBreadcrumbs.children()[3], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 recipesBreadcrumbFour.to($recipesBreadcrumbText[3], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 var recipesBreadcrumbFive = new TimelineMax({paused: true});
-recipesBreadcrumbFive.to($recipesBreadcrumbs.children()[4], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbFive.to($recipesBreadcrumbs.children()[4], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 recipesBreadcrumbFive.to($recipesBreadcrumbText[4], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 var recipesBreadcrumbSix = new TimelineMax({paused: true});
-recipesBreadcrumbSix.to($recipesBreadcrumbs.children()[5], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbSix.to($recipesBreadcrumbs.children()[5], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 recipesBreadcrumbSix.to($recipesBreadcrumbText[5], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 var recipesBreadcrumbSeven = new TimelineMax({paused: true});
-recipesBreadcrumbSeven.to($recipesBreadcrumbs.children()[6], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbSeven.to($recipesBreadcrumbs.children()[6], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 recipesBreadcrumbSeven.to($recipesBreadcrumbText[6], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 function handleOtherScrolling(section, dY, dF) {
@@ -686,24 +686,52 @@ openMenu.to($menuGrey, 1, {opacity: 1}, "-=1.2");
 //   menuOpened = !menuOpened;
 // }});
 
+function toggleMenu() {
+  $('#toggle').toggleClass('active');
+  // $(this).toggleClass('active');
+ //  $('#overlayMenu').toggleClass('open');
+ //  TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+  mainScrollUnlocked = !mainScrollUnlocked;
+ //  openMenu.reversed() ? openMenu.reverse() : openMenu.play();
+ // menuOpened ? openMenu.reverse() : openMenu.play();
+  if (menuOpened) {
+    openMenu.reverse();
+    menuOpened = !menuOpened;
+  } else {
+    openMenu.play();
+    menuOpened = !menuOpened;
+  }
+ //  openMenu.reversed() ? openMenu.reverse() : openMenu.play();
+ //  $menuContainer.fadeToggle('ease');
+}
+
 $('#toggle').click(function() {
-   $(this).toggleClass('active');
-  //  $('#overlayMenu').toggleClass('open');
-  //  TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-   mainScrollUnlocked = !mainScrollUnlocked;
-  //  openMenu.reversed() ? openMenu.reverse() : openMenu.play();
-  // menuOpened ? openMenu.reverse() : openMenu.play();
-   if (menuOpened) {
-     openMenu.reverse();
-     menuOpened = !menuOpened;
-   } else {
-     openMenu.play();
-     menuOpened = !menuOpened;
-   }
-  //  openMenu.reversed() ? openMenu.reverse() : openMenu.play();
-  //  $menuContainer.fadeToggle('ease');
+  toggleMenu();
  });
 
+$('.square').click(function() {
+  toggleMenu();
+  if (this.id === "premium-square") {
+    jumpToSlide(mainIdx, 0);
+    mainIdx = 0;
+  } else if (this.id === "black-square") {
+    jumpToSlide(mainIdx, 1);
+    mainIdx = 1;
+  } else if (this.id === "honey-cinnamon-square") {
+    jumpToSlide(mainIdx, 2);
+    mainIdx = 2;
+  } else if (this.id === "story-square") {
+    jumpToSlide(mainIdx, 3);
+    mainIdx = 3;
+  } else if (this.id === "cocktails-square") {
+    jumpToSlide(mainIdx, 4);
+    mainIdx = 4;
+  } else if (this.id === "contact-square") {
+    jumpToSlide(mainIdx, 5);
+    mainIdx = 5;
+  }
+  updateBreadcrumb(mainIdx);
+})
 
 /***************
 Age Gate

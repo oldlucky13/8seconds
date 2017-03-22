@@ -157,10 +157,14 @@
 .square {
   display: inline-block;
   position: relative;
-  width: 30%;
-  padding-bottom: 30%;
-  background: black;
-  margin: 2.66%;
+  width: 32%;
+  // width: 30%;
+  padding-bottom: 22%;
+  // padding-bottom: 30%;
+  // background: black;
+  margin: -10.4px;
+  // margin: 2.66%;
+  cursor: pointer;
 
   .square-content {
     position: absolute;
@@ -178,6 +182,13 @@
         vertical-align: middle;
         height: 100%;
         width: 100%;
+
+        p {
+          font-family: $baraged;
+          color: #fff;
+          font-size: 1.5em;
+          text-align: center;
+        }
 
         a {
           color: white;
@@ -199,6 +210,21 @@
   height: 100%;
   width: 100%;
   opacity: 0;
+}
+
+#menu-row-first {
+  margin-top: 5%;
+}
+
+#menu-row-last {
+  margin-bottom: 5%;
+}
+
+#premium-cell {
+  background: url("/wp-content/uploads/2017/03/menu-hover-premium.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 //
@@ -238,36 +264,39 @@
 .dr {
   border-style: solid;
   border-width: 42px 41px 44px 45px;
-  -moz-border-image: url("/wp-content/uploads/2017/03/menu-border-dr.png") 42 41 44 45 repeat;
-  -webkit-border-image: url("/wp-content/uploads/2017/03/menu-border-dr.png") 42 41 44 45 repeat;
-  -o-border-image: url("/wp-content/uploads/2017/03/menu-border-dr.png") 42 41 44 45 repeat;
-  border-image: url("/wp-content/uploads/2017/03/menu-border-dr.png") 42 41 44 45 fill repeat;
+  -moz-border-image: url("/wp-content/uploads/2017/03/menu-dr2.png") 42 41 44 45 repeat;
+  -webkit-border-image: url("/wp-content/uploads/2017/03/menu-dr2.png") 42 41 44 45 repeat;
+  -o-border-image: url("/wp-content/uploads/2017/03/menu-dr2.png") 42 41 44 45 repeat;
+  border-image: url("/wp-content/uploads/2017/03/menu-dr2.png") 42 41 44 45 fill repeat;
 }
 .dl {
   border-style: solid;
   border-width: 42px 41px 44px 45px;
-  -moz-border-image: url("/wp-content/uploads/2017/03/menu-border-dl.png") 42 41 44 45 repeat;
-  -webkit-border-image: url("/wp-content/uploads/2017/03/menu-border-dl.png") 42 41 44 45 repeat;
-  -o-border-image: url("/wp-content/uploads/2017/03/menu-border-dl.png") 42 41 44 45 repeat;
-  border-image: url("/wp-content/uploads/2017/03/menu-border-dl.png") 42 41 44 45 fill repeat;
+  -moz-border-image: url("/wp-content/uploads/2017/03/menu-dl2.png") 42 41 44 45 repeat;
+  -webkit-border-image: url("/wp-content/uploads/2017/03/menu-dl2.png") 42 41 44 45 repeat;
+  -o-border-image: url("/wp-content/uploads/2017/03/menu-dl2.png") 42 41 44 45 repeat;
+  border-image: url("/wp-content/uploads/2017/03/menu-dl2.png") 42 41 44 45 fill repeat;
 }
 .left {
   border-style: solid;
   border-width: 42px 41px 44px 45px;
-  -moz-border-image: url("/wp-content/uploads/2017/03/menu-border-left.png") 42 41 44 45 repeat;
-  -webkit-border-image: url("/wp-content/uploads/2017/03/menu-border-left.png") 42 41 44 45 repeat;
-  -o-border-image: url("/wp-content/uploads/2017/03/menu-border-left.png") 42 41 44 45 repeat;
-  border-image: url("/wp-content/uploads/2017/03/menu-border-left.png") 42 41 44 45 fill repeat;
+  -moz-border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 repeat;
+  -webkit-border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 repeat;
+  -o-border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 repeat;
+  border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 fill repeat;
 }
 .right {
   border-style: solid;
   border-width: 42px 41px 44px 45px;
-  -moz-border-image: url("/wp-content/uploads/2017/03/menu-border-right.png") 42 41 44 45 repeat;
-  -webkit-border-image: url("/wp-content/uploads/2017/03/menu-border-right.png") 42 41 44 45 repeat;
-  -o-border-image: url("/wp-content/uploads/2017/03/menu-border-right.png") 42 41 44 45 repeat;
-  border-image: url("/wp-content/uploads/2017/03/menu-border-right.png") 42 41 44 45 fill repeat;
+  -moz-border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 repeat;
+  -webkit-border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 repeat;
+  -o-border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 repeat;
+  border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 fill repeat;
 }
 
+.menu-row {
+  display: block;
+}
 
 // --------------------------
 //

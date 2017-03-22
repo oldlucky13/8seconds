@@ -5774,13 +5774,16 @@ body {
   left: 4%;
   background: #e8e5dd;
   border: 2px solid #86754D;
-  padding: 9px 16px;
+  padding: 18px 18px;
   border-radius: 22px; }
   .slide-button i {
     -webkit-transition: all 2s ease;
     -moz-transition: all 2s ease;
     -o-transition: all 2s ease;
-    transition: all 2s ease; }
+    transition: all 2s ease;
+    position: absolute;
+    top: 33%;
+    left: 42%; }
 
 .s-btn.focus, .s-btn:focus, .s-btn:hover {
   color: #fff;
@@ -5842,7 +5845,8 @@ body {
 
 .ajax-breadcrumb {
   position: relative;
-  margin-right: 10px; }
+  margin-right: 10px;
+  opacity: 0.55; }
   .ajax-breadcrumb h5 {
     display: inline;
     padding-right: 5px;
@@ -6041,10 +6045,10 @@ body {
 .square {
   display: inline-block;
   position: relative;
-  width: 30%;
-  padding-bottom: 30%;
-  background: black;
-  margin: 2.66%; }
+  width: 32%;
+  padding-bottom: 22%;
+  margin: -10.4px;
+  cursor: pointer; }
   .square .square-content {
     position: absolute;
     text-align: center;
@@ -6059,6 +6063,11 @@ body {
         vertical-align: middle;
         height: 100%;
         width: 100%; }
+        .square .square-content .table .table-cell p {
+          font-family: "Barley Aged", "Sans Serif";
+          color: #fff;
+          font-size: 1.5em;
+          text-align: center; }
         .square .square-content .table .table-cell a {
           color: white;
           cursor: pointer;
@@ -6073,37 +6082,52 @@ body {
   width: 100%;
   opacity: 0; }
 
+#menu-row-first {
+  margin-top: 5%; }
+
+#menu-row-last {
+  margin-bottom: 5%; }
+
+#premium-cell {
+  background: url("/wp-content/uploads/2017/03/menu-hover-premium.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
 .dr {
   border-style: solid;
   border-width: 42px 41px 44px 45px;
-  -moz-border-image: url("/wp-content/uploads/2017/03/menu-border-dr.png") 42 41 44 45 repeat;
-  -webkit-border-image: url("/wp-content/uploads/2017/03/menu-border-dr.png") 42 41 44 45 repeat;
-  -o-border-image: url("/wp-content/uploads/2017/03/menu-border-dr.png") 42 41 44 45 repeat;
-  border-image: url("/wp-content/uploads/2017/03/menu-border-dr.png") 42 41 44 45 fill repeat; }
+  -moz-border-image: url("/wp-content/uploads/2017/03/menu-dr2.png") 42 41 44 45 repeat;
+  -webkit-border-image: url("/wp-content/uploads/2017/03/menu-dr2.png") 42 41 44 45 repeat;
+  -o-border-image: url("/wp-content/uploads/2017/03/menu-dr2.png") 42 41 44 45 repeat;
+  border-image: url("/wp-content/uploads/2017/03/menu-dr2.png") 42 41 44 45 fill repeat; }
 
 .dl {
   border-style: solid;
   border-width: 42px 41px 44px 45px;
-  -moz-border-image: url("/wp-content/uploads/2017/03/menu-border-dl.png") 42 41 44 45 repeat;
-  -webkit-border-image: url("/wp-content/uploads/2017/03/menu-border-dl.png") 42 41 44 45 repeat;
-  -o-border-image: url("/wp-content/uploads/2017/03/menu-border-dl.png") 42 41 44 45 repeat;
-  border-image: url("/wp-content/uploads/2017/03/menu-border-dl.png") 42 41 44 45 fill repeat; }
+  -moz-border-image: url("/wp-content/uploads/2017/03/menu-dl2.png") 42 41 44 45 repeat;
+  -webkit-border-image: url("/wp-content/uploads/2017/03/menu-dl2.png") 42 41 44 45 repeat;
+  -o-border-image: url("/wp-content/uploads/2017/03/menu-dl2.png") 42 41 44 45 repeat;
+  border-image: url("/wp-content/uploads/2017/03/menu-dl2.png") 42 41 44 45 fill repeat; }
 
 .left {
   border-style: solid;
   border-width: 42px 41px 44px 45px;
-  -moz-border-image: url("/wp-content/uploads/2017/03/menu-border-left.png") 42 41 44 45 repeat;
-  -webkit-border-image: url("/wp-content/uploads/2017/03/menu-border-left.png") 42 41 44 45 repeat;
-  -o-border-image: url("/wp-content/uploads/2017/03/menu-border-left.png") 42 41 44 45 repeat;
-  border-image: url("/wp-content/uploads/2017/03/menu-border-left.png") 42 41 44 45 fill repeat; }
+  -moz-border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 repeat;
+  -webkit-border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 repeat;
+  -o-border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 repeat;
+  border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 fill repeat; }
 
 .right {
   border-style: solid;
   border-width: 42px 41px 44px 45px;
-  -moz-border-image: url("/wp-content/uploads/2017/03/menu-border-right.png") 42 41 44 45 repeat;
-  -webkit-border-image: url("/wp-content/uploads/2017/03/menu-border-right.png") 42 41 44 45 repeat;
-  -o-border-image: url("/wp-content/uploads/2017/03/menu-border-right.png") 42 41 44 45 repeat;
-  border-image: url("/wp-content/uploads/2017/03/menu-border-right.png") 42 41 44 45 fill repeat; }
+  -moz-border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 repeat;
+  -webkit-border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 repeat;
+  -o-border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 repeat;
+  border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 fill repeat; }
+
+.menu-row {
+  display: block; }
 
 .icon-section {
   width: 50%;
