@@ -614,7 +614,7 @@ function checkSize(){
 
   if (onAboutPage && startingSideWidth < 992) {
     if ($(window).width() >= 992) {
-      $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+      $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
       aboutAreaTlMobile.progress(0).pause();
       // aboutAreaTlMobile.reverse();
       triggerSection("main");
@@ -622,7 +622,7 @@ function checkSize(){
     }
   } else if (onAboutPage && startingSideWidth >= 992) {
     if ($(window).width() < 992) {
-      $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
+      $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
       aboutAreaTl.reverse();
       triggerSection("main");
       TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
@@ -714,6 +714,11 @@ $('#toggle').click(function() {
 
 $('.square').click(function() {
   toggleMenu();
+  if (onAboutPage) {
+    handleAboutTrigger();
+  } else if (onRecipesPage) {
+    handleRecipesTrigger();
+  }
   if (this.id === "premium-square") {
     jumpToSlide(mainIdx, 0);
     mainIdx = 0;
@@ -760,7 +765,7 @@ Age Gate
 
 //console.log(Cookies.get());
 
-//Cookies.remove('drinkingAge');
+Cookies.remove('drinkingAge');
 if(Cookies.get('drinkingAge') == 'over21'){
 	//don't do anything
  }

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- ( •_•)>⌐■-■ Too Cool Productions -->
 <!--[if IE 6]>
 <html id="ie6" <?php language_attributes(); ?>>
 <![endif]-->
@@ -33,7 +34,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	
+
 
 
 

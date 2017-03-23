@@ -386,7 +386,7 @@ get_header();
                   <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
                 </div>
                 <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-5.svg" alt="">
-                <h2 class="s-header">8 SECONDS GINER</h2>
+                <h2 class="s-header">8 SECONDS GINGER</h2>
                 <a id="recipes-five"></a>
                 <p class="s-paragraph">Not for the urban cowboy.</p>
               </div>
@@ -440,9 +440,11 @@ get_header();
         <div id="six" class="contact row main-page-slide">
           <div class="no-mobile-col col-md-6 main-page-txt">
             <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
-            <p class="main-text-content">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <!-- <p class="main-text-content">
+            </p> -->
+            <div class="contact-form-container">
+              <?php echo do_shortcode( '[contact-form-7 id="153" title="Contact form 1"]' ); ?>
+            </div>
             <div class="filler">
             </div>
           </div>
@@ -574,7 +576,7 @@ get_header();
                 </div>
               </div>
             </div>
-            <div id="recipes-square" class="square right" data-menuanchor="recipes" class="nav-menu-link mobile-menu">
+            <div id="cocktails-square" class="square right" data-menuanchor="recipes" class="nav-menu-link mobile-menu">
               <div class="square-content">
                 <div class="table">
                   <div class="table-cell">
@@ -670,21 +672,17 @@ get_header();
       </nav>
     </div>
   <!-- </div> -->
-  <!-- <div id="ageGate" class="modal">
-      <img src="/wp-content/uploads/2017/01/Jseeds-ageGate_mini.png">
-      <h1>Are you over 21 years old?</h1>
+  <div id="ageGate" class="modal">
+    <div class="age-gate-content">
+      <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" id="age-gate-icon" alt="8 seconds whiskey bull logo">
+      <h1>ARE YOU ABLE TO RIDE?</h1>
+      <h3>(OVER 21 YEARS OLD)</h3>
       <div class="button-wrapper">
-          <button id="over21" class="JSbtn">Yes</button>
-          <button id="under21" class="JSbtn">No</button>
+        <button id="over21" class="JSbtn empty-button age-gate-button">Yes</button>
+        <button id="under21" class="JSbtn empty-button age-gate-button">No</button>
       </div>
-  </div> -->
+    </div>
+  </div>
 </div> <!-- #main-content -->
-
-
-
-
-
-
-
 <div id="mobile-indicator"></div>
 <?php get_footer(); ?>
