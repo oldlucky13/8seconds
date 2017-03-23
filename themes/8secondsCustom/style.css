@@ -5678,7 +5678,7 @@ body {
   background-position: center center; }
 
 .icon-mini {
-  height: 67px;
+  height: 50px;
   display: block;
   margin: 0 auto;
   margin-top: 15px; }
@@ -5701,7 +5701,7 @@ body {
     text-align: center;
     width: 50%;
     margin: 0 auto;
-    margin-top: 50%;
+    margin-top: 60%;
     font-size: 1em; }
 
 .main-page-txt-mobile {
@@ -6257,5 +6257,49 @@ body {
 
 #first-recipe {
   margin-top: 15%; }
+
+.contact-form-container {
+  margin-top: 50%; }
+
+.wpcf7 {
+  width: 80%;
+  margin: 0 auto !important;
+  text-align: center; }
+  .wpcf7 p {
+    margin: 0 !important;
+    display: inline; }
+  .wpcf7 div {
+    margin: 5px 0px; }
+  .wpcf7 br {
+    display: none; }
+  .wpcf7 .cfield {
+    width: 49%;
+    background: transparent;
+    border: 1px solid #7f7f7f;
+    height: 3em;
+    font-size: 1em;
+    font-family: "Barley Aged", "Sans Serif";
+    color: #fff;
+    padding-left: 10px; }
+    .wpcf7 .cfield::-webkit-input-placeholder {
+      color: #fff; }
+    .wpcf7 .cfield::-moz-placeholder {
+      color: #fff; }
+    .wpcf7 .cfield:-moz-placeholder {
+      color: #fff; }
+    .wpcf7 .cfield:-ms-input-placeholder {
+      color: #fff; }
+  .wpcf7 .cfield-left {
+    margin-right: 1%; }
+  .wpcf7 .cfield-right {
+    margin-left: 1%; }
+  .wpcf7 #cmessage {
+    resize: none;
+    width: 100%;
+    height: 10em;
+    padding-top: 10px; }
+  .wpcf7 #form-submit {
+    margin-top: 15px;
+    width: 50%; }
 
 /*# sourceMappingURL=style.css.map */

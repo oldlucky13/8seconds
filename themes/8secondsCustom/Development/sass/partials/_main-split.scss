@@ -56,7 +56,7 @@
 }
 
 .icon-mini {
-  height: 67px;
+  height: 50px;
   display: block;
   margin: 0 auto;
   margin-top: 15px;
@@ -82,7 +82,7 @@
     text-align: center;
     width: 50%;
     margin: 0 auto;
-    margin-top: 50%;
+    margin-top: 60%;
     font-size: 1em;
     // EXPERIMENTAL, NEED TO USE SCREEN WIDTH:HEIGHT RATIO MEDIA QUERIES
     // @media all and (max-width: 1500px) {
@@ -255,7 +255,7 @@ border-image: url('/wp-content/uploads/2017/03/eb.png') 16 24 15 27 fill stretch
   background: transparent;
   display: block;
   letter-spacing: 2px;
-  
+
   &:hover {
     border-style: solid;
     border-width: 16px 24px 15px 27px;
