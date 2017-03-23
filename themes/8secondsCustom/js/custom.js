@@ -714,6 +714,11 @@ $('#toggle').click(function() {
 
 $('.square').click(function() {
   toggleMenu();
+  if (onAboutPage) {
+    handleAboutTrigger();
+  } else if (onRecipesPage) {
+    handleRecipesTrigger();
+  }
   if (this.id === "premium-square") {
     jumpToSlide(mainIdx, 0);
     mainIdx = 0;
