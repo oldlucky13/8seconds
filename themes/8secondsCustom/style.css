@@ -5813,28 +5813,30 @@ body {
   font-family: "Barley Aged", "Sans Serif";
   color: #86754D;
   border-style: solid;
-  border-width: 15px 22px 18px 19px;
-  -moz-border-image: url("/wp-content/uploads/2017/03/emptybutton.png") 15 22 18 19 stretch;
-  -webkit-border-image: url("/wp-content/uploads/2017/03/emptybutton.png") 15 22 18 19 stretch;
-  -o-border-image: url("/wp-content/uploads/2017/03/emptybutton.png") 15 22 18 19 stretch;
-  border-image: url("/wp-content/uploads/2017/03/emptybutton.png") 15 22 18 19 fill stretch;
+  border-width: 16px 24px 15px 27px;
+  -moz-border-image: url("/wp-content/uploads/2017/03/eb.png") 16 24 15 27 stretch;
+  -webkit-border-image: url("/wp-content/uploads/2017/03/eb.png") 16 24 15 27 stretch;
+  -o-border-image: url("/wp-content/uploads/2017/03/eb.png") 16 24 15 27 stretch;
+  border-image: url("/wp-content/uploads/2017/03/eb.png") 16 24 15 27 fill stretch;
   text-align: center;
   width: 33.33%;
   margin: 0 auto;
   margin-top: 80px;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   cursor: pointer;
   background: transparent;
-  display: block; }
+  display: block;
+  letter-spacing: 2px; }
   .empty-button:hover {
     border-style: solid;
-    border-width: 122px 30px 88px 121px;
-    -moz-border-image: url("/wp-content/uploads/2017/03/empty-button-hover1.png") 122 30 88 121 stretch;
-    -webkit-border-image: url("/wp-content/uploads/2017/03/empty-button-hover1.png") 122 30 88 121 stretch;
-    -o-border-image: url("/wp-content/uploads/2017/03/empty-button-hover1.png") 122 30 88 121 stretch;
-    border-image: url("/wp-content/uploads/2017/03/empty-button-hover1.png") 122 30 88 121 fill stretch; }
+    border-width: 16px 24px 15px 27px;
+    -moz-border-image: url("/wp-content/uploads/2017/03/ebh.png") 16 24 15 27 stretch;
+    -webkit-border-image: url("/wp-content/uploads/2017/03/ebh.png") 16 24 15 27 stretch;
+    -o-border-image: url("/wp-content/uploads/2017/03/ebh.png") 16 24 15 27 stretch;
+    border-image: url("/wp-content/uploads/2017/03/ebh.png") 16 24 15 27 fill stretch;
+    color: #000; }
 
 .ajaxSection {
   position: absolute;

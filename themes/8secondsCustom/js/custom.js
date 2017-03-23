@@ -295,7 +295,7 @@ function handleRecipesTrigger() {
     $recipesImg.addClass('lateral-img');
     // $recipesSection.addClass('initial-lateral-img');  removed because too choppy, although it does solve padding issue
   } else if ($btnRecipes.hasClass("bk")) {
-    $recipesImg.css('background-image','url(/wp-content/uploads/2017/03/home-home-drinks-manhattan.jpg)');
+    $recipesImg.css('background-image','url(/wp-content/uploads/2017/03/home-drinks-manhattan.jpg)');
     recipesAreaTl.reverse();
     triggerSection("main");
     TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
@@ -533,7 +533,8 @@ function handleOtherScrolling(section, dY, dF) {
     if ((scrollPosition + $(window).height()) > recipesSeven){
       recipesBreadcrumbSix.reverse();
       recipesBreadcrumbSeven.play();
-      // TweenMax.to($recipesImg, 0.5, {backgroundImage: 'url(/wp-content/uploads/2017/03/drinks-neat.jpg)', ease: Power2.easeInOut})
+      // TweenMax.to($recipesImg, 1, {backgroundImage: 'none', ease: Power2.easeInOut})
+      // TweenMax.to($recipesImg, 1.2, {backgroundImage: 'url(/wp-content/uploads/2017/03/drinks-neat.jpg)', ease: Power2.easeInOut})
       $recipesImg.css('background-image', 'url(/wp-content/uploads/2017/03/drinks-neat.jpg)');
     } else if ((scrollPosition + $(window).height()) > recipesSix) {
       recipesBreadcrumbSeven.reverse();

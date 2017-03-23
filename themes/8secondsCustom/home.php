@@ -206,7 +206,7 @@ get_header();
               <div class="s-text">
                 <p class="s-paragraph">The PBR now hosts over 300 events across America where their World Finals brings in over 700,000 fans. Bull riding is now considered the fastest growing sport in the US. </p>
               </div>
-              <button type="button" class="empty-button back-to-top">BACK TO TOP</button>
+              <button type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
             </div>
             <button id="about-btn-bk-mobile" type="button" class="p-btn btn btn-primary mobile-btn">Go Back</button>
           </div>
@@ -431,7 +431,7 @@ get_header();
                 <a id="recipes-seven"></a>
                 <p class="s-paragraph">No need to complicate.</p>
               </div>
-              <button type="button" class="empty-button back-to-top">BACK TO TOP</button>
+              <button type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
 
             </div>
             <button id="recipes-btn-bk-mobile" type="button" class="p-btn btn btn-primary mobile-btn">Go Back</button>
