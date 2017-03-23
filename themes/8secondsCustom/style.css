@@ -6302,4 +6302,16 @@ body {
     margin-top: 15px;
     width: 50%; }
 
+#ageGate {
+  background-color: black; }
+
+.age-gate-content {
+  width: 25%;
+  margin: 0 auto;
+  text-align: center; }
+  .age-gate-content .age-gate-button {
+    display: inline; }
+  .age-gate-content #age-gate-icon {
+    max-width: 250px; }
+
 /*# sourceMappingURL=style.css.map */

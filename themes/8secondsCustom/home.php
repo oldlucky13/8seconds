@@ -672,32 +672,17 @@ get_header();
       </nav>
     </div>
   <!-- </div> -->
-  <!-- <div id="ageGate" class="modal">
-      <img src="/wp-content/uploads/2017/01/Jseeds-ageGate_mini.png">
-      <h1>Are you over 21 years old?</h1>
+  <div id="ageGate" class="modal">
+    <div class="age-gate-content">
+      <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" id="age-gate-icon" alt="8 seconds whiskey bull logo">
+      <h1>ARE YOU ABLE TO RIDE?</h1>
+      <h3>(OVER 21 YEARS OLD)</h3>
       <div class="button-wrapper">
-          <button id="over21" class="JSbtn">Yes</button>
-          <button id="under21" class="JSbtn">No</button>
+        <button id="over21" class="JSbtn empty-button age-gate-button">Yes</button>
+        <button id="under21" class="JSbtn empty-button age-gate-button">No</button>
       </div>
-  </div> -->
+    </div>
+  </div>
 </div> <!-- #main-content -->
-
-
-
-<!--  original contact form-->
-<!-- <div>
-<span>[text* your-first-name class:cfield placeholder "FIRST NAME"]</span>
-<span>[text* your-last-name class:cfield plaeholder "LAST NAME"]</span>
-</div>
-<div>
-<span>[tel* your-last-name class:cfield placeholder "PHONE"]</span>
-<span>[email* your-email class:cfield placeholder "EMAIL"]</span>
-</div>
-<div>
-[textarea your-message id:cmessage class:cfield placeholder "MESSAGE"]
-</div>
-[submit class:empty-button "Send"] -->
-
-
 <div id="mobile-indicator"></div>
 <?php get_footer(); ?>

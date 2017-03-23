@@ -1,0 +1,18 @@
+#ageGate {
+  background-color: black;
+}
+
+.age-gate-content {
+  width: 25%;
+  margin: 0 auto;
+  text-align: center;
+
+  .age-gate-button {
+    display: inline;
+  }
+
+
+  #age-gate-icon {
+    max-width: 250px;
+  }
+}

@@ -765,7 +765,7 @@ Age Gate
 
 //console.log(Cookies.get());
 
-//Cookies.remove('drinkingAge');
+Cookies.remove('drinkingAge');
 if(Cookies.get('drinkingAge') == 'over21'){
 	//don't do anything
  }
