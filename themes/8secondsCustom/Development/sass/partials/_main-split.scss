@@ -22,6 +22,7 @@
 // }
 #four-img {
   background-image: $story-main;
+  background-color: #000;
   // background-position-x: -225px;
   @include transition(all 500ms ease-out);
 }
@@ -30,6 +31,7 @@
 // }
 #five-img {
   background-image: url("/wp-content/uploads/2017/03/home-drinks-manhattan.jpg");
+  background-color: #000;
   // background-position-x: -350px;
   @include transition(all 500ms ease-out);
 }
@@ -131,7 +133,8 @@
 }
 
 .h2-child {
-  transform: translateY(100%);
+  // transform: translateY(100%);
+  @include transform(translateY(100%));
   margin: 0;
   font-size: 50px;
 
@@ -141,7 +144,8 @@
 }
 
 #first-h2-child {
-  transform: translateY(0%);
+  // transform: translateY(0%);
+  @include transform(translateY(0%));
 }
 
 #breadcrumb-group {
@@ -163,7 +167,7 @@
   width: 8px;
   height: 8px;
   cursor: pointer;
-  transition: all 1s ease;
+  @include transition(all 1s ease);
 }
 
 .breadcrumb-active {
@@ -193,15 +197,17 @@
   padding: 18px 18px;
   // padding: 9px 15px;
   border-radius: 22px;
+  cursor: pointer;
   i {
-    -webkit-transition: all 2s ease; // Chrome
-   -moz-transition: all 2s ease; // Mozilla
-   -o-transition: all 2s ease; // Opera
-   transition: all 2s ease;
+    @include transition(all 2s ease);
+  //   -webkit-transition: all 2s ease; // Chrome
+  //  -moz-transition: all 2s ease; // Mozilla
+  //  -o-transition: all 2s ease; // Opera
+  //  transition: all 2s ease;
 
     position: absolute;
     top: 33%;
-    left: 42%;
+    left: 38%;
   }
   .initial-hide {
     // display: none;
@@ -230,18 +236,28 @@
   color: $icon-color;
   border-style: solid;
   border-width: 15px 22px 18px 19px;
-  -moz-border-image: url('/wp-content/uploads/2017/03/emptybutton.png') 15 22 18 19 repeat;
-  -webkit-border-image: url('/wp-content/uploads/2017/03/emptybutton.png') 15 22 18 19 repeat;
-  -o-border-image: url('/wp-content/uploads/2017/03/emptybutton.png') 15 22 18 19 repeat;
-  border-image: url('/wp-content/uploads/2017/03/emptybutton.png') 15 22 18 19 fill repeat;
+  -moz-border-image: url('/wp-content/uploads/2017/03/emptybutton.png') 15 22 18 19 stretch;
+  -webkit-border-image: url('/wp-content/uploads/2017/03/emptybutton.png') 15 22 18 19 stretch;
+  -o-border-image: url('/wp-content/uploads/2017/03/emptybutton.png') 15 22 18 19 stretch;
+  border-image: url('/wp-content/uploads/2017/03/emptybutton.png') 15 22 18 19 fill stretch;
   text-align: center;
   width: 33.33%;
   margin: 0 auto;
   margin-top: 80px;
-  transition: all .2s ease;
+  // transition: all .2s ease;
+  @include transition(all .2s ease);
   cursor: pointer;
   background: transparent;
   display: block;
+
+  &:hover {
+    border-style: solid;
+    border-width: 122px 30px 88px 121px;
+    -moz-border-image: url('/wp-content/uploads/2017/03/empty-button-hover1.png') 122 30 88 121 stretch;
+    -webkit-border-image: url('/wp-content/uploads/2017/03/empty-button-hover1.png') 122 30 88 121 stretch;
+    -o-border-image: url('/wp-content/uploads/2017/03/empty-button-hover1.png') 122 30 88 121 stretch;
+    border-image: url('/wp-content/uploads/2017/03/empty-button-hover1.png') 122 30 88 121 fill stretch;
+  }
   // &:hover {
   //   background-color: $icon-color;
   //   color: $font-color;

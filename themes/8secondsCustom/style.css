@@ -5652,12 +5652,14 @@ body {
 
 #four-img {
   background-image: url("/wp-content/uploads/2017/03/home-story-boots.jpg");
+  background-color: #000;
   -webkit-transition: all 500ms ease-out;
   -moz-transition: all 500ms ease-out;
   transition: all 500ms ease-out; }
 
 #five-img {
   background-image: url("/wp-content/uploads/2017/03/home-drinks-manhattan.jpg");
+  background-color: #000;
   -webkit-transition: all 500ms ease-out;
   -moz-transition: all 500ms ease-out;
   transition: all 500ms ease-out; }
@@ -5729,6 +5731,10 @@ body {
   width: 100vw; }
 
 .h2-child {
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
   transform: translateY(100%);
   margin: 0;
   font-size: 50px;
@@ -5736,6 +5742,10 @@ body {
   width: 500px; }
 
 #first-h2-child {
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
   transform: translateY(0%); }
 
 #breadcrumb-group {
@@ -5755,6 +5765,8 @@ body {
   width: 8px;
   height: 8px;
   cursor: pointer;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
   transition: all 1s ease; }
 
 .breadcrumb-active {
@@ -5775,15 +5787,15 @@ body {
   background: #e8e5dd;
   border: 2px solid #86754D;
   padding: 18px 18px;
-  border-radius: 22px; }
+  border-radius: 22px;
+  cursor: pointer; }
   .slide-button i {
     -webkit-transition: all 2s ease;
     -moz-transition: all 2s ease;
-    -o-transition: all 2s ease;
     transition: all 2s ease;
     position: absolute;
     top: 33%;
-    left: 42%; }
+    left: 38%; }
 
 .s-btn.focus, .s-btn:focus, .s-btn:hover {
   color: #fff;
@@ -5802,18 +5814,27 @@ body {
   color: #86754D;
   border-style: solid;
   border-width: 15px 22px 18px 19px;
-  -moz-border-image: url("/wp-content/uploads/2017/03/emptybutton.png") 15 22 18 19 repeat;
-  -webkit-border-image: url("/wp-content/uploads/2017/03/emptybutton.png") 15 22 18 19 repeat;
-  -o-border-image: url("/wp-content/uploads/2017/03/emptybutton.png") 15 22 18 19 repeat;
-  border-image: url("/wp-content/uploads/2017/03/emptybutton.png") 15 22 18 19 fill repeat;
+  -moz-border-image: url("/wp-content/uploads/2017/03/emptybutton.png") 15 22 18 19 stretch;
+  -webkit-border-image: url("/wp-content/uploads/2017/03/emptybutton.png") 15 22 18 19 stretch;
+  -o-border-image: url("/wp-content/uploads/2017/03/emptybutton.png") 15 22 18 19 stretch;
+  border-image: url("/wp-content/uploads/2017/03/emptybutton.png") 15 22 18 19 fill stretch;
   text-align: center;
   width: 33.33%;
   margin: 0 auto;
   margin-top: 80px;
-  transition: all .2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   cursor: pointer;
   background: transparent;
   display: block; }
+  .empty-button:hover {
+    border-style: solid;
+    border-width: 122px 30px 88px 121px;
+    -moz-border-image: url("/wp-content/uploads/2017/03/empty-button-hover1.png") 122 30 88 121 stretch;
+    -webkit-border-image: url("/wp-content/uploads/2017/03/empty-button-hover1.png") 122 30 88 121 stretch;
+    -o-border-image: url("/wp-content/uploads/2017/03/empty-button-hover1.png") 122 30 88 121 stretch;
+    border-image: url("/wp-content/uploads/2017/03/empty-button-hover1.png") 122 30 88 121 fill stretch; }
 
 .ajaxSection {
   position: absolute;
@@ -5938,7 +5959,13 @@ body {
   width: 35px;
   cursor: pointer;
   z-index: 100;
-  transition: opacity .25s ease;
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -o-transform: scale(0.7);
   transform: scale(0.7); }
   .button_container:hover {
     opacity: .7; }
@@ -5964,7 +5991,9 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    transition: all .35s ease;
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    transition: all 0.35s ease;
     cursor: pointer; }
     .button_container span:nth-of-type(2) {
       top: 11px; }
@@ -6039,8 +6068,9 @@ body {
           -o-transform: translateX(-50%);
           transform: translateX(-50%);
           height: 3px;
-          transition: .35s;
-          -webkit-transition: .35s; }
+          -webkit-transition: 0.35s;
+          -moz-transition: 0.35s;
+          transition: 0.35s; }
 
 .square {
   display: inline-block;
