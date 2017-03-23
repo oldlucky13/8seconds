@@ -1,0 +1,26 @@
+.drink-guide {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.drink-half {
+  flex: 1;
+  margin: 0px 5%;
+  p {
+    color: #fff;
+    font-family: $bot;
+    line-height: 1.6em;
+  }
+}
+
+.drink-guide-title {
+  font-family: $baraged;
+  color: $icon-color;
+  border-bottom: 1px solid $icon-color;
+  padding-bottom: 4%;
+}
+
+#first-recipe {
+  margin-top: 15%;
+}

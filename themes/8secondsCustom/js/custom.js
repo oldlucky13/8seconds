@@ -99,6 +99,12 @@ jQuery(document).ready(function( $ ) {
   $menuLeft = $('.menu-left');
   $menuGrey = $('.menu-grey');
   $allTitles = $('.main-page-title-group');
+  $aboutBtn = $('.about-btn');
+  $btnAbout = $('#btn-about');
+  $recipesBtn = $('.recipes-btn');
+  $btnRecipes = $('#btn-recipes');
+  $aboutSection = $('.about');
+  $recipesSection = $('.recipes');
 
   var mainIdx = 0;
   var mainScrollUnlocked = true;
@@ -107,6 +113,19 @@ jQuery(document).ready(function( $ ) {
   var onRecipesPage = false;
   var deskClassAdded = false;
   var startingSideWidth = null;
+
+  aboutOne = $('#about-one').offset().top;
+  aboutTwo = $('#about-two').offset().top;
+  aboutThree = $('#about-three').offset().top;
+  aboutFour = $('#about-four').offset().top;
+  aboutFive = $('#about-five').offset().top;
+  recipesOne = $('#recipes-one').offset().top;
+  recipesTwo = $('#recipes-two').offset().top;
+  recipesThree = $('#recipes-three').offset().top;
+  recipesFour = $('#recipes-four').offset().top;
+  recipesFive = $('#recipes-five').offset().top;
+  recipesSix = $('#recipes-six').offset().top;
+  recipesSeven = $('#recipes-seven').offset().top;
 
   /***************
   Mousewheel
@@ -159,12 +178,12 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
 
 function nextSlide(idx, callback) {
   TweenMax.to($allTitles.find(".h2-child").eq(idx - 1), 1, {y:"-100%", force3D: true, onComplete: nextTitle(idx, callback)});
-  $('.main-page-slide-group').children().eq(idx).fadeIn();
+  $('.main-page-slide-group').children().eq(idx).fadeIn(1100);
 }
 
 function previousSlide(idx, callback) {
   TweenMax.to($allTitles.find(".h2-child").eq(idx + 1), 1, {y:"100%", force3D: true, onComplete: nextTitle(idx, callback)});
-  $('.main-page-slide-group').children().eq(idx + 1).fadeOut();
+  $('.main-page-slide-group').children().eq(idx + 1).fadeOut(1100);
 }
 
 function jumpToSlide(oldIdx, newIdx) {
@@ -221,15 +240,15 @@ function revealTitles(titles) {
   titles.css("visibility", "visible");
 }
 
-console.log($mainPageAll);
-console.log($mainPageContainer.children());
+// console.log($mainPageAll);
+// console.log($mainPageContainer.children());
 
 /***************
 Ajax loading
 ***************/
 var aboutAreaTl = new TimelineMax({paused: true});
 aboutAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("about")}, 0);
-// wip: should just be able to include under $mainPageAll
+// wip: weird title sliding, should just be able to include under $mainPageAll
 aboutAreaTl.to($allTitles, 1.75, {ease: Power4.easeInOut, xPercent: -200}, 0);
 aboutAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
 aboutAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
@@ -264,16 +283,19 @@ recipesAreaTlMobile.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "
 var ajaxAboutTl = new TimelineMax({paused: true});
 ajaxAboutTl.to($ajaxAboutSection, 1.7, {ease: Power4.easeInOut, right: "-50%"}, 0);
 
-$('#recipes-btn').click(function () {
-  if ($(this).hasClass("fwd")) {
+function handleRecipesTrigger() {
+  if ($recipesBtn.hasClass("fwd")) {
     recipesAreaTl.play();
     triggerSection("recipes");
-    $(this).removeClass("fwd");
-    $(this).addClass("bk");
-    $(this).children().removeClass("fa-chevron-right");
-    $(this).children().addClass("fa-chevron-left");
+    // wip: all of these below should be in GSAP
+    $recipesBtn.removeClass("fwd");
+    $recipesBtn.addClass("bk");
+    $btnRecipes.children().removeClass("fa-chevron-right");
+    $btnRecipes.children().addClass("fa-chevron-left");
     $recipesImg.addClass('lateral-img');
-  } else if ($(this).hasClass("bk")) {
+    // $recipesSection.addClass('initial-lateral-img');  removed because too choppy, although it does solve padding issue
+  } else if ($btnRecipes.hasClass("bk")) {
+    $recipesImg.css('background-image','url(/wp-content/uploads/2017/03/home-drinks-manhattan.jpg)');
     recipesAreaTl.reverse();
     triggerSection("main");
     TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
@@ -284,12 +306,52 @@ $('#recipes-btn').click(function () {
     recipesBreadcrumbThree.reverse();
     recipesBreadcrumbTwo.reverse();
     recipesBreadcrumbOne.reverse();
-    $(this).removeClass("bk");
-    $(this).addClass("fwd");
-    $(this).children().removeClass("fa-chevron-left");
-    $(this).children().addClass("fa-chevron-right");
+    $recipesBtn.removeClass("bk");
+    $recipesBtn.addClass("fwd");
+    $btnRecipes.children().removeClass("fa-chevron-left");
+    $btnRecipes.children().addClass("fa-chevron-right");
     $recipesImg.removeClass('lateral-img');
+    // $recipesSection.removeClass('initial-lateral-img'); removed because too choppy, although it does solve padding issue
   }
+}
+
+function handleAboutTrigger() {
+  if ($btnAbout.hasClass("fwd")) {
+    aboutAreaTl.play();
+    triggerSection("about");
+    $aboutBtn.removeClass("fwd");
+    $aboutBtn.addClass("bk");
+    $btnAbout.children().removeClass("fa-chevron-right");
+    $btnAbout.children().addClass("fa-chevron-left");
+    $aboutImg.addClass('lateral-img');
+    // $aboutSection.addClass('initial-lateral-img');
+  } else if ($btnAbout.hasClass("bk")) {
+    $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
+    aboutAreaTl.reverse();
+    triggerSection("main");
+    TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    aboutBreadcrumbFive.reverse();
+    aboutBreadcrumbFour.reverse();
+    aboutBreadcrumbThree.reverse();
+    aboutBreadcrumbTwo.reverse();
+    aboutBreadcrumbOne.reverse();
+    $aboutBtn.removeClass("bk");
+    $aboutBtn.addClass("fwd");
+    $btnAbout.children().removeClass("fa-chevron-left");
+    $btnAbout.children().addClass("fa-chevron-right");
+    $aboutImg.removeClass('lateral-img');
+    // $aboutSection.removeClass('initial-lateral-img');
+  }
+}
+
+$recipesBtn.click(function () {
+  triggerSection("recipes");
+  handleRecipesTrigger();
+})
+
+$aboutBtn.click(function () {
+  triggerSection("about");
+  handleAboutTrigger();
 })
 
 $('#recipes-btn-fwd-mobile').click(function () {
@@ -304,49 +366,6 @@ $('#recipes-btn-bk-mobile').click(function () {
   // $ajaxRecipesSection[0].scrollTop = 0;
 })
 
-$('#about-btn').click(function () {
-  if ($(this).hasClass("fwd")) {
-    aboutAreaTl.play();
-    triggerSection("about");
-    $(this).removeClass("fwd");
-    $(this).addClass("bk");
-    // TweenMax.to($(this).children(), 1, {className: "-=fa-chevron-right", className: "+=fa-chevron-left"});
-    // $(this).children().switchClass( "fa-chevron-right", "fa-chevron-left", 1000, "easeInOutQuad" );
-
-    // TweenMax.to($(this).children()[0], 1, {display: "none", opacity: 0, visibility: "hidden"});
-    // TweenMax.to($(this).children()[1], 1, {display: "inline-block", opacity: 1, visibility: "visibile"});
-
-    // $(this).children().eq(0).addClass("hidden");
-    // $(this).children().eq(1).removeClass("hidden");
-
-    // $("fa-chevron-right").addClass("hidden");
-    // $("fa-chevron-left").removeClass("hidden");
-
-    $(this).children().removeClass("fa-chevron-right");
-    $(this).children().addClass("fa-chevron-left");
-    $aboutImg.css('padding-left', '0 !important');
-  } else if ($(this).hasClass("bk")) {
-    $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
-    aboutAreaTl.reverse();
-    triggerSection("main");
-    TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-    aboutBreadcrumbFive.reverse();
-    aboutBreadcrumbFour.reverse();
-    aboutBreadcrumbThree.reverse();
-    aboutBreadcrumbTwo.reverse();
-    aboutBreadcrumbOne.reverse();
-    $(this).removeClass("bk");
-    $(this).addClass("fwd");
-        // $(this).switchClass( "fa-chevron-left", "fa-chevron-right", 1000, "easeInOutQuad" );
-    // $("fa-chevron-left").addClass("hidden");
-    // $("fa-chevron-right").removeClass("hidden");
-
-    $(this).children().removeClass("fa-chevron-left");
-    $(this).children().addClass("fa-chevron-right");
-    $aboutImg.css('padding-left', '15px');
-    // $aboutImg.removeClass('lateral-img')
-  }
-})
 // $('#about-btn-fwd-desk').click(function () {
 //   aboutAreaTl.play();
 //   triggerSection("about");
@@ -395,11 +414,13 @@ function triggerSection(section) {
     onAboutPage = true;
     onRecipesPage =  false;
     startingSideWidth = $(window).width();
+    // handleAboutTrigger();
   } else if (section === "recipes") {
     onMainPage = false;
     onAboutPage = false;
     onRecipesPage =  true;
     startingSideWidth = $(window).width();
+    // handleRecipesTrigger();
   }
 }
 
@@ -408,63 +429,64 @@ Other scrolling
 ***************/
 
 var aboutBreadcrumbOne = new TimelineMax({paused: true});
-aboutBreadcrumbOne.to($aboutBreadcrumbs.children()[0], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+aboutBreadcrumbOne.to($aboutBreadcrumbs.children()[0], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 aboutBreadcrumbOne.to($aboutBreadcrumbText[0], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 var aboutBreadcrumbTwo = new TimelineMax({paused: true});
-aboutBreadcrumbTwo.to($aboutBreadcrumbs.children()[1], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+aboutBreadcrumbTwo.to($aboutBreadcrumbs.children()[1], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 aboutBreadcrumbTwo.to($aboutBreadcrumbText[1], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 var aboutBreadcrumbThree = new TimelineMax({paused: true});
-aboutBreadcrumbThree.to($aboutBreadcrumbs.children()[2], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+aboutBreadcrumbThree.to($aboutBreadcrumbs.children()[2], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 aboutBreadcrumbThree.to($aboutBreadcrumbText[2], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 var aboutBreadcrumbFour = new TimelineMax({paused: true});
-aboutBreadcrumbFour.to($aboutBreadcrumbs.children()[3], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+aboutBreadcrumbFour.to($aboutBreadcrumbs.children()[3], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 aboutBreadcrumbFour.to($aboutBreadcrumbText[3], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 var aboutBreadcrumbFive = new TimelineMax({paused: true});
-aboutBreadcrumbFive.to($aboutBreadcrumbs.children()[4], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+aboutBreadcrumbFive.to($aboutBreadcrumbs.children()[4], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 aboutBreadcrumbFive.to($aboutBreadcrumbText[4], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 // var aboutBreadcrumbTwo = $aboutBreadcrumbText[1];
 // var aboutBreadcrumbThree = $aboutBreadcrumbText[2];
 
 var recipesBreadcrumbOne = new TimelineMax({paused: true});
-recipesBreadcrumbOne.to($recipesBreadcrumbs.children()[0], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbOne.to($recipesBreadcrumbs.children()[0], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 recipesBreadcrumbOne.to($recipesBreadcrumbText[0], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 var recipesBreadcrumbTwo = new TimelineMax({paused: true});
-recipesBreadcrumbTwo.to($recipesBreadcrumbs.children()[1], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbTwo.to($recipesBreadcrumbs.children()[1], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 recipesBreadcrumbTwo.to($recipesBreadcrumbText[1], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 var recipesBreadcrumbThree = new TimelineMax({paused: true});
-recipesBreadcrumbThree.to($recipesBreadcrumbs.children()[2], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbThree.to($recipesBreadcrumbs.children()[2], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 recipesBreadcrumbThree.to($recipesBreadcrumbText[2], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 var recipesBreadcrumbFour = new TimelineMax({paused: true});
-recipesBreadcrumbFour.to($recipesBreadcrumbs.children()[3], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbFour.to($recipesBreadcrumbs.children()[3], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 recipesBreadcrumbFour.to($recipesBreadcrumbText[3], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 var recipesBreadcrumbFive = new TimelineMax({paused: true});
-recipesBreadcrumbFive.to($recipesBreadcrumbs.children()[4], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbFive.to($recipesBreadcrumbs.children()[4], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 recipesBreadcrumbFive.to($recipesBreadcrumbText[4], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 var recipesBreadcrumbSix = new TimelineMax({paused: true});
-recipesBreadcrumbSix.to($recipesBreadcrumbs.children()[5], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbSix.to($recipesBreadcrumbs.children()[5], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 recipesBreadcrumbSix.to($recipesBreadcrumbText[5], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 var recipesBreadcrumbSeven = new TimelineMax({paused: true});
-recipesBreadcrumbSeven.to($recipesBreadcrumbs.children()[6], 1, {ease: Power4.easeInOut, marginRight: 0}, 0);
+recipesBreadcrumbSeven.to($recipesBreadcrumbs.children()[6], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 recipesBreadcrumbSeven.to($recipesBreadcrumbText[6], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
 function handleOtherScrolling(section, dY, dF) {
   var scrollPosition = section[0].scrollTop += (-dY * dF);
   if (section === $ajaxAboutSection) {
-    var aboutOne = $('#about-one').offset().top;
-    var aboutTwo = $('#about-two').offset().top;
-    var aboutThree = $('#about-three').offset().top;
-    var aboutFour = $('#about-four').offset().top;
-    var aboutFive = $('#about-five').offset().top;
+    // console.log(testvar = $('#about-two'));
+    // console.log(testvar.offset().top);
+    // console.log("------- scroll position is: ");
+    // console.log(scrollPosition);
+    // console.log("------- window height position is: ");
+    // console.log($(window).height());
     if ((scrollPosition + $(window).height()) > aboutFive) {
       aboutBreadcrumbFour.reverse();
       aboutBreadcrumbFive.play();
@@ -508,16 +530,11 @@ function handleOtherScrolling(section, dY, dF) {
 
     }
   } else if (section === $ajaxRecipesSection) {
-    var recipesOne = $('#recipes-one').offset().top;
-    var recipesTwo = $('#recipes-two').offset().top;
-    var recipesThree = $('#recipes-three').offset().top;
-    var recipesFour = $('#recipes-four').offset().top;
-    var recipesFive = $('#recipes-five').offset().top;
-    var recipesSix = $('#recipes-six').offset().top;
-    var recipesSeven = $('#recipes-seven').offset().top;
     if ((scrollPosition + $(window).height()) > recipesSeven){
       recipesBreadcrumbSix.reverse();
       recipesBreadcrumbSeven.play();
+      // TweenMax.to($recipesImg, 1, {backgroundImage: 'none', ease: Power2.easeInOut})
+      // TweenMax.to($recipesImg, 1.2, {backgroundImage: 'url(/wp-content/uploads/2017/03/drinks-neat.jpg)', ease: Power2.easeInOut})
       $recipesImg.css('background-image', 'url(/wp-content/uploads/2017/03/drinks-neat.jpg)');
     } else if ((scrollPosition + $(window).height()) > recipesSix) {
       recipesBreadcrumbSeven.reverse();
@@ -552,6 +569,25 @@ function handleOtherScrolling(section, dY, dF) {
   }
 }
 
+$('.back-to-top').click(function () {
+  if (onAboutPage) {
+    TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    aboutBreadcrumbFive.reverse();
+    aboutBreadcrumbFour.reverse();
+    aboutBreadcrumbThree.reverse();
+    aboutBreadcrumbTwo.reverse();
+    aboutBreadcrumbOne.reverse();
+  } else if (onRecipesPage) {
+    TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    recipesBreadcrumbSeven.reverse();
+    recipesBreadcrumbSix.reverse();
+    recipesBreadcrumbFive.reverse();
+    recipesBreadcrumbFour.reverse();
+    recipesBreadcrumbThree.reverse();
+    recipesBreadcrumbTwo.reverse();
+    recipesBreadcrumbOne.reverse();
+  }
+})
 
 
 /***************
@@ -577,9 +613,7 @@ function checkSize(){
 	}
 
   if (onAboutPage && startingSideWidth < 992) {
-    console.log("hey");
     if ($(window).width() >= 992) {
-      console.log("hi");
       $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
       aboutAreaTlMobile.progress(0).pause();
       // aboutAreaTlMobile.reverse();
@@ -606,6 +640,20 @@ function checkSize(){
       TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
     }
   }
+  // wip: these don't actually recalculate on resize. secondary image change on scroll is not responsive.
+  // update: as it currently stands these only work when you navigate to the secondary section and then navigate back to main. then you can resize, go back to secondary and it will work. if you resize first without loading secondary, aboutOne returns 0. if you resize while on secondary the whole page breaks.
+  aboutOne = $('#about-one').offset().top;
+  aboutTwo = $('#about-two').offset().top;
+  aboutThree = $('#about-three').offset().top;
+  aboutFour = $('#about-four').offset().top;
+  aboutFive = $('#about-five').offset().top;
+  recipesOne = $('#recipes-one').offset().top;
+  recipesTwo = $('#recipes-two').offset().top;
+  recipesThree = $('#recipes-three').offset().top;
+  recipesFour = $('#recipes-four').offset().top;
+  recipesFive = $('#recipes-five').offset().top;
+  recipesSix = $('#recipes-six').offset().top;
+  recipesSeven = $('#recipes-seven').offset().top;
 }
 
 /***************
@@ -641,23 +689,69 @@ openMenu.to($menuGrey, 1, {opacity: 1}, "-=1.2");
 //   menuOpened = !menuOpened;
 // }});
 
+function toggleMenu() {
+  $('#toggle').toggleClass('active');
+  // $(this).toggleClass('active');
+ //  $('#overlayMenu').toggleClass('open');
+ //  TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+  mainScrollUnlocked = !mainScrollUnlocked;
+ //  openMenu.reversed() ? openMenu.reverse() : openMenu.play();
+ // menuOpened ? openMenu.reverse() : openMenu.play();
+  if (menuOpened) {
+    openMenu.reverse();
+    menuOpened = !menuOpened;
+  } else {
+    openMenu.play();
+    menuOpened = !menuOpened;
+  }
+ //  openMenu.reversed() ? openMenu.reverse() : openMenu.play();
+ //  $menuContainer.fadeToggle('ease');
+}
+
 $('#toggle').click(function() {
-   $(this).toggleClass('active');
-  //  $('#overlayMenu').toggleClass('open');
-  //  TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-   mainScrollUnlocked = !mainScrollUnlocked;
-  //  openMenu.reversed() ? openMenu.reverse() : openMenu.play();
-  // menuOpened ? openMenu.reverse() : openMenu.play();
-   if (menuOpened) {
-     openMenu.reverse();
-     menuOpened = !menuOpened;
-   } else {
-     openMenu.play();
-     menuOpened = !menuOpened;
-   }
-  //  openMenu.reversed() ? openMenu.reverse() : openMenu.play();
-  //  $menuContainer.fadeToggle('ease');
+  toggleMenu();
  });
+
+$('.square').click(function() {
+  toggleMenu();
+  if (this.id === "premium-square") {
+    jumpToSlide(mainIdx, 0);
+    mainIdx = 0;
+  } else if (this.id === "black-square") {
+    jumpToSlide(mainIdx, 1);
+    mainIdx = 1;
+  } else if (this.id === "honey-cinnamon-square") {
+    jumpToSlide(mainIdx, 2);
+    mainIdx = 2;
+  } else if (this.id === "story-square") {
+    jumpToSlide(mainIdx, 3);
+    mainIdx = 3;
+  } else if (this.id === "cocktails-square") {
+    jumpToSlide(mainIdx, 4);
+    mainIdx = 4;
+  } else if (this.id === "contact-square") {
+    jumpToSlide(mainIdx, 5);
+    mainIdx = 5;
+  }
+  updateBreadcrumb(mainIdx);
+})
+
+/***************
+Preload images
+***************/
+
+// function preload(arrayOfImages) {
+//     $(arrayOfImages).each(function () {
+//         $('<img />').attr('src',this).appendTo('body').css('display','none');
+//     });
+// }
+//
+// preload([
+//     'url(/wp-content/uploads/2017/03/home-story-boots.jpg)',
+//     'url(/wp-content/uploads/2017/03/story-vintagebull.jpg)',
+//     'url(/wp-content/uploads/2017/03/story-gloves.jpg)',
+// ]);
+
 
 
 /***************
