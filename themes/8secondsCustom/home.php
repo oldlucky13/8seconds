@@ -564,6 +564,10 @@ get_header();
     </nav> <!-- menu-left -->
   </div> <!-- menu-container -->
   <div id="ageGate" class="modal">
+    <video id="age-gate-video" autoplay>
+      <source src="/wp-content/uploads/2017/03/Age-Gate-Video-V3.webmhd.webm" type="video/webm">
+      <source src="/wp-content/uploads/2017/03/Age-Gate-Video-V3.mp4" type="video/mp4">
+    </video>
     <div class="age-gate-content">
       <img src="/wp-content/uploads/2017/03/age-gate-icon.png" id="age-gate-icon" alt="8 seconds whiskey bull logo">
       <h1>ARE YOU ABLE TO RIDE?</h1>
@@ -574,10 +578,6 @@ get_header();
       </div>
     </div>
   </div>
-  <!-- <video id="age-gate-video" autoplay>
-    <source src="/wp-content/uploads/2017/03/Age-Gate-Video-V3.webmhd.webm" type="video/webm">
-    <source src="/wp-content/uploads/2017/03/Age-Gate-Video-V3.mp4" type="video/mp4">
-  </video> -->
 </div> <!-- #main-content -->
 <div id="mobile-indicator"></div>
 <?php get_footer(); ?>

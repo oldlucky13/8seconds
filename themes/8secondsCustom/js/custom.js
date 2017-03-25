@@ -81,7 +81,7 @@ jQuery(window).on('load', function($) { // makes sure the whole site is loaded
   jQuery('#status').fadeOut(); // will first fade out the loading animation
   jQuery('#preloader').delay(350).fadeOut('slow', function () {
     var AgeGateFadeIn = new TimelineMax({paused: true});
-    AgeGateFadeIn.to($ageGateContent, 2, {opacity: 1, ease: Power4.easeInOut});
+    AgeGateFadeIn.from($ageGateContent, 2, {opacity: 0, ease: Power4.easeInOut});
     AgeGateFadeIn.play();
   }); // will fade out the white DIV that covers the website.
 })
