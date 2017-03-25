@@ -6304,99 +6304,151 @@ body {
 
 #ageGate {
   background-color: #000; }
-
-.age-gate-content {
-  margin: 0 auto;
-  text-align: center;
-  color: #ECE8DE;
-  width: 80%;
-  margin-top: 4em; }
-  @media all and (min-width: 760px) {
-    .age-gate-content {
-      margin-top: 11em; } }
-  @media all and (min-width: 1765px) {
-    .age-gate-content {
-      margin-top: 10%; } }
-  @media screen and (min-aspect-ratio: 17 / 10) and (max-width: 800px) {
-    .age-gate-content {
-      margin-top: 1em; } }
-  .age-gate-content #age-gate-icon {
-    max-width: 250px; }
-    @media all and (min-width: 360px) {
-      .age-gate-content #age-gate-icon {
-        max-width: 300px; } }
+  #ageGate #age-gate-video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  #ageGate .age-gate-content {
+    margin: 0 auto;
+    text-align: center;
+    color: #ECE8DE;
+    width: 80%;
+    margin-top: 4em;
+    opacity: 0; }
     @media all and (min-width: 760px) {
-      .age-gate-content #age-gate-icon {
-        max-width: 350px; } }
+      #ageGate .age-gate-content {
+        margin-top: 11em; } }
+    @media all and (min-width: 1765px) {
+      #ageGate .age-gate-content {
+        margin-top: 10%; } }
     @media screen and (min-aspect-ratio: 17 / 10) and (max-width: 800px) {
-      .age-gate-content #age-gate-icon {
-        max-width: 200px; } }
-  .age-gate-content .button-wrapper {
-    margin-top: 30px;
-    margin: 0 auto; }
-    @media all and (min-width: 360px) {
-      .age-gate-content .button-wrapper {
-        margin-top: 40px; } }
-    @media all and (min-width: 760px) {
-      .age-gate-content .button-wrapper {
-        margin-top: 40px;
-        width: 80%; } }
-    @media screen and (min-aspect-ratio: 17 / 10) and (max-width: 800px) {
-      .age-gate-content .button-wrapper {
-        margin-top: .8em; } }
-    @media all and (min-width: 1200px) {
-      .age-gate-content .button-wrapper {
-        width: 50%; } }
-    @media all and (min-width: 1650px) {
-      .age-gate-content .button-wrapper {
-        width: 40%; } }
-    .age-gate-content .button-wrapper .age-gate-button {
-      display: block;
-      width: 100%;
-      height: 50px;
-      line-height: 0;
-      cursor: pointer;
-      margin-top: 0;
-      margin: 0 auto; }
-      @media all and (min-width: 760px) {
-        .age-gate-content .button-wrapper .age-gate-button {
-          display: inline;
-          width: 48%; } }
-      @media screen and (min-aspect-ratio: 17 / 10) and (max-width: 800px) {
-        .age-gate-content .button-wrapper .age-gate-button {
-          display: inline;
-          width: 48%; } }
-      .age-gate-content .button-wrapper .age-gate-button:hover {
-        cursor: pointer; }
-    .age-gate-content .button-wrapper #over21 {
-      margin-bottom: 10px; }
-      @media all and (min-width: 760px) {
-        .age-gate-content .button-wrapper #over21 {
-          margin-right: 5px; } }
-    .age-gate-content .button-wrapper #under21 {
-      margin-top: 10px; }
-      @media all and (min-width: 760px) {
-        .age-gate-content .button-wrapper #under21 {
-          margin-left: 5px; } }
-  .age-gate-content h1 {
-    font-family: "Barley Aged", "Sans Serif";
-    letter-spacing: 2px;
-    margin-top: 40px;
-    font-size: 2.5em; }
-    @media all and (min-width: 360px) {
-      .age-gate-content h1 {
-        font-size: 2.55em;
-        margin-top: 60px; } }
-    @media all and (min-width: 375px) {
-      .age-gate-content h1 {
-        font-size: 3em; } }
-    @media screen and (min-aspect-ratio: 17 / 10) and (max-width: 800px) {
-      .age-gate-content h1 {
-        font-size: 2em;
+      #ageGate .age-gate-content {
         margin-top: 1em; } }
-  .age-gate-content h3 {
-    margin-top: 5px;
-    font-family: "Wheat Aged", "Sans Serif";
-    letter-spacing: 1px; }
+    #ageGate .age-gate-content #age-gate-icon {
+      max-width: 250px; }
+      @media all and (min-width: 360px) {
+        #ageGate .age-gate-content #age-gate-icon {
+          max-width: 300px; } }
+      @media all and (min-width: 760px) {
+        #ageGate .age-gate-content #age-gate-icon {
+          max-width: 350px; } }
+      @media screen and (min-aspect-ratio: 17 / 10) and (max-width: 800px) {
+        #ageGate .age-gate-content #age-gate-icon {
+          max-width: 200px; } }
+    #ageGate .age-gate-content .button-wrapper {
+      margin-top: 30px;
+      margin: 0 auto; }
+      @media all and (min-width: 360px) {
+        #ageGate .age-gate-content .button-wrapper {
+          margin-top: 40px; } }
+      @media all and (min-width: 760px) {
+        #ageGate .age-gate-content .button-wrapper {
+          margin-top: 40px;
+          width: 80%; } }
+      @media screen and (min-aspect-ratio: 17 / 10) and (max-width: 800px) {
+        #ageGate .age-gate-content .button-wrapper {
+          margin-top: .8em; } }
+      @media all and (min-width: 1200px) {
+        #ageGate .age-gate-content .button-wrapper {
+          width: 50%; } }
+      @media all and (min-width: 1650px) {
+        #ageGate .age-gate-content .button-wrapper {
+          width: 40%; } }
+      #ageGate .age-gate-content .button-wrapper .age-gate-button {
+        display: block;
+        width: 100%;
+        height: 50px;
+        line-height: 0;
+        cursor: pointer;
+        margin-top: 0;
+        margin: 0 auto; }
+        @media all and (min-width: 760px) {
+          #ageGate .age-gate-content .button-wrapper .age-gate-button {
+            display: inline;
+            width: 48%; } }
+        @media screen and (min-aspect-ratio: 17 / 10) and (max-width: 800px) {
+          #ageGate .age-gate-content .button-wrapper .age-gate-button {
+            display: inline;
+            width: 48%; } }
+        #ageGate .age-gate-content .button-wrapper .age-gate-button:hover {
+          cursor: pointer; }
+      #ageGate .age-gate-content .button-wrapper #over21 {
+        margin-bottom: 10px; }
+        @media all and (min-width: 760px) {
+          #ageGate .age-gate-content .button-wrapper #over21 {
+            margin-right: 5px; } }
+      #ageGate .age-gate-content .button-wrapper #under21 {
+        margin-top: 10px; }
+        @media all and (min-width: 760px) {
+          #ageGate .age-gate-content .button-wrapper #under21 {
+            margin-left: 5px; } }
+    #ageGate .age-gate-content h1 {
+      font-family: "Barley Aged", "Sans Serif";
+      letter-spacing: 2px;
+      margin-top: 40px;
+      font-size: 2.5em; }
+      @media all and (min-width: 360px) {
+        #ageGate .age-gate-content h1 {
+          font-size: 2.55em;
+          margin-top: 60px; } }
+      @media all and (min-width: 375px) {
+        #ageGate .age-gate-content h1 {
+          font-size: 3em; } }
+      @media screen and (min-aspect-ratio: 17 / 10) and (max-width: 800px) {
+        #ageGate .age-gate-content h1 {
+          font-size: 2em;
+          margin-top: 1em; } }
+    #ageGate .age-gate-content h3 {
+      margin-top: 5px;
+      font-family: "Wheat Aged", "Sans Serif";
+      letter-spacing: 1px; }
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  z-index: 199; }
+  #preloader #status {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    max-width: 500px;
+    background-size: contain;
+    left: 50%;
+    /* centers the loading animation horizontally one the screen */
+    top: 50%;
+    /* centers the loading animation vertically one the screen */
+    /* path to your loading animation */
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-transform: -50% -50%;
+    -moz-transform: -50% -50%;
+    -ms-transform: -50% -50%;
+    -o-transform: -50% -50%;
+    transform: -50% -50%; }
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; }
+
+.pace-inactive {
+  display: none; }
+
+.pace .pace-progress {
+  background: #73623c;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px; }
 
 /*# sourceMappingURL=style.css.map */
