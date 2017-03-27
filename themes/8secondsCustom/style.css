@@ -5788,7 +5788,8 @@ body {
   border: 2px solid #86754D;
   padding: 18px 18px;
   border-radius: 22px;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 8; }
   .slide-button i {
     -webkit-transition: all 2s ease;
     -moz-transition: all 2s ease;
@@ -6447,5 +6448,42 @@ body {
   right: 100%;
   width: 100%;
   height: 2px; }
+
+#boots {
+  background-image: url("/wp-content/uploads/2017/03/home-story-boots.jpg"); }
+
+#bootstwo {
+  background-image: url("/wp-content/uploads/2017/03/home-story-boots.jpg"); }
+
+#vintagebull {
+  background-image: url("/wp-content/uploads/2017/03/story-vintagebull.jpg"); }
+
+#gloves {
+  background-image: url("/wp-content/uploads/2017/03/story-gloves.jpg"); }
+
+#bullrider {
+  background-image: url("/wp-content/uploads/2017/03/story-bullrider.jpg"); }
+
+#matador {
+  background-image: url("/wp-content/uploads/2017/03/story-matador.jpg"); }
+
+.secondary-image-group {
+  height: 100%;
+  opacity: 0; }
+
+.secondary-image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0; }
+
+.col-md-6 {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
 
 /*# sourceMappingURL=style.css.map */

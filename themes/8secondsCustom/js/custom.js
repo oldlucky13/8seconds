@@ -115,6 +115,11 @@ jQuery(document).ready(function( $ ) {
   $aboutSection = $('.about');
   $recipesSection = $('.recipes');
   $ageGateContent = $('.age-gate-content');
+  $boots = $('#boots');
+  $vintagebull = $('#vintagebull');
+  $gloves = $('#gloves');
+  $bullrider = $('#bullrider');
+  $matador = $('#matador');
 
   var mainIdx = 0;
 
@@ -334,6 +339,7 @@ function handleAboutTrigger() {
     $btnAbout.children().removeClass("fa-chevron-right");
     $btnAbout.children().addClass("fa-chevron-left");
     $aboutImg.addClass('lateral-img');
+    TweenMax.to($('.secondary-image-group'), 1, {opacity: 1});
     // $aboutSection.addClass('initial-lateral-img');
   } else if ($btnAbout.hasClass("bk")) {
     $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
@@ -500,29 +506,38 @@ function handleOtherScrolling(section, dY, dF) {
     if ((scrollPosition + $(window).height()) > aboutFive) {
       aboutBreadcrumbFour.reverse();
       aboutBreadcrumbFive.play();
-      $aboutImg.css('background-image', 'url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
+      TweenMax.to($boots, 1, {opacity: 1, ease: Power1.easeOut});
     } else if ((scrollPosition + $(window).height()) > aboutFour) {
       aboutBreadcrumbFive.reverse();
       aboutBreadcrumbThree.reverse();
       aboutBreadcrumbFour.play();
-      $aboutImg.css('background-image', 'url(/wp-content/uploads/2017/03/story-vintagebull.jpg)');
+      TweenMax.to($vintagebull, 1, {opacity: 1, ease: Power1.easeOut});
+      TweenMax.to($boots, 1, {opacity: 0, ease: Power1.easeOut});
+      // $aboutImg.css('background-image', 'url(/wp-content/uploads/2017/03/story-vintagebull.jpg);
     } else if ((scrollPosition + $(window).height()) > aboutThree) {
       aboutBreadcrumbTwo.reverse();
       aboutBreadcrumbFour.reverse();
       aboutBreadcrumbThree.play();
-      $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/story-gloves.jpg)');
+      TweenMax.to($gloves, 1, {opacity: 1, ease: Power1.easeOut});
+      TweenMax.to($vintagebull, 1, {opacity: 0, ease: Power1.easeOut});
+      // $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/story-gloves.jpg);
     } else if ((scrollPosition + $(window).height()) > aboutTwo) {
       aboutBreadcrumbOne.reverse()
       aboutBreadcrumbThree.reverse();
       aboutBreadcrumbTwo.play();
-      $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/story-bullrider.jpg)');
+      TweenMax.to($bullrider, 1, {opacity: 1, ease: Power1.easeOut});
+      TweenMax.to($gloves, 1, {opacity: 0, ease: Power1.easeOut});
+      // $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/story-bullrider.jpg);
     } else if ((scrollPosition + $(window).height()) > aboutOne) {
       aboutBreadcrumbTwo.reverse();
       aboutBreadcrumbOne.play();
-      $aboutImg.css('background-image', 'url(/wp-content/uploads/2017/03/story-matador.jpg)');
+      TweenMax.to($matador, 1, {opacity: 1, ease: Power1.easeOut});
+      TweenMax.to($bullrider, 1, {opacity: 0, ease: Power1.easeOut});
+      // $aboutImg.css('background-image', 'url(/wp-content/uploads/2017/03/story-matador.jpg);
     } else {
       aboutBreadcrumbOne.reverse();
-      $aboutImg.css('background-image', 'url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
+      TweenMax.to($matador, 1, {opacity: 0, ease: Power1.easeOut});
+      // $aboutImg.css('background-image', 'url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
     // }
 
     // console.log("sP = " + scrollPosition);
