@@ -5918,6 +5918,9 @@ body {
   text-align: center; }
 
 .s-down-btn {
+  position: absolute;
+  bottom: 10%;
+  left: calc(50% - 16px);
   padding: 4px 10px;
   border: 1px solid #86754D;
   color: #fff;
@@ -5986,6 +5989,11 @@ div.wpcf7-validation-errors {
 div.wpcf7-mail-sent-ok {
   font-family: "Boton", "Sans Serif";
   border: none; }
+
+#story-s-tagline {
+  position: absolute;
+  left: calc(50% - 143.04px);
+  bottom: 16%; }
 
 .button_container {
   position: absolute;

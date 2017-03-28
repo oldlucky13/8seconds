@@ -150,9 +150,9 @@ get_header();
           <div class="s-section first-s-section">
             <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             <img class="s-title" src="wp-content/uploads/2017/03/home-story-title_v2.png" alt="">
-            <p class="s-tagline">THE MOST DANGEROUS 8 SECONDS IN SPORTS</p>
+            <p id="story-s-tagline" class="s-tagline">THE MOST DANGEROUS 8 SECONDS IN SPORTS</p>
             <button type="button" class="s-down-btn s-btn btn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
-            <div class="v0 vertical-line">
+            <div class="v1 vertical-line">
                 <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
           </div> <!-- s-section -->

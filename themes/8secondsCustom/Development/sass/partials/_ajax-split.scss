@@ -106,6 +106,9 @@
 }
 
 .s-down-btn {
+  position: absolute;
+  bottom: 10%;
+  left: calc(50% - 16px);
   padding: 4px 10px;
   border: 1px solid $icon-color;
   color: #fff;
@@ -194,4 +197,10 @@ div.wpcf7-validation-errors {
 div.wpcf7-mail-sent-ok {
   font-family: $bot;
   border: none;
+}
+
+#story-s-tagline {
+  position: absolute;
+  left: calc(50% - 143.04px);
+  bottom: 16%;
 }
