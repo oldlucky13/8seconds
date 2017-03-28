@@ -39,7 +39,10 @@ function enqueue_load_fa() {
 
 }
 
-
+function wpse_dequeue_google_fonts() {
+   wp_dequeue_style( 'divi-fonts' );
+}
+add_action( 'wp_enqueue_scripts', 'wpse_dequeue_google_fonts', 20 );
 
 add_filter('show_admin_bar', '__return_false');
 
