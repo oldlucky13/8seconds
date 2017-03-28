@@ -522,6 +522,8 @@ get_header();
       <div id="nav-menu">
         <div id="menu-row-first" class="menu-row">
           <div id="premium-square" class="square dr" data-menuanchor="premium" class="nav-menu-link mobile-menu">
+            <div id="fake-premium" class="fake-background">
+            </div>
             <div class="square-content">
               <div class="table">
                 <div class="table-cell">
@@ -531,6 +533,8 @@ get_header();
             </div>
           </div> <!-- square -->
           <div id="story-square" class="square dl" data-menuanchor="story" class="nav-menu-link mobile-menu">
+            <div id="fake-story" class="fake-background">
+            </div>
             <div class="square-content">
               <div class="table">
                 <div class="table-cell">
@@ -542,6 +546,8 @@ get_header();
         </div> <!-- row -->
         <div class="menu-row">
           <div id="black-square" class="square left" data-menuanchor="black" class="nav-menu-link mobile-menu">
+            <div id="fake-black" class="fake-background">
+            </div>
             <div class="square-content">
               <div class="table">
                 <div id="black-cell" class="table-cell">
@@ -551,6 +557,8 @@ get_header();
             </div>
           </div> <!-- square -->
           <div id="cocktails-square" class="square right" data-menuanchor="recipes" class="nav-menu-link mobile-menu">
+            <div id="fake-cocktails" class="fake-background">
+            </div>
             <div class="square-content">
               <div class="table">
                 <div class="table-cell">
@@ -562,6 +570,8 @@ get_header();
         </div> <!-- row -->
         <div id="menu-row-last" class="menu-row">
           <div id="honey-cinnamon-square" class="square dl" data-menuanchor="honey-cinnamon" class="nav-menu-link mobile-menu">
+            <div id="fake-honey-cinnamon" class="fake-background">
+            </div>
             <div class="square-content">
               <div class="table">
                 <div id="honey-cinnamon-cell" class="table-cell">
@@ -572,6 +582,8 @@ get_header();
             </div>
           </div> <!-- square -->
           <div id="contact-square" class="square dr" data-menuanchor="contact" class="nav-menu-link mobile-menu">
+            <div id="fake-contact" class="fake-background">
+            </div>
             <div class="square-content">
               <div class="table">
                 <div id="contact-cell" class="table-cell">

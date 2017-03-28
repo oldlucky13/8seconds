@@ -6088,6 +6088,8 @@ body {
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   transition: all 1s ease; }
+  .square:hover .fake-background {
+    opacity: 1; }
   .square:hover p {
     opacity: 0; }
   .square .square-content {
@@ -6108,7 +6110,10 @@ body {
           font-family: "Barley Aged", "Sans Serif";
           color: #fff;
           font-size: 1.5em;
-          text-align: center; }
+          text-align: center;
+          -webkit-transition: all 0.2s ease;
+          -moz-transition: all 0.2s ease;
+          transition: all 0.2s ease; }
         .square .square-content .table .table-cell a {
           color: white;
           cursor: pointer;
@@ -6129,22 +6134,35 @@ body {
 #menu-row-last {
   margin-bottom: 5%; }
 
-#premium-square:hover {
+.fake-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-position: center center;
+  background-size: cover;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  transition: all 0.8s ease; }
+
+#fake-premium {
   background-image: url("/wp-content/uploads/2017/03/menu-premium-1.png"); }
 
-#story-square:hover {
+#fake-story {
   background-image: url("/wp-content/uploads/2017/03/menu-story.png"); }
 
-#black-square:hover {
+#fake-black {
   background-image: url("/wp-content/uploads/2017/03/menu-black.png"); }
 
-#cocktails-square:hover {
+#fake-cocktails {
   background-image: url("/wp-content/uploads/2017/03/menu-cocktail.png"); }
 
-#honey-cinnamon-square:hover {
+#fake-honey-cinnamon {
   background-image: url("/wp-content/uploads/2017/03/menu-honeycinnamon.png"); }
 
-#contact-square:hover {
+#fake-contact {
   background-image: url("/wp-content/uploads/2017/03/menu-contact.png"); }
 
 .dr {
