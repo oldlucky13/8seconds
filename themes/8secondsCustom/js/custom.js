@@ -196,6 +196,16 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
       }
       updateBreadcrumb(mainIdx);
     }
+    if (mainIdx === 3) {
+      $btnAbout.fadeIn();
+      $btnRecipes.fadeOut();
+    } else if (mainIdx === 4) {
+      $btnAbout.fadeOut();
+      $btnRecipes.fadeIn();
+    } else {
+      $btnAbout.fadeOut();
+      $btnRecipes.fadeOut();
+    }
   }
 }
 
