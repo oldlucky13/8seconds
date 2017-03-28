@@ -173,7 +173,7 @@ Main Scroll Logic
 function handleMainPageScroll(scrollDir, newMainIdx) {
   if (mainScrollUnlocked) {
     mainScrollUnlocked = false;
-    setTimeout(unlockMainScroll, 1000);
+    setTimeout(unlockMainScroll, 1200);
     if (mainIdx === 0 && scrollDir > 0) { // can't scroll up at first slide
       return;
     } else if (scrollDir > 0) { // scroll up
@@ -211,20 +211,36 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
 }
 
 function nextSlide(idx, callback) {
-  TweenMax.to($allTitles.find(".h2-child").eq(idx - 1), 1, {y:"-100%", force3D: true, onComplete: nextTitle(idx, callback)});
-  TweenMax.to($hideContainer.eq(idx - 1), 1, {opacity: 0, ease: Power4.easeInOut});
-  $('.main-page-slide-group').children().eq(idx).fadeIn(1000, function () {
-    TweenMax.to($hideContainer.eq(idx), 1, {opacity: 1, ease: Power4.easeInOut});
+  TweenMax.to($allTitles.find(".h2-child").eq(idx - 1), 1.5, {y:"-100%", force3D: true, onComplete: nextTitle(idx, callback)});
+  TweenMax.to($hideContainer.eq(idx - 1), .6, {opacity: 0, ease: Power4.easeInOut});
+  $('.main-page-slide-group').children().eq(idx).fadeIn(1200, function () {
   });
+  TweenMax.to($hideContainer.eq(idx), 1.5, {opacity: 1, ease: Power4.easeIn});
 }
 
 function previousSlide(idx, callback) {
-  TweenMax.to($allTitles.find(".h2-child").eq(idx + 1), 1, {y:"100%", force3D: true, onComplete: nextTitle(idx, callback)});
-  TweenMax.to($hideContainer.eq(idx + 1), 1, {opacity: 0, ease: Power4.easeInOut});
-  $('.main-page-slide-group').children().eq(idx + 1).fadeOut(1000, function () {
-    TweenMax.to($hideContainer.eq(idx), 1, {opacity: 1, ease: Power4.easeInOut});
+  TweenMax.to($allTitles.find(".h2-child").eq(idx + 1), 1.5, {y:"100%", force3D: true, onComplete: nextTitle(idx, callback)});
+  TweenMax.to($hideContainer.eq(idx + 1), .6, {opacity: 0, ease: Power4.easeInOut});
+  $('.main-page-slide-group').children().eq(idx + 1).fadeOut(1200, function () {
   });
+  TweenMax.to($hideContainer.eq(idx), 1.5, {opacity: 1, ease: Power4.easeIn});
 }
+
+// function nextSlide(idx, callback) {
+//   TweenMax.to($allTitles.find(".h2-child").eq(idx - 1), 1, {y:"-100%", force3D: true, onComplete: nextTitle(idx, callback)});
+//   TweenMax.to($hideContainer.eq(idx - 1), 1, {opacity: 0, ease: Power4.easeInOut});
+//   $('.main-page-slide-group').children().eq(idx).fadeIn(1000, function () {
+//     TweenMax.to($hideContainer.eq(idx), 1, {opacity: 1, ease: Power4.easeInOut});
+//   });
+// }
+//
+// function previousSlide(idx, callback) {
+//   TweenMax.to($allTitles.find(".h2-child").eq(idx + 1), 1, {y:"100%", force3D: true, onComplete: nextTitle(idx, callback)});
+//   TweenMax.to($hideContainer.eq(idx + 1), 1, {opacity: 0, ease: Power4.easeInOut});
+//   $('.main-page-slide-group').children().eq(idx + 1).fadeOut(1000, function () {
+//     TweenMax.to($hideContainer.eq(idx), 1, {opacity: 1, ease: Power4.easeInOut});
+//   });
+// }
 
 function jumpToSlide(oldIdx, newIdx) {
   if (oldIdx < newIdx) {
@@ -251,7 +267,7 @@ function jumpToSlide(oldIdx, newIdx) {
 }
 
 function nextTitle(idx, callback) {
-  TweenMax.to($allTitles.find(".h2-child").eq(idx), 1, {y:"0%", onComplete: function () {
+  TweenMax.to($allTitles.find(".h2-child").eq(idx), 1.5, {y:"0%", onComplete: function () {
     if (typeof callback === "function") {
       callback();
     }
