@@ -313,7 +313,7 @@ get_header();
                 <p>Rub the cut edge of the orange peel over the rim of the glass and twist it over the dirnk to release the oils. Do not drop it in.</p>
               </div>
             </div> <!-- drink-guide -->
-            <div class="first-v-line vertical-line">
+            <div class="v1 vertical-line">
             </div>
           </div> <!-- s-section -->
           <div class="s-section">
