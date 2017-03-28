@@ -147,7 +147,7 @@ get_header();
           </ol>
         </div> <!-- #four-img -->
         <div class="ajaxSection ajaxAboutSection no-mobile-col col-md-6">
-          <div class="s-section">
+          <div class="s-section first-s-section">
             <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             <img class="s-title" src="wp-content/uploads/2017/03/home-story-title_v2.png" alt="">
             <p class="s-tagline">THE MOST DANGEROUS 8 SECONDS IN SPORTS</p>
@@ -289,7 +289,7 @@ get_header();
           </ol>
         </div> <!-- #five-img -->
         <div class="ajaxSection ajaxRecipesSection no-mobile-col col-md-6">
-          <div class="s-section">
+          <div class="s-section first-s-section">
             <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             <div id="first-recipe" class="s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-1.svg" alt="">
@@ -313,15 +313,13 @@ get_header();
                 <p>Rub the cut edge of the orange peel over the rim of the glass and twist it over the dirnk to release the oils. Do not drop it in.</p>
               </div>
             </div> <!-- drink-guide -->
-            <div class="v3 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
+            <div class="first-v-line vertical-line">
             </div>
           </div> <!-- s-section -->
           <div class="s-section">
+            <div class="vertical-line v2">
+            </div>
             <div class="s-text">
-              <div class="v2 vertical-line">
-                <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-              </div>
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-2.svg" alt="">
               <h2 class="s-header">8 SECONDS COLA</h2>
               <a id="recipes-two"></a>
@@ -340,14 +338,12 @@ get_header();
               </div>
             </div>
             <div class="v1 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
           </div> <!-- s-section -->
           <div class="s-section">
+            <div class="vertical-line v2">
+            </div>
             <div class="s-text">
-              <div class="v2 vertical-line">
-                <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-              </div>
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-3.svg" alt="">
               <h2 class="s-header">OLD FASHIONED</h2>
               <a id="recipes-three"></a>
@@ -371,14 +367,12 @@ get_header();
               </div>
             </div>
             <div class="v1 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
           </div> <!-- s-section -->
           <div class="s-section">
+            <div class="v2 vertical-line">
+            </div>
             <div class="s-text">
-              <div class="v2 vertical-line">
-                <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-              </div>
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-4.svg" alt="">
               <h2 class="s-header">COWBOY JULEP</h2>
               <a id="recipes-four"></a>
@@ -403,14 +397,12 @@ get_header();
               </div>
             </div>
             <div class="v1 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
           </div> <!-- s-section -->
           <div class="s-section">
+            <div class="v2 vertical-line">
+            </div>
             <div class="s-text">
-              <div class="v2 vertical-line">
-                <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-              </div>
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-5.svg" alt="">
               <h2 class="s-header">8 SECONDS GINGER</h2>
               <a id="recipes-five"></a>
@@ -430,28 +422,24 @@ get_header();
               </div>
             </div>
             <div class="v1 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
           </div> <!-- s-section -->
           <div class="s-section">
+            <div class="v2 vertical-line">
+            </div>
             <div class="s-text">
-              <div class="v2 vertical-line">
-                <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-              </div>
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-6.svg" alt="">
               <h2 class="s-header">HONEY CINNAMON SHOOTER</h2>
               <a id="recipes-six"></a>
               <p class="s-paragraph">Shootin' it straight.</p>
             </div>
             <div class="v1 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
           </div> <!-- s-section -->
           <div class="s-section">
+            <div class="v2 vertical-line">
+            </div>
             <div class="s-text">
-              <div class="v2 vertical-line">
-                <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-              </div>
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-7.svg" alt="">
               <h2 class="s-header">8 SECONDS NEAT</h2>
               <a id="recipes-seven"></a>

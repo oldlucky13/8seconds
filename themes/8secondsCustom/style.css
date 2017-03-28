@@ -5900,7 +5900,8 @@ body {
   padding-right: 0 !important; }
 
 .s-section {
-  height: 100vh; }
+  height: 80vh;
+  position: relative; }
 
 .s-title {
   height: 300px;
@@ -5948,8 +5949,9 @@ body {
   height: 10%; }
 
 .v1 {
-  margin-top: 3%;
-  height: 57%; }
+  position: absolute;
+  height: 10%;
+  bottom: 0; }
 
 .v2 {
   height: 20%; }
@@ -5965,6 +5967,14 @@ body {
 
 .back-to-top {
   padding: 0px; }
+
+.first-s-section {
+  height: 100vh; }
+
+.first-v-line {
+  position: absolute;
+  height: 5%;
+  bottom: -2%; }
 
 .button_container {
   position: absolute;

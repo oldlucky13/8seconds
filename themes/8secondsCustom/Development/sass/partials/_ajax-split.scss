@@ -82,7 +82,8 @@
 }
 
 .s-section {
-  height: 100vh;
+  height: 80vh;
+  position: relative;
 }
 
 .s-title {
@@ -142,9 +143,14 @@
   height: 10%;
 }
 .v1 {
-  margin-top: 3%;
-  height: 57%;
+  position: absolute;
+  height: 10%;
+  bottom: 0;
 }
+// .v1 {
+//   margin-top: 3%;
+//   height: 57%;
+// }
 
 .v2 {
   height: 20%;
@@ -164,4 +170,14 @@
 
 .back-to-top {
   padding: 0px;
+}
+
+.first-s-section {
+  height: 100vh;
+}
+
+.first-v-line {
+  position: absolute;
+  height: 5%;
+  bottom: -2%;
 }
