@@ -212,7 +212,7 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
 
 function nextSlide(idx, callback) {
   TweenMax.to($allTitles.find(".h2-child").eq(idx - 1), 1, {y:"-100%", force3D: true, onComplete: nextTitle(idx, callback)});
-    TweenMax.to($hideContainer.eq(idx - 1), 1, {opacity: 0, ease: Power4.easeInOut});
+  TweenMax.to($hideContainer.eq(idx - 1), 1, {opacity: 0, ease: Power4.easeInOut});
   $('.main-page-slide-group').children().eq(idx).fadeIn(1000, function () {
     TweenMax.to($hideContainer.eq(idx), 1, {opacity: 1, ease: Power4.easeInOut});
   });
