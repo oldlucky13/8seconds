@@ -6127,6 +6127,20 @@ body {
   background-position: center center;
   background-repeat: no-repeat; }
 
+#premium-square {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background: transparent;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  transition: all 1s ease; }
+  #premium-square:hover {
+    background: url("/wp-content/uploads/2017/03/menu-premiumv2.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+
 .dr {
   border-style: solid;
   border-width: 42px 41px 44px 45px;
@@ -6260,6 +6274,8 @@ body {
   margin-top: 15%; }
 
 .contact-form-container {
+  width: 80%;
+  margin: 0 auto;
   margin-top: 50%; }
 
 .wpcf7 {

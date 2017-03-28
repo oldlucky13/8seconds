@@ -231,6 +231,20 @@
   background-repeat: no-repeat;
 }
 
+#premium-square {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background: transparent;
+  @include transition(all 1s ease);
+  &:hover {
+    background: url("/wp-content/uploads/2017/03/menu-premiumv2.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
 //
 // .square-grid {
 //   display: flex;

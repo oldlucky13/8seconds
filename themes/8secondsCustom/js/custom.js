@@ -126,6 +126,7 @@ jQuery(document).ready(function( $ ) {
   $ginger = $('#ginger');
   $shooter = $('#shooter');
   $neat = $('#neat');
+  $slideButton = $('.slide-button');
 
 
   var mainIdx = 0;
@@ -371,12 +372,12 @@ function handleAboutTrigger() {
 }
 
 $recipesBtn.click(function () {
-  triggerSection("recipes");
+  // triggerSection("recipes");
   handleRecipesTrigger();
 })
 
 $aboutBtn.click(function () {
-  triggerSection("about");
+  // triggerSection("about");
   handleAboutTrigger();
 })
 
