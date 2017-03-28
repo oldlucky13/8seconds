@@ -5976,6 +5976,17 @@ body {
   height: 5%;
   bottom: -2%; }
 
+span.wpcf7-not-valid-tip {
+  display: none; }
+
+div.wpcf7-validation-errors {
+  font-family: "Boton", "Sans Serif";
+  border: none; }
+
+div.wpcf7-mail-sent-ok {
+  font-family: "Boton", "Sans Serif";
+  border: none; }
+
 .button_container {
   position: absolute;
   top: 4%;

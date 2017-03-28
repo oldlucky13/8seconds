@@ -181,3 +181,17 @@
   height: 5%;
   bottom: -2%;
 }
+
+span.wpcf7-not-valid-tip {
+  display: none;
+}
+
+div.wpcf7-validation-errors {
+  font-family: $bot;
+  border: none;
+}
+
+div.wpcf7-mail-sent-ok {
+  font-family: $bot;
+  border: none;
+}
