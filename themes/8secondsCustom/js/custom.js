@@ -198,14 +198,14 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
       updateBreadcrumb(mainIdx);
     }
     if (mainIdx === 3) {
-      $btnAbout.fadeIn();
-      $btnRecipes.fadeOut();
+      $btnAbout.fadeIn(1500);
+      $btnRecipes.fadeOut(1500);
     } else if (mainIdx === 4) {
-      $btnAbout.fadeOut();
-      $btnRecipes.fadeIn();
+      $btnAbout.fadeOut(1500);
+      $btnRecipes.fadeIn(1500);
     } else {
-      $btnAbout.fadeOut();
-      $btnRecipes.fadeOut();
+      $btnAbout.fadeOut(1500);
+      $btnRecipes.fadeOut(1500);
     }
   }
 }
@@ -213,16 +213,14 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
 function nextSlide(idx, callback) {
   TweenMax.to($allTitles.find(".h2-child").eq(idx - 1), 1.5, {y:"-100%", force3D: true, onComplete: nextTitle(idx, callback)});
   TweenMax.to($hideContainer.eq(idx - 1), .6, {opacity: 0, ease: Power4.easeInOut});
-  $('.main-page-slide-group').children().eq(idx).fadeIn(1200, function () {
-  });
+  $('.main-page-slide-group').children().eq(idx).fadeIn(1200);
   TweenMax.to($hideContainer.eq(idx), 1.5, {opacity: 1, ease: Power4.easeIn});
 }
 
 function previousSlide(idx, callback) {
   TweenMax.to($allTitles.find(".h2-child").eq(idx + 1), 1.5, {y:"100%", force3D: true, onComplete: nextTitle(idx, callback)});
   TweenMax.to($hideContainer.eq(idx + 1), .6, {opacity: 0, ease: Power4.easeInOut});
-  $('.main-page-slide-group').children().eq(idx + 1).fadeOut(1200, function () {
-  });
+  $('.main-page-slide-group').children().eq(idx + 1).fadeOut(1200);
   TweenMax.to($hideContainer.eq(idx), 1.5, {opacity: 1, ease: Power4.easeIn});
 }
 
