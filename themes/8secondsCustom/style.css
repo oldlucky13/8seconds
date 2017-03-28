@@ -5957,6 +5957,9 @@ body {
 #s-text-button-wide {
   width: 25%; }
 
+.back-to-top {
+  padding: 0px; }
+
 .button_container {
   position: absolute;
   top: 4%;
