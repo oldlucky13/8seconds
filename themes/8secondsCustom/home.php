@@ -279,7 +279,7 @@ get_header();
               <hr class="ajax-breadcrumb-line">
             </li>
             <li class="ajax-breadcrumb">
-              <h5 class="recipes-breadcrumb-text">HONEY CINNAMON SHOOTER</h5>
+              <h5 class="recipes-breadcrumb-text">HONEY CINNAMON SHO0TER</h5>
               <hr class="ajax-breadcrumb-line">
             </li>
             <li class="ajax-breadcrumb">
@@ -429,7 +429,7 @@ get_header();
             </div>
             <div class="s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-6.svg" alt="">
-              <h2 class="s-header">HONEY CINNAMON SHOOTER</h2>
+              <h2 class="s-header">HONEY CINNAMON SHO0TER</h2>
               <a id="recipes-six"></a>
               <p class="s-paragraph">Shootin' it straight.</p>
             </div>
