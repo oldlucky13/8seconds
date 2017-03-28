@@ -5842,6 +5842,12 @@ body {
     border-image: url("/wp-content/uploads/2017/03/ebh.png") 16 24 15 27 fill stretch;
     color: #000; }
 
+#first-hide {
+  opacity: 1; }
+
+.hide-container {
+  opacity: 0; }
+
 .ajaxSection {
   position: absolute;
   left: 100%;

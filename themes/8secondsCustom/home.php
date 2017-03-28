@@ -22,15 +22,18 @@ get_header();
       <div id="one" class="show-off row main-page-slide">
         <div class="no-mobile-col col-md-6 main-page-txt">
           <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
-          <p class="main-text-content">
-            This unique Canadian Whisky developed elegant<br>nuances from its aging in oak barrels and has become<br>one of the smoothest, most refined Canadian Whiskies<br>on the market today.
-          </p>
-          <div class="icon-section">
-            <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-raindrop.svg" alt=""><span class="icon-text">GOLDEN AMBER</span></p>
-            <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-waves.svg" alt=""><span class="icon-text">MOCHA GELATO, BURNT SUGAR, PEPPER</span></p>
-            <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-box.svg" alt=""><span class="icon-text">SMOOTH TOFFEE &amp; SPICE</span></p>
-          </div> <!-- icon-section -->
-          <div class="filler">
+          <div id="first-hide" class="hide-container">
+
+            <p class="main-text-content">
+              This unique Canadian Whisky developed elegant<br>nuances from its aging in oak barrels and has become<br>one of the smoothest, most refined Canadian Whiskies<br>on the market today.
+            </p>
+            <div class="icon-section">
+              <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-raindrop.svg" alt=""><span class="icon-text">GOLDEN AMBER</span></p>
+              <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-waves.svg" alt=""><span class="icon-text">MOCHA GELATO, BURNT SUGAR, PEPPER</span></p>
+              <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-box.svg" alt=""><span class="icon-text">SMOOTH TOFFEE &amp; SPICE</span></p>
+            </div> <!-- icon-section -->
+            <div class="filler">
+            </div>
           </div>
         </div> <!-- no-mobile-col col-md-6 main-page-txt-->
         <div id="one-img" class="main-page-img no-mobile-col col-md-6">
@@ -44,15 +47,18 @@ get_header();
       <div id="two" class="show-off row main-page-slide">
         <div class="no-mobile-col col-md-6 main-page-txt">
           <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
-          <p class="main-text-content">
-            Aged for 8 years, 8 Seconds Black is a rich and full<br>flavored Canadian Whisky. A tad darker than the<br>original 8 Seconds Premium, it is an excellent sipper.
-          </p>
-          <div class="icon-section">
-            <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-raindrop.svg" alt=""><span class="icon-text">RICH AMBER</span></p>
-            <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-waves.svg" alt=""><span class="icon-text">APRICOT, CASHEW BRITLE, PINEAPPLE</span></p>
-            <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-box.svg" alt=""><span class="icon-text">MEDIUM BODY HONEYED FRUIT &amp; FRUIT</span></p>
-          </div> <!--icon-section -->
-          <div class="filler">
+          <div class="hide-container">
+
+            <p class="main-text-content">
+              Aged for 8 years, 8 Seconds Black is a rich and full<br>flavored Canadian Whisky. A tad darker than the<br>original 8 Seconds Premium, it is an excellent sipper.
+            </p>
+            <div class="icon-section">
+              <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-raindrop.svg" alt=""><span class="icon-text">RICH AMBER</span></p>
+              <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-waves.svg" alt=""><span class="icon-text">APRICOT, CASHEW BRITLE, PINEAPPLE</span></p>
+              <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-box.svg" alt=""><span class="icon-text">MEDIUM BODY HONEYED FRUIT &amp; FRUIT</span></p>
+            </div> <!--icon-section -->
+            <div class="filler">
+            </div>
           </div>
         </div> <!-- no-mobile-col col-md-6 main-page-txt-->
         <div id="two-img" class="main-page-img no-mobile-col col-md-6">
@@ -65,15 +71,18 @@ get_header();
       <div id="three" class="show-off row main-page-slide">
         <div class="no-mobile-col col-md-6 main-page-txt">
           <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
-          <p class="main-text-content">
-            With the curative powers of honey-cinnamon in mind,<br>we took aged Canadian Whisky, blended it with<br>natural honey-cinnamon extract and provided you<br>a superb, smooth tasting blend.
-          </p>
-          <div class="icon-section">
-            <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-raindrop.svg" alt=""><span class="icon-text">LIGHT AMBER</span></p>
-            <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-waves.svg" alt=""><span class="icon-text">WARM TAPIOCA, NUTMEG, GRAHAM CRACKER</span></p>
-            <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-box.svg" alt=""><span class="icon-text">SMOOTH WITHOUT BEING TOO SWEET</span></p>
-          </div>
-          <div class="filler">
+          <div class="hide-container">
+
+            <p class="main-text-content">
+              With the curative powers of honey-cinnamon in mind,<br>we took aged Canadian Whisky, blended it with<br>natural honey-cinnamon extract and provided you<br>a superb, smooth tasting blend.
+            </p>
+            <div class="icon-section">
+              <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-raindrop.svg" alt=""><span class="icon-text">LIGHT AMBER</span></p>
+              <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-waves.svg" alt=""><span class="icon-text">WARM TAPIOCA, NUTMEG, GRAHAM CRACKER</span></p>
+              <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-box.svg" alt=""><span class="icon-text">SMOOTH WITHOUT BEING TOO SWEET</span></p>
+            </div>
+            <div class="filler">
+            </div>
           </div>
         </div>
         <div id="three-img" class="main-page-img no-mobile-col col-md-6">
@@ -86,14 +95,17 @@ get_header();
       <div id="four" class="row main-page-slide">
         <div class="about no-mobile-col col-md-6 main-page-txt">
           <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
-          <p class="main-text-content">
-            When cowboys originally would ride a bull to death,<br>the 8 seconds standard has helped bull riding evolve<br>into America’s fastest growing sport.
-          </p>
-          <div class="empty-button about-btn fwd">
-            LEARN MORE
-          </div>
-          <!-- <button id="about-btn-fwd-desk" type="button" class="btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></button> -->
-          <div class="filler">
+          <div class="hide-container">
+
+            <p class="main-text-content">
+              When cowboys originally would ride a bull to death,<br>the 8 seconds standard has helped bull riding evolve<br>into America’s fastest growing sport.
+            </p>
+            <div class="empty-button about-btn fwd">
+              LEARN MORE
+            </div>
+            <!-- <button id="about-btn-fwd-desk" type="button" class="btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></button> -->
+            <div class="filler">
+            </div>
           </div>
         </div> <!-- about no-mobile-col col-md-6 main-page-txt -->
         <div id="four-img" class="main-page-img no-mobile-col col-md-6">
@@ -217,14 +229,17 @@ get_header();
       <div id="five" class="row main-page-slide">
         <div class="recipes no-mobile-col col-md-6 main-page-txt">
           <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
-          <p class="main-text-content">
-            "Too much of anything is bad, but too much<br>of a good whiskey is never enough."<br>
-            - Mark Twain
-          </p>
-          <div class="empty-button recipes-btn fwd">
-            LEARN MORE
-          </div>
-          <div class="filler">
+          <div class="hide-container">
+
+            <p class="main-text-content">
+              "Too much of anything is bad, but too much<br>of a good whiskey is never enough."<br>
+              - Mark Twain
+            </p>
+            <div class="empty-button recipes-btn fwd">
+              LEARN MORE
+            </div>
+            <div class="filler">
+            </div>
           </div>
         </div> <!-- recipes no-mobile-col col-md-6 main-page-txt -->
         <div id="five-img" class="main-page-img no-mobile-col col-md-6">
@@ -451,12 +466,15 @@ get_header();
       <div id="six" class="contact row main-page-slide">
         <div class="no-mobile-col col-md-6 main-page-txt">
           <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
-          <!-- <p class="main-text-content">
+          <div class="hide-container">
+
+            <!-- <p class="main-text-content">
           </p> -->
           <div class="contact-form-container">
             <?php echo do_shortcode( '[contact-form-7 id="153" title="Contact form 1"]' ); ?>
           </div>
           <div class="filler">
+          </div>
           </div>
         </div>
         <div id="six-img" class="main-page-img no-mobile-col col-md-6">

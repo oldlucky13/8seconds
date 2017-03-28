@@ -267,3 +267,10 @@ border-image: url('/wp-content/uploads/2017/03/eb.png') 16 24 15 27 fill stretch
   //   color: $font-color;
   // }
 }
+#first-hide {
+  opacity: 1;
+}
+
+.hide-container {
+  opacity: 0;
+}

@@ -127,6 +127,7 @@ jQuery(document).ready(function( $ ) {
   $shooter = $('#shooter');
   $neat = $('#neat');
   $slideButton = $('.slide-button');
+  $hideContainer = $('.hide-container');
 
 
   var mainIdx = 0;
@@ -211,12 +212,18 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
 
 function nextSlide(idx, callback) {
   TweenMax.to($allTitles.find(".h2-child").eq(idx - 1), 1, {y:"-100%", force3D: true, onComplete: nextTitle(idx, callback)});
-  $('.main-page-slide-group').children().eq(idx).fadeIn(1100);
+    TweenMax.to($hideContainer.eq(idx - 1), 1, {opacity: 0, ease: Power4.easeInOut});
+  $('.main-page-slide-group').children().eq(idx).fadeIn(1000, function () {
+    TweenMax.to($hideContainer.eq(idx), 1, {opacity: 1, ease: Power4.easeInOut});
+  });
 }
 
 function previousSlide(idx, callback) {
   TweenMax.to($allTitles.find(".h2-child").eq(idx + 1), 1, {y:"100%", force3D: true, onComplete: nextTitle(idx, callback)});
-  $('.main-page-slide-group').children().eq(idx + 1).fadeOut(1100);
+  TweenMax.to($hideContainer.eq(idx + 1), 1, {opacity: 0, ease: Power4.easeInOut});
+  $('.main-page-slide-group').children().eq(idx + 1).fadeOut(1000, function () {
+    TweenMax.to($hideContainer.eq(idx), 1, {opacity: 1, ease: Power4.easeInOut});
+  });
 }
 
 function jumpToSlide(oldIdx, newIdx) {
