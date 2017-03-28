@@ -6131,15 +6131,14 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background: transparent;
+  background-image: none;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   transition: all 1s ease; }
   #premium-square:hover {
-    background: url("/wp-content/uploads/2017/03/menu-premiumv2.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover; }
+    background-image: url("/wp-content/uploads/2017/03/menu-premiumv2.png"); }
+    #premium-square:hover p {
+      opacity: 0; }
 
 .dr {
   border-style: solid;

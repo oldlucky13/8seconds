@@ -23,7 +23,7 @@ get_header();
         <div class="no-mobile-col col-md-6 main-page-txt">
           <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
           <p class="main-text-content">
-            This unique Canadian Whisky developed elegant nuances from its aging  in oak barrels and has become one of the smoothest, most refined Canadian Whiskies on the market today.
+            This unique Canadian Whisky developed elegant<br>nuances from its aging in oak barrels and has become<br>one of the smoothest, most refined Canadian Whiskies<br>on the market today.
           </p>
           <div class="icon-section">
             <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-raindrop.svg" alt=""><span class="icon-text">GOLDEN AMBER</span></p>
@@ -45,7 +45,7 @@ get_header();
         <div class="no-mobile-col col-md-6 main-page-txt">
           <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
           <p class="main-text-content">
-            Aged for 8 years, 8 Seconds Black is a rich and full flavored Canadian Whisky. A tad darker than the original 8 Seconds Premium, it is an excellent sipper.
+            Aged for 8 years, 8 Seconds Black is a rich and full<br>flavored Canadian Whisky. A tad darker than the<br>original 8 Seconds Premium, it is an excellent sipper.
           </p>
           <div class="icon-section">
             <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-raindrop.svg" alt=""><span class="icon-text">RICH AMBER</span></p>
@@ -66,7 +66,7 @@ get_header();
         <div class="no-mobile-col col-md-6 main-page-txt">
           <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
           <p class="main-text-content">
-            With the curative powers of honey-cinnamon in mind, we took aged Canadian Whisky, blended it with natural honey-cinnamon extract and provided you a superb, smooth tasting blend.
+            With the curative powers of honey-cinnamon in mind,<br>we took aged Canadian Whisky, blended it with<br>natural honey-cinnamon extract and provided you<br>a superb, smooth tasting blend.
           </p>
           <div class="icon-section">
             <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-raindrop.svg" alt=""><span class="icon-text">LIGHT AMBER</span></p>
@@ -87,7 +87,7 @@ get_header();
         <div class="about no-mobile-col col-md-6 main-page-txt">
           <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
           <p class="main-text-content">
-            When cowboys originally would ride a bull to death, the 8 seconds standard has helped bull riding evolve into America’s fastest growing sport.
+            When cowboys originally would ride a bull to death,<br>the 8 seconds standard has helped bull riding evolve<br>into America’s fastest growing sport.
           </p>
           <div class="empty-button about-btn fwd">
             LEARN MORE
@@ -218,7 +218,7 @@ get_header();
         <div class="recipes no-mobile-col col-md-6 main-page-txt">
           <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
           <p class="main-text-content">
-            "Too much of anything is bad, but too much of a good whiskey is never enough." <br>
+            "Too much of anything is bad, but too much<br>of a good whiskey is never enough."<br>
             - Mark Twain
           </p>
           <div class="empty-button recipes-btn fwd">

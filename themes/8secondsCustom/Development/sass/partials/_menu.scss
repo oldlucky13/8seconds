@@ -235,13 +235,13 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background: transparent;
+  background-image: none;
   @include transition(all 1s ease);
   &:hover {
-    background: url("/wp-content/uploads/2017/03/menu-premiumv2.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url("/wp-content/uploads/2017/03/menu-premiumv2.png");
+    p {
+      opacity: 0;
+    }
   }
 }
 
