@@ -169,6 +169,17 @@
   margin: -10.4px;
   // margin: 2.66%;
   cursor: pointer;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  @include transition(all 1s ease);
+
+  &:hover {
+    p {
+      opacity: 0;
+    }
+  }
 
   .square-content {
     position: absolute;
@@ -208,6 +219,23 @@
   }
 }
 
+// .square:after {
+//   // background-size: cover;
+//   background-position: center center;
+//   background-repeat: no-repeat;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   // background-image: none;
+//   opacity: 0;
+//   @include transition(all 1s ease);
+//   &:hover {
+//     opacity: 1;
+//   }
+// }
+
 .menu-grey {
   position: absolute;
   background: rgba(0, 0, 0, 0.6);
@@ -224,24 +252,47 @@
   margin-bottom: 5%;
 }
 
-#premium-cell {
-  background: url("/wp-content/uploads/2017/03/menu-hover-premium.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+#premium-square {
+    // background-image: url("/wp-content/uploads/2017/03/menu-premium-1.png");
+  &:hover {
+    background-image: url("/wp-content/uploads/2017/03/menu-premium-1.png");
+  }
 }
 
-#premium-square {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-image: none;
-  @include transition(all 1s ease);
+#story-square {
+    // background-image: url("/wp-content/uploads/2017/03/menu-story.png");
+
   &:hover {
-    background-image: url("/wp-content/uploads/2017/03/menu-premiumv2.png");
-    p {
-      opacity: 0;
-    }
+    background-image: url("/wp-content/uploads/2017/03/menu-story.png");
+  }
+}
+
+#black-square {
+    // background-image: url("/wp-content/uploads/2017/03/menu-black.png");
+
+  &:hover {
+    background-image: url("/wp-content/uploads/2017/03/menu-black.png");
+  }
+}
+#cocktails-square {
+    // background-image: url("/wp-content/uploads/2017/03/menu-cocktail.png");
+
+  &:hover {
+    background-image: url("/wp-content/uploads/2017/03/menu-cocktail.png");
+  }
+}
+#honey-cinnamon-square {
+    // background-image: url("/wp-content/uploads/2017/03/menu-honeycinnamon.png");
+
+  &:hover {
+    background-image: url("/wp-content/uploads/2017/03/menu-honeycinnamon.png");
+  }
+}
+#contact-square {
+    // background-image: url("/wp-content/uploads/2017/03/menu-contact.png");
+
+  &:hover {
+    background-image: url("/wp-content/uploads/2017/03/menu-contact.png");
   }
 }
 

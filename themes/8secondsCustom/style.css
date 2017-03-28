@@ -6081,7 +6081,15 @@ body {
   width: 32%;
   padding-bottom: 22%;
   margin: -10.4px;
-  cursor: pointer; }
+  cursor: pointer;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  transition: all 1s ease; }
+  .square:hover p {
+    opacity: 0; }
   .square .square-content {
     position: absolute;
     text-align: center;
@@ -6121,24 +6129,23 @@ body {
 #menu-row-last {
   margin-bottom: 5%; }
 
-#premium-cell {
-  background: url("/wp-content/uploads/2017/03/menu-hover-premium.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat; }
+#premium-square:hover {
+  background-image: url("/wp-content/uploads/2017/03/menu-premium-1.png"); }
 
-#premium-square {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-image: none;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  transition: all 1s ease; }
-  #premium-square:hover {
-    background-image: url("/wp-content/uploads/2017/03/menu-premiumv2.png"); }
-    #premium-square:hover p {
-      opacity: 0; }
+#story-square:hover {
+  background-image: url("/wp-content/uploads/2017/03/menu-story.png"); }
+
+#black-square:hover {
+  background-image: url("/wp-content/uploads/2017/03/menu-black.png"); }
+
+#cocktails-square:hover {
+  background-image: url("/wp-content/uploads/2017/03/menu-cocktail.png"); }
+
+#honey-cinnamon-square:hover {
+  background-image: url("/wp-content/uploads/2017/03/menu-honeycinnamon.png"); }
+
+#contact-square:hover {
+  background-image: url("/wp-content/uploads/2017/03/menu-contact.png"); }
 
 .dr {
   border-style: solid;
