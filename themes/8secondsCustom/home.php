@@ -603,9 +603,9 @@ get_header();
     </nav> <!-- menu-left -->
   </div> <!-- menu-container -->
   <div id="ageGate" class="modal fade">
-    <video id="age-gate-video" playsinline autoplay loop muted>
+    <video id="age-gate-video" playsinline autoplay loop muted poster="/wp-content/uploads/2017/03/agegatestill.png">
       <source src="/wp-content/uploads/2017/03/age-gate-video-sm.webmsd.webm" type="video/webm">
-      <source src="/wp-content/uploads/2017/03/age-gate-video-sm.mp4" type="video/mp4">
+      <source src="/wp-content/uploads/2017/03/agegatesmv3.mp4" type="video/mp4">
     </video>
     <!-- <script>
 //     var waitTime = 150;

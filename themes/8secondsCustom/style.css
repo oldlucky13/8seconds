@@ -5703,6 +5703,9 @@ body {
     margin: 0 auto;
     margin-top: 60%;
     font-size: 1em; }
+    @media all and (max-width: 1300px) {
+      .main-page-txt .main-text-content {
+        width: 65%; } }
 
 .main-page-txt-mobile {
   display: inline-block; }
@@ -5847,6 +5850,9 @@ body {
 
 .hide-container {
   opacity: 0; }
+
+.empty-button:focus {
+  outline: none !important; }
 
 .ajaxSection {
   position: absolute;
@@ -6312,8 +6318,8 @@ div.wpcf7-mail-sent-ok {
   font-style: normal; }
 @font-face {
   font-family: 'Boton';
-  src: url("Boton-Light.eot");
-  src: url("Boton-Light.eot?#iefix") format("embedded-opentype"), url("Boton-Light.woff") format("woff"), url("Boton-Light.ttf") format("truetype");
+  src: url("wp-content/themes/8secondsCustom/fonts/Boton-Light.eot");
+  src: url("wp-content/themes/8secondsCustom/fonts/Boton-Light.eot?#iefix") format("embedded-opentype"), url("wp-content/themes/8secondsCustom/fonts/Boton-Light.woff") format("woff"), url("wp-content/themes/8secondsCustom/fonts/Boton-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal; }
 .drink-guide {

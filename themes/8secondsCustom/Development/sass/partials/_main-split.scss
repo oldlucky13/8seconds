@@ -74,6 +74,10 @@
     //   margin-top: 50%;
     // }
 
+    @media all and (max-width: 1300px) {
+      width: 65%;
+    }
+
   }
 }
 
@@ -273,4 +277,8 @@ border-image: url('/wp-content/uploads/2017/03/eb.png') 16 24 15 27 fill stretch
 
 .hide-container {
   opacity: 0;
+}
+
+.empty-button:focus {
+  outline: none !important;
 }
