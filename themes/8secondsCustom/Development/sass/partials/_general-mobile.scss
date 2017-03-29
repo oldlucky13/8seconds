@@ -1,12 +1,12 @@
 .mobile-nav {
-  padding-top: 15px;
-  padding-bottom: 5px;
-  // not final
-  position: absolute;
-  width: 100%;
-  z-index: 20;
   @media all and (max-width: 991px) {
     background: #000;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    // not final
+    position: absolute;
+    width: 100%;
+    z-index: 20;
   }
 
 }
