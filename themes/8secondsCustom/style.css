@@ -6671,3 +6671,136 @@ div.wpcf7-mail-sent-ok {
     z-index: 20; } }
 
 /*# sourceMappingURL=style.css.map */
+_::-webkit-full-page-media, _:future, :root {
+
+  @media all and (max-width: 991px) {
+    .row {
+      margin-right: -61px;
+    }
+
+    html, body, #et-main-area, #main-content, .main-page-container {
+      width: calc(100% + 61px);
+    }
+
+    .button_container {
+      right: calc(7% - 61px);
+      top: 4%;
+    }
+  }
+
+  @media all and (max-width: 425px) {
+    .mobile-main-title {
+      left: calc(50% - 200px);
+    }
+  }
+
+  @media all and (max-width: 320px) {
+    .mobile-main-title {
+      left: calc(50% - 150px)
+    }
+  }
+
+
+}
+
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+{ @media {
+
+
+      @media all and (max-width: 991px) {
+        .row {
+          margin-right: -61px;
+        }
+
+        html, body, #et-main-area, #main-content, .main-page-container {
+          width: calc(100% + 61px);
+        }
+
+        .button_container {
+          right: calc(7% - 61px);
+          top: 4%;
+        }
+      }
+
+      @media all and (max-width: 425px) {
+        .mobile-main-title {
+          left: calc(50% - 200px);
+        }
+      }
+
+      @media all and (max-width: 320px) {
+        .mobile-main-title {
+          left: calc(50% - 150px)
+        }
+      }
+
+
+
+}}
+
+_::-webkit-full-page-media, _:future, :root {
+
+  @media all and (max-width: 991px) {
+    .row {
+      margin-right: -61px;
+    }
+
+    html, body, #et-main-area, #main-content, .main-page-container {
+      width: calc(100% + 61px);
+    }
+
+    .button_container {
+      right: calc(7% - 61px);
+      top: 4%;
+    }
+  }
+
+  @media all and (max-width: 425px) {
+    .mobile-main-title {
+      left: calc(50% - 200px);
+    }
+  }
+
+  @media all and (max-width: 320px) {
+    .mobile-main-title {
+      left: calc(50% - 150px)
+    }
+  }
+
+
+}
+
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+{ @media {
+
+
+      @media all and (max-width: 991px) {
+        .row {
+          margin-right: -61px;
+        }
+
+        html, body, #et-main-area, #main-content, .main-page-container {
+          width: calc(100% + 61px);
+        }
+
+        .button_container {
+          right: calc(7% - 61px);
+          top: 4%;
+        }
+      }
+
+      @media all and (max-width: 425px) {
+        .mobile-main-title {
+          left: calc(50% - 200px);
+        }
+      }
+
+      @media all and (max-width: 320px) {
+        .mobile-main-title {
+          left: calc(50% - 150px)
+        }
+      }
+
+
+
+}}
