@@ -162,12 +162,23 @@ jQuery(document).ready(function( $ ) {
   recipesSeven = $('#recipes-seven').offset().top;
 
   /***************
+  Hammer
+  ***************/
+
+  var mainPageContainerHammer = document.getElementById('the-container');
+  var mc = new Hammer(mainPageContainerHammer);
+
+
+  /***************
   Mousewheel
   ***************/
 
   $body.mousewheel(function(event) {
     if (onMainPage) {
       handleMainPageScroll(event.deltaY);
+      mc.on("scroll", function() {
+        console.log("scrolling");
+      })
     } else if (onAboutPage) {
       handleOtherScrolling($ajaxAboutSection, event.deltaY, event.deltaFactor);
     } else if (onRecipesPage) {
@@ -911,8 +922,6 @@ else{
 		}
 	});//click function
 } //end else
-
-
 
 
 

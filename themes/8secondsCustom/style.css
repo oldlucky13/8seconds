@@ -5719,6 +5719,15 @@ body {
   top: 14%;
   box-sizing: border-box;
   z-index: 2; }
+  @media all and (max-width: 991px) {
+    .main-page-title-group {
+      display: none;
+      left: calc(50% - 250px); } }
+
+@media all and (max-width: 991px) {
+  .mobile-main-title {
+    display: block;
+    left: calc(50% - 250px); } }
 
 .main-page-slide-title {
   position: relative;
@@ -5757,6 +5766,9 @@ body {
   width: 50px;
   top: 44%;
   z-index: 3; }
+  @media all and (max-width: 991px) {
+    #breadcrumb-group {
+      display: none; } }
 
 .breadcrumb {
   padding: 0px;
@@ -5782,6 +5794,13 @@ body {
 @media screen and (min-width: 992px) {
   .mobile-btn {
     display: none; } }
+
+@media all and (max-width: 991px) {
+  #btn-recipes, #btn-about {
+    top: inherit;
+    left: inherit;
+    bottom: 0;
+    right: 2%; } }
 
 .slide-button {
   position: absolute;
