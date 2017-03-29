@@ -95,6 +95,19 @@
   // width: 100%; leave this undone for now
   box-sizing: border-box;
   z-index: 2;
+
+  @media all and (max-width: 991px) {
+    display: none;
+    left: calc(50% - 250px);
+  }
+
+}
+
+.mobile-main-title {
+  @media all and (max-width: 991px) {
+    display: block;
+    left: calc(50% - 250px);
+  }
 }
 
 .main-page-slide-title {
@@ -143,6 +156,11 @@
   width: 50px;
   top: 44%;
   z-index: 3;
+
+  @media all and (max-width: 991px) {
+    display: none;
+  }
+
 }
 
 .breadcrumb {
@@ -177,6 +195,17 @@
   }
 }
 
+#btn-recipes, #btn-about {
+  @media all and (max-width: 991px) {
+    top: inherit;
+    left: inherit;
+    bottom: 0;
+    right: 2%;
+  }
+
+}
+
+
 .slide-button {
   position: absolute;
   top: 50%;
@@ -188,6 +217,7 @@
   border-radius: 22px;
   cursor: pointer;
   z-index: 2;
+
   i {
     @include transition(all 2s ease);
   //   -webkit-transition: all 2s ease; // Chrome

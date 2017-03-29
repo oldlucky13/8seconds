@@ -17,7 +17,7 @@ get_header();
     <span class="middle"></span>
     <span class="bottom"></span>
   </div> <!-- button_container-->
-  <div class="main-page-container container-fluid">
+  <div id="the-container" class="main-page-container container-fluid">
     <div class="main-page-slide-group">
       <div id="one" class="show-off row main-page-slide">
         <div class="no-mobile-col col-md-6 main-page-txt">
@@ -492,13 +492,13 @@ get_header();
         <!-- <img class="h2-child" src="wp-content/uploads/2017/03/home-honey-cinnamon-title_v2.png" alt=""> -->
       </div>
     </div>
-    <div class="main-page-title-group">
+    <div class="mobile-main-title main-page-title-group">
       <div class="main-page-slide-title">
         <img class="h2-child" src="wp-content/uploads/2017/03/nodots-story-v1.png" alt="">
         <!-- <img class="h2-child" src="wp-content/uploads/2017/03/home-story-title_v2.png" alt=""> -->
       </div>
     </div>
-    <div class="main-page-title-group">
+    <div class="mobile-main-title main-page-title-group">
       <div class="main-page-slide-title">
         <img class="h2-child" src="wp-content/uploads/2017/03/nodots-cocktail-v1.png" alt="">
         <!-- <img class="h2-child" src="wp-content/uploads/2017/03/home-recipes-title_v2.png" alt=""> -->
