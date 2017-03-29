@@ -82,7 +82,8 @@
 }
 
 .s-section {
-  height: 100vh;
+  height: 80vh;
+  position: relative;
 }
 
 .s-title {
@@ -105,6 +106,9 @@
 }
 
 .s-down-btn {
+  position: absolute;
+  bottom: 10%;
+  left: calc(50% - 16px);
   padding: 4px 10px;
   border: 1px solid $icon-color;
   color: #fff;
@@ -142,9 +146,14 @@
   height: 10%;
 }
 .v1 {
-  margin-top: 3%;
-  height: 57%;
+  position: absolute;
+  height: 10%;
+  bottom: 0;
 }
+// .v1 {
+//   margin-top: 3%;
+//   height: 57%;
+// }
 
 .v2 {
   height: 20%;
@@ -160,4 +169,38 @@
 
 #s-text-button-wide {
   width: 25%;
+}
+
+.back-to-top {
+  padding: 0px;
+}
+
+.first-s-section {
+  height: 100vh;
+}
+
+.first-v-line {
+  position: absolute;
+  height: 5%;
+  bottom: -2%;
+}
+
+span.wpcf7-not-valid-tip {
+  display: none;
+}
+
+div.wpcf7-validation-errors {
+  font-family: $bot;
+  border: none;
+}
+
+div.wpcf7-mail-sent-ok {
+  font-family: $bot;
+  border: none;
+}
+
+#story-s-tagline {
+  position: absolute;
+  left: calc(50% - 143.04px);
+  bottom: 16%;
 }

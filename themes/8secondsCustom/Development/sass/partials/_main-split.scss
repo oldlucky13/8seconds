@@ -1,45 +1,30 @@
-// #one {
-//   background-color: blue;
-// }
 #one-img {
   background-image: url("/wp-content/uploads/2017/03/home-bottle-premium.jpg");
 }
-// #two {
-//   background-color: red;
-// }
+
 #two-img {
   background-image: url("/wp-content/uploads/2017/03/home-bottle-black.jpg");
-  // background-position-x: -200px;
 }
-// #three {
-//   background-color: purple;
-// }
+
 #three-img {
   background-image: url("/wp-content/uploads/2017/03/home-bottle-cinnamon.jpg");
 }
-// #four {
-//   background-color: green;
-// }
+
 #four-img {
   background-image: $story-main;
   background-color: #000;
-  // background-position-x: -225px;
   @include transition(all 500ms ease-out);
 }
-// #five {
-//   background-color: orange;
-// }
+
 #five-img {
   background-image: url("/wp-content/uploads/2017/03/home-drinks-manhattan.jpg");
   background-color: #000;
-  // background-position-x: -350px;
   @include transition(all 500ms ease-out);
 }
-// #six {
-//   background-color: black;
-// }
+
 #six-img {
   background-image: url("/wp-content/uploads/2017/03/home-contact.jpg");
+  // z-index: 3;
 }
 
 .main-page-slide {
@@ -88,6 +73,10 @@
     // @media all and (max-width: 1500px) {
     //   margin-top: 50%;
     // }
+
+    @media all and (max-width: 1300px) {
+      width: 65%;
+    }
 
   }
 }
@@ -198,6 +187,7 @@
   // padding: 9px 15px;
   border-radius: 22px;
   cursor: pointer;
+  z-index: 2;
   i {
     @include transition(all 2s ease);
   //   -webkit-transition: all 2s ease; // Chrome
@@ -213,6 +203,12 @@
     // display: none;
     // opacity: 0;
     // visibility: hidden;
+  }
+}
+
+.bk {
+  i {
+    left: 35%;
   }
 }
 
@@ -274,4 +270,15 @@ border-image: url('/wp-content/uploads/2017/03/eb.png') 16 24 15 27 fill stretch
   //   background-color: $icon-color;
   //   color: $font-color;
   // }
+}
+#first-hide {
+  opacity: 1;
+}
+
+.hide-container {
+  opacity: 0;
+}
+
+.empty-button:focus {
+  outline: none !important;
 }

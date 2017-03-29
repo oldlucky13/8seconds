@@ -5703,6 +5703,9 @@ body {
     margin: 0 auto;
     margin-top: 60%;
     font-size: 1em; }
+    @media all and (max-width: 1300px) {
+      .main-page-txt .main-text-content {
+        width: 65%; } }
 
 .main-page-txt-mobile {
   display: inline-block; }
@@ -5788,7 +5791,8 @@ body {
   border: 2px solid #86754D;
   padding: 18px 18px;
   border-radius: 22px;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 2; }
   .slide-button i {
     -webkit-transition: all 2s ease;
     -moz-transition: all 2s ease;
@@ -5796,6 +5800,9 @@ body {
     position: absolute;
     top: 33%;
     left: 38%; }
+
+.bk i {
+  left: 35%; }
 
 .s-btn.focus, .s-btn:focus, .s-btn:hover {
   color: #fff;
@@ -5837,6 +5844,15 @@ body {
     -o-border-image: url("/wp-content/uploads/2017/03/ebh.png") 16 24 15 27 stretch;
     border-image: url("/wp-content/uploads/2017/03/ebh.png") 16 24 15 27 fill stretch;
     color: #000; }
+
+#first-hide {
+  opacity: 1; }
+
+.hide-container {
+  opacity: 0; }
+
+.empty-button:focus {
+  outline: none !important; }
 
 .ajaxSection {
   position: absolute;
@@ -5890,7 +5906,8 @@ body {
   padding-right: 0 !important; }
 
 .s-section {
-  height: 100vh; }
+  height: 80vh;
+  position: relative; }
 
 .s-title {
   height: 300px;
@@ -5907,6 +5924,9 @@ body {
   text-align: center; }
 
 .s-down-btn {
+  position: absolute;
+  bottom: 10%;
+  left: calc(50% - 16px);
   padding: 4px 10px;
   border: 1px solid #86754D;
   color: #fff;
@@ -5938,8 +5958,9 @@ body {
   height: 10%; }
 
 .v1 {
-  margin-top: 3%;
-  height: 57%; }
+  position: absolute;
+  height: 10%;
+  bottom: 0; }
 
 .v2 {
   height: 20%; }
@@ -5952,6 +5973,33 @@ body {
 
 #s-text-button-wide {
   width: 25%; }
+
+.back-to-top {
+  padding: 0px; }
+
+.first-s-section {
+  height: 100vh; }
+
+.first-v-line {
+  position: absolute;
+  height: 5%;
+  bottom: -2%; }
+
+span.wpcf7-not-valid-tip {
+  display: none; }
+
+div.wpcf7-validation-errors {
+  font-family: "Boton", "Sans Serif";
+  border: none; }
+
+div.wpcf7-mail-sent-ok {
+  font-family: "Boton", "Sans Serif";
+  border: none; }
+
+#story-s-tagline {
+  position: absolute;
+  left: calc(50% - 143.04px);
+  bottom: 16%; }
 
 .button_container {
   position: absolute;
@@ -6080,7 +6128,17 @@ body {
   width: 32%;
   padding-bottom: 22%;
   margin: -10.4px;
-  cursor: pointer; }
+  cursor: pointer;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  transition: all 1s ease; }
+  .square:hover .fake-background {
+    opacity: 1; }
+  .square:hover p {
+    opacity: 0; }
   .square .square-content {
     position: absolute;
     text-align: center;
@@ -6099,7 +6157,10 @@ body {
           font-family: "Barley Aged", "Sans Serif";
           color: #fff;
           font-size: 1.5em;
-          text-align: center; }
+          text-align: center;
+          -webkit-transition: all 0.2s ease;
+          -moz-transition: all 0.2s ease;
+          transition: all 0.2s ease; }
         .square .square-content .table .table-cell a {
           color: white;
           cursor: pointer;
@@ -6120,11 +6181,36 @@ body {
 #menu-row-last {
   margin-bottom: 5%; }
 
-#premium-cell {
-  background: url("/wp-content/uploads/2017/03/menu-hover-premium.png");
-  background-size: cover;
+.fake-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
   background-position: center center;
-  background-repeat: no-repeat; }
+  background-size: cover;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  transition: all 0.8s ease; }
+
+#fake-premium {
+  background-image: url("/wp-content/uploads/2017/03/menu-premium-1.png"); }
+
+#fake-story {
+  background-image: url("/wp-content/uploads/2017/03/menu-story.png"); }
+
+#fake-black {
+  background-image: url("/wp-content/uploads/2017/03/menu-black.png"); }
+
+#fake-cocktails {
+  background-image: url("/wp-content/uploads/2017/03/menu-cocktail.png"); }
+
+#fake-honey-cinnamon {
+  background-image: url("/wp-content/uploads/2017/03/menu-honeycinnamon.png"); }
+
+#fake-contact {
+  background-image: url("/wp-content/uploads/2017/03/menu-contact.png"); }
 
 .dr {
   border-style: solid;
@@ -6196,44 +6282,44 @@ body {
 
 @font-face {
   font-family: 'Barley Rough';
-  src: url("wp-content/themes/8secondsCustom/fonts/BarleyRough-Regular.eot");
-  src: url("wp-content/themes/8secondsCustom/fonts/BarleyRough-Regular.eot?#iefix") format("embedded-opentype"), url("wp-content/themes/8secondsCustom/fonts/BarleyRough-Regular.woff") format("woff"), url("wp-content/themes/8secondsCustom/fonts/BarleyRough-Regular.ttf") format("truetype");
+  src: url("../fonts/BarleyRough-Regular.eot");
+  src: url("../fonts/BarleyRough-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/BarleyRough-Regular.woff") format("woff"), url("../fonts/BarleyRough-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Barley';
-  src: url("wp-content/themes/8secondsCustom/fonts/Barley-Regular.eot");
-  src: url("wp-content/themes/8secondsCustom/fonts/Barley-Regular.eot?#iefix") format("embedded-opentype"), url("wp-content/themes/8secondsCustom/fonts/Barley-Regular.woff") format("woff"), url("wp-content/themes/8secondsCustom/fonts/Barley-Regular.ttf") format("truetype");
+  src: url("../fonts/Barley-Regular.eot");
+  src: url("../fonts/Barley-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Barley-Regular.woff") format("woff"), url("../fonts/Barley-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Wheat Rough';
-  src: url("wp-content/themes/8secondsCustom/fonts/WheatRough-Regular.eot");
-  src: url("wp-content/themes/8secondsCustom/fonts/WheatRough-Regular.eot?#iefix") format("embedded-opentype"), url("wp-content/themes/8secondsCustom/fonts/WheatRough-Regular.woff") format("woff"), url("wp-content/themes/8secondsCustom/fonts/WheatRough-Regular.ttf") format("truetype");
+  src: url("../fonts/WheatRough-Regular.eot");
+  src: url("../fonts/WheatRough-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/WheatRough-Regular.woff") format("woff"), url("../fonts/WheatRough-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Barley Aged';
-  src: url("wp-content/themes/8secondsCustom/fonts/BarleyAged-Regular.eot");
-  src: url("wp-content/themes/8secondsCustom/fonts/BarleyAged-Regular.eot?#iefix") format("embedded-opentype"), url("wp-content/themes/8secondsCustom/fonts/BarleyAged-Regular.woff") format("woff"), url("wp-content/themes/8secondsCustom/fonts/BarleyAged-Regular.ttf") format("truetype");
+  src: url("../fonts/BarleyAged-Regular.eot");
+  src: url("../fonts/BarleyAged-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/BarleyAged-Regular.woff") format("woff"), url("../fonts/BarleyAged-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Wheat';
-  src: url("wp-content/themes/8secondsCustom/fonts/Wheat-Regular.eot");
-  src: url("wp-content/themes/8secondsCustom/fonts/Wheat-Regular.eot?#iefix") format("embedded-opentype"), url("wp-content/themes/8secondsCustom/fonts/Wheat-Regular.woff") format("woff"), url("wp-content/themes/8secondsCustom/fonts/Wheat-Regular.ttf") format("truetype");
+  src: url("../fonts/Wheat-Regular.eot");
+  src: url("../fonts/Wheat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Wheat-Regular.woff") format("woff"), url("../fonts/Wheat-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Wheat Aged';
-  src: url("wp-content/themes/8secondsCustom/fonts/WheatAged-Regular.eot");
-  src: url("wp-content/themes/8secondsCustom/fonts/WheatAged-Regular.eot?#iefix") format("embedded-opentype"), url("wp-content/themes/8secondsCustom/fonts/WheatAged-Regular.woff") format("woff"), url("wp-content/themes/8secondsCustom/fonts/WheatAged-Regular.ttf") format("truetype");
+  src: url("../fonts/WheatAged-Regular.eot");
+  src: url("../fonts/WheatAged-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/WheatAged-Regular.woff") format("woff"), url("../fonts/WheatAged-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Boton';
-  src: url("Boton-Light.eot");
-  src: url("Boton-Light.eot?#iefix") format("embedded-opentype"), url("Boton-Light.woff") format("woff"), url("Boton-Light.ttf") format("truetype");
+  src: url("../fonts/Boton-Light.eot");
+  src: url("../fonts/Boton-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Boton-Light.woff") format("woff"), url("../fonts/Boton-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal; }
 .drink-guide {
@@ -6259,6 +6345,8 @@ body {
   margin-top: 15%; }
 
 .contact-form-container {
+  width: 80%;
+  margin: 0 auto;
   margin-top: 50%; }
 
 .wpcf7 {
@@ -6303,15 +6391,212 @@ body {
     width: 50%; }
 
 #ageGate {
-  background-color: black; }
+  background-color: #000; }
+  #ageGate .age-gate-content {
+    margin: 0 auto;
+    text-align: center;
+    color: #ECE8DE;
+    width: 80%;
+    margin-top: 4em;
+    opacity: 0;
+    position: absolute;
+    left: 10%; }
+    @media all and (min-width: 760px) {
+      #ageGate .age-gate-content {
+        margin-top: 11em; } }
+    @media all and (min-width: 1765px) {
+      #ageGate .age-gate-content {
+        margin-top: 10%; } }
+    @media screen and (min-aspect-ratio: 17 / 10) and (max-width: 800px) {
+      #ageGate .age-gate-content {
+        margin-top: 1em; } }
+    #ageGate .age-gate-content #age-gate-icon {
+      max-width: 250px; }
+      @media all and (min-width: 760px) {
+        #ageGate .age-gate-content #age-gate-icon {
+          max-width: 350px; } }
+      @media screen and (min-aspect-ratio: 17 / 10) and (max-width: 800px) {
+        #ageGate .age-gate-content #age-gate-icon {
+          max-width: 200px; } }
+    #ageGate .age-gate-content .button-wrapper {
+      margin-top: 30px;
+      margin: 0 auto; }
+      @media all and (min-width: 360px) {
+        #ageGate .age-gate-content .button-wrapper {
+          margin-top: 40px; } }
+      @media all and (min-width: 760px) {
+        #ageGate .age-gate-content .button-wrapper {
+          margin-top: 40px;
+          width: 80%; } }
+      @media screen and (min-aspect-ratio: 17 / 10) and (max-width: 800px) {
+        #ageGate .age-gate-content .button-wrapper {
+          margin-top: .8em; } }
+      @media all and (min-width: 1200px) {
+        #ageGate .age-gate-content .button-wrapper {
+          width: 50%; } }
+      @media all and (min-width: 1650px) {
+        #ageGate .age-gate-content .button-wrapper {
+          width: 40%; } }
+      #ageGate .age-gate-content .button-wrapper .age-gate-button {
+        display: block;
+        width: 100%;
+        height: 50px;
+        line-height: 0;
+        cursor: pointer;
+        margin-top: 0;
+        margin: 0 auto; }
+        @media all and (min-width: 760px) {
+          #ageGate .age-gate-content .button-wrapper .age-gate-button {
+            display: inline;
+            width: 48%; } }
+        @media screen and (min-aspect-ratio: 17 / 10) and (max-width: 800px) {
+          #ageGate .age-gate-content .button-wrapper .age-gate-button {
+            display: inline;
+            width: 48%; } }
+        #ageGate .age-gate-content .button-wrapper .age-gate-button:hover {
+          cursor: pointer; }
+      #ageGate .age-gate-content .button-wrapper #over21 {
+        margin-bottom: 10px; }
+        @media all and (min-width: 760px) {
+          #ageGate .age-gate-content .button-wrapper #over21 {
+            margin-right: 5px; } }
+      #ageGate .age-gate-content .button-wrapper #under21 {
+        margin-top: 10px; }
+        @media all and (min-width: 760px) {
+          #ageGate .age-gate-content .button-wrapper #under21 {
+            margin-left: 5px; } }
+    #ageGate .age-gate-content h1 {
+      font-family: "Barley Aged", "Sans Serif";
+      letter-spacing: 2px;
+      margin-top: 40px;
+      font-size: 2.5em; }
+      @media all and (min-width: 360px) {
+        #ageGate .age-gate-content h1 {
+          font-size: 2.55em;
+          margin-top: 40px; } }
+      @media screen and (min-aspect-ratio: 17 / 10) and (max-width: 800px) {
+        #ageGate .age-gate-content h1 {
+          font-size: 2em;
+          margin-top: 1em; } }
+    #ageGate .age-gate-content h3 {
+      margin-top: 5px;
+      font-family: "Wheat Aged", "Sans Serif";
+      letter-spacing: 1px; }
 
-.age-gate-content {
-  width: 25%;
-  margin: 0 auto;
-  text-align: center; }
-  .age-gate-content .age-gate-button {
-    display: inline; }
-  .age-gate-content #age-gate-icon {
-    max-width: 250px; }
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  z-index: 199; }
+  #preloader #status {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    max-width: 500px;
+    background-size: contain;
+    left: 50%;
+    /* centers the loading animation horizontally one the screen */
+    top: 50%;
+    /* centers the loading animation vertically one the screen */
+    /* path to your loading animation */
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-transform: -50% -50%;
+    -moz-transform: -50% -50%;
+    -ms-transform: -50% -50%;
+    -o-transform: -50% -50%;
+    transform: -50% -50%; }
+
+#age-gate-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  -o-object-fit: cover;
+  object-fit: cover;
+  font-family: "object-fit: cover";
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-size: cover; }
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; }
+
+.pace-inactive {
+  display: none; }
+
+.pace .pace-progress {
+  background: #73623c;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px; }
+
+#boots {
+  background-image: url("/wp-content/uploads/2017/03/home-story-boots.jpg"); }
+
+#vintagebull {
+  background-image: url("/wp-content/uploads/2017/03/story-vintagebull.jpg"); }
+
+#gloves {
+  background-image: url("/wp-content/uploads/2017/03/story-gloves.jpg"); }
+
+#bullrider {
+  background-image: url("/wp-content/uploads/2017/03/story-bullrider.jpg"); }
+
+#matador {
+  background-image: url("/wp-content/uploads/2017/03/story-matador.jpg"); }
+
+#neat {
+  background-image: url("/wp-content/uploads/2017/03/drinks-neat.jpg"); }
+
+#shooter {
+  background-image: url("/wp-content/uploads/2017/03/drinks-shooters.jpg"); }
+
+#ginger {
+  background-image: url("/wp-content/uploads/2017/03/drinks-whiskeyginger.jpg"); }
+
+#cowboyjulep {
+  background-image: url("/wp-content/uploads/2017/03/drinks-cowboy.jpg"); }
+
+#oldfashioned {
+  background-image: url("/wp-content/uploads/2017/03/drinks-oldfashioned.jpg"); }
+
+#cola {
+  background-image: url("/wp-content/uploads/2017/03/drinks-whiskeycola.jpg"); }
+
+.secondary-image-group {
+  height: 100%; }
+
+.secondary-image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0; }
+
+.col-md-6 {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
 
 /*# sourceMappingURL=style.css.map */
