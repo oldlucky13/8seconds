@@ -119,6 +119,16 @@
     display: block;
     left: calc(50% - 250px);
   }
+  @media all and (max-width: 425px) {
+    left: calc(50% - 220px);
+  }
+  // @media all and (max-width: 425px) {
+  //   left: calc(50% - 200px);
+  // }
+  //
+  // @media all and (max-width: 320px) {
+  //   left: calc(50% - 150px)
+  // }
 }
 
 .main-page-slide-title {
@@ -154,6 +164,19 @@
   // testonly
   height: 300px;
   width: 500px;
+
+
+
+  @media all and (max-width: 425px) {
+    height: 270px;
+    width: 450px;
+  }
+
+  @media all and (max-width: 320px) {
+    height: 210px;
+    width: 350px;
+  }
+
 }
 
 #first-h2-child {

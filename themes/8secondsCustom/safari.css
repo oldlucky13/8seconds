@@ -1,0 +1,55 @@
+/*
+ Theme Name:     8 Seconds Custom
+ Template:       Divi
+ Version:        1.0
+ Author: 	     Affinity Creative
+*/
+
+_::-webkit-full-page-media, _:future, :root .safari_only {
+
+  @media all and (max-width: 991px) {
+    .row {
+      margin-right: -61px;
+    }
+  }
+
+  @media all and (max-width: 425px) {
+    .mobile-main-title {
+      left: calc(50% - 200px);
+    }
+  }
+
+  @media all and (max-width: 320px) {
+    .mobile-main-title {
+      left: calc(50% - 150px)
+    }
+  }
+
+
+}
+
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+{ @media {
+    .safari_only {
+
+      @media all and (max-width: 991px) {
+        .row {
+          margin-right: -61px;
+        }
+      }
+
+      @media all and (max-width: 425px) {
+        .mobile-main-title {
+          left: calc(50% - 200px);
+        }
+      }
+
+      @media all and (max-width: 320px) {
+        .mobile-main-title {
+          left: calc(50% - 150px)
+        }
+      }
+
+
+    }
+}}

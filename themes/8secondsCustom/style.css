@@ -5728,6 +5728,9 @@ body {
   .mobile-main-title {
     display: block;
     left: calc(50% - 250px); } }
+@media all and (max-width: 425px) {
+  .mobile-main-title {
+    left: calc(50% - 220px); } }
 
 .main-page-slide-title {
   position: relative;
@@ -5752,6 +5755,14 @@ body {
   font-size: 50px;
   height: 300px;
   width: 500px; }
+  @media all and (max-width: 425px) {
+    .h2-child {
+      height: 270px;
+      width: 450px; } }
+  @media all and (max-width: 320px) {
+    .h2-child {
+      height: 210px;
+      width: 350px; } }
 
 #first-h2-child {
   -webkit-transform: translateY(0%);
