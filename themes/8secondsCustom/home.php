@@ -21,7 +21,9 @@ get_header();
     <div class="main-page-slide-group">
       <div id="one" class="show-off row main-page-slide">
         <div class="no-mobile-col col-md-6 main-page-txt">
-          <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+          <div class="mobile-nav">
+            <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+          </div>
           <div id="first-hide" class="hide-container">
 
             <p class="main-text-content">
@@ -38,7 +40,9 @@ get_header();
         </div> <!-- no-mobile-col col-md-6 main-page-txt-->
         <div id="one-img" class="main-page-img no-mobile-col col-md-6">
           <div class="no-mobile-col col-md-6 main-page-txt-mobile">
-            <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+            <div class="mobile-nav">
+              <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+            </div>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
           </div> <!-- main-page-img no-mobile-col col-md-6-->
@@ -46,9 +50,10 @@ get_header();
       </div> <!-- #one -->
       <div id="two" class="show-off row main-page-slide">
         <div class="no-mobile-col col-md-6 main-page-txt">
-          <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+          <div class="mobile-nav">
+            <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+          </div>
           <div class="hide-container">
-
             <p class="main-text-content">
               Aged for 8 years, 8 Seconds Black is a rich and full<br>flavored Canadian Whisky. A tad darker than the<br>original 8 Seconds Premium, it is an excellent sipper.
             </p>
@@ -63,14 +68,18 @@ get_header();
         </div> <!-- no-mobile-col col-md-6 main-page-txt-->
         <div id="two-img" class="main-page-img no-mobile-col col-md-6">
           <div class="no-mobile-col col-md-6 main-page-txt-mobile">
-            <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+            <div class="mobile-nav">
+              <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+            </div>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </div> <!-- no-mobile-col col-md-6 main-page-txt-->
         </div> <!-- #two-img -->
       </div> <!-- #two -->
       <div id="three" class="show-off row main-page-slide">
         <div class="no-mobile-col col-md-6 main-page-txt">
-          <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+          <div class="mobile-nav">
+            <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+          </div>
           <div class="hide-container">
 
             <p class="main-text-content">
@@ -87,14 +96,18 @@ get_header();
         </div>
         <div id="three-img" class="main-page-img no-mobile-col col-md-6">
           <div class="no-mobile-col col-md-6 main-page-txt-mobile">
-            <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+            <div class="mobile-nav">
+              <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+            </div>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </div>
         </div> <!-- #three-img -->
       </div> <!-- #three -->
       <div id="four" class="row main-page-slide">
         <div class="about no-mobile-col col-md-6 main-page-txt">
-          <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+          <div class="mobile-nav">
+            <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+          </div>
           <div class="hide-container">
 
             <p class="main-text-content">
@@ -119,7 +132,9 @@ get_header();
             <div id="boots" class="secondary-image"></div>
           </div>
           <div class="no-mobile-col col-md-6 main-page-txt-mobile">
-            <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+            <div class="mobile-nav">
+              <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+            </div>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             <button id="about-btn-fwd-mobile" type="button" class="p-btn btn btn-primary">See More</button>
           </div>
@@ -148,7 +163,9 @@ get_header();
         </div> <!-- #four-img -->
         <div class="ajaxSection ajaxAboutSection no-mobile-col col-md-6">
           <div class="s-section first-s-section">
-            <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+            <div class="mobile-nav">
+              <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+            </div>
             <img class="s-title" src="wp-content/uploads/2017/03/home-story-title_v2.png" alt="">
             <p id="story-s-tagline" class="s-tagline">THE MOST DANGEROUS 8 SECONDS IN SPORTS</p>
             <button type="button" class="s-down-btn s-btn btn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
@@ -228,7 +245,9 @@ get_header();
       </div> <!--#four -->
       <div id="five" class="row main-page-slide">
         <div class="recipes no-mobile-col col-md-6 main-page-txt">
-          <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+          <div class="mobile-nav">
+            <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+          </div>
           <div class="hide-container">
 
             <p class="main-text-content">
@@ -253,7 +272,9 @@ get_header();
             <div id="neat" class="secondary-image"></div>
           </div>
           <div class="no-mobile-col col-md-6 main-page-txt-mobile">
-            <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+            <div class="mobile-nav">
+              <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+            </div>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             <button id="recipes-btn-fwd-mobile" type="button" class="p-btn btn btn-primary">See More</button>
           </div> <!-- no-mobile-col col-md-6 main-page-txt-mobile -->
@@ -290,7 +311,9 @@ get_header();
         </div> <!-- #five-img -->
         <div class="ajaxSection ajaxRecipesSection no-mobile-col col-md-6">
           <div class="s-section first-s-section">
-            <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+            <div class="mobile-nav">
+              <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+            </div>
             <div id="first-recipe" class="s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-1.svg" alt="">
               <h2 class="s-header">MANHATTAN</h2>
@@ -453,7 +476,9 @@ get_header();
       </div> <!-- #five -->
       <div id="six" class="contact row main-page-slide">
         <div class="no-mobile-col col-md-6 main-page-txt">
-          <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+          <div class="mobile-nav">
+            <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+          </div>
           <div class="hide-container">
 
             <!-- <p class="main-text-content">
@@ -467,7 +492,9 @@ get_header();
         </div>
         <div id="six-img" class="main-page-img no-mobile-col col-md-6">
           <div class="no-mobile-col col-md-6 main-page-txt-mobile">
-            <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+            <div class="mobile-nav">
+              <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+            </div>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </div>
         </div>

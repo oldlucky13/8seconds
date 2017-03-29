@@ -55,7 +55,11 @@
   height: 50px;
   display: block;
   margin: 0 auto;
-  margin-top: 15px;
+  // margin-top: 15px;
+  @media all and (max-width: 991px) {
+    margin: 0px 0px 10px 20px;
+  }
+
 }
 
 .main-page-txt {
@@ -126,9 +130,9 @@
   //   left: calc(50% - 200px);
   // }
   //
-  // @media all and (max-width: 320px) {
-  //   left: calc(50% - 150px)
-  // }
+  @media all and (max-width: 320px) {
+    left: calc(50% - 170px)
+  }
 }
 
 .main-page-slide-title {

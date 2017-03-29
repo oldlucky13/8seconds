@@ -5680,8 +5680,10 @@ body {
 .icon-mini {
   height: 50px;
   display: block;
-  margin: 0 auto;
-  margin-top: 15px; }
+  margin: 0 auto; }
+  @media all and (max-width: 991px) {
+    .icon-mini {
+      margin: 0px 0px 10px 20px; } }
 
 .main-page-txt {
   display: none;
@@ -5731,6 +5733,9 @@ body {
 @media all and (max-width: 425px) {
   .mobile-main-title {
     left: calc(50% - 220px); } }
+@media all and (max-width: 320px) {
+  .mobile-main-title {
+    left: calc(50% - 170px); } }
 
 .main-page-slide-title {
   position: relative;
@@ -6079,6 +6084,31 @@ div.wpcf7-mail-sent-ok {
       top: 11px; }
     .button_container span:nth-of-type(3) {
       top: 22px; }
+  @media all and (max-width: 991px) {
+    .button_container {
+      right: 2%;
+      top: 2.5%;
+      width: 50px;
+      height: 40px;
+      left: inherit; }
+      .button_container.active .top {
+        -webkit-transform: translateY(15px) translateX(0) rotate(45deg);
+        -moz-transform: translateY(15px) translateX(0) rotate(45deg);
+        -ms-transform: translateY(15px) translateX(0) rotate(45deg);
+        -o-transform: translateY(15px) translateX(0) rotate(45deg);
+        transform: translateY(15px) translateX(0) rotate(45deg); }
+      .button_container.active .bottom {
+        -webkit-transform: translateY(-15px) translateX(0) rotate(-45deg);
+        -moz-transform: translateY(-15px) translateX(0) rotate(-45deg);
+        -ms-transform: translateY(-15px) translateX(0) rotate(-45deg);
+        -o-transform: translateY(-15px) translateX(0) rotate(-45deg);
+        transform: translateY(-15px) translateX(0) rotate(-45deg); }
+      .button_container span {
+        height: 5px; }
+        .button_container span:nth-of-type(2) {
+          top: 15px; }
+        .button_container span:nth-of-type(3) {
+          top: 30px; } }
 
 .menu-container {
   position: fixed;
@@ -6629,4 +6659,81 @@ div.wpcf7-mail-sent-ok {
   padding-left: 0 !important;
   padding-right: 0 !important; }
 
+.mobile-nav {
+  padding-top: 15px;
+  padding-bottom: 5px;
+  position: absolute;
+  width: 100%;
+  z-index: 20; }
+  @media all and (max-width: 991px) {
+    .mobile-nav {
+      background: #000; } }
+
 /*# sourceMappingURL=style.css.map */
+
+_::-webkit-full-page-media, _:future, :root {
+
+  @media all and (max-width: 991px) {
+    .row {
+      margin-right: -61px;
+    }
+
+    html, body, #et-main-area, #main-content, .main-page-container {
+      width: calc(100% + 61px);
+    }
+
+    .button_container {
+      right: calc(7% - 61px);
+      top: 4%;
+    }
+  }
+
+  @media all and (max-width: 425px) {
+    .mobile-main-title {
+      left: calc(50% - 200px);
+    }
+  }
+
+  @media all and (max-width: 320px) {
+    .mobile-main-title {
+      left: calc(50% - 150px)
+    }
+  }
+
+
+}
+
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+{ @media {
+
+
+      @media all and (max-width: 991px) {
+        .row {
+          margin-right: -61px;
+        }
+
+        html, body, #et-main-area, #main-content, .main-page-container {
+          width: calc(100% + 61px);
+        }
+
+        .button_container {
+          right: calc(7% - 61px);
+          top: 4%;
+        }
+      }
+
+      @media all and (max-width: 425px) {
+        .mobile-main-title {
+          left: calc(50% - 200px);
+        }
+      }
+
+      @media all and (max-width: 320px) {
+        .mobile-main-title {
+          left: calc(50% - 150px)
+        }
+      }
+
+
+
+}}
