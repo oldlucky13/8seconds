@@ -5676,6 +5676,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; }
+  @media all and (max-width: 991px) {
+    .main-page-img {
+      position: relative; } }
 
 .icon-mini {
   height: 50px;
@@ -6674,8 +6677,19 @@ div.wpcf7-mail-sent-ok {
     width: 100%;
     z-index: 20;
     top: 0; } }
-@media screen and (max-device-width: 425px) {
-  .mobile-nav {
-    top: -25px; } }
+
+@media all and (max-width: 991px) {
+  .main-page-txt-mobile {
+    height: 100%; } }
+
+.plus-button {
+  top: 50%;
+  left: 5.5%;
+  background: #e8e5dd;
+  border: 2px solid #86754D;
+  padding: 18px 18px;
+  border-radius: 22px;
+  cursor: pointer;
+  z-index: 2; }
 
 /*# sourceMappingURL=style.css.map */

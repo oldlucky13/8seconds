@@ -11,8 +11,27 @@
   }
 
   @media screen and (max-device-width: 425px) {
-    top: -25px;
+    // hold off on this while position relative is on parent element
+    // top: -25px;
   }
 
 
+}
+
+.main-page-txt-mobile {
+  @media all and (max-width: 991px) {
+    height: 100%;
+  }
+
+}
+
+.plus-button {
+  top: 50%;
+  left: 5.5%;
+  background: #e8e5dd;
+  border: 2px solid #86754D;
+  padding: 18px 18px;
+  border-radius: 22px;
+  cursor: pointer;
+  z-index: 2;
 }

@@ -49,6 +49,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  @media all and (max-width: 991px) {
+    position: relative;
+  }
+
 }
 
 .icon-mini {

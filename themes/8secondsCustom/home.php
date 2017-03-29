@@ -43,10 +43,11 @@ get_header();
             <div class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
+            <button id="btn-premium" type="button" class="plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <!-- <button id="btn-premium" type="button" class="p-btn btn slide-button"><i class="fa fa-plus" aria-hidden="true"></i></button> -->
               <div class="filler">
 
               </div>
-              <button id="btn-premium" type="button" class="p-btn btn slide-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
 
 
           </div> <!-- main-page-img no-mobile-col col-md-6-->
