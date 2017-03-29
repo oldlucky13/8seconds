@@ -170,7 +170,7 @@ jQuery(document).ready(function( $ ) {
   hammertime.on('swipe', function(event) {
     handleMainPageScroll(event.deltaY);
   })
-  
+
   // (function(factory) {
   //     if (typeof define === 'function' && define.amd) {
   //         define(['jquery', 'hammerjs'], factory);
@@ -393,7 +393,7 @@ recipesAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}
 recipesAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
 recipesAreaTl.to($recipesBreadcrumbs, .1, {display: "block"}, 0);
 recipesAreaTl.to($recipesBreadcrumbs, 1, {ease: Power4.easeInOut, opacity: 1}, 0);
-aboutAreaTl.to($btnRecipes, 1, {ease: Power4.easeInOut, left: "4%"}, 0);
+recipesAreaTl.to($btnRecipes, 1, {ease: Power4.easeInOut, left: "4%"}, 0);
 // recipesAreaTl.to($ajaxRecipesSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
 // recipesAreaTl.to($ajaxRecipesSection[0], .1, {ease: Power4.easeOut, scrollTo: 0}, 0);
 
