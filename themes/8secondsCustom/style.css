@@ -6698,4 +6698,7 @@ div.wpcf7-mail-sent-ok {
     left: 29.5%;
     font-size: 2em; }
 
+#btn-contactfake {
+  display: none !important; }
+
 /*# sourceMappingURL=style.css.map */

@@ -43,7 +43,7 @@ get_header();
             <div class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
-            <button id="btn-premium" type="button" class="plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <button id="btn-premium" type="button" class="p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
             <!-- <button id="btn-premium" type="button" class="p-btn btn slide-button"><i class="fa fa-plus" aria-hidden="true"></i></button> -->
               <div class="filler">
 
@@ -76,6 +76,7 @@ get_header();
             <div class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
+            <button id="btn-black" type="button" class="p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
             <div class="filler">
 
             </div>
@@ -106,6 +107,7 @@ get_header();
             <div class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
+            <button id="btn-honey-cinnamon" type="button" class="p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
             <div class="filler">
 
             </div>
@@ -147,7 +149,7 @@ get_header();
             <div class="filler">
 
             </div>
-            <button id="about-btn-fwd-mobile" type="button" class="p-btn btn btn-primary">See More</button>
+            <!-- <button id="about-btn-fwd-mobile" type="button" class="p-btn btn btn-primary">See More</button> -->
           </div>
           <ol id="about-ajax-breadcrumb-group" class="ajax-breadcrumb-group">
             <li class="ajax-breadcrumb">
@@ -251,7 +253,7 @@ get_header();
             </div>
             <button type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
           </div> <!-- s-section -->
-          <button id="about-btn-bk-mobile" type="button" class="p-btn btn btn-primary mobile-btn">Go Back</button>
+          <!-- <button id="about-btn-bk-mobile" type="button" class="p-btn btn btn-primary mobile-btn">Go Back</button> -->
         </div>
       </div> <!--#four -->
       <div id="five" class="row main-page-slide">
@@ -289,7 +291,7 @@ get_header();
             <div class="filler">
 
             </div>
-            <button id="recipes-btn-fwd-mobile" type="button" class="p-btn btn btn-primary">See More</button>
+            <!-- <button id="recipes-btn-fwd-mobile" type="button" class="p-btn btn btn-primary">See More</button> -->
           </div> <!-- no-mobile-col col-md-6 main-page-txt-mobile -->
           <ol id="recipes-ajax-breadcrumb-group" class="ajax-breadcrumb-group">
             <li class="ajax-breadcrumb">
@@ -484,7 +486,7 @@ get_header();
             <button type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
 
           </div> <!-- s-section -->
-          <button id="recipes-btn-bk-mobile" type="button" class="p-btn btn btn-primary mobile-btn">Go Back</button>
+          <!-- <button id="recipes-btn-bk-mobile" type="button" class="p-btn btn btn-primary mobile-btn">Go Back</button> -->
         </div> <!-- ajaxRecipesSection -->
       </div> <!-- #five -->
       <div id="six" class="contact row main-page-slide">
@@ -508,6 +510,7 @@ get_header();
             <div class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
+            <button id="btn-contactfake" type="button" class="p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
             <div class="filler">
 
             </div>

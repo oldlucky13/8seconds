@@ -136,6 +136,7 @@ jQuery(document).ready(function( $ ) {
   $neat = $('#neat');
   $slideButton = $('.slide-button');
   $hideContainer = $('.hide-container');
+  $pBtn = $('.p-btn');
 
   var mainIdx = 0;
 
@@ -263,16 +264,21 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
       }
       updateBreadcrumb(mainIdx);
     }
-    if (mainIdx === 3) {
-      $btnAbout.fadeIn(1500);
-      $btnRecipes.fadeOut(1500);
-    } else if (mainIdx === 4) {
-      $btnAbout.fadeOut(1500);
-      $btnRecipes.fadeIn(1500);
+    nextButton(scrollDir, mainIdx);
+  }
+}
+
+function nextButton(scrollDir, mainIdx) {
+  if (scrollDir < 0) {
+    $pBtn.eq(mainIdx - 1).fadeOut();
+    if (mainIdx === 5) {
+      return;
     } else {
-      $btnAbout.fadeOut(1500);
-      $btnRecipes.fadeOut(1500);
+      $pBtn.eq(mainIdx).fadeIn();
     }
+  } else if (scrollDir > 0) {
+    $pBtn.eq(mainIdx + 1).fadeOut();
+    $pBtn.eq(mainIdx).fadeIn();
   }
 }
 
