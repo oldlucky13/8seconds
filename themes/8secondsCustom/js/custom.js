@@ -359,6 +359,13 @@ function handleRecipesTrigger() {
     $recipesImg.addClass('lateral-img');
     TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
     // $recipesSection.addClass('initial-lateral-img');  removed because too choppy, although it does solve padding issue
+    recipesOne = $('#recipes-one').offset().top;
+    recipesTwo = $('#recipes-two').offset().top;
+    recipesThree = $('#recipes-three').offset().top;
+    recipesFour = $('#recipes-four').offset().top;
+    recipesFive = $('#recipes-five').offset().top;
+    recipesSix = $('#recipes-six').offset().top;
+    recipesSeven = $('#recipes-seven').offset().top;
   } else if ($btnRecipes.hasClass("bk")) {
     $recipesImg.css('background-image','url(/wp-content/uploads/2017/03/home-drinks-manhattan.jpg)');
     recipesAreaTl.reverse();
@@ -392,6 +399,11 @@ function handleAboutTrigger() {
     $aboutImg.addClass('lateral-img');
     TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
     // $aboutSection.addClass('initial-lateral-img');
+    aboutOne = $('#about-one').offset().top;
+    aboutTwo = $('#about-two').offset().top;
+    aboutThree = $('#about-three').offset().top;
+    aboutFour = $('#about-four').offset().top;
+    aboutFive = $('#about-five').offset().top;
   } else if ($btnAbout.hasClass("bk")) {
     $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
     aboutAreaTl.reverse();
@@ -704,33 +716,39 @@ function checkSize(){
     deskClassAdded = true;
 	}
 
-  if (onAboutPage && startingSideWidth < 992) {
-    if ($(window).width() >= 992) {
-      $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
-      aboutAreaTlMobile.progress(0).pause();
-      // aboutAreaTlMobile.reverse();
-      triggerSection("main");
-      TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-    }
-  } else if (onAboutPage && startingSideWidth >= 992) {
-    if ($(window).width() < 992) {
-      $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
-      aboutAreaTl.reverse();
-      triggerSection("main");
-      TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-    }
-  } else if (onRecipesPage && startingSideWidth < 992) {
-    if ($(window).width() >= 992) {
-      recipesAreaTlMobile.reverse();
-      triggerSection("main");
-      TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-    }
-  } else if (onRecipesPage && startingSideWidth >= 992) {
-    if ($(window).width() < 992) {
-      recipesAreaTl.reverse();
-      triggerSection("main");
-      TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-    }
+  // if (onAboutPage && startingSideWidth < 992) {
+  //   if ($(window).width() >= 992) {
+  //     $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
+  //     aboutAreaTlMobile.progress(0).pause();
+  //     // aboutAreaTlMobile.reverse();
+  //     triggerSection("main");
+  //     TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+  //   }
+  // } else if (onAboutPage && startingSideWidth >= 992) {
+  //   if ($(window).width() < 992) {
+  //     $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
+  //     aboutAreaTl.reverse();
+  //     triggerSection("main");
+  //     TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+  //   }
+  // } else if (onRecipesPage && startingSideWidth < 992) {
+  //   if ($(window).width() >= 992) {
+  //     recipesAreaTlMobile.reverse();
+  //     triggerSection("main");
+  //     TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+  //   }
+  // } else if (onRecipesPage && startingSideWidth >= 992) {
+  //   if ($(window).width() < 992) {
+  //     recipesAreaTl.reverse();
+  //     triggerSection("main");
+  //     TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+  //   }
+  // }
+
+  if (onAboutPage) {
+    handleAboutTrigger();
+  } else if (onRecipesPage) {
+    handleRecipesTrigger();
   }
   // wip: these don't actually recalculate on resize. secondary image change on scroll is not responsive.
   // update: as it currently stands these only work when you navigate to the secondary section and then navigate back to main. then you can resize, go back to secondary and it will work. if you resize first without loading secondary, aboutOne returns 0. if you resize while on secondary the whole page breaks.
