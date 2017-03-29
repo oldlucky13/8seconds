@@ -5768,7 +5768,7 @@ body {
   z-index: 3; }
   @media all and (max-width: 991px) {
     #breadcrumb-group {
-      display: none; } }
+      display: none !important; } }
 
 .breadcrumb {
   padding: 0px;
@@ -5805,7 +5805,7 @@ body {
 .slide-button {
   position: absolute;
   top: 50%;
-  left: 4%;
+  left: -2.5%;
   background: #e8e5dd;
   border: 2px solid #86754D;
   padding: 18px 18px;

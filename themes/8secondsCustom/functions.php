@@ -26,6 +26,9 @@ if ( ! function_exists( 'wpt_setup' ) ):
     wp_register_script('jquery_mousewheel', get_stylesheet_directory_uri () . '/js/jquery.mousewheel.min.js', array( 'jquery' ), '3.1.13', true );
     wp_enqueue_script('jquery_mousewheel');
 
+    wp_register_script('jquery_hammer', get_stylesheet_directory_uri () . '/js/hammer.min.js.map', array( 'jquery' ), '2.0.8', true );
+    wp_enqueue_script('jquery_hammer');
+
     wp_register_script( 'cookieJS', get_stylesheet_directory_uri() . '/js/js.cookie.js', array( 'jquery' ), '2.1.3', true );
     wp_enqueue_script('cookieJS');
 }
