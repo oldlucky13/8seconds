@@ -6683,13 +6683,19 @@ div.wpcf7-mail-sent-ok {
     height: 100%; } }
 
 .plus-button {
-  top: 50%;
-  left: 5.5%;
+  position: absolute;
+  bottom: 4%;
+  left: calc(50% - 12.5px);
   background: #e8e5dd;
   border: 2px solid #86754D;
-  padding: 18px 18px;
-  border-radius: 22px;
+  padding: 25px 25px;
+  border-radius: 40px;
   cursor: pointer;
   z-index: 2; }
+  .plus-button i {
+    position: absolute;
+    top: 25%;
+    left: 29.5%;
+    font-size: 2em; }
 
 /*# sourceMappingURL=style.css.map */
