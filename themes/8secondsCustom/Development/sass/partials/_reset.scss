@@ -1,0 +1,31 @@
+#main-header {
+  display: none;
+}
+
+#mobile-logo {
+  display: none;
+}
+
+html, body, #et-main-area, #main-content, .main-page-container, {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+// #main-page-breadcrumbs {
+//   position: absolute;
+//   z-index: 2;
+//   right: 10%;
+//   top: 10%;
+//
+//   h2 {
+//     transition: all 1s;
+//   }
+//   h2:hover {
+//     // transform: matrix(1, 0, 0, 1, 0, 0);
+//     transform: matrix(1, 0, 0, 1, 0, 977);
+//   }
+// }

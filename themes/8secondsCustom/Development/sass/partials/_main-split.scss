@@ -1,0 +1,326 @@
+#one-img {
+  background-image: url("/wp-content/uploads/2017/03/home-bottle-premium.jpg");
+}
+
+#two-img {
+  background-image: url("/wp-content/uploads/2017/03/home-bottle-black.jpg");
+}
+
+#three-img {
+  background-image: url("/wp-content/uploads/2017/03/home-bottle-cinnamon.jpg");
+}
+
+#four-img {
+  background-image: $story-main;
+  background-color: #000;
+  @include transition(all 500ms ease-out);
+}
+
+#five-img {
+  background-image: url("/wp-content/uploads/2017/03/home-drinks-manhattan.jpg");
+  background-color: #000;
+  @include transition(all 500ms ease-out);
+}
+
+#six-img {
+  background-image: url("/wp-content/uploads/2017/03/home-contact.jpg");
+  // z-index: 3;
+}
+
+.main-page-slide {
+  height: 100vh;
+  // width: 100%; can't do this because part of slide section shows on main after click
+  position: absolute;
+  // @media all and (max-width: 991px) {
+  //   position: static;
+  //   display: block;
+  // }
+}
+
+// @media all and (max-width: 991px) {
+//   body {
+//     overflow: auto;
+//   }
+// }
+
+
+.main-page-img {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.icon-mini {
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.main-page-txt {
+  display: none;
+  height: 100vh;
+  background: $main-texture;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $font-color;
+  @media screen and (min-width: 992px){
+    display: block;
+  }
+
+  h1 {
+    text-align: center;
+  }
+  .main-text-content {
+    font-family: $bot;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 60%;
+    font-size: 1em;
+    // EXPERIMENTAL, NEED TO USE SCREEN WIDTH:HEIGHT RATIO MEDIA QUERIES
+    // @media all and (max-width: 1500px) {
+    //   margin-top: 50%;
+    // }
+
+    @media all and (max-width: 1300px) {
+      width: 65%;
+    }
+
+  }
+}
+
+.main-page-txt-mobile {
+  display: inline-block;
+  @media screen and (min-width: 992px){
+    display: none;
+  }
+}
+
+.main-page-title-group {
+  position: absolute;
+  left: calc((100%/4) - 250px);
+  top: 14%;
+  // width: 100%; leave this undone for now
+  box-sizing: border-box;
+  z-index: 2;
+
+  @media all and (max-width: 991px) {
+    display: none;
+    left: calc(50% - 250px);
+  }
+
+}
+
+.mobile-main-title {
+  @media all and (max-width: 991px) {
+    display: block;
+    left: calc(50% - 250px);
+  }
+}
+
+.main-page-slide-title {
+  position: relative;
+  margin: 0;
+  font-family: 'serif';
+  font-weight: 200;
+  text-transform: uppercase;
+  line-height: 31pt;
+  color: #fff;
+  overflow: hidden;
+  // height: 50px;
+
+  // testonlyoff
+  // h2 {
+  //   img {
+  //     height: 300px;
+  //     width: 500px;
+  //   }
+  // }
+}
+
+.filler {
+  width: 100vw;
+}
+
+.h2-child {
+  // transform: translateY(100%);
+  @include transform(translateY(100%));
+  margin: 0;
+  font-size: 50px;
+
+  // testonly
+  height: 300px;
+  width: 500px;
+}
+
+#first-h2-child {
+  // transform: translateY(0%);
+  @include transform(translateY(0%));
+}
+
+#breadcrumb-group {
+  position: absolute;
+  right: 1.5%;
+  width: 50px;
+  top: 44%;
+  z-index: 3;
+
+  @media all and (max-width: 991px) {
+    display: none !important;
+  }
+
+}
+
+.breadcrumb {
+  // padding: 7px 7px;
+  padding: 0px;
+  margin-bottom: 15px;
+  list-style: none;
+  background-color: transparent;
+  border: 1px solid $icon-color;
+  border-radius: 8px;
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  @include transition(all 1s ease);
+}
+
+.breadcrumb-active {
+  background-color: $icon-color;
+}
+
+
+.desk-btn {
+  @media screen and (max-width: 991px){
+    display: none;
+  }
+}
+
+
+.mobile-btn {
+  @media screen and (min-width: 992px){
+    display: none;
+  }
+}
+
+#btn-recipes, #btn-about {
+  @media all and (max-width: 991px) {
+    top: inherit;
+    left: inherit;
+    bottom: 0;
+    right: 2%;
+  }
+
+}
+
+
+.slide-button {
+  position: absolute;
+  top: 50%;
+  left: -2.5%;
+  // left: 4%;
+  background: rgb(232, 229, 221);
+  border: 2px solid $icon-color;
+  padding: 18px 18px;
+  // padding: 9px 15px;
+  border-radius: 22px;
+  cursor: pointer;
+  z-index: 2;
+
+  i {
+    @include transition(all 2s ease);
+  //   -webkit-transition: all 2s ease; // Chrome
+  //  -moz-transition: all 2s ease; // Mozilla
+  //  -o-transition: all 2s ease; // Opera
+  //  transition: all 2s ease;
+
+    position: absolute;
+    top: 33%;
+    left: 38%;
+  }
+  .initial-hide {
+    // display: none;
+    // opacity: 0;
+    // visibility: hidden;
+  }
+}
+
+.bk {
+  i {
+    left: 35%;
+  }
+}
+
+.s-btn.focus, .s-btn:focus, .s-btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.p-btn.focus, .p-btn:focus, .p-btn:hover {
+    color: rgb(30, 30, 30);
+    text-decoration: none;
+}
+
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: none !important;
+    outline-offset: 0px
+}
+
+.empty-button {
+  font-family: $baraged;
+  color: $icon-color;
+  border-style: solid;
+border-width: 16px 24px 15px 27px;
+-moz-border-image: url('/wp-content/uploads/2017/03/eb.png') 16 24 15 27 stretch;
+-webkit-border-image: url('/wp-content/uploads/2017/03/eb.png') 16 24 15 27 stretch;
+-o-border-image: url('/wp-content/uploads/2017/03/eb.png') 16 24 15 27 stretch;
+border-image: url('/wp-content/uploads/2017/03/eb.png') 16 24 15 27 fill stretch;
+// -moz-border-image: url('/wp-content/uploads/2017/03/emptybutton.png') 16 24 15 27 stretch;
+// -webkit-border-image: url('/wp-content/uploads/2017/03/emptybutton.png') 16 24 15 27 stretch;
+// -o-border-image: url('/wp-content/uploads/2017/03/emptybutton.png') 16 24 15 27 stretch;
+// border-image: url('/wp-content/uploads/2017/03/emptybutton.png') 16 24 15 27 fill stretch;
+
+  text-align: center;
+  width: 33.33%;
+  margin: 0 auto;
+  margin-top: 80px;
+  // transition: all .2s ease;
+  @include transition(all .5s ease);
+  cursor: pointer;
+  background: transparent;
+  display: block;
+  letter-spacing: 2px;
+
+  &:hover {
+    border-style: solid;
+    border-width: 16px 24px 15px 27px;
+    -moz-border-image: url('/wp-content/uploads/2017/03/ebh.png') 16 24 15 27 stretch;
+    -webkit-border-image: url('/wp-content/uploads/2017/03/ebh.png') 16 24 15 27 stretch;
+    -o-border-image: url('/wp-content/uploads/2017/03/ebh.png') 16 24 15 27 stretch;
+    border-image: url('/wp-content/uploads/2017/03/ebh.png') 16 24 15 27 fill stretch;
+    color: #000;
+    // -moz-border-image: url('/wp-content/uploads/2017/03/empty-button-hover-1.png') 16 24 15 27 stretch;
+    // -webkit-border-image: url('/wp-content/uploads/2017/03/empty-button-hover-1.png') 16 24 15 27 stretch;
+    // -o-border-image: url('/wp-content/uploads/2017/03/empty-button-hover-1.png') 16 24 15 27 stretch;
+    // border-image: url('/wp-content/uploads/2017/03/empty-button-hover-1.png') 16 24 15 27 fill stretch;
+
+  }
+  // &:hover {
+  //   background-color: $icon-color;
+  //   color: $font-color;
+  // }
+}
+#first-hide {
+  opacity: 1;
+}
+
+.hide-container {
+  opacity: 0;
+}
+
+.empty-button:focus {
+  outline: none !important;
+}

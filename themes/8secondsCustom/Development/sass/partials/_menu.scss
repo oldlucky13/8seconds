@@ -1,0 +1,434 @@
+.button_container {
+  position: absolute;
+  top: 4%;
+  left: 2%;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  @include transition(opacity .25s ease);
+  // transition: opacity .25s ease;
+  // transform: scale(0.7);
+  @include transform(scale(0.7));
+  &:hover {
+    opacity: .7;
+  }
+
+  &.active {
+    .top {
+      @include transform(translateY(11px) translateX(0) rotate(45deg));
+      // background: white;
+    }
+    .middle {
+      opacity: 0;
+      // background: white;
+    }
+
+    .bottom {
+      @include transform(translateY(-11px) translateX(0) rotate(-45deg));
+      // background: white;
+    }
+  }
+
+  span {
+    background: $icon-color;
+    border: none;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include transition(all .35s ease);
+    // transition:  all .35s ease;
+    cursor: pointer;
+
+    &:nth-of-type(2) {
+      top: 11px;
+    }
+
+    &:nth-of-type(3) {
+      top: 22px;
+    }
+  }
+}
+
+
+//  menuContainer
+
+
+.menu-container {
+    position: fixed;
+    // background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // height: 0%;
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+    // @include transition(opacity .35s, visibility .35s, height .35s);
+    overflow: hidden;
+    z-index: 99;
+    //  LEAVE FOR SLIDE DOWN. GIVE CLASS 100% HEIGHT AND POSITION OFFSCREEN/GREENSOCK FOR J
+    &.open {
+      // opacity: 1;
+      // visibility: visible;
+      // height: 100%;
+      //
+      li {
+       // @include animation(fadeInRight .5s ease forwards);
+        //@include animation-delay(.35s);
+
+        &:nth-of-type(2) {
+          @include animation-delay(.4s);
+        }
+        &:nth-of-type(3) {
+           @include animation-delay(.45s);
+        }
+        &:nth-of-type(4) {
+           @include animation-delay(.5s);
+        }
+      }
+    }
+    .menu-left {
+      position: relative;
+      // height: 70%;
+      height: 100%;
+      width: 51%;
+      left: -100%;
+      // top: 50%;
+      // @include transform(translateY(-50%));
+      font-size: 1em;
+      font-family: serif;
+      font-weight: 400;
+      text-align: center;
+      background: $main-texture;
+
+    #nav-menu {
+      padding: 5%;
+    }
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      display: inline-block;
+      position: relative;
+      height: 100%;
+
+      li {
+        display: block;
+        height: 25%;
+        @include calc(height, "100% / 6");
+        min-height: 50px;
+        position: relative;
+        opacity: 1;
+
+        a {
+          display: block;
+          position: relative;
+          // color: $color-link;
+          text-decoration: none;
+          // overflow: hidden;
+          // text-transform: uppercase;
+          // font-family: $paragraphFont;
+
+          &:hover:after,
+          &:focus:after,
+          &:active:after {
+           width: 100%;
+         }
+
+         &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0%;
+          @include transform(translateX(-50%));
+          height: 3px;
+          // background: $accent-color;
+          // transition: .35s;
+          // -webkit-transition: .35s;
+          @include transition(.35s);
+        }
+      }
+    }
+  }
+}
+
+.square {
+  display: inline-block;
+  position: relative;
+  width: 32%;
+  // width: 30%;
+  padding-bottom: 22%;
+  // padding-bottom: 30%;
+  // background: black;
+  margin: -10.4px;
+  // margin: 2.66%;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  @include transition(all 1s ease);
+
+  &:hover {
+    .fake-background {
+      opacity: 1;
+    }
+    p {
+      opacity: 0;
+    }
+  }
+
+  .square-content {
+    position: absolute;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+
+    .table {
+      display: table;
+      height: 100%;
+      width: 100%;
+
+      .table-cell {
+        display: table-cell;
+        vertical-align: middle;
+        height: 100%;
+        width: 100%;
+
+        p {
+          font-family: $baraged;
+          color: #fff;
+          font-size: 1.5em;
+          text-align: center;
+          @include transition(all 0.2s ease);
+        }
+
+        a {
+          color: white;
+          cursor: pointer;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// .square:after {
+//   // background-size: cover;
+//   background-position: center center;
+//   background-repeat: no-repeat;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   // background-image: none;
+//   opacity: 0;
+//   @include transition(all 1s ease);
+//   &:hover {
+//     opacity: 1;
+//   }
+// }
+
+.menu-grey {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+#menu-row-first {
+  margin-top: 5%;
+}
+
+#menu-row-last {
+  margin-bottom: 5%;
+}
+
+.fake-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-position: center center;
+  background-size: cover;
+  @include transition(all 0.8s ease);
+}
+
+#fake-premium {
+  background-image: url("/wp-content/uploads/2017/03/menu-premium-1.png");
+}
+
+#fake-story {
+   background-image: url("/wp-content/uploads/2017/03/menu-story.png");
+}
+
+#fake-black {
+  background-image: url("/wp-content/uploads/2017/03/menu-black.png");
+}
+
+#fake-cocktails {
+  background-image: url("/wp-content/uploads/2017/03/menu-cocktail.png");
+}
+
+#fake-honey-cinnamon {
+  background-image: url("/wp-content/uploads/2017/03/menu-honeycinnamon.png");
+}
+
+#fake-contact {
+  background-image: url("/wp-content/uploads/2017/03/menu-contact.png");
+}
+// #premium-square {
+//     // background-image: url("/wp-content/uploads/2017/03/menu-premium-1.png");
+//   &:hover {
+//     background-image: url("/wp-content/uploads/2017/03/menu-premium-1.png");
+//   }
+// }
+
+// #story-square {
+//     // background-image: url("/wp-content/uploads/2017/03/menu-story.png");
+//
+//   &:hover {
+//     background-image: url("/wp-content/uploads/2017/03/menu-story.png");
+//   }
+// }
+
+// #black-square {
+//     // background-image: url("/wp-content/uploads/2017/03/menu-black.png");
+//
+//   &:hover {
+//     background-image: url("/wp-content/uploads/2017/03/menu-black.png");
+//   }
+// }
+// #cocktails-square {
+//     // background-image: url("/wp-content/uploads/2017/03/menu-cocktail.png");
+//
+//   &:hover {
+//     background-image: url("/wp-content/uploads/2017/03/menu-cocktail.png");
+//   }
+// }
+// #honey-cinnamon-square {
+//     // background-image: url("/wp-content/uploads/2017/03/menu-honeycinnamon.png");
+//
+//   &:hover {
+//     background-image: url("/wp-content/uploads/2017/03/menu-honeycinnamon.png");
+//   }
+// }
+// #contact-square {
+//     // background-image: url("/wp-content/uploads/2017/03/menu-contact.png");
+//
+//   &:hover {
+//     background-image: url("/wp-content/uploads/2017/03/menu-contact.png");
+//   }
+// }
+
+//
+// .square-grid {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+// }
+//
+// .square-grid__cell {
+//   background-color: rgba(0, 0, 0, 0.03);
+//   box-shadow: 0 0 0 1px black;
+//   overflow: hidden;
+//   position: relative;
+//   margin: 1.66%;
+// }
+//
+// .square-grid__content {
+//   left: 0;
+//   position: absolute;
+//   top: 0;
+// }
+//
+// .square-grid__cell:after {
+//   content: '';
+//   display: block;
+//   padding-bottom: 100%;
+// }
+//
+// .square-grid__cell--3 {
+//   flex-basis: 33.333%;
+// }
+//
+// .square-grid__cell--2 {
+//   flex-basis: 50%;
+// }
+.dr {
+  border-style: solid;
+  border-width: 42px 41px 44px 45px;
+  -moz-border-image: url("/wp-content/uploads/2017/03/menu-dr2.png") 42 41 44 45 repeat;
+  -webkit-border-image: url("/wp-content/uploads/2017/03/menu-dr2.png") 42 41 44 45 repeat;
+  -o-border-image: url("/wp-content/uploads/2017/03/menu-dr2.png") 42 41 44 45 repeat;
+  border-image: url("/wp-content/uploads/2017/03/menu-dr2.png") 42 41 44 45 fill repeat;
+}
+.dl {
+  border-style: solid;
+  border-width: 42px 41px 44px 45px;
+  -moz-border-image: url("/wp-content/uploads/2017/03/menu-dl2.png") 42 41 44 45 repeat;
+  -webkit-border-image: url("/wp-content/uploads/2017/03/menu-dl2.png") 42 41 44 45 repeat;
+  -o-border-image: url("/wp-content/uploads/2017/03/menu-dl2.png") 42 41 44 45 repeat;
+  border-image: url("/wp-content/uploads/2017/03/menu-dl2.png") 42 41 44 45 fill repeat;
+}
+.left {
+  border-style: solid;
+  border-width: 42px 41px 44px 45px;
+  -moz-border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 repeat;
+  -webkit-border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 repeat;
+  -o-border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 repeat;
+  border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 fill repeat;
+}
+.right {
+  border-style: solid;
+  border-width: 42px 41px 44px 45px;
+  -moz-border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 repeat;
+  -webkit-border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 repeat;
+  -o-border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 repeat;
+  border-image: url("/wp-content/uploads/2017/03/menu-none2.png") 42 41 44 45 fill repeat;
+}
+
+.menu-row {
+  display: block;
+}
+
+// --------------------------
+//
+// table {
+//   width: 80%;
+//   border-collapse: separate !important;
+//   margin: 0 auto;
+//   margin-top: 1%;
+//   margin-bottom: 1%;
+// }
+// td {
+//     width: 41%;
+//     padding-bottom: 41%;
+//     box-shadow: inset 0 0 2px 2px #fff;
+//     background-color: #bada55;
+// }
+// ---------------------------------
+// .table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+//     border: 0; /* reset */
+//     border-color: transparent;
+//     border-style: solid;
+//     border-width: 27px;
+//     -moz-border-image: url(http://www.w3.org/TR/css3-background/border.png) 27 repeat;
+//     -webkit-border-image: url(http://www.w3.org/TR/css3-background/border.png) 27 repeat;
+//     -o-border-image: url(http://www.w3.org/TR/css3-background/border.png) 27 repeat;
+//     border-image: url(http://www.w3.org/TR/css3-background/border.png) 27 fill repeat;
+// }

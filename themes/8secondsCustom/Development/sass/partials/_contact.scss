@@ -1,0 +1,58 @@
+.contact-form-container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50%;
+}
+
+.wpcf7 {
+  width: 80%;
+  margin: 0 auto !important;
+  text-align: center;
+
+  p {
+    margin: 0 !important;
+    display: inline;
+  }
+
+  div {
+    margin: 5px 0px;
+  }
+
+  br {
+    display: none;
+  }
+
+  .cfield {
+    width: 49%;
+    background: transparent;
+    border: 1px solid rgb(127, 127, 127);
+    height: 3em;
+    font-size: 1em;
+    font-family: $baraged;
+    color: #fff;
+    padding-left: 10px;
+    @include placeholder {
+      color: #fff;
+    }
+  }
+
+  .cfield-left {
+    margin-right: 1%;
+  }
+
+  .cfield-right {
+    margin-left: 1%;
+  }
+
+  #cmessage {
+    resize: none;
+    width: 100%;
+    height: 10em;
+    padding-top: 10px;
+  }
+
+  #form-submit {
+    margin-top: 15px;
+    width: 50%;
+  }
+}
