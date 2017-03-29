@@ -603,21 +603,11 @@ get_header();
     </nav> <!-- menu-left -->
   </div> <!-- menu-container -->
   <div id="ageGate" class="modal fade">
-    <video id="age-gate-video" playsinline autoplay loop muted poster="/wp-content/uploads/2017/03/agegatestill.png">
-      <source src="/wp-content/uploads/2017/03/age-gate-video-sm.webmsd.webm" type="video/webm">
-      <source src="/wp-content/uploads/2017/03/agegatesmv3.mp4" type="video/mp4">
+    <video id="age-gate-video" playsinline autoplay loop muted >
+      <source src="/wp-content/uploads/2017/03/agegatesmv4.webmhd.webm" type="video/webm">
+      <!-- <source src="/wp-content/uploads/2017/03/agegatesmv4.webmsd.webm" type="video/webm"> -->
+      <source src="/wp-content/uploads/2017/03/agegatesmv4.mp4" type="video/mp4">
     </video>
-    <!-- <script>
-//     var waitTime = 150;
-//     var el = document.getElementById('age-gate-video');
-// setTimeout(function () {
-//   // Resume play if the element if is paused.
-//   if (el.paused) {
-//     el.play();
-//   }
-// }, waitTime);
-      document.getElementById('age-gate-video').play();
-    </script> -->
     <div class="age-gate-content">
       <img src="/wp-content/uploads/2017/03/age-gate-icon.png" id="age-gate-icon" alt="8 seconds whiskey bull logo">
       <h1>ARE YOU ABLE TO RIDE?</h1>

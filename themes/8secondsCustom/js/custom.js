@@ -83,6 +83,9 @@ jQuery(window).on('load', function($) { // makes sure the whole site is loaded
     var AgeGateFadeIn = new TimelineMax({paused: true});
     AgeGateFadeIn.to($ageGateContent, 2, {opacity: 1, ease: Power4.easeInOut});
     AgeGateFadeIn.play();
+
+    var ageGateVideo = document.getElementById('age-gate-video');
+    ageGateVideo.play();
   }); // will fade out the white DIV that covers the website.
 })
 
@@ -128,7 +131,6 @@ jQuery(document).ready(function( $ ) {
   $neat = $('#neat');
   $slideButton = $('.slide-button');
   $hideContainer = $('.hide-container');
-
 
   var mainIdx = 0;
 
