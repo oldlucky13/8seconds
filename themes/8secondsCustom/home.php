@@ -101,7 +101,7 @@ get_header();
               When cowboys originally would ride a bull to death,<br>the 8 seconds standard has helped bull riding evolve<br>into America’s fastest growing sport.
             </p>
             <div class="empty-button about-btn fwd">
-              LEARN MORE
+              SEE THE HISTORY
             </div>
             <!-- <button id="about-btn-fwd-desk" type="button" class="btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></button> -->
             <div class="filler">
@@ -236,7 +236,7 @@ get_header();
               - Mark Twain
             </p>
             <div class="empty-button recipes-btn fwd">
-              LEARN MORE
+              SEE THE DRINKS
             </div>
             <div class="filler">
             </div>
