@@ -64,6 +64,12 @@
     margin-top: 0px;
     margin: 0px 0px 10px 20px;
   }
+  @media all and (max-width: 425px) {
+    height: 40px
+  }
+  @media all and (max-width: 320px) {
+    height: 35px;
+  }
 
 }
 
@@ -119,6 +125,7 @@
   @media all and (max-width: 991px) {
     display: none;
     left: calc(50% - 250px);
+    top: 24%;
   }
 
 }
@@ -135,7 +142,7 @@
   //   left: calc(50% - 200px);
   // }
   //
-  @media all and (max-width: 320px) {
+  @media all and (max-width: 360px) {
     left: calc(50% - 170px)
   }
 }
@@ -181,10 +188,17 @@
     width: 450px;
   }
 
-  @media all and (max-width: 320px) {
+  @media all and (max-width: 360px) {
     height: 210px;
     width: 350px;
   }
+
+// galaxy s5
+  // @media all and (width: 360px) and (height: 640px) {
+  //   height: 240px;
+  //   width: 400px;
+  // }
+
 
 }
 

@@ -10,9 +10,8 @@
     top: 0;
   }
 
-  @media screen and (max-device-width: 425px) {
-    // hold off on this while position relative is on parent element
-    // top: -25px;
+  @media all and (max-width: 320px) {
+    padding-top: 10px;
   }
 
 
@@ -57,6 +56,14 @@
   display: none !important;
 }
 
-.testbackground {
-
+.mobile-main-page-overlay {
+  @media all and (max-width: 991px) {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
 }

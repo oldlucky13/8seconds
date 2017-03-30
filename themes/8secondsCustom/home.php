@@ -133,6 +133,8 @@ get_header();
           </div>
         </div> <!-- about no-mobile-col col-md-6 main-page-txt -->
         <div id="four-img" class="main-page-img no-mobile-col col-md-6">
+          <div class="mobile-main-page-overlay">
+          </div>
           <button id="btn-about" type="button" class="p-btn btn slide-button about-btn fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
           <!-- <button id="about-btn" type="button" class="btn slide-button fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i><i class="fa fa-chevron-left initial-hide" aria-hidden="true"></i></button> -->
           <div id="secondary-story-image-group" class="secondary-image-group">
@@ -275,6 +277,8 @@ get_header();
           </div>
         </div> <!-- recipes no-mobile-col col-md-6 main-page-txt -->
         <div id="five-img" class="main-page-img no-mobile-col col-md-6">
+          <div class="mobile-main-page-overlay">
+          </div>
           <button id="btn-recipes" type="button" class="p-btn btn slide-button recipes-btn fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
           <div id="secondary-story-image-group" class="secondary-image-group">
             <div id="cola" class="secondary-image"></div>
@@ -506,8 +510,7 @@ get_header();
           </div>
         </div>
         <div id="six-img" class="main-page-img no-mobile-col col-md-6">
-          <div class="testbackground">
-
+          <div class="mobile-main-page-overlay">
           </div>
           <div class="no-mobile-col col-md-6 main-page-txt-mobile">
             <div class="mobile-nav">
