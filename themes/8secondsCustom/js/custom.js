@@ -773,28 +773,8 @@ Resize
 
 function checkSize(){
 
-	  if($(window).innerWidth() <= 991){
-		$('#nav-menu .menu-row').each(function(){
-			var storyDetach = $(this).find('#story-square').detach();
-			var recipeDetach = $(this).find('#cocktails-square').detach();
-			var contactDetach = $(this).find('#contact-square').detach();
-			$('#menu-row-last').append(storyDetach).append(recipeDetach).append(contactDetach);
-			
-		}); //each function
-	}else{
-
-		$('#nav-menu .menu-row').each(function(){
-			var storyDetach = $(this).find('#story-square').detach();
-			var recipeDetach = $(this).find('#cocktails-square').detach();
-			var contactDetach = $(this).find('#contact-square').detach();
-			$('#menu-row-first').append(storyDetach);
-			$('#menu-row-middle').append(recipeDetach);
-			$('#menu-row-last').append(contactDetach);
-			
-		}); //each function
-	}
-
-
+	
+	sortMenu();
 
 
 	if (deskClassAdded && $(window).innerWidth() <= 991){
@@ -1014,31 +994,37 @@ else{
 	***************/
 $('#toggle').on('click', function(){
 
-	if($(window).innerWidth() <= 991){
-		$('#nav-menu .menu-row').each(function(){
-			var storyDetach = $(this).find('#story-square').detach();
-			var recipeDetach = $(this).find('#cocktails-square').detach();
-			var contactDetach = $(this).find('#contact-square').detach();
-			$('#menu-row-last').append(storyDetach).append(recipeDetach).append(contactDetach);
-			
-		}); //each function
-	}else{
-
-		$('#nav-menu .menu-row').each(function(){
-			var storyDetach = $(this).find('#story-square').detach();
-			var recipeDetach = $(this).find('#cocktails-square').detach();
-			var contactDetach = $(this).find('#contact-square').detach();
-			$('#menu-row-first').append(storyDetach);
-			$('#menu-row-middle').append(recipeDetach);
-			$('#menu-row-last').append(contactDetach);
-			
-		}); //each function
-	}
+	sortMenu();
 	
 })
 
 
-	
+	function sortMenu(){
+		
+		
+		if($(window).innerWidth() <= 991){
+			$('#nav-menu .menu-row').each(function(){
+				var storyDetach = $(this).find('#story-square').detach();
+				var recipeDetach = $(this).find('#cocktails-square').detach();
+				var contactDetach = $(this).find('#contact-square').detach();
+				$('#menu-row-last').append(storyDetach).append(recipeDetach).append(contactDetach);
+				
+			}); //each function
+		}else{
+
+			$('#nav-menu .menu-row').each(function(){
+				var storyDetach = $(this).find('#story-square').detach();
+				var recipeDetach = $(this).find('#cocktails-square').detach();
+				var contactDetach = $(this).find('#contact-square').detach();
+				$('#menu-row-first').append(storyDetach);
+				$('#menu-row-middle').append(recipeDetach);
+				$('#menu-row-last').append(contactDetach);
+				
+			}); //each function
+		}
+
+
+	}
 
 
 
