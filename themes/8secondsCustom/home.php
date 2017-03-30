@@ -188,13 +188,11 @@ get_header();
           </ol>
         </div> <!-- #four-img -->
         <div class="ajaxSection ajaxAboutSection no-mobile-col col-md-6">
-          <div class="s-section first-s-section">
+          <div id="first-s-story" class="s-section first-s-section">
             <div id="s-recipes-mobile-nav" class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
-            <div id="about-btn-bk-mobile" class="s-back-mobile">
-              <i class="fa fa-arrow-left" aria-hidden="true"></i>
-            </div>
+
             <img class="s-title" src="wp-content/uploads/2017/03/home-story-title_v2.png" alt="">
             <p id="story-s-tagline" class="s-tagline">THE MOST DANGEROUS 8 SECONDS IN SPORTS</p>
             <button type="button" class="s-down-btn s-btn btn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
@@ -202,7 +200,10 @@ get_header();
                 <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
+          <div id="matador-section" class="s-section">
+            <div id="about-btn-bk-mobile" class="s-back-mobile">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </div>
             <div class="v2 vertical-line">
               <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>

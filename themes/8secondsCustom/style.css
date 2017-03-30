@@ -5984,7 +5984,13 @@ body {
 
 .s-section {
   height: 80vh;
-  position: relative; }
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+  @media all and (max-width: 991px) {
+    .s-section {
+      height: 100vh; } }
 
 .s-title {
   height: 300px;
@@ -6029,10 +6035,20 @@ body {
 .s-header {
   font-family: "Wheat Aged", "Sans Serif";
   font-size: 3em; }
+  @media all and (max-width: 991px) {
+    .s-header {
+      display: none; } }
 
 .s-paragraph {
   font-family: "Boton", "Sans Serif";
   font-size: 1em; }
+  @media all and (max-width: 991px) {
+    .s-paragraph {
+      display: none; } }
+
+@media all and (max-width: 991px) {
+  #first-s-story {
+    display: none; } }
 
 .v0 {
   height: 10%; }
@@ -6080,6 +6096,10 @@ div.wpcf7-mail-sent-ok {
   position: absolute;
   left: calc(50% - 143.04px);
   bottom: 16%; }
+
+@media all and (max-width: 991px) {
+  #matador-section {
+    background-image: url("/wp-content/uploads/2017/03/story-matador.jpg"); } }
 
 .button_container {
   position: absolute;
