@@ -2,12 +2,34 @@
   width: 80%;
   margin: 0 auto;
   margin-top: 50%;
+  @media all and (max-width: 991px) {
+    position: relative;
+  }
+
+  @media all and (max-width: 360px) {
+    margin-top: 40%;
+  }
+
+  @media all and (max-width: 320px) {
+    margin-top: 20%;
+  }
+
+
+}
+
+.absolute-container {
+  position: absolute;
+  z-index: 10;
 }
 
 .wpcf7 {
   width: 80%;
   margin: 0 auto !important;
   text-align: center;
+
+  @media all and (max-width: 991px) {
+    width: 100%;
+  }
 
   p {
     margin: 0 !important;
@@ -16,6 +38,9 @@
 
   div {
     margin: 5px 0px;
+    @media all and (max-width: 991px) {
+    margin-left: 0px;
+    }
   }
 
   br {
@@ -34,14 +59,26 @@
     @include placeholder {
       color: #fff;
     }
+    @media all and (max-width: 991px) {
+      display: block;
+      width: 100%;
+    }
+
   }
 
   .cfield-left {
     margin-right: 1%;
+    @media all and (max-width: 991px) {
+      margin-right: 0;
+    }
   }
 
   .cfield-right {
     margin-left: 1%;
+    @media all and (max-width: 991px) {
+      margin-left: 0;
+      margin: 5px 0px;
+    }
   }
 
   #cmessage {
@@ -49,10 +86,26 @@
     width: 100%;
     height: 10em;
     padding-top: 10px;
+    @media all and (max-width: 320px) {
+      height: 6em;
+    }
+
   }
 
   #form-submit {
     margin-top: 15px;
     width: 50%;
+    @media all and (max-width: 991px) {
+      width: 100%;
+    }
   }
+}
+
+.absolute-container {
+  position: absolute;
+  z-index: 10;
+}
+
+div.wpcf7-response-output {
+  color: #fff;
 }

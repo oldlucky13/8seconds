@@ -136,6 +136,7 @@ jQuery(document).ready(function( $ ) {
   $neat = $('#neat');
   $slideButton = $('.slide-button');
   $hideContainer = $('.hide-container');
+  $pBtn = $('.p-btn');
 
   var mainIdx = 0;
 
@@ -263,16 +264,21 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
       }
       updateBreadcrumb(mainIdx);
     }
-    if (mainIdx === 3) {
-      $btnAbout.fadeIn(1500);
-      $btnRecipes.fadeOut(1500);
-    } else if (mainIdx === 4) {
-      $btnAbout.fadeOut(1500);
-      $btnRecipes.fadeIn(1500);
+    nextButton(scrollDir, mainIdx);
+  }
+}
+
+function nextButton(scrollDir, mainIdx) {
+  if (scrollDir < 0) {
+    $pBtn.eq(mainIdx - 1).fadeOut();
+    if (mainIdx === 5) {
+      return;
     } else {
-      $btnAbout.fadeOut(1500);
-      $btnRecipes.fadeOut(1500);
+      $pBtn.eq(mainIdx).fadeIn();
     }
+  } else if (scrollDir > 0) {
+    $pBtn.eq(mainIdx + 1).fadeOut();
+    $pBtn.eq(mainIdx).fadeIn();
   }
 }
 
@@ -281,6 +287,7 @@ function nextSlide(idx, callback) {
   TweenMax.to($hideContainer.eq(idx - 1), .6, {opacity: 0, ease: Power4.easeInOut});
   $('.main-page-slide-group').children().eq(idx).fadeIn(1200);
   TweenMax.to($hideContainer.eq(idx), 1.5, {opacity: 1, ease: Power4.easeIn});
+  // nextButton(1, mainIdx);
 }
 
 function previousSlide(idx, callback) {
@@ -288,6 +295,7 @@ function previousSlide(idx, callback) {
   TweenMax.to($hideContainer.eq(idx + 1), .6, {opacity: 0, ease: Power4.easeInOut});
   $('.main-page-slide-group').children().eq(idx + 1).fadeOut(1200);
   TweenMax.to($hideContainer.eq(idx), 1.5, {opacity: 1, ease: Power4.easeIn});
+  // nextButton(-1, mainIdx);
 }
 
 // function nextSlide(idx, callback) {
@@ -316,6 +324,7 @@ function jumpToSlide(oldIdx, newIdx) {
       } else {
         nextSlide(i);
       }
+      nextButton(-1, i);
     }
   } else if (oldIdx > newIdx) {
     var previousTitles = $allTitles.find(".h2-child").slice(newIdx + 1, oldIdx);
@@ -326,6 +335,7 @@ function jumpToSlide(oldIdx, newIdx) {
       } else {
         previousSlide(j);
       }
+      nextButton(1, j);
     }
   }
 }
