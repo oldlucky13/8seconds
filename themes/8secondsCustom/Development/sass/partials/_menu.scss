@@ -10,6 +10,7 @@
   // transition: opacity .25s ease;
   // transform: scale(0.7);
   @include transform(scale(0.7));
+
   &:hover {
     opacity: .7;
   }
@@ -50,6 +51,42 @@
       top: 22px;
     }
   }
+
+  @media all and (max-width: 991px) {
+    right: 2%;
+    top: 2.5%;
+    width: 50px;
+    height: 40px;
+    left: inherit;
+
+    &.active {
+      .top {
+        @include transform(translateY(15px) translateX(0) rotate(45deg));
+        // background: white;
+      }
+      .bottom {
+        @include transform(translateY(-15px) translateX(0) rotate(-45deg));
+        // background: white;
+      }
+    }
+
+    span {
+      height: 5px;
+
+      &:nth-of-type(2) {
+        top: 15px;
+      }
+
+      &:nth-of-type(3) {
+        top: 30px;
+      }
+    }
+  }
+
+  @media all and (max-width: 320px) {
+    top: 1.5%;
+  }
+
 }
 
 
