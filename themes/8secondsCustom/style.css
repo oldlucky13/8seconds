@@ -5835,6 +5835,9 @@ body {
 @media all and (max-width: 425px) {
   #btn-recipes, #btn-about {
     bottom: 12%; } }
+@media all and (max-width: 320px) {
+  #btn-recipes, #btn-about {
+    bottom: 14%; } }
 
 .slide-button {
   position: absolute;
@@ -6436,6 +6439,9 @@ div.wpcf7-mail-sent-ok {
     display: inline; }
   .wpcf7 div {
     margin: 5px 0px; }
+    @media all and (max-width: 991px) {
+      .wpcf7 div {
+        margin-left: 0px; } }
   .wpcf7 br {
     display: none; }
   .wpcf7 .cfield {
@@ -6455,10 +6461,21 @@ div.wpcf7-mail-sent-ok {
       color: #fff; }
     .wpcf7 .cfield:-ms-input-placeholder {
       color: #fff; }
+    @media all and (max-width: 991px) {
+      .wpcf7 .cfield {
+        display: block;
+        width: 100%; } }
   .wpcf7 .cfield-left {
     margin-right: 1%; }
+    @media all and (max-width: 991px) {
+      .wpcf7 .cfield-left {
+        margin-right: 0; } }
   .wpcf7 .cfield-right {
     margin-left: 1%; }
+    @media all and (max-width: 991px) {
+      .wpcf7 .cfield-right {
+        margin-left: 0;
+        margin: 5px 0px; } }
   .wpcf7 #cmessage {
     resize: none;
     width: 100%;
@@ -6467,6 +6484,9 @@ div.wpcf7-mail-sent-ok {
   .wpcf7 #form-submit {
     margin-top: 15px;
     width: 50%; }
+    @media all and (max-width: 991px) {
+      .wpcf7 #form-submit {
+        width: 100%; } }
 
 #ageGate {
   background-color: #000; }
@@ -6714,6 +6734,9 @@ div.wpcf7-mail-sent-ok {
     .plus-button {
       bottom: 12%;
       left: calc(50% - 27.5px); } }
+  @media all and (max-width: 320px) {
+    .plus-button {
+      bottom: 14%; } }
 
 #btn-contactfake {
   display: none !important; }

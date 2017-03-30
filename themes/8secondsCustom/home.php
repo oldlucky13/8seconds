@@ -511,6 +511,9 @@ get_header();
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
             <button id="btn-contactfake" type="button" class="p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <div class="contact-form-container">
+              <?php echo do_shortcode('[contact-form-7 id="188" title="Mobile Contact"]'); ?>
+            </div>
             <div class="filler">
 
             </div>

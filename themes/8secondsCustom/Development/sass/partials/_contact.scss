@@ -16,6 +16,9 @@
 
   div {
     margin: 5px 0px;
+    @media all and (max-width: 991px) {
+    margin-left: 0px;
+    }
   }
 
   br {
@@ -34,14 +37,26 @@
     @include placeholder {
       color: #fff;
     }
+    @media all and (max-width: 991px) {
+      display: block;
+      width: 100%;
+    }
+
   }
 
   .cfield-left {
     margin-right: 1%;
+    @media all and (max-width: 991px) {
+      margin-right: 0;
+    }
   }
 
   .cfield-right {
     margin-left: 1%;
+    @media all and (max-width: 991px) {
+      margin-left: 0;
+      margin: 5px 0px;
+    }
   }
 
   #cmessage {
@@ -54,5 +69,8 @@
   #form-submit {
     margin-top: 15px;
     width: 50%;
+    @media all and (max-width: 991px) {
+      width: 100%;
+    }
   }
 }

@@ -267,6 +267,10 @@
     bottom: 12%;
   }
 
+  @media all and (max-width: 320px) {
+    bottom: 14%
+  }
+
 }
 
 .slide-button {
