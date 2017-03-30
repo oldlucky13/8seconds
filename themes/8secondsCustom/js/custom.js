@@ -95,7 +95,7 @@ jQuery(window).on('load', function($) { // makes sure the whole site is loaded
 })
 
 jQuery(document).ready(function( $ ) {
-  jQuery('#six, #five, #four, #three, #two').fadeOut(); // prep slides for scrolling
+  jQuery('#six, #five, #four, #three, #two, #one').fadeOut(); // prep slides for scrolling
   /***************
   Variables
   ***************/
@@ -252,7 +252,7 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
         previousSlide(mainIdx);
       }
       updateBreadcrumb(mainIdx);
-    } else if (scrollDir < 0 && mainIdx === 5) { // can't scroll down at last slide
+    } else if (scrollDir < 0 && mainIdx === 6) { // can't scroll down at last slide
       return;
     } else { // scroll down
       if (newMainIdx) { // user clicked a breadcrumb
@@ -271,7 +271,7 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
 function nextButton(scrollDir, mainIdx) {
   if (scrollDir < 0) {
     $pBtn.eq(mainIdx - 1).fadeOut();
-    if (mainIdx === 5) {
+    if (mainIdx === 6) {
       return;
     } else {
       $pBtn.eq(mainIdx).fadeIn();
@@ -283,6 +283,7 @@ function nextButton(scrollDir, mainIdx) {
 }
 
 function nextSlide(idx, callback) {
+  console.log(idx);
   TweenMax.to($allTitles.find(".h2-child").eq(idx - 1), 1.5, {y:"-100%", force3D: true, onComplete: nextTitle(idx, callback)});
   TweenMax.to($hideContainer.eq(idx - 1), .6, {opacity: 0, ease: Power4.easeInOut});
   $('.main-page-slide-group').children().eq(idx).fadeIn(1200);
