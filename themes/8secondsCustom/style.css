@@ -6111,8 +6111,7 @@ div.wpcf7-mail-sent-ok {
     font-size: 1em;
     font-family: serif;
     font-weight: 400;
-    text-align: center;
-    background: url("/wp-content/uploads/2017/03/home-background-texture-grey.jpg"); }
+    text-align: center; }
     .menu-container .menu-left #nav-menu {
       padding: 5%; }
   .menu-container ul {
@@ -6225,22 +6224,22 @@ div.wpcf7-mail-sent-ok {
   transition: all 0.8s ease; }
 
 #fake-premium {
-  background-image: url("/wp-content/uploads/2017/03/menu-premium-1.png"); }
+  background-image: url("/wp-content/uploads/2017/03/8-seconds-premium-v11.png"); }
 
 #fake-story {
-  background-image: url("/wp-content/uploads/2017/03/menu-story.png"); }
+  background-image: url("/wp-content/uploads/2017/03/story-v4.png"); }
 
 #fake-black {
-  background-image: url("/wp-content/uploads/2017/03/menu-black.png"); }
+  background-image: url("/wp-content/uploads/2017/03/8-seconds-black-v7.png"); }
 
 #fake-cocktails {
-  background-image: url("/wp-content/uploads/2017/03/menu-cocktail.png"); }
+  background-image: url("/wp-content/uploads/2017/03/recipe-v2.png"); }
 
 #fake-honey-cinnamon {
-  background-image: url("/wp-content/uploads/2017/03/menu-honeycinnamon.png"); }
+  background-image: url("/wp-content/uploads/2017/03/8-seconds-honey-cinnamon-v9.png"); }
 
 #fake-contact {
-  background-image: url("/wp-content/uploads/2017/03/menu-contact.png"); }
+  background-image: url("/wp-content/uploads/2017/03/contact-v3.png"); }
 
 .dr {
   border-style: solid;
@@ -6277,6 +6276,65 @@ div.wpcf7-mail-sent-ok {
 .menu-row {
   display: block; }
 
+body {
+  -ms-overflow-style: none; }
+
+.dl, .dr, .left, .right {
+  border-style: none;
+  border-image: none;
+  border-width: 0; }
+
+.fake-background {
+  opacity: .1;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.square {
+  height: 30vh;
+  width: 44%;
+  margin: 0; }
+
+.menu-container .menu-left #nav-menu {
+  padding: 1%; }
+
+.mobile-span {
+  display: inline; }
+
+.menu-container .menu-left {
+  background-image: url("/wp-content/uploads/2017/03/home-background-texture-black-v2.jpg");
+  background-size: cover; }
+
+@media screen and (max-width: 991px) {
+  .menu-container .menu-left {
+    width: 100%; }
+    .menu-container .menu-left #nav-menu {
+      height: 100vh;
+      padding: 0; }
+
+  #menu-row-first {
+    margin-top: 0; }
+
+  .dl, .dr, .left, .right {
+    border-style: none; }
+
+  .fake-background {
+    opacity: .65;
+    background-size: cover;
+    height: 106%; }
+
+  .mobile-span {
+    display: none; }
+
+  .square {
+    width: 100%;
+    height: 16vh;
+    padding-bottom: 0; }
+
+  .square .square-content .table {
+    height: 105%; }
+
+  .square .square-content .table .table-cell p {
+    font-size: 1.75em; } }
 .icon-section {
   width: 50%;
   padding: 10px 0px;

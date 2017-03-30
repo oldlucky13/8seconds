@@ -762,11 +762,39 @@ Resize
  $(window).resize(checkSize);
 
 function checkSize(){
+
+	  if($(window).innerWidth() <= 991){
+		$('#nav-menu .menu-row').each(function(){
+			var storyDetach = $(this).find('#story-square').detach();
+			var recipeDetach = $(this).find('#cocktails-square').detach();
+			var contactDetach = $(this).find('#contact-square').detach();
+			$('#menu-row-last').append(storyDetach).append(recipeDetach).append(contactDetach);
+			
+		}); //each function
+	}else{
+
+		$('#nav-menu .menu-row').each(function(){
+			var storyDetach = $(this).find('#story-square').detach();
+			var recipeDetach = $(this).find('#cocktails-square').detach();
+			var contactDetach = $(this).find('#contact-square').detach();
+			$('#menu-row-first').append(storyDetach);
+			$('#menu-row-middle').append(recipeDetach);
+			$('#menu-row-last').append(contactDetach);
+			
+		}); //each function
+	}
+
+
+
+
 	if (deskClassAdded && $(window).innerWidth() <= 991){
 		$noMobileCol.each(function () {
 		  $(this).removeClass('col-md-6');
 		})
     deskClassAdded = false;
+
+
+
 	}else if (!deskClassAdded && $(window).innerWidth() > 991) {
     $noMobileCol.each(function () {
 		  $(this).addClass('col-md-6');
@@ -970,6 +998,37 @@ else{
 	});//click function
 } //end else
 
+
+	/***************
+	Sort menu items mobile
+	***************/
+$('#toggle').on('click', function(){
+
+	if($(window).innerWidth() <= 991){
+		$('#nav-menu .menu-row').each(function(){
+			var storyDetach = $(this).find('#story-square').detach();
+			var recipeDetach = $(this).find('#cocktails-square').detach();
+			var contactDetach = $(this).find('#contact-square').detach();
+			$('#menu-row-last').append(storyDetach).append(recipeDetach).append(contactDetach);
+			
+		}); //each function
+	}else{
+
+		$('#nav-menu .menu-row').each(function(){
+			var storyDetach = $(this).find('#story-square').detach();
+			var recipeDetach = $(this).find('#cocktails-square').detach();
+			var contactDetach = $(this).find('#contact-square').detach();
+			$('#menu-row-first').append(storyDetach);
+			$('#menu-row-middle').append(recipeDetach);
+			$('#menu-row-last').append(contactDetach);
+			
+		}); //each function
+	}
+	
+})
+
+
+	
 
 
 

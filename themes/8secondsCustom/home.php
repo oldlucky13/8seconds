@@ -550,7 +550,7 @@ get_header();
             </div>
           </div> <!-- square -->
         </div> <!-- row -->
-        <div class="menu-row">
+        <div id="menu-row-middle" class="menu-row">
           <div id="black-square" class="square left" data-menuanchor="black" class="nav-menu-link mobile-menu">
             <div id="fake-black" class="fake-background">
             </div>
@@ -581,8 +581,7 @@ get_header();
             <div class="square-content">
               <div class="table">
                 <div id="honey-cinnamon-cell" class="table-cell">
-                  <p>HONEY</p>
-                  <p>CINNAMON</p>
+                  <p>HONEY <span class="mobile-span"><br></span> CINNAMON</p>
                 </div>
               </div>
             </div>
