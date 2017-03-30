@@ -6429,11 +6429,21 @@ div.wpcf7-mail-sent-ok {
   width: 80%;
   margin: 0 auto;
   margin-top: 50%; }
+  @media all and (max-width: 991px) {
+    .contact-form-container {
+      position: relative; } }
+
+.absolute-container {
+  position: absolute;
+  z-index: 10; }
 
 .wpcf7 {
   width: 80%;
   margin: 0 auto !important;
   text-align: center; }
+  @media all and (max-width: 991px) {
+    .wpcf7 {
+      width: 100%; } }
   .wpcf7 p {
     margin: 0 !important;
     display: inline; }
@@ -6487,6 +6497,9 @@ div.wpcf7-mail-sent-ok {
     @media all and (max-width: 991px) {
       .wpcf7 #form-submit {
         width: 100%; } }
+
+.absolute-container {
+  position: absolute; }
 
 #ageGate {
   background-color: #000; }
