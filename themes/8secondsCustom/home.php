@@ -19,6 +19,17 @@ get_header();
   </div> <!-- button_container-->
   <div id="the-container" class="main-page-container container-fluid">
     <div class="main-page-slide-group">
+      <div id="zero" class="row main-page-slide">
+        <div id="zero-img" class="main-page-img col-md-12">
+          <div class="filler">
+
+          </div>
+          <div class="hide-container">
+
+          </div>
+          <button id="btn-homefake" type="button" class="fake-btn p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+        </div>
+      </div>
       <div id="one" class="show-off row main-page-slide">
         <div class="no-mobile-col col-md-6 main-page-txt">
           <div class="mobile-nav">
@@ -516,7 +527,7 @@ get_header();
             <div class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
-            <button id="btn-contactfake" type="button" class="p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <button id="btn-contactfake" type="button" class="fake-btn p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
             <div class="contact-form-container">
               <div class="absolute-container">
                 <?php echo do_shortcode('[contact-form-7 id="188" title="Mobile Contact"]'); ?>
@@ -530,6 +541,14 @@ get_header();
       </div> <!-- six -->
     </div> <!-- main-page-slide-group -->
 
+    <div class="main-page-title-group">
+      <div class="main-page-slide-title">
+        <div class="h2-child">
+
+        </div>
+        <!-- <img id="first-h2-child" class="h2-child" src="wp-content/uploads/2017/03/home-premium-title_v4.png" alt=""> -->
+      </div>
+    </div>
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
         <img id="first-h2-child" class="h2-child" src="wp-content/uploads/2017/03/nodots-premium-v1.png" alt="">
@@ -569,6 +588,7 @@ get_header();
 
     <ol id="breadcrumb-group">
       <li class="breadcrumb breadcrumb-active"></li>
+      <li class="breadcrumb"></li>
       <li class="breadcrumb"></li>
       <li class="breadcrumb"></li>
       <li class="breadcrumb"></li>

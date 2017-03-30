@@ -5667,6 +5667,9 @@ body {
 #six-img {
   background-image: url("/wp-content/uploads/2017/03/home-contact.jpg"); }
 
+#zero-img {
+  background-image: url("/wp-content/uploads/2017/03/landingpagev1.jpg"); }
+
 .main-page-slide {
   height: 100vh;
   position: absolute; }
@@ -5786,7 +5789,8 @@ body {
   -moz-transform: translateY(0%);
   -ms-transform: translateY(0%);
   -o-transform: translateY(0%);
-  transform: translateY(0%); }
+  transform: translateY(0%);
+  opacity: 0; }
 
 #breadcrumb-group {
   position: absolute;
@@ -6836,6 +6840,9 @@ div.wpcf7-response-output {
       bottom: 14%; } }
 
 #btn-contactfake {
+  display: none !important; }
+
+#btn-homefake {
   display: none !important; }
 
 @media all and (max-width: 991px) {
