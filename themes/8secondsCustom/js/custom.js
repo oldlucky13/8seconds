@@ -137,6 +137,7 @@ jQuery(document).ready(function( $ ) {
   $slideButton = $('.slide-button');
   $hideContainer = $('.hide-container');
   $pBtn = $('.p-btn');
+  $firstHtwo = $('#first-h2-child')
 
   var mainIdx = 0;
 
@@ -283,16 +284,26 @@ function nextButton(scrollDir, mainIdx) {
 }
 
 function nextSlide(idx, callback) {
-  console.log(idx);
   TweenMax.to($allTitles.find(".h2-child").eq(idx - 1), 1.5, {y:"-100%", force3D: true, onComplete: nextTitle(idx, callback)});
   TweenMax.to($hideContainer.eq(idx - 1), .6, {opacity: 0, ease: Power4.easeInOut});
-  $('.main-page-slide-group').children().eq(idx).fadeIn(1200);
+  $('.main-page-slide-group').children().eq(idx).fadeIn(1200, function() {
+    // if (idx === 1) {
+    //   $('#zero').fadeOut();
+    // }
+  });
   TweenMax.to($hideContainer.eq(idx), 1.5, {opacity: 1, ease: Power4.easeIn});
   // nextButton(1, mainIdx);
 }
 
 function previousSlide(idx, callback) {
-  TweenMax.to($allTitles.find(".h2-child").eq(idx + 1), 1.5, {y:"100%", force3D: true, onComplete: nextTitle(idx, callback)});
+  // if (idx === 0) {
+  //   $('#zero').fadeIn();
+  // }
+  if (idx === 0) {
+    TweenMax.to($firstHtwo, .6, {opacity: 0, onComplete: nextTitle(idx, callback)});
+  } else {
+    TweenMax.to($allTitles.find(".h2-child").eq(idx + 1), 1.5, {y:"100%", force3D: true, onComplete: nextTitle(idx, callback)});
+  }
   TweenMax.to($hideContainer.eq(idx + 1), .6, {opacity: 0, ease: Power4.easeInOut});
   $('.main-page-slide-group').children().eq(idx + 1).fadeOut(1200);
   TweenMax.to($hideContainer.eq(idx), 1.5, {opacity: 1, ease: Power4.easeIn});
@@ -342,6 +353,9 @@ function jumpToSlide(oldIdx, newIdx) {
 }
 
 function nextTitle(idx, callback) {
+  if (idx === 1) {
+    TweenMax.to($firstHtwo, 1.5, {opacity: 1});
+  }
   TweenMax.to($allTitles.find(".h2-child").eq(idx), 1.5, {y:"0%", onComplete: function () {
     if (typeof callback === "function") {
       callback();
@@ -368,6 +382,8 @@ $('.breadcrumb').click(function(e) {
 })
 
 function revealTitles(titles) {
+  console.log("revealTitles(titles)");
+  console.log(titles);
   titles.css("visibility", "visible");
 }
 
