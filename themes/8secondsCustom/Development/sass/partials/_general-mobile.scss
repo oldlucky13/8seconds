@@ -1,6 +1,15 @@
+.mobile-nav {
+  @media all and (max-width: 991px) {
+    background: #000;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    // not final
+    position: absolute;
+    width: 100%;
+    z-index: 20;
+    top: 0;
+  }
 
-<<<<<<< Updated upstream
-=======
   @media all and (max-width: 320px) {
     padding-top: 10px;
   }
@@ -55,4 +64,3 @@
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
   }
 }
->>>>>>> Stashed changes
