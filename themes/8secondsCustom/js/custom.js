@@ -988,10 +988,9 @@ else{
 	});//click function
 } //end else
 
-
-	/***************
+/***************
 	Sort menu items mobile
-	***************/
+***************/
 $('#toggle').on('click', function(){
 
 	sortMenu();
@@ -1025,6 +1024,22 @@ $('#toggle').on('click', function(){
 
 
 	}
+
+/***************
+Modal set up
+***************/
+$('.p-btn').on('click', function(){
+
+	$(this).toggleClass('is-open');
+
+	if($(this).hasClass('is-open')){
+		$(this).find('.btn-image').attr('src','/wp-content/uploads/2017/03/module-minus.svg');
+	}else{
+		$(this).find('.btn-image').attr('src','/wp-content/uploads/2017/03/module-plus.svg');
+	}
+
+});
+
 
 
 

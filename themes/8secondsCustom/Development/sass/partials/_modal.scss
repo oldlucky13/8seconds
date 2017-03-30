@@ -1,0 +1,12 @@
+.plus-button img{
+	width: 55px;
+	height: 55px;
+}
+
+
+.plus-button {
+	background: transparent;
+    border: transparent;
+    left: 50%;
+    @include transform(translateX(-47%));
+}
