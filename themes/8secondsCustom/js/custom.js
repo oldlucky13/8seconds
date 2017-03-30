@@ -173,7 +173,7 @@ jQuery(document).ready(function( $ ) {
   hammertime.on('swipe', function(event) {
     if (onMainPage) {
       handleMainPageScroll(event.deltaY);
-    } else if (onAboutPage) {
+    } else {
       hammertime.destroy();
       // handleMobileScroll($ajaxAboutSection, event);
     }
@@ -543,13 +543,25 @@ $aboutBtn.click(function () {
 $('#recipes-btn-fwd-mobile').click(function () {
   recipesAreaTlMobile.play();
   triggerSection("recipes");
+  hammertime.destroy();
 })
 
 $('#recipes-btn-bk-mobile').click(function () {
   recipesAreaTlMobile.reverse();
   triggerSection("main");
   TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-  // $ajaxRecipesSection[0].scrollTop = 0;
+  $ajaxRecipesSection[0].scrollTop = 0;
+  var hammertime = new Hammer(mainPageContainerHammer);
+  hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+  hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+  hammertime.on('swipe', function(event) {
+    if (onMainPage) {
+      handleMainPageScroll(event.deltaY);
+    } else {
+      hammertime.destroy();
+      // handleMobileScroll($ajaxAboutSection, event);
+    }
+  })
 })
 
 // $('#about-btn-fwd-desk').click(function () {
@@ -560,6 +572,7 @@ $('#recipes-btn-bk-mobile').click(function () {
 $('#about-btn-fwd-mobile').click(function () {
   aboutAreaTlMobile.play();
   triggerSection("about");
+  hammertime.destroy();
 })
 
 // $('#about-btn-bk-desk').click(function () {
@@ -588,6 +601,17 @@ $('#about-btn-bk-mobile').click(function () {
   aboutAreaTlMobile.reverse();
   triggerSection("main");
   TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+  var hammertime = new Hammer(mainPageContainerHammer);
+  hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+  hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+  hammertime.on('swipe', function(event) {
+    if (onMainPage) {
+      handleMainPageScroll(event.deltaY);
+    } else {
+      hammertime.destroy();
+      // handleMobileScroll($ajaxAboutSection, event);
+    }
+  })
 })
 
 function triggerSection(section) {
