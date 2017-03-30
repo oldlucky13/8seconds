@@ -133,6 +133,9 @@
 .vertical-line {
   width: 50%;
   border-right: 1px solid $icon-color;
+  @media all and (max-width: 991px) {
+    border-right: 3px solid $icon-color;
+  }
 }
 
 .s-text {
@@ -140,6 +143,20 @@
   color: white;
   text-align: center;
   width: 50%;
+  @media all and (max-width: 991px) {
+    padding-top: 60%;
+  }
+  @media all and (max-width: 425px) {
+    padding-top: 26%;
+  }
+
+}
+
+#first-story-s-text-mobile {
+  @media all and (max-width: 991px) {
+    padding-top: 60%;
+  }
+
 }
 
 .s-header {
@@ -189,14 +206,29 @@
 
 .s-text-button {
   width: 12%;
+  @media all and (max-width: 991px) {
+    width: 41%;
+  }
+
 }
 
 #s-text-button-wide {
   width: 25%;
+  @media all and (max-width: 991px) {
+    width: 100%;
+  }
+
 }
 
 .back-to-top {
   padding: 0px;
+  @media all and (max-width: 991px) {
+    width: 50%;
+  }
+  @media all and (max-width: 425px) {
+    margin-top: 40px;
+  }
+
 }
 
 .first-s-section {
@@ -229,8 +261,55 @@ div.wpcf7-mail-sent-ok {
   bottom: 16%;
 }
 
+.mobile-first-v-line {
+  @media all and (max-width: 991px) {
+    display: none;
+  }
+}
+
 #matador-section {
   @media all and (max-width: 991px) {
     background-image: url("/wp-content/uploads/2017/03/story-matador.jpg");
   }
+}
+#bullrider-section {
+  @media all and (max-width: 991px) {
+    background-image: url("/wp-content/uploads/2017/03/story-bullrider.jpg");
+  }
+}
+#gloves-section {
+  @media all and (max-width: 991px) {
+    background-image: url("/wp-content/uploads/2017/03/story-gloves.jpg");
+  }
+}
+#vintagebull-section {
+  @media all and (max-width: 991px) {
+    background-image: url("/wp-content/uploads/2017/03/story-vintagebull.jpg");
+  }
+}
+#boots-section {
+  @media all and (max-width: 991px) {
+    background-image: url("/wp-content/uploads/2017/03/home-story-boots.jpg");
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);
+  }
+}
+
+.last-mobile-paragraph {
+  @media all and (max-width: 991px) {
+    display: block;
+  }
+
+}
+
+#last-story-title {
+  @media all and (max-width: 991px) {
+    display: block;
+  }
+  @media all and (max-width: 425px) {
+    width: 300px;
+    height: 180px;
+    margin-top: 0%;
+  }
+
+
 }

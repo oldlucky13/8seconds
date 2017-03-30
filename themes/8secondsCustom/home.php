@@ -204,10 +204,10 @@ get_header();
             <div id="about-btn-bk-mobile" class="s-back-mobile">
               <i class="fa fa-arrow-left" aria-hidden="true"></i>
             </div>
-            <div class="v2 vertical-line">
+            <div class="v2 vertical-line mobile-first-v-line">
               <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
-            <div class="s-text">
+            <div id="first-story-s-text-mobile" class="s-text">
               <img id="s-text-button-wide" class="s-text-button" src="wp-content/uploads/2017/03/story-16cen.svg" alt="">
               <h2 class="s-header">SPANISH ORIGINS</h2>
               <a id="about-one"></a>
@@ -217,7 +217,7 @@ get_header();
               <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
+          <div id="bullrider-section" class="s-section">
             <div class="v2 vertical-line">
               <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
@@ -231,7 +231,7 @@ get_header();
               <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
+          <div id="gloves-section" class="s-section">
             <div class="v2 vertical-line">
               <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
@@ -245,7 +245,7 @@ get_header();
               <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
+          <div id="vintagebull-section" class="s-section">
             <div class="v2 vertical-line">
               <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
@@ -259,14 +259,14 @@ get_header();
               <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
+          <div id="boots-section" class="s-section">
             <div class="v2 vertical-line">
               <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
-            <img class="s-title" src="wp-content/uploads/2017/03/story-pasttopresent2.svg" alt="">
+            <img id="last-story-title" class="s-title" src="wp-content/uploads/2017/03/story-pasttopresent2.svg" alt="">
             <a id="about-five"></a>
-            <div class="s-text">
-              <p class="s-paragraph">The PBR now hosts over 300 events across America where their World Finals brings in over 700,000 fans. Bull riding is now considered the fastest growing sport in the US. </p>
+            <div class="last-mobile-s-text s-text">
+              <p class="last-mobile-paragraph s-paragraph">The PBR now hosts over 300 events across America where their World Finals brings in over 700,000 fans. Bull riding is now considered the fastest growing sport in the US. </p>
             </div>
             <button type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
           </div> <!-- s-section -->
