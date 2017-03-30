@@ -5823,31 +5823,41 @@ body {
   .desk-btn {
     display: none; } }
 
-@media screen and (min-width: 992px) {
-  .mobile-btn {
-    display: none; } }
+.mobile-btn {
+  display: block; }
+  @media screen and (min-width: 992px) {
+    .mobile-btn {
+      display: none; } }
 
 @media all and (max-width: 991px) {
-  #btn-recipes, #btn-about {
+  #btn-about {
+    display: none !important; } }
+
+@media all and (min-width: 992px) {
+  #about-btn-fwd-mobile {
+    display: none !important; } }
+
+@media all and (max-width: 991px) {
+  #btn-recipes, #about-btn-fwd-mobile {
     top: inherit;
     left: inherit;
     bottom: 4%;
     right: 8%;
     padding: 25px 25px;
     border-radius: 40px; }
-    #btn-recipes i, #btn-about i {
+    #btn-recipes i, #about-btn-fwd-mobile i {
       position: absolute;
       top: 28%;
       font-size: 1.8em; }
-    #btn-recipes .fwd i, #btn-about .fwd i {
+    #btn-recipes .fwd i, #about-btn-fwd-mobile .fwd i {
       left: 35%; }
-    #btn-recipes .bk i, #btn-about .bk i {
+    #btn-recipes .bk i, #about-btn-fwd-mobile .bk i {
       left: 37.8%; } }
 @media all and (max-width: 425px) {
-  #btn-recipes, #btn-about {
+  #btn-recipes, #about-btn-fwd-mobile {
     bottom: 12%; } }
 @media all and (max-width: 320px) {
-  #btn-recipes, #btn-about {
+  #btn-recipes, #about-btn-fwd-mobile {
     bottom: 14%; } }
 
 .slide-button {
@@ -5982,6 +5992,9 @@ body {
   display: block;
   margin: 0 auto;
   margin-top: calc(14% - 82px); }
+  @media all and (max-width: 991px) {
+    .s-title {
+      display: none; } }
 
 .s-tagline {
   font-family: "Barley Aged", "Sans Serif";
@@ -6854,5 +6867,14 @@ div.wpcf7-response-output {
     position: absolute;
     top: 0;
     bottom: 0; } }
+
+@media all and (max-width: 991px) {
+  .s-back-mobile {
+    width: 110%;
+    background-color: #86754D;
+    height: 0px;
+    position: fixed;
+    z-index: 999;
+    cursor: pointer; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -70,3 +70,15 @@
     bottom: 0;
   }
 }
+
+.s-back-mobile {
+  @media all and (max-width: 991px) {
+    width: 110%;
+    background-color: $icon-color;
+    height: 0px;
+    // height: 62px;
+    position: fixed;
+    z-index: 999;
+    cursor: pointer;
+  }
+}

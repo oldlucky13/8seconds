@@ -95,6 +95,10 @@
   display: block;
   margin: 0 auto;
   margin-top: calc(14% - 82px);
+  @media all and (max-width: 991px) {
+    display: none;
+  }
+
 }
 
 .s-tagline {

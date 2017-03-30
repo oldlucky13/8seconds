@@ -137,7 +137,8 @@ jQuery(document).ready(function( $ ) {
   $slideButton = $('.slide-button');
   $hideContainer = $('.hide-container');
   $pBtn = $('.p-btn');
-  $firstHtwo = $('#first-h2-child')
+  $firstHtwo = $('#first-h2-child');
+  $pMoBtn = $('.p-mobile-btn');
 
   var mainIdx = 0;
 
@@ -170,9 +171,19 @@ jQuery(document).ready(function( $ ) {
   hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
 
   hammertime.on('swipe', function(event) {
-    handleMainPageScroll(event.deltaY);
+    if (onMainPage) {
+      handleMainPageScroll(event.deltaY);
+    } else if (onAboutPage) {
+      hammertime.destroy();
+      // handleMobileScroll($ajaxAboutSection, event);
+    }
   })
 
+  // function handleMobileScroll(section, event) {
+  //   section[0].scrollTop += (-(event.deltaY) * Math.abs(event.velocity));
+  //   console.log(section[0].scrollTop);
+  //   console.log(event);
+  // }
   // (function(factory) {
   //     if (typeof define === 'function' && define.amd) {
   //         define(['jquery', 'hammerjs'], factory);
@@ -277,9 +288,19 @@ function nextButton(scrollDir, mainIdx) {
     } else {
       $pBtn.eq(mainIdx).fadeIn();
     }
+    if (mainIdx === 4) {
+      $pMoBtn.eq(0).fadeIn();
+    } else if (mainIdx === 5) {
+      $pMoBtn.eq(0).fadeOut();
+    }
   } else if (scrollDir > 0) {
     $pBtn.eq(mainIdx + 1).fadeOut();
     $pBtn.eq(mainIdx).fadeIn();
+    if (mainIdx === 4) {
+      $pMoBtn.eq(0).fadeIn();
+    } else if (mainIdx === 3) {
+      $pMoBtn.eq(0).fadeOut();
+    }
   }
 }
 
@@ -382,8 +403,6 @@ $('.breadcrumb').click(function(e) {
 })
 
 function revealTitles(titles) {
-  console.log("revealTitles(titles)");
-  console.log(titles);
   titles.css("visibility", "visible");
 }
 
@@ -409,8 +428,10 @@ aboutAreaTl.to($btnAbout, 1, {ease: Power4.easeInOut, left: "4%"}, 0);
 var aboutAreaTlMobile = new TimelineMax({paused: true});
 aboutAreaTlMobile.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -100, onComplete: triggerSection.bind("about")}, 0);
 aboutAreaTlMobile.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
-// aboutAreaTlMobile.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
-// aboutAreaTlMobile.to($ajaxAboutSection, .7, {ease: Power4.easeOut, left: "50%"}, 0);
+aboutAreaTlMobile.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
+aboutAreaTlMobile.to($('#s-recipes-mobile-nav'), .2, {display: "none"}, 0);
+aboutAreaTlMobile.to($('.button_container'), .2, {display: "none"}, 0);
+aboutAreaTlMobile.to($('#about-btn-bk-mobile'), 1, {ease: Power4.easeInOut, height: "62px"}, 1);
 
 var recipesAreaTl = new TimelineMax({paused: true});
 recipesAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("recipes")}, 0);
@@ -558,11 +579,12 @@ $('#about-btn-fwd-mobile').click(function () {
 // })
 
 $('#about-btn-bk-mobile').click(function () {
-  $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
+  // $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
   // $aboutImg.fadeOut(function() {
   //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
   // })
   // .fadeIn();
+  TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
   aboutAreaTlMobile.reverse();
   triggerSection("main");
   TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
@@ -796,7 +818,7 @@ function checkSize(){
 			var recipeDetach = $(this).find('#cocktails-square').detach();
 			var contactDetach = $(this).find('#contact-square').detach();
 			$('#menu-row-last').append(storyDetach).append(recipeDetach).append(contactDetach);
-			
+
 		}); //each function
 	}else{
 
@@ -807,7 +829,7 @@ function checkSize(){
 			$('#menu-row-first').append(storyDetach);
 			$('#menu-row-middle').append(recipeDetach);
 			$('#menu-row-last').append(contactDetach);
-			
+
 		}); //each function
 	}
 
@@ -1037,7 +1059,7 @@ $('#toggle').on('click', function(){
 			var recipeDetach = $(this).find('#cocktails-square').detach();
 			var contactDetach = $(this).find('#contact-square').detach();
 			$('#menu-row-last').append(storyDetach).append(recipeDetach).append(contactDetach);
-			
+
 		}); //each function
 	}else{
 
@@ -1048,14 +1070,14 @@ $('#toggle').on('click', function(){
 			$('#menu-row-first').append(storyDetach);
 			$('#menu-row-middle').append(recipeDetach);
 			$('#menu-row-last').append(contactDetach);
-			
+
 		}); //each function
 	}
-	
+
 })
 
 
-	
+
 
 
 

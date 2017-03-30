@@ -147,6 +147,7 @@ get_header();
           <div class="mobile-main-page-overlay">
           </div>
           <button id="btn-about" type="button" class="p-btn btn slide-button about-btn fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+          <button id="about-btn-fwd-mobile" type="button" class="p-mobile-btn btn slide-button fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
           <!-- <button id="about-btn" type="button" class="btn slide-button fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i><i class="fa fa-chevron-left initial-hide" aria-hidden="true"></i></button> -->
           <div id="secondary-story-image-group" class="secondary-image-group">
             <div id="matador" class="secondary-image"></div>
@@ -162,7 +163,6 @@ get_header();
             <div class="filler">
 
             </div>
-            <!-- <button id="about-btn-fwd-mobile" type="button" class="p-btn btn btn-primary">See More</button> -->
           </div>
           <ol id="about-ajax-breadcrumb-group" class="ajax-breadcrumb-group">
             <li class="ajax-breadcrumb">
@@ -189,8 +189,11 @@ get_header();
         </div> <!-- #four-img -->
         <div class="ajaxSection ajaxAboutSection no-mobile-col col-md-6">
           <div class="s-section first-s-section">
-            <div class="mobile-nav">
+            <div id="s-recipes-mobile-nav" class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+            </div>
+            <div id="about-btn-bk-mobile" class="s-back-mobile">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
             </div>
             <img class="s-title" src="wp-content/uploads/2017/03/home-story-title_v2.png" alt="">
             <p id="story-s-tagline" class="s-tagline">THE MOST DANGEROUS 8 SECONDS IN SPORTS</p>
