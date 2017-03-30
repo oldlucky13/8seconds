@@ -5823,9 +5823,11 @@ body {
   .desk-btn {
     display: none; } }
 
-@media screen and (min-width: 992px) {
-  .mobile-btn {
-    display: none; } }
+.mobile-btn {
+  display: block; }
+  @media screen and (min-width: 992px) {
+    .mobile-btn {
+      display: none; } }
 
 @media all and (max-width: 991px) {
   #btn-about {

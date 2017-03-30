@@ -137,7 +137,8 @@ jQuery(document).ready(function( $ ) {
   $slideButton = $('.slide-button');
   $hideContainer = $('.hide-container');
   $pBtn = $('.p-btn');
-  $firstHtwo = $('#first-h2-child')
+  $firstHtwo = $('#first-h2-child');
+  $pMoBtn = $('.p-mobile-btn');
 
   var mainIdx = 0;
 
@@ -277,9 +278,19 @@ function nextButton(scrollDir, mainIdx) {
     } else {
       $pBtn.eq(mainIdx).fadeIn();
     }
+    if (mainIdx === 4) {
+      $pMoBtn.eq(0).fadeIn();
+    } else if (mainIdx === 5) {
+      $pMoBtn.eq(0).fadeOut();
+    }
   } else if (scrollDir > 0) {
     $pBtn.eq(mainIdx + 1).fadeOut();
     $pBtn.eq(mainIdx).fadeIn();
+    if (mainIdx === 4) {
+      $pMoBtn.eq(0).fadeIn();
+    } else if (mainIdx === 3) {
+      $pMoBtn.eq(0).fadeOut();
+    }
   }
 }
 
@@ -409,7 +420,7 @@ aboutAreaTl.to($btnAbout, 1, {ease: Power4.easeInOut, left: "4%"}, 0);
 var aboutAreaTlMobile = new TimelineMax({paused: true});
 aboutAreaTlMobile.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -100, onComplete: triggerSection.bind("about")}, 0);
 aboutAreaTlMobile.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
-// aboutAreaTlMobile.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
+aboutAreaTlMobile.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
 // aboutAreaTlMobile.to($ajaxAboutSection, .7, {ease: Power4.easeOut, left: "50%"}, 0);
 
 var recipesAreaTl = new TimelineMax({paused: true});
