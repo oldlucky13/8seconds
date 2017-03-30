@@ -467,8 +467,23 @@ get_header();
         </div>
         <div id="six-img" class="main-page-img no-mobile-col col-md-6">
           <div class="no-mobile-col col-md-6 main-page-txt-mobile">
+<<<<<<< Updated upstream
             <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+=======
+            <div class="mobile-nav">
+              <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+            </div>
+            <button id="btn-contactfake" type="button" class="p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <div class="contact-form-container">
+              <div class="absolute-container">
+                <?php echo do_shortcode('[contact-form-7 id="146" title="Contact form mobile"]'); ?>
+              </div>
+            </div>
+            <div class="filler">
+
+            </div>
+>>>>>>> Stashed changes
           </div>
         </div>
       </div> <!-- six -->
