@@ -147,6 +147,7 @@ get_header();
           <div class="mobile-main-page-overlay">
           </div>
           <button id="btn-about" type="button" class="p-btn btn slide-button about-btn fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+          <button id="about-btn-fwd-mobile" type="button" class="p-btn btn slide-button fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
           <!-- <button id="about-btn" type="button" class="btn slide-button fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i><i class="fa fa-chevron-left initial-hide" aria-hidden="true"></i></button> -->
           <div id="secondary-story-image-group" class="secondary-image-group">
             <div id="matador" class="secondary-image"></div>
@@ -162,7 +163,6 @@ get_header();
             <div class="filler">
 
             </div>
-            <!-- <button id="about-btn-fwd-mobile" type="button" class="p-btn btn btn-primary">See More</button> -->
           </div>
           <ol id="about-ajax-breadcrumb-group" class="ajax-breadcrumb-group">
             <li class="ajax-breadcrumb">

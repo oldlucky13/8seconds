@@ -258,7 +258,19 @@
   }
 }
 
-#btn-recipes, #btn-about {
+#btn-about {
+  @media all and (max-width: 991px) {
+    display: none !important;
+  }
+}
+
+#about-btn-fwd-mobile {
+  @media all and (min-width: 992px) {
+    display: none;
+  }
+}
+
+#btn-recipes, #about-btn-fwd-mobile {
   @media all and (max-width: 991px) {
     top: inherit;
     left: inherit;
@@ -292,6 +304,40 @@
   }
 
 }
+// #btn-recipes, #btn-about {
+//   @media all and (max-width: 991px) {
+//     top: inherit;
+//     left: inherit;
+//     bottom: 4%;
+//     right: 8%;
+//     padding: 25px 25px;
+//     border-radius: 40px;
+//
+//     i {
+//       position: absolute;
+//       top: 28%;
+//       font-size: 1.8em;
+//     }
+//
+//     .fwd i {
+//       left: 35%;
+//       // left: 36.9%;
+//     }
+//
+//     .bk i {
+//       left: 37.8%;
+//     }
+//   }
+//
+//   @media all and (max-width: 425px) {
+//     bottom: 12%;
+//   }
+//
+//   @media all and (max-width: 320px) {
+//     bottom: 14%
+//   }
+//
+// }
 
 .slide-button {
   position: absolute;
