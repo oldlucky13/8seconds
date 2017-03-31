@@ -7077,7 +7077,6 @@ div.wpcf7-response-output {
     position: absolute;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3); } }
 
-<<<<<<< HEAD
 .s-back-mobile {
   display: none; }
   @media all and (max-width: 991px) {
@@ -7097,7 +7096,7 @@ div.wpcf7-response-output {
 @media all and (max-width: 991px) {
   #cowboy-line {
     height: 7%; } }
-=======
+
 .plus-button img {
   width: 55px;
   height: 55px; }
@@ -7121,6 +7120,5 @@ div.wpcf7-response-output {
   border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 fill repeat;
   z-index: 800;
   background-color: rgba(0, 0, 0, 0.7); }
->>>>>>> modalT
 
 /*# sourceMappingURL=style.css.map */
