@@ -183,3 +183,11 @@
   top: 50% !important;
   opacity: 0;
 }
+
+.ajaxSection {
+  @media all and (max-width: 991px) {
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+  }
+
+}
