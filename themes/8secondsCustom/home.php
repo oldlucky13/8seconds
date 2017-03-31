@@ -197,7 +197,7 @@ get_header();
             <p id="story-s-tagline" class="s-tagline">THE MOST DANGEROUS 8 SECONDS IN SPORTS</p>
             <button type="button" class="s-down-btn s-btn btn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
             <div class="v1 vertical-line">
-                <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+  <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
           </div> <!-- s-section -->
           <div id="matador-section" class="s-section">
@@ -205,7 +205,6 @@ get_header();
               <i class="fa fa-arrow-left" aria-hidden="true"></i>
             </div>
             <div class="v2 vertical-line mobile-first-v-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
             <div id="first-story-s-text-mobile" class="s-text">
               <img id="s-text-button-wide" class="s-text-button" src="wp-content/uploads/2017/03/story-16cen.svg" alt="">
@@ -213,56 +212,40 @@ get_header();
               <a id="about-one"></a>
               <p class="s-paragraph">The origin of the rodeo, as we have come to know it today, can be traced back to the 16th century influence from Spanish conquistadors. Spanish-Mexican settlers introduced horse and cattle breeding to the Southwest. What initially started out as daily practices of Spanish ranchers evolved into ranch and horsemanship skill contests featured at charreadas.</p>
             </div>
-            <div class="v1 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-            </div>
+            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="bullrider-section" class="s-section">
-            <div class="v2 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-            </div>
+            <div class="v2 vertical-line"></div>
             <div class="s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-1850.svg" alt="">
               <h2 class="s-header">GAINING POPULARITY</h2>
               <p class="s-paragraph">Charreada-style competition gained popularity in the Southwest, particularly Texas and California. The 1852 Lone Star Fair became the first-ever Anglo-American event to host this still bull fighting.</p>
             </div>
             <a id="about-two"></a>
-            <div class="v1 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-            </div>
+            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="gloves-section" class="s-section">
-            <div class="v2 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-            </div>
+            <div class="v2 vertical-line"></div>
             <div class="s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-1936.svg" alt="">
               <h2 class="s-header">STANDARDIZATION</h2>
               <a id="about-three"></a>
               <p class="s-paragraph">Like most rodeo events at the time, bull riding lacked standardized rules and regulations. A group of cowboys decided to create their own organization, the Cowboy Turtle’s Association, after striking the Boston Garden Rodeo. They established many of the qualifying rules, such as the 8 second ride, still in effect today and hugely increased the popularity of rodeos and bull riding.</p>
             </div>
-            <div class="v1 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-            </div>
+            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="vintagebull-section" class="s-section">
-            <div class="v2 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-            </div>
+            <div class="v2 vertical-line"></div>
             <div class="s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-1992.svg" alt="">
               <h2 class="s-header">BREAKING AWAY</h2>
               <a id="about-four"></a>
               <p class="s-paragraph">20 bull riders gathered to contribute in the creation of the Professional Bull Riders, Inc. Believing that bull riding was popular enough to break away from the traditional rodeo, this organization created their own governing rules and events.</p>
             </div>
-            <div class="v1 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-            </div>
+            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="boots-section" class="s-section">
-            <div class="v2 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-            </div>
+            <div class="v2 vertical-line"></div>
             <img id="last-story-title" class="s-title" src="wp-content/uploads/2017/03/story-pasttopresent2.svg" alt="">
             <a id="about-five"></a>
             <div class="last-mobile-s-text s-text">
@@ -373,8 +356,7 @@ get_header();
                 <p>Rub the cut edge of the orange peel over the rim of the glass and twist it over the dirnk to release the oils. Do not drop it in.</p>
               </div>
             </div> <!-- drink-guide -->
-            <div class="v1 vertical-line">
-            </div>
+            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="mobile-cola" class="s-section">
             <div class="vertical-line v2">
@@ -397,8 +379,7 @@ get_header();
                 <p>Enjoy!</p>
               </div>
             </div>
-            <div class="v1 vertical-line">
-            </div>
+            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="mobile-oldfashioned" class="s-section">
             <div class="vertical-line v2">
@@ -426,8 +407,7 @@ get_header();
                 <p>Garnish with orange twist and cherry.</p>
               </div>
             </div>
-            <div class="v1 vertical-line">
-            </div>
+            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="mobile-cowboyjulep" class="s-section">
             <div id="cowboy-line" class="v2 vertical-line">
@@ -456,12 +436,10 @@ get_header();
                 <p>Garnish with a mint sprig.</p>
               </div>
             </div>
-            <div class="v1 vertical-line">
-            </div>
+            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="mobile-ginger" class="s-section">
-            <div class="v2 vertical-line">
-            </div>
+            <div class="v2 vertical-line"></div>
             <div class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-5.svg" alt="">
               <h2 class="s-header">8 SECONDS GINGER</h2>
@@ -481,24 +459,20 @@ get_header();
                 <p>Garnish with lime wedge.</p>
               </div>
             </div>
-            <div class="v1 vertical-line">
-            </div>
+            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="mobile-honeycinnamon" class="s-section">
-            <div class="v2 vertical-line">
-            </div>
+            <div class="v2 vertical-line"></div>
             <div class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-6.svg" alt="">
               <h2 class="s-header">HONEY CINNAMON SHO0TER</h2>
               <a id="recipes-six"></a>
               <p class="s-paragraph">Shootin' it straight.</p>
             </div>
-            <div class="v1 vertical-line">
-            </div>
+            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="mobile-neat" class="s-section">
-            <div class="v2 vertical-line">
-            </div>
+            <div class="v2 vertical-line"></div>
             <div class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-7.svg" alt="">
               <h2 class="s-header">8 SECONDS NEAT</h2>
@@ -548,7 +522,7 @@ get_header();
               <div class="absolute-container">
               <img src="/wp-content/uploads/2017/03/howdy-contact.png">
                 <?php echo do_shortcode('[contact-form-7 id="146" title="Contact form mobile"]'); ?>
-               
+
             </div> <!-- absolute container -->
             <div class="filler">
 
@@ -718,7 +692,7 @@ get_header();
   </div> <!-- age Gate -->
 
   <div id="mobile-modal" class="modal" >
-     
+
   </div>
 
 
