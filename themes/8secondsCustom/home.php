@@ -21,6 +21,7 @@ get_header();
     <div class="main-page-slide-group">
       <div id="zero" class="row main-page-slide">
         <div id="zero-img" class="main-page-img col-md-12">
+          <img id="landing-title" src="/wp-content/uploads/2017/03/landingpagetitle.png" alt="">
           <div class="filler">
 
           </div>
@@ -202,7 +203,8 @@ get_header();
           </div> <!-- s-section -->
           <div id="matador-section" class="s-section">
             <div id="about-btn-bk-mobile" class="s-back-mobile">
-              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              <!-- <i class="fa fa-arrow-left" aria-hidden="true"></i> -->
+              <img src="/wp-content/uploads/2017/03/mobilebackarrow.svg" alt="">
             </div>
             <div class="v2 vertical-line mobile-first-v-line">
             </div>
@@ -334,7 +336,8 @@ get_header();
         <div class="ajaxSection ajaxRecipesSection no-mobile-col col-md-6">
           <div id="mobile-manhattan" class="s-section first-s-section">
             <div id="recipes-btn-bk-mobile" class="s-back-mobile">
-              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              <!-- <i class="fa fa-arrow-left" aria-hidden="true"></i> -->
+              <img src="/wp-content/uploads/2017/03/mobilebackarrow.svg" alt="">
             </div>
             <div id="s-recipes-mobile-nav" class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
