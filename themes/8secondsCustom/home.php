@@ -54,7 +54,7 @@ get_header();
             <div class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
-            <button id="btn-premium" type="button" class="p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <button id="btn-premium" type="button" class="p-btn plus-button whiskey-modal"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <!-- <button id="btn-premium" type="button" class="p-btn btn slide-button"><i class="fa fa-plus" aria-hidden="true"></i></button> -->
               <div class="filler">
 
@@ -87,7 +87,7 @@ get_header();
             <div class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
-            <button id="btn-black" type="button" class="p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <button id="btn-black" type="button" class="p-btn plus-button"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="filler">
 
             </div>
@@ -118,7 +118,7 @@ get_header();
             <div class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
-            <button id="btn-honey-cinnamon" type="button" class="p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <button id="btn-honey-cinnamon" type="button" class="p-btn plus-button"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="filler">
 
             </div>
@@ -519,30 +519,47 @@ get_header();
 
             <!-- <p class="main-text-content">
           </p> -->
-          <div class="contact-form-container">
-            <?php echo do_shortcode( '[contact-form-7 id="153" title="Contact form 1"]' ); ?>
-          </div>
+            <div class="contact-form-container">
+              <?php echo do_shortcode( '[contact-form-7 id="153" title="Contact form 1"]' ); ?>
+               <div class="social-container">
+                    <ul>
+                      <li><a href="https://www.facebook.com/8-Seconds-Canadian-Whisky-149500401730774/"><img src="/wp-content/uploads/2017/03/social-icon-FB.svg"></a></li>
+                      <li><a href="https://twitter.com/8secondswhisky"><img src="/wp-content/uploads/2017/03/social-icon-twitter.svg"></a></li>
+                    </ul>
+               </div>
+            </div>  <!-- contact-form-container -->
+          </div> <!-- hide container -->
           <div class="filler">
-          </div>
-          </div>
-        </div>
+          </div> <!-- filler -->
+        </div> <!-- no mobile col -->
         <div id="six-img" class="main-page-img no-mobile-col col-md-6">
           <div class="mobile-main-page-overlay">
           </div>
           <div class="no-mobile-col col-md-6 main-page-txt-mobile">
+
+            <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
+           <!--  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. -->
+
             <div class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
             <button id="btn-contactfake" type="button" class="fake-btn p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
             <div class="contact-form-container">
               <div class="absolute-container">
-                <?php echo do_shortcode('[contact-form-7 id="188" title="Mobile Contact"]'); ?>
-              </div>
-            </div>
+              <img src="/wp-content/uploads/2017/03/howdy-contact.png">
+                <?php echo do_shortcode('[contact-form-7 id="146" title="Contact form mobile"]'); ?>
+               
+            </div> <!-- absolute container -->
             <div class="filler">
 
-            </div>
-          </div>
+            </div> <!-- filler -->
+             <div class="social-container-mobile">
+                    <ul>
+                      <li><a href="https://www.facebook.com/8-Seconds-Canadian-Whisky-149500401730774/"><img src="/wp-content/uploads/2017/03/social-icon-FB.svg"></a></li>
+                      <li><a href="https://twitter.com/8secondswhisky"><img src="/wp-content/uploads/2017/03/social-icon-twitter.svg"></a></li>
+                    </ul>
+                 </div> <!-- social mobile -->
+          </div> <!-- contact form container -->
         </div>
       </div> <!-- six -->
     </div> <!-- main-page-slide-group -->
@@ -698,7 +715,17 @@ get_header();
         <button id="under21" class="JSbtn empty-button age-gate-button">No</button>
       </div>
     </div>
+  </div> <!-- age Gate -->
+
+  <div id="mobile-modal" class="modal" >
+     
   </div>
+
+
 </div> <!-- #main-content -->
+
+
+
+
 <div id="mobile-indicator"></div>
 <?php get_footer(); ?>

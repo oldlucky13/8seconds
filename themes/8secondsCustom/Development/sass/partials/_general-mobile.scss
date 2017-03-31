@@ -62,13 +62,9 @@
 .mobile-main-page-overlay {
   @media all and (max-width: 991px) {
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);
     width: 100%;
-    z-index: 1;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    bottom: 0;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
   }
 }
 
