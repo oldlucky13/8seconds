@@ -6104,7 +6104,7 @@ body {
       margin-top: 50%; } }
   @media screen and (device-aspect-ratio: 40 / 71) {
     .back-to-top {
-      margin-top: 62px; } }
+      margin-top: 78px; } }
   @media screen and (device-aspect-ratio: 375 / 667) {
     .back-to-top {
       margin-top: 45%; } }
@@ -7157,6 +7157,10 @@ div.wpcf7-response-output {
     font-family: "Barley Aged", "Sans Serif";
     color: #EAE6DE;
     font-size: 1.3em; }
+  @media all and (max-width: 425px) {
+    #landing-text {
+      bottom: 75px;
+      left: calc(50% - 165px); } }
 
 .mobile-back-arrow {
   vertical-align: middle;
