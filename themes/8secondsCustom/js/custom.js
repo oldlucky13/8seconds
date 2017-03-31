@@ -469,7 +469,7 @@ function handleRecipesTrigger() {
   if ($recipesBtn.hasClass("fwd")) {
     if ($(window).width() > 991) {
       recipesAreaTl.play();
-    } else if ($(window).width()) {
+    } else if ($(window).width() <= 991) {
       recipesAreaTlMobile.play();
     }
     triggerSection("recipes");
@@ -492,8 +492,19 @@ function handleRecipesTrigger() {
     $recipesImg.css('background-image','url(/wp-content/uploads/2017/03/home-drinks-manhattan.jpg)');
     if ($(window).width() > 991) {
       recipesAreaTl.reverse();
-    } else if ($(window).width()) {
+    } else if ($(window).width() <= 991) {
       recipesAreaTlMobile.reverse();
+      var hammertime = new Hammer(mainPageContainerHammer);
+      hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+      hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+      hammertime.on('swipe', function(event) {
+        if (onMainPage) {
+          handleMainPageScroll(event.deltaY);
+        } else {
+          hammertime.destroy();
+          // handleMobileScroll($ajaxAboutSection, event);
+        }
+      })
     }
     triggerSection("main");
     TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
@@ -518,7 +529,7 @@ function handleAboutTrigger() {
   if ($btnAbout.hasClass("fwd")) {
     if ($(window).width() > 991) {
       aboutAreaTl.play();
-    } else if ($(window).width()) {
+    } else if ($(window).width() <= 991) {
       aboutAreaTlMobile.play();
     }
     triggerSection("about");
@@ -538,8 +549,19 @@ function handleAboutTrigger() {
     $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
     if ($(window).width() > 991) {
       aboutAreaTl.reverse();
-    } else if ($(window).width()) {
+    } else if ($(window).width() <= 991) {
       aboutAreaTlMobile.reverse();
+      var hammertime = new Hammer(mainPageContainerHammer);
+      hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+      hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+      hammertime.on('swipe', function(event) {
+        if (onMainPage) {
+          handleMainPageScroll(event.deltaY);
+        } else {
+          hammertime.destroy();
+          // handleMobileScroll($ajaxAboutSection, event);
+        }
+      })
     }
     triggerSection("main");
     TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
