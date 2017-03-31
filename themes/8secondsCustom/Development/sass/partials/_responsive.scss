@@ -36,6 +36,12 @@
     }
   }
 }
+
+@media screen and (min-aspect-ratio: 128 / 100) {
+  .icon-section {
+    width: 44%;
+  }
+}
 @media screen and (min-aspect-ratio: 135 / 100) {
   .main-page-txt {
     .main-text-content {
@@ -52,7 +58,7 @@
     }
   }
   .icon-section {
-    width: 50%;
+
 
     span {
       font-size: 0.9em;
@@ -65,6 +71,10 @@
     .main-text-content {
       margin-top: 58%;
     }
+  }
+
+  .icon-section {
+    width: 38%;
   }
 
 }
@@ -87,8 +97,9 @@
   }
 
   .icon-section {
-    width: 40%;
+    width: 34%;
   }
+
 }
 
 @media screen and (min-aspect-ratio: 185 / 100) {
@@ -96,5 +107,17 @@
     .main-text-content {
       margin-top: 48%;
     }
+  }
+}
+
+// contact form
+@media all and (max-height: 700px) {
+  #contact-desk-title {
+    visibility: hidden !important;
+  }
+
+  .wpcf7 {
+    top: 30%;
+    z-index: 10;
   }
 }

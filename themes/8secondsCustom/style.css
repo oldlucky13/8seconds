@@ -7205,6 +7205,9 @@ div.wpcf7-response-output {
 @media screen and (min-aspect-ratio: 120 / 100) {
   .main-page-txt .main-text-content {
     margin-top: 70%; } }
+@media screen and (min-aspect-ratio: 128 / 100) {
+  .icon-section {
+    width: 44%; } }
 @media screen and (min-aspect-ratio: 135 / 100) {
   .main-page-txt .main-text-content {
     margin-top: 63%; } }
@@ -7213,13 +7216,14 @@ div.wpcf7-response-output {
     margin-top: 63%;
     font-size: 1.1em; }
 
-  .icon-section {
-    width: 50%; }
-    .icon-section span {
-      font-size: 0.9em; } }
+  .icon-section span {
+    font-size: 0.9em; } }
 @media screen and (min-aspect-ratio: 155 / 100) {
   .main-page-txt .main-text-content {
-    margin-top: 58%; } }
+    margin-top: 58%; }
+
+  .icon-section {
+    width: 38%; } }
 @media screen and (min-aspect-ratio: 160 / 100) {
   .main-page-txt .main-text-content {
     margin-top: 56%; } }
@@ -7228,9 +7232,16 @@ div.wpcf7-response-output {
     margin-top: 52%; }
 
   .icon-section {
-    width: 40%; } }
+    width: 34%; } }
 @media screen and (min-aspect-ratio: 185 / 100) {
   .main-page-txt .main-text-content {
     margin-top: 48%; } }
+@media all and (max-height: 700px) {
+  #contact-desk-title {
+    visibility: hidden !important; }
+
+  .wpcf7 {
+    top: 30%;
+    z-index: 10; } }
 
 /*# sourceMappingURL=style.css.map */
