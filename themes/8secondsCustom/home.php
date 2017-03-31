@@ -35,7 +35,7 @@ get_header();
           <button id="btn-homefake" type="button" class="fake-btn p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
         </div>
       </div>
-      <div id="one" class="show-off row main-page-slide">
+      <div id="one" class="show-off row main-page-slide" img-attr="wp-content/uploads/2017/03/nodots-premium-v1.png">
         <div class="no-mobile-col col-md-6 main-page-txt">
           <div class="mobile-nav">
             <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
@@ -59,7 +59,7 @@ get_header();
             <div class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
-            <button id="btn-premium" type="button" class="p-btn plus-button whiskey-modal"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <button id="btn-premium" type="button" class="p-btn plus-button whiskey-modal is-closed"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <!-- <button id="btn-premium" type="button" class="p-btn btn slide-button"><i class="fa fa-plus" aria-hidden="true"></i></button> -->
               <div class="filler">
 
@@ -69,7 +69,7 @@ get_header();
           </div> <!-- main-page-img no-mobile-col col-md-6-->
         </div> <!-- #one-img -->
       </div> <!-- #one -->
-      <div id="two" class="show-off row main-page-slide">
+      <div id="two" class="show-off row main-page-slide" img-attr="wp-content/uploads/2017/03/nodots-black-v3.png">
         <div class="no-mobile-col col-md-6 main-page-txt">
           <div class="mobile-nav">
             <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
@@ -92,14 +92,14 @@ get_header();
             <div class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
-            <button id="btn-black" type="button" class="p-btn plus-button"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <button id="btn-black" type="button" class="p-btn plus-button whiskey-modal"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="filler">
 
             </div>
           </div> <!-- no-mobile-col col-md-6 main-page-txt-->
         </div> <!-- #two-img -->
       </div> <!-- #two -->
-      <div id="three" class="show-off row main-page-slide">
+      <div id="three" class="show-off row main-page-slide" img-attr="wp-content/uploads/2017/03/nodots-honeycinnamon-v1.png">
         <div class="no-mobile-col col-md-6 main-page-txt">
           <div class="mobile-nav">
             <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
@@ -123,7 +123,7 @@ get_header();
             <div class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
-            <button id="btn-honey-cinnamon" type="button" class="p-btn plus-button"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <button id="btn-honey-cinnamon" type="button" class="p-btn plus-button whiskey-modal"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="filler">
 
             </div>
