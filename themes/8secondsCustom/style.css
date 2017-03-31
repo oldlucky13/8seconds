@@ -7206,6 +7206,9 @@ div.wpcf7-response-output {
     /* has to be scroll, not auto */
     -webkit-overflow-scrolling: touch; } }
 
+.s-back-mobile {
+  backface-visibility: hidden; }
+
 .plus-button img {
   width: 55px;
   height: 55px; }

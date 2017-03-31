@@ -340,11 +340,10 @@ get_header();
           </ol>
         </div> <!-- #five-img -->
         <div class="ajaxSection ajaxRecipesSection no-mobile-col col-md-6">
+          <div id="recipes-btn-bk-mobile" class="s-back-mobile">
+            <img class="mobile-back-arrow" src="/wp-content/uploads/2017/03/mobilebackarrow.svg" alt="">
+          </div>
           <div id="mobile-manhattan" class="s-section first-s-section">
-            <div id="recipes-btn-bk-mobile" class="s-back-mobile">
-              <!-- <i class="fa fa-arrow-left" aria-hidden="true"></i> -->
-              <img class="mobile-back-arrow" src="/wp-content/uploads/2017/03/mobilebackarrow.svg" alt="">
-            </div>
             <div id="s-recipes-mobile-nav" class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
@@ -716,7 +715,9 @@ get_header();
 
   </div>
 
-
+  <div id="about-btn-bk-mobile" class="s-back-mobile">
+    <img class="mobile-back-arrow" src="/wp-content/uploads/2017/03/mobilebackarrow.svg" alt="">
+  </div>
 </div> <!-- #main-content -->
 
 
