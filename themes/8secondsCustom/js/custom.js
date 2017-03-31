@@ -441,7 +441,7 @@ aboutAreaTlMobile.to($('#s-about-mobile-nav'), .2, {display: "none"}, 0);
 aboutAreaTlMobile.to($('.button_container'), .2, {display: "none"}, 0);
 aboutAreaTlMobile.to($('#about-btn-bk-mobile'), .2, {display: "block"}, 0);
 aboutAreaTlMobile.to($('.mobile-main-title'), 1, {ease: Power4.easeInOut, opacity: 0}, 0);
-aboutAreaTlMobile.to($('#about-btn-bk-mobile'), 1, {ease: Power4.easeInOut, height: "62px"}, 1);
+aboutAreaTlMobile.to($('#about-btn-bk-mobile'), 1, {force3D: true, ease: Power4.easeInOut, height: "62px"}, 1);
 aboutAreaTlMobile.to($('.mobile-back-arrow'), 1, {ease: Power4.easeInOut, opacity: 1}, 2);
 
 var recipesAreaTl = new TimelineMax({paused: true});
@@ -465,7 +465,7 @@ recipesAreaTlMobile.to($('.button_container'), .2, {display: "none"}, 0);
 recipesAreaTlMobile.to($('#recipes-btn-bk-mobile'), .2, {display: "block"}, 0);
 recipesAreaTlMobile.to($('.story-plus'), .2, {display: "none"}, 0);
 recipesAreaTlMobile.to($('.mobile-main-title'), 1, {ease: Power4.easeInOut, opacity: 0}, 0);
-recipesAreaTlMobile.to($('#recipes-btn-bk-mobile'), 1, {ease: Power4.easeInOut, height: "62px"}, 1);
+recipesAreaTlMobile.to($('#recipes-btn-bk-mobile'), 1, {force3D: true, ease: Power4.easeInOut, height: "62px"}, 1);
 recipesAreaTlMobile.to($('.mobile-back-arrow'), 1, {ease: Power4.easeInOut, opacity: 1}, 2);
 
 var ajaxAboutTl = new TimelineMax({paused: true});
@@ -697,6 +697,18 @@ function triggerSection(section) {
   }
 }
 
+$('#story-down').click(function () {
+  var matadorTag = (-($('#story-down').offset().top / 2));
+  TweenMax.to($('.ajaxAboutSection'), 1.5, {scrollTop: $(this).offset().top, ease: Power4.easeInOut});
+  aboutBreadcrumbTwo.reverse();
+  aboutBreadcrumbOne.play();
+  TweenMax.to($matador, 1, {opacity: 1, ease: Power1.easeOut});
+  TweenMax.to($bullrider, 1, {opacity: 0, ease: Power1.easeOut});
+
+  // , onComplete: handleOtherScrolling.bind($ajaxAboutSection, matadorTag, 2)
+  // var matadorTag = (-(aboutOne / 2));
+  // handleOtherScrolling($ajaxAboutSection, matadorTag, 2);
+})
 /***************
 Other scrolling
 ***************/
@@ -898,7 +910,7 @@ Resize
 
 function checkSize(){
 
-  // console.log($(window).width() / $(window).height());
+  console.log($(window).width() / $(window).height());
 
 	sortMenu();
 
@@ -1211,6 +1223,14 @@ $('.plus-button').on('click', function(){
 				});
 			}
 
+		$('#mobile-modal').modal({
+			escapeClose: true,      // Allows the user to close the modal by pressing `ESC`
+  			clickClose: true,       // Allows the user to close the modal by clicking the overlay
+  			showClose: false,
+  			fadeDuration: 450,
+  			 fadeDelay: .8
+		});
+
 
 	}else{
 		//$('.mobile-nav').css('z-index','20');
@@ -1237,6 +1257,7 @@ $body.mousewheel(function(event) {
 
 });
 
+
 $('div[id*="modal"]').on('click', function(){
 	$.modal.close();
 	$('body').find('.close-modal-btn').attr({src:'/wp-content/uploads/2017/03/module-plus.svg'}).removeClass('close-modal-btn');// find the minus btn image, switch it to plus and remove close btn class
@@ -1245,6 +1266,26 @@ $('div[id*="modal"]').on('click', function(){
 	$('#mobile-modal-drinks').empty();
 });
 
+
+
+var selScrollable = '.ajaxSection';
+// Uses document because document will be topmost level in bubbling
+$(document).on('touchmove',function(e){
+  e.preventDefault();
+});
+// Uses body because jQuery on events are called off of the element they are
+// added to, so bubbling would not work if we used document instead.
+$('body').on('touchstart', selScrollable, function(e) {
+  if (e.currentTarget.scrollTop === 0) {
+    e.currentTarget.scrollTop = 1;
+  } else if (e.currentTarget.scrollHeight === e.currentTarget.scrollTop + e.currentTarget.offsetHeight) {
+    e.currentTarget.scrollTop -= 1;
+  }
+});
+// Stops preventDefault from being called on document if it sees a scrollable div
+$('body').on('touchmove', selScrollable, function(e) {
+  e.stopPropagation();
+});
 
 
 });// jquery document ready

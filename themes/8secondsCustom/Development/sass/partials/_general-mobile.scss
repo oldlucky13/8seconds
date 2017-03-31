@@ -80,7 +80,44 @@
     z-index: 999;
     cursor: pointer;
   }
+
+
+
 }
+// ios devices need to account for url bar
+// .s-back-mobile, .mobile-nav, .button_container {
+//   // 4
+//   @media only screen
+//   and (min-device-width: 320px)
+//   and (max-device-width: 480px)
+//   and (-webkit-min-device-pixel-ratio: 2)
+//   and (orientation: portrait) {
+//     top: 36px;
+//   }
+//   // 5
+//   @media only screen
+//   and (min-device-width: 320px)
+//   and (max-device-width: 568px)
+//   and (-webkit-min-device-pixel-ratio: 2)
+//   and (orientation: portrait) {
+//     top: 36px;
+//   }
+//   // 6
+//   @media only screen
+//   and (min-device-width: 375px)
+//   and (max-device-width: 667px)
+//   and (-webkit-min-device-pixel-ratio: 2) {
+//     top: 36px;
+//   }
+//   // 7
+//   @media only screen
+//   and (min-device-width: 414px)
+//   and (max-device-width: 736px)
+//   and (-webkit-min-device-pixel-ratio: 3)
+//   and (orientation: portrait) {
+//     top: 36px;
+//   }
+// }
 
 .last-mobile-s-text {
   width: 75%;
@@ -124,6 +161,7 @@
     height: 210px;
     padding: 20px;
     width: 350px;
+    top: 40%;
    // margin: -136px 0 0 -180px;
   }
 
@@ -168,7 +206,8 @@
 
   @media all and (max-width: 425px) {
     bottom: 75px;
-    //left: calc(50% - 165px);
+    top: inherit;
+
   }
 
 }
@@ -181,4 +220,16 @@
   left: calc(50% - 26px) !important;
   top: 50% !important;
   opacity: 0;
+}
+
+.ajaxSection {
+  @media all and (max-width: 991px) {
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+  }
+
+}
+
+.s-back-mobile {
+  backface-visibility: hidden;
 }

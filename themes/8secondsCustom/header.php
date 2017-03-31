@@ -18,7 +18,7 @@
 	<?php elegant_canonical(); ?>
 
 	<?php do_action( 'et_head_meta' ); ?>
-
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 	<?php $template_directory_uri = get_template_directory_uri(); ?>
