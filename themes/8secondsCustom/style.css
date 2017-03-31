@@ -5669,7 +5669,8 @@ body {
 
 #zero-img {
   background-image: url("/wp-content/uploads/2017/03/landingpagebackground.jpg");
-  position: relative; }
+  position: relative;
+  padding: 0; }
 
 .main-page-slide {
   height: 100vh;
@@ -7040,6 +7041,9 @@ div.wpcf7-response-output {
 .col-md-6 {
   padding-left: 0 !important;
   padding-right: 0 !important; }
+  @media screen and (min-width: 991px) {
+    .col-md-6 {
+      padding-right: 2px !important; } }
 
 @media all and (max-width: 991px) {
   .mobile-nav {
@@ -7132,31 +7136,53 @@ div.wpcf7-response-output {
   width: 500px;
   top: 50%;
   left: 50%;
-  margin: -192px 0 0 -260px; }
-  @media all and (max-width: 360px) {
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  @media all and (max-width: 480px) {
     #landing-title {
       height: 210px;
       padding: 20px;
-      width: 350px;
-      margin: -136px 0 0 -180px; } }
+      width: 350px; } }
 
 #landing-text {
   position: absolute;
   bottom: 1%;
-  width: 300px;
-  left: calc(50% - 150px);
-  text-align: center; }
+  width: 100%;
+  left: 50%;
+  top: 82%;
+  height: 85px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%); }
   #landing-text button {
-    position: static;
+    position: absolute;
     bottom: inherit;
-    left: inherit;
-    margin-top: 0; }
+    left: 50%;
+    margin-top: 0;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    @media screen and (max-width: 480px) {
+      #landing-text button {
+        bottom: 12px; } }
     #landing-text button:hover {
       color: #fff !important; }
   #landing-text h3 {
     font-family: "Barley Aged", "Sans Serif";
     color: #EAE6DE;
-    font-size: 1.3em; }
+    font-size: 1.3em;
+    width: 100%;
+    text-align: center; }
+    @media screen and (max-width: 480px) {
+      #landing-text h3 {
+        margin-left: 0; } }
 
 .mobile-back-arrow {
   vertical-align: middle;
@@ -7244,7 +7270,7 @@ div.wpcf7-response-output {
     margin-top: 52%; }
 
   .icon-section {
-    width: 34%; } }
+    width: 36%; } }
 @media screen and (min-aspect-ratio: 185 / 100) {
   .main-page-txt .main-text-content {
     margin-top: 48%; } }
