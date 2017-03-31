@@ -189,7 +189,7 @@ get_header();
         </div> <!-- #four-img -->
         <div class="ajaxSection ajaxAboutSection no-mobile-col col-md-6">
           <div id="first-s-story" class="s-section first-s-section">
-            <div id="s-recipes-mobile-nav" class="mobile-nav">
+            <div id="s-about-mobile-nav" class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
 
@@ -345,7 +345,10 @@ get_header();
         </div> <!-- #five-img -->
         <div class="ajaxSection ajaxRecipesSection no-mobile-col col-md-6">
           <div class="s-section first-s-section">
-            <div class="mobile-nav">
+            <div id="about-btn-bk-mobile" class="s-back-mobile">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </div>
+            <div id="s-recipes-mobile-nav" class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
             <div id="first-recipe" class="s-text">
