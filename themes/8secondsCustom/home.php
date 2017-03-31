@@ -28,6 +28,10 @@ get_header();
           <div class="hide-container">
 
           </div>
+          <div id="landing-text">
+            <h3>EXPLORE THE SITE</h3>
+            <button id="landing-button" type="button" class="s-down-btn btn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
+          </div>
           <button id="btn-homefake" type="button" class="fake-btn p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
         </div>
       </div>

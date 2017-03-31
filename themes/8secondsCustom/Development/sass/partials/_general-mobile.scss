@@ -128,3 +128,23 @@
   }
 
 }
+
+#landing-text {
+  position: absolute;
+  bottom: 1%;
+  width: 300px;
+  left: calc(50% - 150px);
+  text-align: center;
+
+  button {
+    position: static;
+    bottom: inherit;
+    left: inherit;
+    margin-top: 0;
+  }
+
+  h3 {
+    font-family: $baraged;
+    color: $font-color;
+  }
+}

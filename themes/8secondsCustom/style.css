@@ -5882,7 +5882,7 @@ body {
 .bk i {
   left: 35%; }
 
-.s-btn.focus, .s-btn:focus, .s-btn:hover {
+.s-btn.focus, .s-btn:focus, .s-btn:hover, .btn:focus, .btn:visited {
   color: #fff;
   text-decoration: none; }
 
@@ -7132,6 +7132,21 @@ div.wpcf7-response-output {
       padding: 20px;
       width: 350px;
       margin: -136px 0 0 -180px; } }
+
+#landing-text {
+  position: absolute;
+  bottom: 1%;
+  width: 300px;
+  left: calc(50% - 150px);
+  text-align: center; }
+  #landing-text button {
+    position: static;
+    bottom: inherit;
+    left: inherit;
+    margin-top: 0; }
+  #landing-text h3 {
+    font-family: "Barley Aged", "Sans Serif";
+    color: #EAE6DE; }
 
 .plus-button img {
   width: 55px;

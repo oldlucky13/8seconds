@@ -640,6 +640,10 @@ $('#about-btn-bk-mobile').click(function () {
   })
 })
 
+$('#landing-button').click(function() {
+  handleMainPageScroll(-50);
+})
+
 function triggerSection(section) {
   if (section === "main") {
     onMainPage = true;
