@@ -7190,4 +7190,47 @@ div.wpcf7-response-output {
   z-index: 800;
   background-color: rgba(0, 0, 0, 0.7); }
 
+@media screen and (min-aspect-ratio: 143 / 100) {
+  .main-page-txt .main-text-content {
+    width: 75%; } }
+@media all and (max-width: 1098px) {
+  .empty-button {
+    width: 40%; } }
+@media screen and (max-aspect-ratio: 150 / 100) {
+  .main-page-txt .main-text-content {
+    margin-top: 70%; } }
+@media screen and (min-aspect-ratio: 101 / 100) {
+  .main-page-txt .main-text-content {
+    margin-top: 85%; } }
+@media screen and (min-aspect-ratio: 120 / 100) {
+  .main-page-txt .main-text-content {
+    margin-top: 70%; } }
+@media screen and (min-aspect-ratio: 135 / 100) {
+  .main-page-txt .main-text-content {
+    margin-top: 63%; } }
+@media screen and (min-aspect-ratio: 148 / 100) {
+  .main-page-txt .main-text-content {
+    margin-top: 63%;
+    font-size: 1.1em; }
+
+  .icon-section {
+    width: 50%; }
+    .icon-section span {
+      font-size: 0.9em; } }
+@media screen and (min-aspect-ratio: 155 / 100) {
+  .main-page-txt .main-text-content {
+    margin-top: 58%; } }
+@media screen and (min-aspect-ratio: 160 / 100) {
+  .main-page-txt .main-text-content {
+    margin-top: 56%; } }
+@media screen and (min-aspect-ratio: 170 / 100) {
+  .main-page-txt .main-text-content {
+    margin-top: 52%; }
+
+  .icon-section {
+    width: 40%; } }
+@media screen and (min-aspect-ratio: 185 / 100) {
+  .main-page-txt .main-text-content {
+    margin-top: 48%; } }
+
 /*# sourceMappingURL=style.css.map */
