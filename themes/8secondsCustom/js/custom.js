@@ -417,14 +417,18 @@ function revealTitles(titles) {
 Ajax loading
 ***************/
 var aboutAreaTl = new TimelineMax({paused: true});
-aboutAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("about")}, 0);
+console.log($mainPageAll);
+// console.log($mainPageAll[0, 2]);
+aboutAreaTl.to($($mainPageAll), 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("about")}, 0);
 // wip: weird title sliding, should just be able to include under $mainPageAll
-aboutAreaTl.to($allTitles, 1.75, {ease: Power4.easeInOut, xPercent: -200}, 0);
+// aboutAreaTl.to($allTitles, 1.75, {ease: Power4.easeInOut, xPercent: -200}, 0);
 aboutAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
 aboutAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
 aboutAreaTl.to($aboutBreadcrumbs, .1, {display: "block"}, 0);
 aboutAreaTl.to($aboutBreadcrumbs, 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 aboutAreaTl.to($btnAbout, 1, {ease: Power4.easeInOut, left: "4%"}, 0);
+
+
 // aboutAreaTl.to($ajaxAboutSection, 1.75, {ease: Power4.easeOut, left: "50%"}, 1);
 // aboutAreaTl.to($ajaxAboutSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
 // aboutAreaTl.to($ajaxAboutSection[0], .1, {ease: Power4.easeOut, scrollTo: 0}, 0);
@@ -443,7 +447,7 @@ aboutAreaTlMobile.to($('.mobile-back-arrow'), 1, {ease: Power4.easeInOut, opacit
 var recipesAreaTl = new TimelineMax({paused: true});
 recipesAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("recipes")}, 0);
 // wip: should just be able to include under $mainPageAll
-recipesAreaTl.to($allTitles, 1.75, {ease: Power4.easeInOut, xPercent: -200}, 0);
+// recipesAreaTl.to($allTitles, 1.75, {ease: Power4.easeInOut, xPercent: -200}, 0);
 recipesAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
 recipesAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
 recipesAreaTl.to($recipesBreadcrumbs, .1, {display: "block"}, 0);
@@ -593,6 +597,7 @@ $aboutBtn.click(function () {
 })
 
 $('#recipes-btn-fwd-mobile').click(function () {
+  // debugger;
   recipesAreaTlMobile.play();
   triggerSection("recipes");
   hammertime.destroy();
@@ -1153,10 +1158,11 @@ Modal set up
 
 
 
-$('.p-btn').on('click', function(){
+$('.plus-button').on('click', function(){
+
+		$(this).toggleClass('is-open is-closed')
 
 
-	$(this).toggleClass('is-open');
 
 	if($(this).hasClass('is-open')){
 		$(this).find('.btn-image').attr({src:'/wp-content/uploads/2017/03/module-minus.svg'}).addClass('close-modal-btn'); // find the button, make it minus, and add close class
@@ -1164,9 +1170,10 @@ $('.p-btn').on('click', function(){
 		$(this).css('z-index' , '999'); //take this button and make sure it's z-index higher than the overlay
 
 			if($(this).hasClass('whiskey-modal')){
-				$('#mobile-modal').empty();
-				var getIcons = $(this).parent('.no-mobile-col').closest('.main-page-slide').find('.icon-section');
-				$('#mobile-modal').append(getIcons);
+				//$('#mobile-modal').empty();
+				var getIcons = $(this).parent('.no-mobile-col').closest('.main-page-slide').find('.icon-section').clone();
+				var getImage = $(this).parent('.no-mobile-col').closest('.main-page-slide').attr('img-attr');
+				$('#mobile-modal').append('<img src=' + getImage + '>').append(getIcons);
 			}
 
 		$('#mobile-modal').modal({
@@ -1183,11 +1190,21 @@ $('.p-btn').on('click', function(){
 	}else{
 		$.modal.close();
 		$(this).find('.close-modal-btn').attr({src:'/wp-content/uploads/2017/03/module-plus.svg'}).removeClass('close-modal-btn');// find the minus btn image, switch it to plus and remove close btn class
+		$('#mobile-modal').empty();
 	}
 
 });
 
 
+$body.mousewheel(function(event) {
+
+	if($('.plus-button').hasClass('is-open')){
+		$.modal.close();
+		$(this).find('.close-modal-btn').attr({src:'/wp-content/uploads/2017/03/module-plus.svg'}).removeClass('close-modal-btn');// find the minus btn image, switch it to plus and remove close btn class
+		$('#mobile-modal').empty();
+	}
+
+});
 
 
 
