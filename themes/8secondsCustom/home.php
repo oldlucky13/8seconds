@@ -19,6 +19,17 @@ get_header();
   </div> <!-- button_container-->
   <div id="the-container" class="main-page-container container-fluid">
     <div class="main-page-slide-group">
+      <div id="zero" class="row main-page-slide">
+        <div id="zero-img" class="main-page-img col-md-12">
+          <div class="filler">
+
+          </div>
+          <div class="hide-container">
+
+          </div>
+          <button id="btn-homefake" type="button" class="fake-btn p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+        </div>
+      </div>
       <div id="one" class="show-off row main-page-slide">
         <div class="no-mobile-col col-md-6 main-page-txt">
           <div class="mobile-nav">
@@ -136,6 +147,7 @@ get_header();
           <div class="mobile-main-page-overlay">
           </div>
           <button id="btn-about" type="button" class="p-btn btn slide-button about-btn fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+          <button id="about-btn-fwd-mobile" type="button" class="p-mobile-btn btn slide-button fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
           <!-- <button id="about-btn" type="button" class="btn slide-button fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i><i class="fa fa-chevron-left initial-hide" aria-hidden="true"></i></button> -->
           <div id="secondary-story-image-group" class="secondary-image-group">
             <div id="matador" class="secondary-image"></div>
@@ -151,7 +163,6 @@ get_header();
             <div class="filler">
 
             </div>
-            <!-- <button id="about-btn-fwd-mobile" type="button" class="p-btn btn btn-primary">See More</button> -->
           </div>
           <ol id="about-ajax-breadcrumb-group" class="ajax-breadcrumb-group">
             <li class="ajax-breadcrumb">
@@ -177,10 +188,11 @@ get_header();
           </ol>
         </div> <!-- #four-img -->
         <div class="ajaxSection ajaxAboutSection no-mobile-col col-md-6">
-          <div class="s-section first-s-section">
-            <div class="mobile-nav">
+          <div id="first-s-story" class="s-section first-s-section">
+            <div id="s-about-mobile-nav" class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
+
             <img class="s-title" src="wp-content/uploads/2017/03/home-story-title_v2.png" alt="">
             <p id="story-s-tagline" class="s-tagline">THE MOST DANGEROUS 8 SECONDS IN SPORTS</p>
             <button type="button" class="s-down-btn s-btn btn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
@@ -188,11 +200,14 @@ get_header();
                 <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
-            <div class="v2 vertical-line">
+          <div id="matador-section" class="s-section">
+            <div id="about-btn-bk-mobile" class="s-back-mobile">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </div>
+            <div class="v2 vertical-line mobile-first-v-line">
               <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
-            <div class="s-text">
+            <div id="first-story-s-text-mobile" class="s-text">
               <img id="s-text-button-wide" class="s-text-button" src="wp-content/uploads/2017/03/story-16cen.svg" alt="">
               <h2 class="s-header">SPANISH ORIGINS</h2>
               <a id="about-one"></a>
@@ -202,7 +217,7 @@ get_header();
               <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
+          <div id="bullrider-section" class="s-section">
             <div class="v2 vertical-line">
               <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
@@ -216,7 +231,7 @@ get_header();
               <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
+          <div id="gloves-section" class="s-section">
             <div class="v2 vertical-line">
               <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
@@ -230,7 +245,7 @@ get_header();
               <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
+          <div id="vintagebull-section" class="s-section">
             <div class="v2 vertical-line">
               <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
@@ -244,14 +259,14 @@ get_header();
               <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
+          <div id="boots-section" class="s-section">
             <div class="v2 vertical-line">
               <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
-            <img class="s-title" src="wp-content/uploads/2017/03/story-pasttopresent2.svg" alt="">
+            <img id="last-story-title" class="s-title" src="wp-content/uploads/2017/03/story-pasttopresent2.svg" alt="">
             <a id="about-five"></a>
-            <div class="s-text">
-              <p class="s-paragraph">The PBR now hosts over 300 events across America where their World Finals brings in over 700,000 fans. Bull riding is now considered the fastest growing sport in the US. </p>
+            <div class="last-mobile-s-text s-text">
+              <p class="last-mobile-paragraph s-paragraph">The PBR now hosts over 300 events across America where their World Finals brings in over 700,000 fans. Bull riding is now considered the fastest growing sport in the US. </p>
             </div>
             <button type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
           </div> <!-- s-section -->
@@ -280,6 +295,7 @@ get_header();
           <div class="mobile-main-page-overlay">
           </div>
           <button id="btn-recipes" type="button" class="p-btn btn slide-button recipes-btn fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+          <button id="recipes-btn-fwd-mobile" type="button" class="p-mobile-btn btn slide-button fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
           <div id="secondary-story-image-group" class="secondary-image-group">
             <div id="cola" class="secondary-image"></div>
             <div id="oldfashioned" class="secondary-image"></div>
@@ -295,7 +311,6 @@ get_header();
             <div class="filler">
 
             </div>
-            <!-- <button id="recipes-btn-fwd-mobile" type="button" class="p-btn btn btn-primary">See More</button> -->
           </div> <!-- no-mobile-col col-md-6 main-page-txt-mobile -->
           <ol id="recipes-ajax-breadcrumb-group" class="ajax-breadcrumb-group">
             <li class="ajax-breadcrumb">
@@ -329,11 +344,14 @@ get_header();
           </ol>
         </div> <!-- #five-img -->
         <div class="ajaxSection ajaxRecipesSection no-mobile-col col-md-6">
-          <div class="s-section first-s-section">
-            <div class="mobile-nav">
+          <div id="mobile-manhattan" class="s-section first-s-section">
+            <div id="recipes-btn-bk-mobile" class="s-back-mobile">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </div>
+            <div id="s-recipes-mobile-nav" class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
-            <div id="first-recipe" class="s-text">
+            <div id="first-recipe" class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-1.svg" alt="">
               <h2 class="s-header">MANHATTAN</h2>
               <a id="recipes-one"></a>
@@ -358,10 +376,10 @@ get_header();
             <div class="v1 vertical-line">
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
+          <div id="mobile-cola" class="s-section">
             <div class="vertical-line v2">
             </div>
-            <div class="s-text">
+            <div class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-2.svg" alt="">
               <h2 class="s-header">8 SECONDS COLA</h2>
               <a id="recipes-two"></a>
@@ -382,10 +400,10 @@ get_header();
             <div class="v1 vertical-line">
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
+          <div id="mobile-oldfashioned" class="s-section">
             <div class="vertical-line v2">
             </div>
-            <div class="s-text">
+            <div class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-3.svg" alt="">
               <h2 class="s-header">OLD FASHIONED</h2>
               <a id="recipes-three"></a>
@@ -411,10 +429,10 @@ get_header();
             <div class="v1 vertical-line">
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
-            <div class="v2 vertical-line">
+          <div id="mobile-cowboyjulep" class="s-section">
+            <div id="cowboy-line" class="v2 vertical-line">
             </div>
-            <div class="s-text">
+            <div class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-4.svg" alt="">
               <h2 class="s-header">COWBOY JULEP</h2>
               <a id="recipes-four"></a>
@@ -441,10 +459,10 @@ get_header();
             <div class="v1 vertical-line">
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
+          <div id="mobile-ginger" class="s-section">
             <div class="v2 vertical-line">
             </div>
-            <div class="s-text">
+            <div class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-5.svg" alt="">
               <h2 class="s-header">8 SECONDS GINGER</h2>
               <a id="recipes-five"></a>
@@ -466,10 +484,10 @@ get_header();
             <div class="v1 vertical-line">
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
+          <div id="mobile-honeycinnamon" class="s-section">
             <div class="v2 vertical-line">
             </div>
-            <div class="s-text">
+            <div class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-6.svg" alt="">
               <h2 class="s-header">HONEY CINNAMON SHO0TER</h2>
               <a id="recipes-six"></a>
@@ -478,19 +496,18 @@ get_header();
             <div class="v1 vertical-line">
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
+          <div id="mobile-neat" class="s-section">
             <div class="v2 vertical-line">
             </div>
-            <div class="s-text">
+            <div class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-7.svg" alt="">
               <h2 class="s-header">8 SECONDS NEAT</h2>
               <a id="recipes-seven"></a>
               <p class="s-paragraph">No need to complicate.</p>
             </div>
-            <button type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
+            <button id="recipes-back-to-top" type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
 
           </div> <!-- s-section -->
-          <!-- <button id="recipes-btn-bk-mobile" type="button" class="p-btn btn btn-primary mobile-btn">Go Back</button> -->
         </div> <!-- ajaxRecipesSection -->
       </div> <!-- #five -->
       <div id="six" class="contact row main-page-slide">
@@ -523,7 +540,7 @@ get_header();
             <div class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
-            <button id="btn-contactfake" type="button" class="p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <button id="btn-contactfake" type="button" class="fake-btn p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
             <div class="contact-form-container">
               <div class="absolute-container">
 <<<<<<< HEAD
@@ -545,6 +562,14 @@ get_header();
       </div> <!-- six -->
     </div> <!-- main-page-slide-group -->
 
+    <div class="main-page-title-group">
+      <div class="main-page-slide-title">
+        <div class="h2-child">
+
+        </div>
+        <!-- <img id="first-h2-child" class="h2-child" src="wp-content/uploads/2017/03/home-premium-title_v4.png" alt=""> -->
+      </div>
+    </div>
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
         <img id="first-h2-child" class="h2-child" src="wp-content/uploads/2017/03/nodots-premium-v1.png" alt="">
@@ -584,6 +609,7 @@ get_header();
 
     <ol id="breadcrumb-group">
       <li class="breadcrumb breadcrumb-active"></li>
+      <li class="breadcrumb"></li>
       <li class="breadcrumb"></li>
       <li class="breadcrumb"></li>
       <li class="breadcrumb"></li>

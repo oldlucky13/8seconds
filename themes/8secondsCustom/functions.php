@@ -49,10 +49,10 @@ add_action( 'wp_enqueue_scripts', 'wpse_dequeue_google_fonts', 20 );
 
 add_filter('show_admin_bar', '__return_false');
 
-function safari_style_sheet() {
-wp_enqueue_style( 'safari-styling', get_stylesheet_directory_uri() . '/safari.css' );
-}
-add_action('wp_enqueue_scripts', 'safari_style_sheet');
+// function safari_style_sheet() {
+// wp_enqueue_style( 'safari-styling', get_stylesheet_directory_uri() . '/safari.css' );
+// }
+// add_action('wp_enqueue_scripts', 'safari_style_sheet');
 
 // function reformat_auto_p_tags($content) {
 //     $new_content = '';

@@ -95,7 +95,7 @@ jQuery(window).on('load', function($) { // makes sure the whole site is loaded
 })
 
 jQuery(document).ready(function( $ ) {
-  jQuery('#six, #five, #four, #three, #two').fadeOut(); // prep slides for scrolling
+  jQuery('#six, #five, #four, #three, #two, #one').fadeOut(); // prep slides for scrolling
   /***************
   Variables
   ***************/
@@ -137,6 +137,8 @@ jQuery(document).ready(function( $ ) {
   $slideButton = $('.slide-button');
   $hideContainer = $('.hide-container');
   $pBtn = $('.p-btn');
+  $firstHtwo = $('#first-h2-child');
+  $pMoBtn = $('.p-mobile-btn');
 
   var mainIdx = 0;
 
@@ -169,9 +171,19 @@ jQuery(document).ready(function( $ ) {
   hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
 
   hammertime.on('swipe', function(event) {
-    handleMainPageScroll(event.deltaY);
+    if (onMainPage) {
+      handleMainPageScroll(event.deltaY);
+    } else {
+      hammertime.destroy();
+      // handleMobileScroll($ajaxAboutSection, event);
+    }
   })
 
+  // function handleMobileScroll(section, event) {
+  //   section[0].scrollTop += (-(event.deltaY) * Math.abs(event.velocity));
+  //   console.log(section[0].scrollTop);
+  //   console.log(event);
+  // }
   // (function(factory) {
   //     if (typeof define === 'function' && define.amd) {
   //         define(['jquery', 'hammerjs'], factory);
@@ -252,7 +264,7 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
         previousSlide(mainIdx);
       }
       updateBreadcrumb(mainIdx);
-    } else if (scrollDir < 0 && mainIdx === 5) { // can't scroll down at last slide
+    } else if (scrollDir < 0 && mainIdx === 6) { // can't scroll down at last slide
       return;
     } else { // scroll down
       if (newMainIdx) { // user clicked a breadcrumb
@@ -271,27 +283,52 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
 function nextButton(scrollDir, mainIdx) {
   if (scrollDir < 0) {
     $pBtn.eq(mainIdx - 1).fadeOut();
-    if (mainIdx === 5) {
-      return;
+    if (mainIdx === 6) {
+      $pMoBtn.eq(1).fadeOut();
     } else {
       $pBtn.eq(mainIdx).fadeIn();
+    }
+    if (mainIdx === 4) {
+      $pMoBtn.eq(0).fadeIn();
+    } else if (mainIdx === 5) {
+      $pMoBtn.eq(0).fadeOut();
+      $pMoBtn.eq(1).fadeIn();
     }
   } else if (scrollDir > 0) {
     $pBtn.eq(mainIdx + 1).fadeOut();
     $pBtn.eq(mainIdx).fadeIn();
+    if (mainIdx === 4) {
+      $pMoBtn.eq(0).fadeIn();
+      $pMoBtn.eq(1).fadeOut();
+    } else if (mainIdx === 3) {
+      $pMoBtn.eq(0).fadeOut();
+    } else if (mainIdx === 5) {
+      $pMoBtn.eq(1).fadeIn();
+    }
   }
 }
 
 function nextSlide(idx, callback) {
   TweenMax.to($allTitles.find(".h2-child").eq(idx - 1), 1.5, {y:"-100%", force3D: true, onComplete: nextTitle(idx, callback)});
   TweenMax.to($hideContainer.eq(idx - 1), .6, {opacity: 0, ease: Power4.easeInOut});
-  $('.main-page-slide-group').children().eq(idx).fadeIn(1200);
+  $('.main-page-slide-group').children().eq(idx).fadeIn(1200, function() {
+    // if (idx === 1) {
+    //   $('#zero').fadeOut();
+    // }
+  });
   TweenMax.to($hideContainer.eq(idx), 1.5, {opacity: 1, ease: Power4.easeIn});
   // nextButton(1, mainIdx);
 }
 
 function previousSlide(idx, callback) {
-  TweenMax.to($allTitles.find(".h2-child").eq(idx + 1), 1.5, {y:"100%", force3D: true, onComplete: nextTitle(idx, callback)});
+  // if (idx === 0) {
+  //   $('#zero').fadeIn();
+  // }
+  if (idx === 0) {
+    TweenMax.to($firstHtwo, .6, {opacity: 0, onComplete: nextTitle(idx, callback)});
+  } else {
+    TweenMax.to($allTitles.find(".h2-child").eq(idx + 1), 1.5, {y:"100%", force3D: true, onComplete: nextTitle(idx, callback)});
+  }
   TweenMax.to($hideContainer.eq(idx + 1), .6, {opacity: 0, ease: Power4.easeInOut});
   $('.main-page-slide-group').children().eq(idx + 1).fadeOut(1200);
   TweenMax.to($hideContainer.eq(idx), 1.5, {opacity: 1, ease: Power4.easeIn});
@@ -341,6 +378,9 @@ function jumpToSlide(oldIdx, newIdx) {
 }
 
 function nextTitle(idx, callback) {
+  if (idx === 1) {
+    TweenMax.to($firstHtwo, 1.5, {opacity: 1});
+  }
   TweenMax.to($allTitles.find(".h2-child").eq(idx), 1.5, {y:"0%", onComplete: function () {
     if (typeof callback === "function") {
       callback();
@@ -392,8 +432,11 @@ aboutAreaTl.to($btnAbout, 1, {ease: Power4.easeInOut, left: "4%"}, 0);
 var aboutAreaTlMobile = new TimelineMax({paused: true});
 aboutAreaTlMobile.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -100, onComplete: triggerSection.bind("about")}, 0);
 aboutAreaTlMobile.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
-// aboutAreaTlMobile.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
-// aboutAreaTlMobile.to($ajaxAboutSection, .7, {ease: Power4.easeOut, left: "50%"}, 0);
+aboutAreaTlMobile.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
+aboutAreaTlMobile.to($('#s-about-mobile-nav'), .2, {display: "none"}, 0);
+aboutAreaTlMobile.to($('.button_container'), .2, {display: "none"}, 0);
+aboutAreaTlMobile.to($('#about-btn-bk-mobile'), .2, {display: "block"}, 0);
+aboutAreaTlMobile.to($('#about-btn-bk-mobile'), 1, {ease: Power4.easeInOut, height: "62px"}, 1);
 
 var recipesAreaTl = new TimelineMax({paused: true});
 recipesAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("recipes")}, 0);
@@ -410,7 +453,11 @@ recipesAreaTl.to($btnRecipes, 1, {ease: Power4.easeInOut, left: "4%"}, 0);
 var recipesAreaTlMobile = new TimelineMax({paused: true});
 recipesAreaTlMobile.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -100, onComplete: triggerSection.bind("recipes")}, 0);
 recipesAreaTlMobile.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
-
+recipesAreaTlMobile.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
+recipesAreaTlMobile.to($('#s-recipes-mobile-nav'), .2, {display: "none"}, 0);
+recipesAreaTlMobile.to($('.button_container'), .2, {display: "none"}, 0);
+recipesAreaTlMobile.to($('#recipes-btn-bk-mobile'), .2, {display: "block"}, 0);
+recipesAreaTlMobile.to($('#recipes-btn-bk-mobile'), 1, {ease: Power4.easeInOut, height: "62px"}, 1);
 
 var ajaxAboutTl = new TimelineMax({paused: true});
 ajaxAboutTl.to($ajaxAboutSection, 1.7, {ease: Power4.easeInOut, right: "-50%"}, 0);
@@ -505,13 +552,25 @@ $aboutBtn.click(function () {
 $('#recipes-btn-fwd-mobile').click(function () {
   recipesAreaTlMobile.play();
   triggerSection("recipes");
+  hammertime.destroy();
 })
 
 $('#recipes-btn-bk-mobile').click(function () {
+  TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
   recipesAreaTlMobile.reverse();
   triggerSection("main");
   TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-  // $ajaxRecipesSection[0].scrollTop = 0;
+  var hammertime = new Hammer(mainPageContainerHammer);
+  hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+  hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+  hammertime.on('swipe', function(event) {
+    if (onMainPage) {
+      handleMainPageScroll(event.deltaY);
+    } else {
+      hammertime.destroy();
+      // handleMobileScroll($ajaxAboutSection, event);
+    }
+  })
 })
 
 // $('#about-btn-fwd-desk').click(function () {
@@ -522,6 +581,7 @@ $('#recipes-btn-bk-mobile').click(function () {
 $('#about-btn-fwd-mobile').click(function () {
   aboutAreaTlMobile.play();
   triggerSection("about");
+  hammertime.destroy();
 })
 
 // $('#about-btn-bk-desk').click(function () {
@@ -541,14 +601,26 @@ $('#about-btn-fwd-mobile').click(function () {
 // })
 
 $('#about-btn-bk-mobile').click(function () {
-  $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
+  // $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
   // $aboutImg.fadeOut(function() {
   //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
   // })
   // .fadeIn();
+  TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
   aboutAreaTlMobile.reverse();
   triggerSection("main");
   TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+  var hammertime = new Hammer(mainPageContainerHammer);
+  hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+  hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+  hammertime.on('swipe', function(event) {
+    if (onMainPage) {
+      handleMainPageScroll(event.deltaY);
+    } else {
+      hammertime.destroy();
+      // handleMobileScroll($ajaxAboutSection, event);
+    }
+  })
 })
 
 function triggerSection(section) {
@@ -773,8 +845,10 @@ Resize
 
 function checkSize(){
 
+
 	
 	sortMenu();
+
 
 
 	if (deskClassAdded && $(window).innerWidth() <= 991){
