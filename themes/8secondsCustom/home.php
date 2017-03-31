@@ -43,7 +43,7 @@ get_header();
             <div class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
-            <button id="btn-premium" type="button" class="p-btn plus-button"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <button id="btn-premium" type="button" class="p-btn plus-button whiskey-modal"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <!-- <button id="btn-premium" type="button" class="p-btn btn slide-button"><i class="fa fa-plus" aria-hidden="true"></i></button> -->
               <div class="filler">
 
@@ -689,9 +689,14 @@ get_header();
         <button id="under21" class="JSbtn empty-button age-gate-button">No</button>
       </div>
     </div>
-  </div>
-</div> <!-- #main-content -->
+  </div> <!-- age Gate -->
 
+  <div id="mobile-modal" class="modal" >
+     
+  </div>
+
+
+</div> <!-- #main-content -->
 
 
 

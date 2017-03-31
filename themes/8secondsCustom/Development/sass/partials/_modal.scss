@@ -9,4 +9,16 @@
     border: transparent;
     left: 50%;
     @include transform(translateX(-47%));
+    
+}
+
+#mobile-modal{
+	border-style: solid;
+	border-width: 50px 40px 46px;
+	-moz-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
+	-webkit-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
+	-o-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
+	border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 fill repeat;
+	z-index: 800;
+	background-color: rgba(0,0,0,.7);
 }
