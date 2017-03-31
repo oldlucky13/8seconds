@@ -89,3 +89,10 @@
   width: 75%;
   padding-top: 20px;
 }
+
+#cowboy-line {
+  @media all and (max-width: 991px) {
+    height: 7%;
+  }
+
+}

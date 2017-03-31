@@ -152,6 +152,12 @@
 
 }
 
+.recipes-s-text {
+  @media all and (max-width: 991px) {
+    display: none;
+  }
+}
+
 #first-story-s-text-mobile {
   @media all and (max-width: 991px) {
     padding-top: 60%;

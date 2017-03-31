@@ -344,14 +344,14 @@ get_header();
           </ol>
         </div> <!-- #five-img -->
         <div class="ajaxSection ajaxRecipesSection no-mobile-col col-md-6">
-          <div class="s-section first-s-section">
+          <div id="mobile-manhattan" class="s-section first-s-section">
             <div id="recipes-btn-bk-mobile" class="s-back-mobile">
               <i class="fa fa-arrow-left" aria-hidden="true"></i>
             </div>
             <div id="s-recipes-mobile-nav" class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
-            <div id="first-recipe" class="s-text">
+            <div id="first-recipe" class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-1.svg" alt="">
               <h2 class="s-header">MANHATTAN</h2>
               <a id="recipes-one"></a>
@@ -376,10 +376,10 @@ get_header();
             <div class="v1 vertical-line">
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
+          <div id="mobile-cola" class="s-section">
             <div class="vertical-line v2">
             </div>
-            <div class="s-text">
+            <div class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-2.svg" alt="">
               <h2 class="s-header">8 SECONDS COLA</h2>
               <a id="recipes-two"></a>
@@ -400,10 +400,10 @@ get_header();
             <div class="v1 vertical-line">
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
+          <div id="mobile-oldfashioned" class="s-section">
             <div class="vertical-line v2">
             </div>
-            <div class="s-text">
+            <div class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-3.svg" alt="">
               <h2 class="s-header">OLD FASHIONED</h2>
               <a id="recipes-three"></a>
@@ -429,10 +429,10 @@ get_header();
             <div class="v1 vertical-line">
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
-            <div class="v2 vertical-line">
+          <div id="mobile-cowboyjulep" class="s-section">
+            <div id="cowboy-line" class="v2 vertical-line">
             </div>
-            <div class="s-text">
+            <div class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-4.svg" alt="">
               <h2 class="s-header">COWBOY JULEP</h2>
               <a id="recipes-four"></a>
@@ -459,10 +459,10 @@ get_header();
             <div class="v1 vertical-line">
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
+          <div id="mobile-ginger" class="s-section">
             <div class="v2 vertical-line">
             </div>
-            <div class="s-text">
+            <div class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-5.svg" alt="">
               <h2 class="s-header">8 SECONDS GINGER</h2>
               <a id="recipes-five"></a>
@@ -484,10 +484,10 @@ get_header();
             <div class="v1 vertical-line">
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
+          <div id="mobile-honeycinnamon" class="s-section">
             <div class="v2 vertical-line">
             </div>
-            <div class="s-text">
+            <div class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-6.svg" alt="">
               <h2 class="s-header">HONEY CINNAMON SHO0TER</h2>
               <a id="recipes-six"></a>
@@ -496,16 +496,16 @@ get_header();
             <div class="v1 vertical-line">
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
+          <div id="mobile-neat" class="s-section">
             <div class="v2 vertical-line">
             </div>
-            <div class="s-text">
+            <div class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-7.svg" alt="">
               <h2 class="s-header">8 SECONDS NEAT</h2>
               <a id="recipes-seven"></a>
               <p class="s-paragraph">No need to complicate.</p>
             </div>
-            <button type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
+            <button id="recipes-back-to-top" type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
 
           </div> <!-- s-section -->
         </div> <!-- ajaxRecipesSection -->
