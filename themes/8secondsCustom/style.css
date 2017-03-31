@@ -5648,7 +5648,7 @@ body {
   background-image: url("/wp-content/uploads/2017/03/finalblackv2.jpg"); }
 
 #three-img {
-  background-image: url("/wp-content/uploads/2017/03/home-bottle-cinnamon.jpg"); }
+  background-image: url("/wp-content/uploads/2017/03/finalhoneycinnamonv2.jpg"); }
 
 #four-img {
   background-image: url("/wp-content/uploads/2017/03/home-story-boots.jpg");
@@ -6760,6 +6760,9 @@ div.wpcf7-response-output {
       -ms-transform: translate(-50%, 10%);
       -o-transform: translate(-50%, 10%);
       transform: translate(-50%, 10%); } }
+  @media all and (max-width: 425px) {
+    .wpcf7 {
+      top: 65%; } }
 
 .absolute-container img {
   display: none; }

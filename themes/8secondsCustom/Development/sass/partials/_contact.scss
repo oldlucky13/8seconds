@@ -139,6 +139,11 @@ div.wpcf7-response-output {
     width: 70%;
     @include transform(translate(-50%,10%));
   }
+
+  @media all and (max-width: 425px) {
+    top: 65%;
+  }
+
 }
 
 .absolute-container img{
@@ -216,23 +221,3 @@ div.wpcf7-response-output {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
