@@ -1176,6 +1176,9 @@ $('.plus-button').on('click', function(){
 				$('#mobile-modal').append('<img src=' + getImage + '>').append(getIcons);
 			}
 
+
+			
+
 		$('#mobile-modal').modal({
 			escapeClose: true,      // Allows the user to close the modal by pressing `ESC`
   			clickClose: true,       // Allows the user to close the modal by clicking the overlay
