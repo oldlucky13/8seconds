@@ -1161,39 +1161,65 @@ Modal set up
 $('.plus-button').on('click', function(){
 
 		$(this).toggleClass('is-open is-closed')
-
-
-
+		//$('.mobile-nav').css('z-index','-1');
+		//$(this).css('z-index','1500');
 	if($(this).hasClass('is-open')){
 		$(this).find('.btn-image').attr({src:'/wp-content/uploads/2017/03/module-minus.svg'}).addClass('close-modal-btn'); // find the button, make it minus, and add close class
 
-		$(this).css('z-index' , '999'); //take this button and make sure it's z-index higher than the overlay
+		
 
 			if($(this).hasClass('whiskey-modal')){
 				//$('#mobile-modal').empty();
 				var getIcons = $(this).parent('.no-mobile-col').closest('.main-page-slide').find('.icon-section').clone();
 				var getImage = $(this).parent('.no-mobile-col').closest('.main-page-slide').attr('img-attr');
 				$('#mobile-modal').append('<img src=' + getImage + '>').append(getIcons);
+				$('#mobile-modal').modal({
+					escapeClose: true,      // Allows the user to close the modal by pressing `ESC`
+		  			clickClose: true,       // Allows the user to close the modal by clicking the overlay
+		  			showClose: false,
+		  			fadeDuration: 250,
+		  			fadeDelay: .4
+				});
+
+
+			}else if($(this).hasClass('about-modal')){
+
+				var getDateImage = $(this).prevAll('.s-text').find('.s-text-button').attr('src');
+				var getTitle = $(this).prevAll('.s-text').find('.s-header').html();
+				var getParagraph = $(this).prevAll('.s-text').find('.s-paragraph').html();
+				$('#mobile-modal-story').append('<img src=' + getDateImage + '>').append('<h1>' +getTitle+'</h1>').append('<p>' +getParagraph+'<p>');
+				$('#mobile-modal-story').modal({
+					escapeClose: true,      // Allows the user to close the modal by pressing `ESC`
+		  			clickClose: true,       // Allows the user to close the modal by clicking the overlay
+		  			showClose: false,
+		  			fadeDuration: 250,
+		  			fadeDelay: .4
+				});
+			}else if($(this).hasClass('drink-modal')){
+
+				var getDateImage = $(this).prevAll('.s-text').find('.s-text-button').attr('src');
+				var getTitle = $(this).prevAll('.s-text').find('.s-header').html();
+				var getParagraph = $(this).prevAll('.s-text').find('.s-paragraph').html();
+				var getGuide = $(this).prevAll('.drink-guide').html();
+				$('#mobile-modal-drinks').append('<img src=' + getDateImage + '>').append('<h1>' +getTitle+'</h1>').append('<p>' +getParagraph+'<p>').append(getGuide);
+				$('#mobile-modal-drinks').modal({
+					escapeClose: true,      // Allows the user to close the modal by pressing `ESC`
+		  			clickClose: true,       // Allows the user to close the modal by clicking the overlay
+		  			showClose: false,
+		  			fadeDuration: 250,
+		  			fadeDelay: .4
+				});
 			}
 
 
-			
-
-		$('#mobile-modal').modal({
-			escapeClose: true,      // Allows the user to close the modal by pressing `ESC`
-  			clickClose: true,       // Allows the user to close the modal by clicking the overlay
-  			showClose: false,
-  			fadeDuration: 450,
-  			 fadeDelay: .8
-		});
-
-
-
-
 	}else{
+		//$('.mobile-nav').css('z-index','20');
+
 		$.modal.close();
 		$(this).find('.close-modal-btn').attr({src:'/wp-content/uploads/2017/03/module-plus.svg'}).removeClass('close-modal-btn');// find the minus btn image, switch it to plus and remove close btn class
 		$('#mobile-modal').empty();
+		$('#mobile-modal-story').empty();
+		$('#mobile-modal-drinks').empty();
 	}
 
 });
@@ -1205,8 +1231,18 @@ $body.mousewheel(function(event) {
 		$.modal.close();
 		$(this).find('.close-modal-btn').attr({src:'/wp-content/uploads/2017/03/module-plus.svg'}).removeClass('close-modal-btn');// find the minus btn image, switch it to plus and remove close btn class
 		$('#mobile-modal').empty();
+		$('#mobile-modal-story').empty();
+		$('#mobile-modal-drinks').empty();
 	}
 
+});
+
+$('div[id*="modal"]').on('click', function(){
+	$.modal.close();
+	$('body').find('.close-modal-btn').attr({src:'/wp-content/uploads/2017/03/module-plus.svg'}).removeClass('close-modal-btn');// find the minus btn image, switch it to plus and remove close btn class
+	$('#mobile-modal').empty();
+	$('#mobile-modal-story').empty();
+	$('#mobile-modal-drinks').empty();
 });
 
 

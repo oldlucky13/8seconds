@@ -118,7 +118,7 @@
   width: 500px;
   top: 50%;
   left: 50%;
-   @include  transform(translate(-50%,-50%));
+   @include  transform(translate(-50%,-70%));
 
   @media all and (max-width: 480px) {
     height: 210px;
@@ -134,8 +134,8 @@
   bottom: 1%;
   width: 100%;
   left: 50%;
-  top:82%;
-  height: 85px;
+  top:75%;
+  height: 100px;
   @include transform(translateX(-50%));
 
   button {
@@ -168,7 +168,7 @@
 
   @media all and (max-width: 425px) {
     bottom: 75px;
-    left: calc(50% - 165px);
+    //left: calc(50% - 165px);
   }
 
 }

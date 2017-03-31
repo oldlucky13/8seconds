@@ -5938,6 +5938,7 @@ body {
   left: 100%;
   height: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
   background: url("/wp-content/uploads/2017/03/home-background-texture-grey.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -6830,7 +6831,8 @@ div.wpcf7-response-output {
       display: none; } }
 
 #ageGate {
-  background-color: #000; }
+  background-color: #000;
+  z-index: 2000; }
   #ageGate .age-gate-content {
     margin: 0 auto;
     text-align: center;
@@ -7136,11 +7138,11 @@ div.wpcf7-response-output {
   width: 500px;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  -webkit-transform: translate(-50%, -70%);
+  -moz-transform: translate(-50%, -70%);
+  -ms-transform: translate(-50%, -70%);
+  -o-transform: translate(-50%, -70%);
+  transform: translate(-50%, -70%); }
   @media all and (max-width: 480px) {
     #landing-title {
       height: 210px;
@@ -7152,8 +7154,8 @@ div.wpcf7-response-output {
   bottom: 1%;
   width: 100%;
   left: 50%;
-  top: 82%;
-  height: 85px;
+  top: 75%;
+  height: 100px;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -7185,8 +7187,7 @@ div.wpcf7-response-output {
         margin-left: 0; } }
   @media all and (max-width: 425px) {
     #landing-text {
-      bottom: 75px;
-      left: calc(50% - 165px); } }
+      bottom: 75px; } }
 
 .mobile-back-arrow {
   vertical-align: middle;
@@ -7196,10 +7197,6 @@ div.wpcf7-response-output {
   top: 50% !important;
   opacity: 0; }
 
-.plus-button img {
-  width: 55px;
-  height: 55px; }
-
 .plus-button {
   background: transparent;
   border: transparent;
@@ -7208,7 +7205,11 @@ div.wpcf7-response-output {
   -moz-transform: translateX(-47%);
   -ms-transform: translateX(-47%);
   -o-transform: translateX(-47%);
-  transform: translateX(-47%); }
+  transform: translateX(-47%);
+  outline: none; }
+  .plus-button img {
+    width: 55px;
+    height: 55px; }
 
 #mobile-modal {
   border-style: solid;
@@ -7217,7 +7218,6 @@ div.wpcf7-response-output {
   -webkit-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
   -o-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
   border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 fill repeat;
-  z-index: 800;
   background-color: rgba(0, 0, 0, 0.7); }
   #mobile-modal > img {
     width: 100%;
@@ -7227,6 +7227,61 @@ div.wpcf7-response-output {
     color: #EAE6DE;
     width: 95%; }
     #mobile-modal .icon-section img {
+      width: 20%; }
+
+#mobile-modal-story {
+  border-style: solid;
+  border-width: 50px 40px 46px;
+  -moz-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
+  -webkit-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
+  -o-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
+  border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 fill repeat;
+  background-color: rgba(0, 0, 0, 0.7); }
+  #mobile-modal-story > img {
+    width: 40%;
+    display: block;
+    margin: 0 auto; }
+  #mobile-modal-story h1 {
+    font-family: "Wheat Aged", "Sans Serif";
+    font-size: 2.5em;
+    color: white;
+    text-align: center; }
+  #mobile-modal-story p {
+    font-family: "Boton", "Sans Serif";
+    font-size: 1em;
+    color: white; }
+  #mobile-modal-story .icon-section {
+    color: #EAE6DE;
+    width: 95%; }
+    #mobile-modal-story .icon-section img {
+      width: 20%; }
+
+#mobile-modal-drinks {
+  border-style: solid;
+  border-width: 50px 40px 46px;
+  -moz-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
+  -webkit-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
+  -o-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
+  border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 fill repeat;
+  background-color: rgba(0, 0, 0, 0.7); }
+  #mobile-modal-drinks > img {
+    width: 15%;
+    display: block;
+    margin: 0 auto; }
+  #mobile-modal-drinks h1 {
+    font-family: "Wheat Aged", "Sans Serif";
+    font-size: 2.5em;
+    color: white;
+    text-align: center; }
+  #mobile-modal-drinks p {
+    font-family: "Boton", "Sans Serif";
+    font-size: .8em;
+    color: white;
+    text-align: center; }
+  #mobile-modal-drinks .icon-section {
+    color: #EAE6DE;
+    width: 95%; }
+    #mobile-modal-drinks .icon-section img {
       width: 20%; }
 
 @media screen and (min-aspect-ratio: 143 / 100) {

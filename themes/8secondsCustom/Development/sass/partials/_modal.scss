@@ -1,14 +1,16 @@
-.plus-button img{
-	width: 55px;
-	height: 55px;
-}
-
 
 .plus-button {
 	background: transparent;
     border: transparent;
     left: 50%;
     @include transform(translateX(-47%));
+
+    & img{
+    	width: 55px;
+		height: 55px;
+    }
+
+    outline: none;
     
 }
 
@@ -19,13 +21,93 @@
 	-webkit-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
 	-o-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
 	border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 fill repeat;
-	z-index: 800;
 	background-color: rgba(0,0,0,.7);
 
 	& > img{
 		width: 100%;
     	display: block;
     	margin: 0 auto;
+	}
+
+	& .icon-section{
+		color: #EAE6DE;
+		width: 95%;
+
+		& img{
+			width: 20%;
+			
+		}
+	}
+}
+
+
+#mobile-modal-story{
+	border-style: solid;
+	border-width: 50px 40px 46px;
+	-moz-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
+	-webkit-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
+	-o-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
+	border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 fill repeat;
+	background-color: rgba(0,0,0,.7);
+
+	& > img{
+		width: 40%;
+    	display: block;
+    	margin: 0 auto;
+	}
+
+	& h1{
+		font-family: "Wheat Aged", "Sans Serif";
+    	font-size: 2.5em;
+    	color: white;
+    	text-align: center;
+	}
+
+	& p{
+		font-family: "Boton", "Sans Serif";
+    	font-size: 1em;
+    	color: white;
+	}
+
+	& .icon-section{
+		color: #EAE6DE;
+		width: 95%;
+
+		& img{
+			width: 20%;
+			
+		}
+	}
+}
+
+
+#mobile-modal-drinks{
+	border-style: solid;
+	border-width: 50px 40px 46px;
+	-moz-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
+	-webkit-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
+	-o-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
+	border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 fill repeat;
+	background-color: rgba(0,0,0,.7);
+
+	& > img{
+		width: 15%;
+    	display: block;
+    	margin: 0 auto;
+	}
+
+	& h1{
+		font-family: "Wheat Aged", "Sans Serif";
+    	font-size: 2.5em;
+    	color: white;
+    	text-align: center;
+	}
+
+	& p{
+		font-family: "Boton", "Sans Serif";
+    	font-size: .8em;
+    	color: white;
+    	text-align: center;
 	}
 
 	& .icon-section{

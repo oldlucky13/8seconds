@@ -193,6 +193,7 @@ get_header();
           </ol>
         </div> <!-- #four-img -->
         <div class="ajaxSection ajaxAboutSection no-mobile-col col-md-6">
+
           <div id="first-s-story" class="s-section first-s-section">
             <div id="s-about-mobile-nav" class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
@@ -218,9 +219,9 @@ get_header();
               <a id="about-one"></a>
               <p class="s-paragraph">The origin of the rodeo, as we have come to know it today, can be traced back to the 16th century influence from Spanish conquistadors. Spanish-Mexican settlers introduced horse and cattle breeding to the Southwest. What initially started out as daily practices of Spanish ranchers evolved into ranch and horsemanship skill contests featured at charreadas.</p>
             </div>
-            <button id="btn-matador" type="button" class="plus-button whiskey-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <button id="btn-matador" type="button" class="plus-button about-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="v1 vertical-line"></div>
-          </div> <!-- s-section -->
+          </div> <!-- s-section matador-section-->
           <div id="bullrider-section" class="s-section">
             <div class="v2 vertical-line"></div>
             <div class="s-text">
@@ -229,7 +230,7 @@ get_header();
               <p class="s-paragraph">Charreada-style competition gained popularity in the Southwest, particularly Texas and California. The 1852 Lone Star Fair became the first-ever Anglo-American event to host this still bull fighting.</p>
             </div>
             <a id="about-two"></a>
-            <button id="btn-bullrider" type="button" class="plus-button whiskey-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <button id="btn-bullrider" type="button" class="plus-button about-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="gloves-section" class="s-section">
@@ -240,7 +241,7 @@ get_header();
               <a id="about-three"></a>
               <p class="s-paragraph">Like most rodeo events at the time, bull riding lacked standardized rules and regulations. A group of cowboys decided to create their own organization, the Cowboy Turtle’s Association, after striking the Boston Garden Rodeo. They established many of the qualifying rules, such as the 8 second ride, still in effect today and hugely increased the popularity of rodeos and bull riding.</p>
             </div>
-            <button id="btn-gloves" type="button" class="plus-button whiskey-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <button id="btn-gloves" type="button" class="plus-button about-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="vintagebull-section" class="s-section">
@@ -251,7 +252,7 @@ get_header();
               <a id="about-four"></a>
               <p class="s-paragraph">20 bull riders gathered to contribute in the creation of the Professional Bull Riders, Inc. Believing that bull riding was popular enough to break away from the traditional rodeo, this organization created their own governing rules and events.</p>
             </div>
-            <button id="btn-vintagebull" type="button" class="plus-button whiskey-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <button id="btn-vintagebull" type="button" class="plus-button about-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="boots-section" class="s-section">
@@ -261,11 +262,15 @@ get_header();
             <div class="last-mobile-s-text s-text">
               <p class="last-mobile-paragraph s-paragraph">The PBR now hosts over 300 events across America where their World Finals brings in over 700,000 fans. Bull riding is now considered the fastest growing sport in the US. </p>
             </div>
-            <button id="btn-boots" type="button" class="plus-button whiskey-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <!-- <button id="btn-boots" type="button" class="plus-button about-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button> -->
             <button type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
           </div> <!-- s-section -->
+          
           <!-- <button id="about-btn-bk-mobile" type="button" class="p-btn btn btn-primary mobile-btn">Go Back</button> -->
         </div>
+         <div id="mobile-modal-story" class="modal" data-backdrop="false" >
+
+         </div>
       </div> <!--#four -->
       <div id="five" class="row main-page-slide">
         <div class="recipes no-mobile-col col-md-6 main-page-txt">
@@ -368,7 +373,7 @@ get_header();
                 <p>Rub the cut edge of the orange peel over the rim of the glass and twist it over the dirnk to release the oils. Do not drop it in.</p>
               </div>
             </div> <!-- drink-guide -->
-            <button id="btn-manhattan" type="button" class="plus-button whiskey-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <button id="btn-manhattan" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="mobile-cola" class="s-section">
@@ -392,7 +397,7 @@ get_header();
                 <p>Enjoy!</p>
               </div>
             </div>
-            <button id="btn-cola" type="button" class="plus-button whiskey-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <button id="btn-cola" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="mobile-oldfashioned" class="s-section">
@@ -421,7 +426,7 @@ get_header();
                 <p>Garnish with orange twist and cherry.</p>
               </div>
             </div>
-            <button id="btn-oldfashioned" type="button" class="plus-button whiskey-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <button id="btn-oldfashioned" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="mobile-cowboyjulep" class="s-section">
@@ -451,7 +456,7 @@ get_header();
                 <p>Garnish with a mint sprig.</p>
               </div>
             </div>
-            <button id="btn-cowboyjulep" type="button" class="plus-button whiskey-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <button id="btn-cowboyjulep" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="mobile-ginger" class="s-section">
@@ -475,7 +480,7 @@ get_header();
                 <p>Garnish with lime wedge.</p>
               </div>
             </div>
-            <button id="btn-ginger" type="button" class="plus-button whiskey-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <button id="btn-ginger" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="mobile-honeycinnamon" class="s-section">
@@ -486,7 +491,7 @@ get_header();
               <a id="recipes-six"></a>
               <p class="s-paragraph">Shootin' it straight.</p>
             </div>
-            <button id="btn-honeycinnamon" type="button" class="plus-button whiskey-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <button id="btn-honeycinnamon" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="mobile-neat" class="s-section">
@@ -497,11 +502,14 @@ get_header();
               <a id="recipes-seven"></a>
               <p class="s-paragraph">No need to complicate.</p>
             </div>
-            <button id="btn-neat" type="button" class="plus-button whiskey-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <button id="btn-neat" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <button id="recipes-back-to-top" type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
 
           </div> <!-- s-section -->
         </div> <!-- ajaxRecipesSection -->
+        <div id="mobile-modal-drinks" class="modal" >
+
+         </div>
       </div> <!-- #five -->
       <div id="six" class="contact row main-page-slide">
         <div class="no-mobile-col col-md-6 main-page-txt">
@@ -710,7 +718,7 @@ get_header();
     </div>
   </div> <!-- age Gate -->
 
-  <div id="mobile-modal" class="modal" >
+  <div id="mobile-modal" class="modal" data-backdrop="false" >
 
   </div>
 
