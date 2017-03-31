@@ -7145,7 +7145,8 @@ div.wpcf7-response-output {
     #landing-title {
       height: 210px;
       padding: 20px;
-      width: 350px; } }
+      width: 350px;
+      top: 40%; } }
 
 #landing-text {
   position: absolute;
@@ -7185,7 +7186,8 @@ div.wpcf7-response-output {
         margin-left: 0; } }
   @media all and (max-width: 425px) {
     #landing-text {
-      bottom: 75px; } }
+      bottom: 75px;
+      top: inherit; } }
 
 .mobile-back-arrow {
   vertical-align: middle;

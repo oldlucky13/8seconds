@@ -124,6 +124,7 @@
     height: 210px;
     padding: 20px;
     width: 350px;
+    top: 40%;
    // margin: -136px 0 0 -180px;
   }
 
@@ -168,6 +169,7 @@
 
   @media all and (max-width: 425px) {
     bottom: 75px;
+    top: inherit;
   }
 
 }
