@@ -7239,6 +7239,9 @@ div.wpcf7-response-output {
 @media screen and (min-aspect-ratio: 185 / 100) {
   .main-page-txt .main-text-content {
     margin-top: 48%; } }
+@media screen and (min-aspect-ratio: 188 / 100) {
+  .icon-section {
+    width: 30%; } }
 @media all and (max-height: 700px) {
   #contact-desk-title {
     visibility: hidden !important; }

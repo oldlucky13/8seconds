@@ -115,6 +115,12 @@
   }
 }
 
+@media screen and (min-aspect-ratio: 188 / 100) {
+  .icon-section {
+    width: 30%;
+  }
+}
+
 // contact form
 @media all and (max-height: 700px) {
   #contact-desk-title {
