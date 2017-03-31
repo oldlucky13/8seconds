@@ -232,9 +232,22 @@
     width: 50%;
   }
   @media all and (max-width: 425px) {
-    margin-top: 40px;
+    margin-top: 50%;
+    // margin-top: 40px;
+  }
+  // iphone 5
+  @media screen and (device-aspect-ratio: 40/71) {
+    margin-top: 62px;
+  }
+  // iphone 6
+  @media screen and (device-aspect-ratio: 375/667) {
+    margin-top: 45%;
   }
 
+  //galaxy s5
+  @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+    margin-top: 45%;
+  }
 }
 
 .first-s-section {

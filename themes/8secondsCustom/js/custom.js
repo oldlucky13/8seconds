@@ -457,6 +457,7 @@ recipesAreaTlMobile.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, padding
 recipesAreaTlMobile.to($('#s-recipes-mobile-nav'), .2, {display: "none"}, 0);
 recipesAreaTlMobile.to($('.button_container'), .2, {display: "none"}, 0);
 recipesAreaTlMobile.to($('#recipes-btn-bk-mobile'), .2, {display: "block"}, 0);
+recipesAreaTlMobile.to($('.story-plus'), .2, {display: "none"}, 0);
 recipesAreaTlMobile.to($('#recipes-btn-bk-mobile'), 1, {ease: Power4.easeInOut, height: "62px"}, 1);
 
 var ajaxAboutTl = new TimelineMax({paused: true});
