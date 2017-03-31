@@ -7140,5 +7140,14 @@ div.wpcf7-response-output {
   border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 fill repeat;
   z-index: 800;
   background-color: rgba(0, 0, 0, 0.7); }
+  #mobile-modal > img {
+    width: 100%;
+    display: block;
+    margin: 0 auto; }
+  #mobile-modal .icon-section {
+    color: #EAE6DE;
+    width: 95%; }
+    #mobile-modal .icon-section img {
+      width: 20%; }
 
 /*# sourceMappingURL=style.css.map */
