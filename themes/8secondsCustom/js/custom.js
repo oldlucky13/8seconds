@@ -437,6 +437,7 @@ aboutAreaTlMobile.to($('#s-about-mobile-nav'), .2, {display: "none"}, 0);
 aboutAreaTlMobile.to($('.button_container'), .2, {display: "none"}, 0);
 aboutAreaTlMobile.to($('#about-btn-bk-mobile'), .2, {display: "block"}, 0);
 aboutAreaTlMobile.to($('#about-btn-bk-mobile'), 1, {ease: Power4.easeInOut, height: "62px"}, 1);
+aboutAreaTlMobile.to($('.mobile-back-arrow'), 1, {ease: Power4.easeInOut, opacity: 1}, 2);
 
 var recipesAreaTl = new TimelineMax({paused: true});
 recipesAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("recipes")}, 0);
@@ -459,13 +460,18 @@ recipesAreaTlMobile.to($('.button_container'), .2, {display: "none"}, 0);
 recipesAreaTlMobile.to($('#recipes-btn-bk-mobile'), .2, {display: "block"}, 0);
 recipesAreaTlMobile.to($('.story-plus'), .2, {display: "none"}, 0);
 recipesAreaTlMobile.to($('#recipes-btn-bk-mobile'), 1, {ease: Power4.easeInOut, height: "62px"}, 1);
+recipesAreaTlMobile.to($('.mobile-back-arrow'), 1, {ease: Power4.easeInOut, opacity: 1}, 2);
 
 var ajaxAboutTl = new TimelineMax({paused: true});
 ajaxAboutTl.to($ajaxAboutSection, 1.7, {ease: Power4.easeInOut, right: "-50%"}, 0);
 
 function handleRecipesTrigger() {
   if ($recipesBtn.hasClass("fwd")) {
-    recipesAreaTl.play();
+    if ($(window).width() > 991) {
+      recipesAreaTl.play();
+    } else if ($(window).width() <= 991) {
+      recipesAreaTlMobile.play();
+    }
     triggerSection("recipes");
     // wip: all of these below should be in GSAP
     $recipesBtn.removeClass("fwd");
@@ -484,7 +490,22 @@ function handleRecipesTrigger() {
     recipesSeven = $('#recipes-seven').offset().top;
   } else if ($btnRecipes.hasClass("bk")) {
     $recipesImg.css('background-image','url(/wp-content/uploads/2017/03/home-drinks-manhattan.jpg)');
-    recipesAreaTl.reverse();
+    if ($(window).width() > 991) {
+      recipesAreaTl.reverse();
+    } else if ($(window).width() <= 991) {
+      recipesAreaTlMobile.reverse();
+      var hammertime = new Hammer(mainPageContainerHammer);
+      hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+      hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+      hammertime.on('swipe', function(event) {
+        if (onMainPage) {
+          handleMainPageScroll(event.deltaY);
+        } else {
+          hammertime.destroy();
+          // handleMobileScroll($ajaxAboutSection, event);
+        }
+      })
+    }
     triggerSection("main");
     TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
     recipesBreadcrumbSeven.reverse();
@@ -506,7 +527,11 @@ function handleRecipesTrigger() {
 
 function handleAboutTrigger() {
   if ($btnAbout.hasClass("fwd")) {
-    aboutAreaTl.play();
+    if ($(window).width() > 991) {
+      aboutAreaTl.play();
+    } else if ($(window).width() <= 991) {
+      aboutAreaTlMobile.play();
+    }
     triggerSection("about");
     $aboutBtn.removeClass("fwd");
     $aboutBtn.addClass("bk");
@@ -522,7 +547,22 @@ function handleAboutTrigger() {
     aboutFive = $('#about-five').offset().top;
   } else if ($btnAbout.hasClass("bk")) {
     $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
-    aboutAreaTl.reverse();
+    if ($(window).width() > 991) {
+      aboutAreaTl.reverse();
+    } else if ($(window).width() <= 991) {
+      aboutAreaTlMobile.reverse();
+      var hammertime = new Hammer(mainPageContainerHammer);
+      hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+      hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+      hammertime.on('swipe', function(event) {
+        if (onMainPage) {
+          handleMainPageScroll(event.deltaY);
+        } else {
+          hammertime.destroy();
+          // handleMobileScroll($ajaxAboutSection, event);
+        }
+      })
+    }
     triggerSection("main");
     TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
     aboutBreadcrumbFive.reverse();
@@ -554,6 +594,7 @@ $('#recipes-btn-fwd-mobile').click(function () {
   recipesAreaTlMobile.play();
   triggerSection("recipes");
   hammertime.destroy();
+  // var hammertime = new Hammer(mainPageContainerHammer);
 })
 
 $('#recipes-btn-bk-mobile').click(function () {
@@ -622,6 +663,10 @@ $('#about-btn-bk-mobile').click(function () {
       // handleMobileScroll($ajaxAboutSection, event);
     }
   })
+})
+
+$('#landing-button').click(function() {
+  handleMainPageScroll(-50);
 })
 
 function triggerSection(section) {
@@ -846,7 +891,7 @@ Resize
 
 function checkSize(){
 
-
+  // console.log($(window).width() / $(window).height());
 
 	sortMenu();
 
