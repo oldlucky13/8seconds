@@ -981,23 +981,23 @@ $('.square').click(function() {
     handleRecipesTrigger();
   }
   if (this.id === "premium-square") {
-    jumpToSlide(mainIdx, 0);
-    mainIdx = 0;
-  } else if (this.id === "black-square") {
     jumpToSlide(mainIdx, 1);
     mainIdx = 1;
-  } else if (this.id === "honey-cinnamon-square") {
+  } else if (this.id === "black-square") {
     jumpToSlide(mainIdx, 2);
     mainIdx = 2;
-  } else if (this.id === "story-square") {
+  } else if (this.id === "honey-cinnamon-square") {
     jumpToSlide(mainIdx, 3);
     mainIdx = 3;
-  } else if (this.id === "cocktails-square") {
+  } else if (this.id === "story-square") {
     jumpToSlide(mainIdx, 4);
     mainIdx = 4;
-  } else if (this.id === "contact-square") {
+  } else if (this.id === "cocktails-square") {
     jumpToSlide(mainIdx, 5);
     mainIdx = 5;
+  } else if (this.id === "contact-square") {
+    jumpToSlide(mainIdx, 6);
+    mainIdx = 6;
   }
   updateBreadcrumb(mainIdx);
 })
