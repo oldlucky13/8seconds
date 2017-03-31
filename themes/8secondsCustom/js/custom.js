@@ -1062,10 +1062,9 @@ else{
 	});//click function
 } //end else
 
-
-	/***************
+/***************
 	Sort menu items mobile
-	***************/
+***************/
 $('#toggle').on('click', function(){
 
 	sortMenu();
@@ -1099,6 +1098,47 @@ $('#toggle').on('click', function(){
 
 
 	}
+
+/***************
+Modal set up
+***************/
+
+
+
+$('.p-btn').on('click', function(){
+
+
+	$(this).toggleClass('is-open');
+
+	if($(this).hasClass('is-open')){
+		$(this).find('.btn-image').attr({src:'/wp-content/uploads/2017/03/module-minus.svg'}).addClass('close-modal-btn'); // find the button, make it minus, and add close class
+		
+		$(this).css('z-index' , '999'); //take this button and make sure it's z-index higher than the overlay
+
+			if($(this).hasClass('whiskey-modal')){
+				$('#mobile-modal').empty();
+				var getIcons = $(this).parent('.no-mobile-col').closest('.main-page-slide').find('.icon-section');
+				$('#mobile-modal').append(getIcons);
+			}
+
+		$('#mobile-modal').modal({
+			escapeClose: true,      // Allows the user to close the modal by pressing `ESC`
+  			clickClose: true,       // Allows the user to close the modal by clicking the overlay
+  			showClose: false,
+  			fadeDuration: 450,
+  			 fadeDelay: .8
+		});
+
+		
+
+
+	}else{
+		$.modal.close();
+		$(this).find('.close-modal-btn').attr({src:'/wp-content/uploads/2017/03/module-plus.svg'}).removeClass('close-modal-btn');// find the minus btn image, switch it to plus and remove close btn class
+	}
+
+});
+
 
 
 
