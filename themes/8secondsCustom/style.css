@@ -7185,8 +7185,7 @@ div.wpcf7-response-output {
         margin-left: 0; } }
   @media all and (max-width: 425px) {
     #landing-text {
-      bottom: 75px;
-      left: calc(50% - 165px); } }
+      bottom: 75px; } }
 
 .mobile-back-arrow {
   vertical-align: middle;
