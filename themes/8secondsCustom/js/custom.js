@@ -465,7 +465,11 @@ ajaxAboutTl.to($ajaxAboutSection, 1.7, {ease: Power4.easeInOut, right: "-50%"}, 
 
 function handleRecipesTrigger() {
   if ($recipesBtn.hasClass("fwd")) {
-    recipesAreaTl.play();
+    if ($(window).width() > 991) {
+      recipesAreaTl.play();
+    } else if ($(window).width()) {
+      recipesAreaTlMobile.play();
+    }
     triggerSection("recipes");
     // wip: all of these below should be in GSAP
     $recipesBtn.removeClass("fwd");
@@ -484,7 +488,11 @@ function handleRecipesTrigger() {
     recipesSeven = $('#recipes-seven').offset().top;
   } else if ($btnRecipes.hasClass("bk")) {
     $recipesImg.css('background-image','url(/wp-content/uploads/2017/03/home-drinks-manhattan.jpg)');
-    recipesAreaTl.reverse();
+    if ($(window).width() > 991) {
+      recipesAreaTl.reverse();
+    } else if ($(window).width()) {
+      recipesAreaTlMobile.reverse();
+    }
     triggerSection("main");
     TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
     recipesBreadcrumbSeven.reverse();
@@ -506,7 +514,11 @@ function handleRecipesTrigger() {
 
 function handleAboutTrigger() {
   if ($btnAbout.hasClass("fwd")) {
-    aboutAreaTl.play();
+    if ($(window).width() > 991) {
+      aboutAreaTl.play();
+    } else if ($(window).width()) {
+      aboutAreaTlMobile.play();
+    }
     triggerSection("about");
     $aboutBtn.removeClass("fwd");
     $aboutBtn.addClass("bk");
@@ -522,7 +534,11 @@ function handleAboutTrigger() {
     aboutFive = $('#about-five').offset().top;
   } else if ($btnAbout.hasClass("bk")) {
     $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
-    aboutAreaTl.reverse();
+    if ($(window).width() > 991) {
+      aboutAreaTl.reverse();
+    } else if ($(window).width()) {
+      aboutAreaTlMobile.reverse();
+    }
     triggerSection("main");
     TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
     aboutBreadcrumbFive.reverse();
