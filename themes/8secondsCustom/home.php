@@ -295,6 +295,7 @@ get_header();
           <div class="mobile-main-page-overlay">
           </div>
           <button id="btn-recipes" type="button" class="p-btn btn slide-button recipes-btn fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+          <button id="recipes-btn-fwd-mobile" type="button" class="p-mobile-btn btn slide-button fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
           <div id="secondary-story-image-group" class="secondary-image-group">
             <div id="cola" class="secondary-image"></div>
             <div id="oldfashioned" class="secondary-image"></div>
@@ -310,7 +311,6 @@ get_header();
             <div class="filler">
 
             </div>
-            <!-- <button id="recipes-btn-fwd-mobile" type="button" class="p-btn btn btn-primary">See More</button> -->
           </div> <!-- no-mobile-col col-md-6 main-page-txt-mobile -->
           <ol id="recipes-ajax-breadcrumb-group" class="ajax-breadcrumb-group">
             <li class="ajax-breadcrumb">
@@ -345,7 +345,7 @@ get_header();
         </div> <!-- #five-img -->
         <div class="ajaxSection ajaxRecipesSection no-mobile-col col-md-6">
           <div class="s-section first-s-section">
-            <div id="about-btn-bk-mobile" class="s-back-mobile">
+            <div id="recipes-btn-bk-mobile" class="s-back-mobile">
               <i class="fa fa-arrow-left" aria-hidden="true"></i>
             </div>
             <div id="s-recipes-mobile-nav" class="mobile-nav">
@@ -508,7 +508,6 @@ get_header();
             <button type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
 
           </div> <!-- s-section -->
-          <!-- <button id="recipes-btn-bk-mobile" type="button" class="p-btn btn btn-primary mobile-btn">Go Back</button> -->
         </div> <!-- ajaxRecipesSection -->
       </div> <!-- #five -->
       <div id="six" class="contact row main-page-slide">

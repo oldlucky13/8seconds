@@ -284,7 +284,7 @@ function nextButton(scrollDir, mainIdx) {
   if (scrollDir < 0) {
     $pBtn.eq(mainIdx - 1).fadeOut();
     if (mainIdx === 6) {
-      return;
+      $pMoBtn.eq(1).fadeOut();
     } else {
       $pBtn.eq(mainIdx).fadeIn();
     }
@@ -292,14 +292,18 @@ function nextButton(scrollDir, mainIdx) {
       $pMoBtn.eq(0).fadeIn();
     } else if (mainIdx === 5) {
       $pMoBtn.eq(0).fadeOut();
+      $pMoBtn.eq(1).fadeIn();
     }
   } else if (scrollDir > 0) {
     $pBtn.eq(mainIdx + 1).fadeOut();
     $pBtn.eq(mainIdx).fadeIn();
     if (mainIdx === 4) {
       $pMoBtn.eq(0).fadeIn();
+      $pMoBtn.eq(1).fadeOut();
     } else if (mainIdx === 3) {
       $pMoBtn.eq(0).fadeOut();
+    } else if (mainIdx === 5) {
+      $pMoBtn.eq(1).fadeIn();
     }
   }
 }
@@ -431,6 +435,7 @@ aboutAreaTlMobile.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "no
 aboutAreaTlMobile.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
 aboutAreaTlMobile.to($('#s-about-mobile-nav'), .2, {display: "none"}, 0);
 aboutAreaTlMobile.to($('.button_container'), .2, {display: "none"}, 0);
+aboutAreaTlMobile.to($('#about-btn-bk-mobile'), .2, {display: "block"}, 0);
 aboutAreaTlMobile.to($('#about-btn-bk-mobile'), 1, {ease: Power4.easeInOut, height: "62px"}, 1);
 
 var recipesAreaTl = new TimelineMax({paused: true});
@@ -451,6 +456,7 @@ recipesAreaTlMobile.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "
 recipesAreaTlMobile.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
 recipesAreaTlMobile.to($('#s-recipes-mobile-nav'), .2, {display: "none"}, 0);
 recipesAreaTlMobile.to($('.button_container'), .2, {display: "none"}, 0);
+recipesAreaTlMobile.to($('#recipes-btn-bk-mobile'), .2, {display: "block"}, 0);
 recipesAreaTlMobile.to($('#recipes-btn-bk-mobile'), 1, {ease: Power4.easeInOut, height: "62px"}, 1);
 
 var ajaxAboutTl = new TimelineMax({paused: true});
@@ -550,10 +556,10 @@ $('#recipes-btn-fwd-mobile').click(function () {
 })
 
 $('#recipes-btn-bk-mobile').click(function () {
+  TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
   recipesAreaTlMobile.reverse();
   triggerSection("main");
   TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-  $ajaxRecipesSection[0].scrollTop = 0;
   var hammertime = new Hammer(mainPageContainerHammer);
   hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
   hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });

@@ -259,19 +259,19 @@
   }
 }
 
-#btn-about {
+#btn-about, #btn-recipes {
   @media all and (max-width: 991px) {
     display: none !important;
   }
 }
 
-#about-btn-fwd-mobile {
+#about-btn-fwd-mobile, #recipes-btn-fwd-mobile {
   @media all and (min-width: 992px) {
     display: none !important;
   }
 }
 
-#btn-recipes, #about-btn-fwd-mobile {
+#recipes-btn-fwd-mobile, #about-btn-fwd-mobile {
   @media all and (max-width: 991px) {
     top: inherit;
     left: inherit;

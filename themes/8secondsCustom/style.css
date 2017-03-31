@@ -5830,34 +5830,34 @@ body {
       display: none; } }
 
 @media all and (max-width: 991px) {
-  #btn-about {
+  #btn-about, #btn-recipes {
     display: none !important; } }
 
 @media all and (min-width: 992px) {
-  #about-btn-fwd-mobile {
+  #about-btn-fwd-mobile, #recipes-btn-fwd-mobile {
     display: none !important; } }
 
 @media all and (max-width: 991px) {
-  #btn-recipes, #about-btn-fwd-mobile {
+  #recipes-btn-fwd-mobile, #about-btn-fwd-mobile {
     top: inherit;
     left: inherit;
     bottom: 4%;
     right: 8%;
     padding: 25px 25px;
     border-radius: 40px; }
-    #btn-recipes i, #about-btn-fwd-mobile i {
+    #recipes-btn-fwd-mobile i, #about-btn-fwd-mobile i {
       position: absolute;
       top: 28%;
       font-size: 1.8em; }
-    #btn-recipes .fwd i, #about-btn-fwd-mobile .fwd i {
+    #recipes-btn-fwd-mobile .fwd i, #about-btn-fwd-mobile .fwd i {
       left: 35%; }
-    #btn-recipes .bk i, #about-btn-fwd-mobile .bk i {
+    #recipes-btn-fwd-mobile .bk i, #about-btn-fwd-mobile .bk i {
       left: 37.8%; } }
 @media all and (max-width: 425px) {
-  #btn-recipes, #about-btn-fwd-mobile {
+  #recipes-btn-fwd-mobile, #about-btn-fwd-mobile {
     bottom: 12%; } }
 @media all and (max-width: 320px) {
-  #btn-recipes, #about-btn-fwd-mobile {
+  #recipes-btn-fwd-mobile, #about-btn-fwd-mobile {
     bottom: 14%; } }
 
 .slide-button {
@@ -6947,14 +6947,17 @@ div.wpcf7-response-output {
     top: 0;
     bottom: 0; } }
 
-@media all and (max-width: 991px) {
-  .s-back-mobile {
-    width: 110%;
-    background-color: #86754D;
-    height: 0px;
-    position: fixed;
-    z-index: 999;
-    cursor: pointer; } }
+.s-back-mobile {
+  display: none; }
+  @media all and (max-width: 991px) {
+    .s-back-mobile {
+      width: 110%;
+      background-color: #86754D;
+      height: 0px;
+      position: fixed;
+      top: 0px;
+      z-index: 999;
+      cursor: pointer; } }
 
 .last-mobile-s-text {
   width: 75%;
