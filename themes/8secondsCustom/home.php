@@ -19,6 +19,17 @@ get_header();
   </div> <!-- button_container-->
   <div id="the-container" class="main-page-container container-fluid">
     <div class="main-page-slide-group">
+      <div id="zero" class="row main-page-slide">
+        <div id="zero-img" class="main-page-img col-md-12">
+          <div class="filler">
+
+          </div>
+          <div class="hide-container">
+
+          </div>
+          <button id="btn-homefake" type="button" class="fake-btn p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+        </div>
+      </div>
       <div id="one" class="show-off row main-page-slide">
         <div class="no-mobile-col col-md-6 main-page-txt">
           <div class="mobile-nav">
@@ -43,7 +54,7 @@ get_header();
             <div class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
-            <button id="btn-premium" type="button" class="p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <button id="btn-premium" type="button" class="p-btn plus-button whiskey-modal"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <!-- <button id="btn-premium" type="button" class="p-btn btn slide-button"><i class="fa fa-plus" aria-hidden="true"></i></button> -->
               <div class="filler">
 
@@ -76,7 +87,7 @@ get_header();
             <div class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
-            <button id="btn-black" type="button" class="p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <button id="btn-black" type="button" class="p-btn plus-button"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="filler">
 
             </div>
@@ -107,7 +118,7 @@ get_header();
             <div class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
-            <button id="btn-honey-cinnamon" type="button" class="p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <button id="btn-honey-cinnamon" type="button" class="p-btn plus-button"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="filler">
 
             </div>
@@ -136,6 +147,7 @@ get_header();
           <div class="mobile-main-page-overlay">
           </div>
           <button id="btn-about" type="button" class="p-btn btn slide-button about-btn fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+          <button id="about-btn-fwd-mobile" type="button" class="p-mobile-btn btn slide-button fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
           <!-- <button id="about-btn" type="button" class="btn slide-button fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i><i class="fa fa-chevron-left initial-hide" aria-hidden="true"></i></button> -->
           <div id="secondary-story-image-group" class="secondary-image-group">
             <div id="matador" class="secondary-image"></div>
@@ -151,7 +163,6 @@ get_header();
             <div class="filler">
 
             </div>
-            <!-- <button id="about-btn-fwd-mobile" type="button" class="p-btn btn btn-primary">See More</button> -->
           </div>
           <ol id="about-ajax-breadcrumb-group" class="ajax-breadcrumb-group">
             <li class="ajax-breadcrumb">
@@ -177,82 +188,74 @@ get_header();
           </ol>
         </div> <!-- #four-img -->
         <div class="ajaxSection ajaxAboutSection no-mobile-col col-md-6">
-          <div class="s-section first-s-section">
-            <div class="mobile-nav">
+          <div id="first-s-story" class="s-section first-s-section">
+            <div id="s-about-mobile-nav" class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
+
             <img class="s-title" src="wp-content/uploads/2017/03/home-story-title_v2.png" alt="">
             <p id="story-s-tagline" class="s-tagline">THE MOST DANGEROUS 8 SECONDS IN SPORTS</p>
             <button type="button" class="s-down-btn s-btn btn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
             <div class="v1 vertical-line">
-                <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+  <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
             </div>
           </div> <!-- s-section -->
-          <div class="s-section">
-            <div class="v2 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
+          <div id="matador-section" class="s-section">
+            <div id="about-btn-bk-mobile" class="s-back-mobile">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
             </div>
-            <div class="s-text">
+            <div class="v2 vertical-line mobile-first-v-line">
+            </div>
+            <div id="first-story-s-text-mobile" class="s-text">
               <img id="s-text-button-wide" class="s-text-button" src="wp-content/uploads/2017/03/story-16cen.svg" alt="">
               <h2 class="s-header">SPANISH ORIGINS</h2>
               <a id="about-one"></a>
               <p class="s-paragraph">The origin of the rodeo, as we have come to know it today, can be traced back to the 16th century influence from Spanish conquistadors. Spanish-Mexican settlers introduced horse and cattle breeding to the Southwest. What initially started out as daily practices of Spanish ranchers evolved into ranch and horsemanship skill contests featured at charreadas.</p>
             </div>
-            <div class="v1 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-            </div>
+            <button id="btn-matador" type="button" class="plus-button whiskey-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
-          <div class="s-section">
-            <div class="v2 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-            </div>
+          <div id="bullrider-section" class="s-section">
+            <div class="v2 vertical-line"></div>
             <div class="s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-1850.svg" alt="">
               <h2 class="s-header">GAINING POPULARITY</h2>
               <p class="s-paragraph">Charreada-style competition gained popularity in the Southwest, particularly Texas and California. The 1852 Lone Star Fair became the first-ever Anglo-American event to host this still bull fighting.</p>
             </div>
             <a id="about-two"></a>
-            <div class="v1 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-            </div>
+            <button id="btn-bullrider" type="button" class="plus-button whiskey-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
-          <div class="s-section">
-            <div class="v2 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-            </div>
+          <div id="gloves-section" class="s-section">
+            <div class="v2 vertical-line"></div>
             <div class="s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-1936.svg" alt="">
               <h2 class="s-header">STANDARDIZATION</h2>
               <a id="about-three"></a>
               <p class="s-paragraph">Like most rodeo events at the time, bull riding lacked standardized rules and regulations. A group of cowboys decided to create their own organization, the Cowboy Turtle’s Association, after striking the Boston Garden Rodeo. They established many of the qualifying rules, such as the 8 second ride, still in effect today and hugely increased the popularity of rodeos and bull riding.</p>
             </div>
-            <div class="v1 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-            </div>
+            <button id="btn-gloves" type="button" class="plus-button whiskey-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
-          <div class="s-section">
-            <div class="v2 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-            </div>
+          <div id="vintagebull-section" class="s-section">
+            <div class="v2 vertical-line"></div>
             <div class="s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-1992.svg" alt="">
               <h2 class="s-header">BREAKING AWAY</h2>
               <a id="about-four"></a>
               <p class="s-paragraph">20 bull riders gathered to contribute in the creation of the Professional Bull Riders, Inc. Believing that bull riding was popular enough to break away from the traditional rodeo, this organization created their own governing rules and events.</p>
             </div>
-            <div class="v1 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-            </div>
+            <button id="btn-vintagebull" type="button" class="plus-button whiskey-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
-          <div class="s-section">
-            <div class="v2 vertical-line">
-              <!-- <br><br><br><br><br><br><br><br><br><br><br> -->
-            </div>
-            <img class="s-title" src="wp-content/uploads/2017/03/story-pasttopresent2.svg" alt="">
+          <div id="boots-section" class="s-section">
+            <div class="v2 vertical-line"></div>
+            <img id="last-story-title" class="s-title" src="wp-content/uploads/2017/03/story-pasttopresent2.svg" alt="">
             <a id="about-five"></a>
-            <div class="s-text">
-              <p class="s-paragraph">The PBR now hosts over 300 events across America where their World Finals brings in over 700,000 fans. Bull riding is now considered the fastest growing sport in the US. </p>
+            <div class="last-mobile-s-text s-text">
+              <p class="last-mobile-paragraph s-paragraph">The PBR now hosts over 300 events across America where their World Finals brings in over 700,000 fans. Bull riding is now considered the fastest growing sport in the US. </p>
             </div>
+            <button id="btn-boots" type="button" class="plus-button whiskey-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <button type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
           </div> <!-- s-section -->
           <!-- <button id="about-btn-bk-mobile" type="button" class="p-btn btn btn-primary mobile-btn">Go Back</button> -->
@@ -280,6 +283,7 @@ get_header();
           <div class="mobile-main-page-overlay">
           </div>
           <button id="btn-recipes" type="button" class="p-btn btn slide-button recipes-btn fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+          <button id="recipes-btn-fwd-mobile" type="button" class="p-mobile-btn btn slide-button fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
           <div id="secondary-story-image-group" class="secondary-image-group">
             <div id="cola" class="secondary-image"></div>
             <div id="oldfashioned" class="secondary-image"></div>
@@ -295,7 +299,6 @@ get_header();
             <div class="filler">
 
             </div>
-            <!-- <button id="recipes-btn-fwd-mobile" type="button" class="p-btn btn btn-primary">See More</button> -->
           </div> <!-- no-mobile-col col-md-6 main-page-txt-mobile -->
           <ol id="recipes-ajax-breadcrumb-group" class="ajax-breadcrumb-group">
             <li class="ajax-breadcrumb">
@@ -329,11 +332,14 @@ get_header();
           </ol>
         </div> <!-- #five-img -->
         <div class="ajaxSection ajaxRecipesSection no-mobile-col col-md-6">
-          <div class="s-section first-s-section">
-            <div class="mobile-nav">
+          <div id="mobile-manhattan" class="s-section first-s-section">
+            <div id="recipes-btn-bk-mobile" class="s-back-mobile">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </div>
+            <div id="s-recipes-mobile-nav" class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
-            <div id="first-recipe" class="s-text">
+            <div id="first-recipe" class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-1.svg" alt="">
               <h2 class="s-header">MANHATTAN</h2>
               <a id="recipes-one"></a>
@@ -355,13 +361,13 @@ get_header();
                 <p>Rub the cut edge of the orange peel over the rim of the glass and twist it over the dirnk to release the oils. Do not drop it in.</p>
               </div>
             </div> <!-- drink-guide -->
-            <div class="v1 vertical-line">
-            </div>
+            <button id="btn-manhattan" type="button" class="plus-button whiskey-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
-          <div class="s-section">
+          <div id="mobile-cola" class="s-section">
             <div class="vertical-line v2">
             </div>
-            <div class="s-text">
+            <div class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-2.svg" alt="">
               <h2 class="s-header">8 SECONDS COLA</h2>
               <a id="recipes-two"></a>
@@ -379,13 +385,13 @@ get_header();
                 <p>Enjoy!</p>
               </div>
             </div>
-            <div class="v1 vertical-line">
-            </div>
+            <button id="btn-cola" type="button" class="plus-button whiskey-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
-          <div class="s-section">
+          <div id="mobile-oldfashioned" class="s-section">
             <div class="vertical-line v2">
             </div>
-            <div class="s-text">
+            <div class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-3.svg" alt="">
               <h2 class="s-header">OLD FASHIONED</h2>
               <a id="recipes-three"></a>
@@ -408,13 +414,13 @@ get_header();
                 <p>Garnish with orange twist and cherry.</p>
               </div>
             </div>
-            <div class="v1 vertical-line">
-            </div>
+            <button id="btn-oldfashioned" type="button" class="plus-button whiskey-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
-          <div class="s-section">
-            <div class="v2 vertical-line">
+          <div id="mobile-cowboyjulep" class="s-section">
+            <div id="cowboy-line" class="v2 vertical-line">
             </div>
-            <div class="s-text">
+            <div class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-4.svg" alt="">
               <h2 class="s-header">COWBOY JULEP</h2>
               <a id="recipes-four"></a>
@@ -438,13 +444,12 @@ get_header();
                 <p>Garnish with a mint sprig.</p>
               </div>
             </div>
-            <div class="v1 vertical-line">
-            </div>
+            <button id="btn-cowboyjulep" type="button" class="plus-button whiskey-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
-          <div class="s-section">
-            <div class="v2 vertical-line">
-            </div>
-            <div class="s-text">
+          <div id="mobile-ginger" class="s-section">
+            <div class="v2 vertical-line"></div>
+            <div class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-5.svg" alt="">
               <h2 class="s-header">8 SECONDS GINGER</h2>
               <a id="recipes-five"></a>
@@ -463,34 +468,32 @@ get_header();
                 <p>Garnish with lime wedge.</p>
               </div>
             </div>
-            <div class="v1 vertical-line">
-            </div>
+            <button id="btn-ginger" type="button" class="plus-button whiskey-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
-          <div class="s-section">
-            <div class="v2 vertical-line">
-            </div>
-            <div class="s-text">
+          <div id="mobile-honeycinnamon" class="s-section">
+            <div class="v2 vertical-line"></div>
+            <div class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-6.svg" alt="">
               <h2 class="s-header">HONEY CINNAMON SHO0TER</h2>
               <a id="recipes-six"></a>
               <p class="s-paragraph">Shootin' it straight.</p>
             </div>
-            <div class="v1 vertical-line">
-            </div>
+            <button id="btn-honeycinnamon" type="button" class="plus-button whiskey-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
-          <div class="s-section">
-            <div class="v2 vertical-line">
-            </div>
-            <div class="s-text">
+          <div id="mobile-neat" class="s-section">
+            <div class="v2 vertical-line"></div>
+            <div class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-7.svg" alt="">
               <h2 class="s-header">8 SECONDS NEAT</h2>
               <a id="recipes-seven"></a>
               <p class="s-paragraph">No need to complicate.</p>
             </div>
-            <button type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
+            <button id="btn-neat" type="button" class="plus-button whiskey-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+            <button id="recipes-back-to-top" type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
 
           </div> <!-- s-section -->
-          <!-- <button id="recipes-btn-bk-mobile" type="button" class="p-btn btn btn-primary mobile-btn">Go Back</button> -->
         </div> <!-- ajaxRecipesSection -->
       </div> <!-- #five -->
       <div id="six" class="contact row main-page-slide">
@@ -502,49 +505,59 @@ get_header();
 
             <!-- <p class="main-text-content">
           </p> -->
-          <div class="contact-form-container">
-            <?php echo do_shortcode( '[contact-form-7 id="153" title="Contact form 1"]' ); ?>
-          </div>
+            <div class="contact-form-container">
+              <?php echo do_shortcode( '[contact-form-7 id="153" title="Contact form 1"]' ); ?>
+               <div class="social-container">
+                    <ul>
+                      <li><a href="https://www.facebook.com/8-Seconds-Canadian-Whisky-149500401730774/"><img src="/wp-content/uploads/2017/03/social-icon-FB.svg"></a></li>
+                      <li><a href="https://twitter.com/8secondswhisky"><img src="/wp-content/uploads/2017/03/social-icon-twitter.svg"></a></li>
+                    </ul>
+               </div>
+            </div>  <!-- contact-form-container -->
+          </div> <!-- hide container -->
           <div class="filler">
-          </div>
-          </div>
-        </div>
+          </div> <!-- filler -->
+        </div> <!-- no mobile col -->
         <div id="six-img" class="main-page-img no-mobile-col col-md-6">
           <div class="mobile-main-page-overlay">
           </div>
           <div class="no-mobile-col col-md-6 main-page-txt-mobile">
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
+
             <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-=======
->>>>>>> mobileT
+           <!--  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. -->
+
             <div class="mobile-nav">
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
-            <button id="btn-contactfake" type="button" class="p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <button id="btn-contactfake" type="button" class="fake-btn p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
             <div class="contact-form-container">
               <div class="absolute-container">
-<<<<<<< HEAD
-                <?php echo do_shortcode('[contact-form-7 id="188" title="Mobile Contact"]'); ?>
-=======
+              <img src="/wp-content/uploads/2017/03/howdy-contact.png">
                 <?php echo do_shortcode('[contact-form-7 id="146" title="Contact form mobile"]'); ?>
->>>>>>> mobileT
-              </div>
-            </div>
+
+            </div> <!-- absolute container -->
             <div class="filler">
 
-            </div>
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> mobileT
-          </div>
+            </div> <!-- filler -->
+             <div class="social-container-mobile">
+                    <ul>
+                      <li><a href="https://www.facebook.com/8-Seconds-Canadian-Whisky-149500401730774/"><img src="/wp-content/uploads/2017/03/social-icon-FB.svg"></a></li>
+                      <li><a href="https://twitter.com/8secondswhisky"><img src="/wp-content/uploads/2017/03/social-icon-twitter.svg"></a></li>
+                    </ul>
+                 </div> <!-- social mobile -->
+          </div> <!-- contact form container -->
         </div>
       </div> <!-- six -->
     </div> <!-- main-page-slide-group -->
 
+    <div class="main-page-title-group">
+      <div class="main-page-slide-title">
+        <div class="h2-child">
+
+        </div>
+        <!-- <img id="first-h2-child" class="h2-child" src="wp-content/uploads/2017/03/home-premium-title_v4.png" alt=""> -->
+      </div>
+    </div>
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
         <img id="first-h2-child" class="h2-child" src="wp-content/uploads/2017/03/nodots-premium-v1.png" alt="">
@@ -584,6 +597,7 @@ get_header();
 
     <ol id="breadcrumb-group">
       <li class="breadcrumb breadcrumb-active"></li>
+      <li class="breadcrumb"></li>
       <li class="breadcrumb"></li>
       <li class="breadcrumb"></li>
       <li class="breadcrumb"></li>
@@ -687,7 +701,17 @@ get_header();
         <button id="under21" class="JSbtn empty-button age-gate-button">No</button>
       </div>
     </div>
+  </div> <!-- age Gate -->
+
+  <div id="mobile-modal" class="modal" >
+
   </div>
+
+
 </div> <!-- #main-content -->
+
+
+
+
 <div id="mobile-indicator"></div>
 <?php get_footer(); ?>

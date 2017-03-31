@@ -5667,6 +5667,9 @@ body {
 #six-img {
   background-image: url("/wp-content/uploads/2017/03/home-contact.jpg"); }
 
+#zero-img {
+  background-image: url("/wp-content/uploads/2017/03/landingpagev1.jpg"); }
+
 .main-page-slide {
   height: 100vh;
   position: absolute; }
@@ -5786,7 +5789,8 @@ body {
   -moz-transform: translateY(0%);
   -ms-transform: translateY(0%);
   -o-transform: translateY(0%);
-  transform: translateY(0%); }
+  transform: translateY(0%);
+  opacity: 0; }
 
 #breadcrumb-group {
   position: absolute;
@@ -5819,31 +5823,41 @@ body {
   .desk-btn {
     display: none; } }
 
-@media screen and (min-width: 992px) {
-  .mobile-btn {
-    display: none; } }
+.mobile-btn {
+  display: block; }
+  @media screen and (min-width: 992px) {
+    .mobile-btn {
+      display: none; } }
 
 @media all and (max-width: 991px) {
-  #btn-recipes, #btn-about {
+  #btn-about, #btn-recipes {
+    display: none !important; } }
+
+@media all and (min-width: 992px) {
+  #about-btn-fwd-mobile, #recipes-btn-fwd-mobile {
+    display: none !important; } }
+
+@media all and (max-width: 991px) {
+  #recipes-btn-fwd-mobile, #about-btn-fwd-mobile {
     top: inherit;
     left: inherit;
     bottom: 4%;
     right: 8%;
     padding: 25px 25px;
     border-radius: 40px; }
-    #btn-recipes i, #btn-about i {
+    #recipes-btn-fwd-mobile i, #about-btn-fwd-mobile i {
       position: absolute;
       top: 28%;
       font-size: 1.8em; }
-    #btn-recipes .fwd i, #btn-about .fwd i {
+    #recipes-btn-fwd-mobile .fwd i, #about-btn-fwd-mobile .fwd i {
       left: 35%; }
-    #btn-recipes .bk i, #btn-about .bk i {
+    #recipes-btn-fwd-mobile .bk i, #about-btn-fwd-mobile .bk i {
       left: 37.8%; } }
 @media all and (max-width: 425px) {
-  #btn-recipes, #btn-about {
+  #recipes-btn-fwd-mobile, #about-btn-fwd-mobile {
     bottom: 12%; } }
 @media all and (max-width: 320px) {
-  #btn-recipes, #btn-about {
+  #recipes-btn-fwd-mobile, #about-btn-fwd-mobile {
     bottom: 14%; } }
 
 .slide-button {
@@ -5970,7 +5984,13 @@ body {
 
 .s-section {
   height: 80vh;
-  position: relative; }
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+  @media all and (max-width: 991px) {
+    .s-section {
+      height: 100vh; } }
 
 .s-title {
   height: 300px;
@@ -5978,6 +5998,9 @@ body {
   display: block;
   margin: 0 auto;
   margin-top: calc(14% - 82px); }
+  @media all and (max-width: 991px) {
+    .s-title {
+      display: none; } }
 
 .s-tagline {
   font-family: "Barley Aged", "Sans Serif";
@@ -6002,20 +6025,47 @@ body {
 .vertical-line {
   width: 50%;
   border-right: 1px solid #86754D; }
+  @media all and (max-width: 991px) {
+    .vertical-line {
+      border-right: 3px solid #86754D; } }
 
 .s-text {
   margin: 0 auto;
   color: white;
   text-align: center;
   width: 50%; }
+  @media all and (max-width: 991px) {
+    .s-text {
+      padding-top: 60%; } }
+  @media all and (max-width: 425px) {
+    .s-text {
+      padding-top: 26%; } }
+
+@media all and (max-width: 991px) {
+  .recipes-s-text {
+    display: none; } }
+
+@media all and (max-width: 991px) {
+  #first-story-s-text-mobile {
+    padding-top: 60%; } }
 
 .s-header {
   font-family: "Wheat Aged", "Sans Serif";
   font-size: 3em; }
+  @media all and (max-width: 991px) {
+    .s-header {
+      display: none; } }
 
 .s-paragraph {
   font-family: "Boton", "Sans Serif";
   font-size: 1em; }
+  @media all and (max-width: 991px) {
+    .s-paragraph {
+      display: none; } }
+
+@media all and (max-width: 991px) {
+  #first-s-story {
+    display: none; } }
 
 .v0 {
   height: 10%; }
@@ -6033,12 +6083,33 @@ body {
 
 .s-text-button {
   width: 12%; }
+  @media all and (max-width: 991px) {
+    .s-text-button {
+      width: 41%; } }
 
 #s-text-button-wide {
   width: 25%; }
+  @media all and (max-width: 991px) {
+    #s-text-button-wide {
+      width: 100%; } }
 
 .back-to-top {
   padding: 0px; }
+  @media all and (max-width: 991px) {
+    .back-to-top {
+      width: 50%; } }
+  @media all and (max-width: 425px) {
+    .back-to-top {
+      margin-top: 50%; } }
+  @media screen and (device-aspect-ratio: 40 / 71) {
+    .back-to-top {
+      margin-top: 62px; } }
+  @media screen and (device-aspect-ratio: 375 / 667) {
+    .back-to-top {
+      margin-top: 45%; } }
+  @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+    .back-to-top {
+      margin-top: 45%; } }
 
 .first-s-section {
   height: 100vh; }
@@ -6063,6 +6134,44 @@ div.wpcf7-mail-sent-ok {
   position: absolute;
   left: calc(50% - 143.04px);
   bottom: 16%; }
+
+@media all and (max-width: 991px) {
+  .mobile-first-v-line {
+    display: none; } }
+
+@media all and (max-width: 991px) {
+  #matador-section {
+    background-image: url("/wp-content/uploads/2017/03/story-matador.jpg"); } }
+
+@media all and (max-width: 991px) {
+  #bullrider-section {
+    background-image: url("/wp-content/uploads/2017/03/story-bullrider.jpg"); } }
+
+@media all and (max-width: 991px) {
+  #gloves-section {
+    background-image: url("/wp-content/uploads/2017/03/story-gloves.jpg"); } }
+
+@media all and (max-width: 991px) {
+  #vintagebull-section {
+    background-image: url("/wp-content/uploads/2017/03/story-vintagebull.jpg"); } }
+
+@media all and (max-width: 991px) {
+  #boots-section {
+    background-image: url("/wp-content/uploads/2017/03/home-story-boots.jpg");
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6); } }
+
+@media all and (max-width: 991px) {
+  .last-mobile-paragraph {
+    display: block; } }
+
+@media all and (max-width: 991px) {
+  #last-story-title {
+    display: block; } }
+@media all and (max-width: 425px) {
+  #last-story-title {
+    width: 300px;
+    height: 180px;
+    margin-top: 0%; } }
 
 .button_container {
   position: absolute;
@@ -6475,6 +6584,9 @@ body {
   display: flex;
   width: 90%;
   margin: 0 auto; }
+  @media all and (max-width: 991px) {
+    .drink-guide {
+      display: none; } }
 
 .drink-half {
   flex: 1;
@@ -6492,6 +6604,31 @@ body {
 
 #first-recipe {
   margin-top: 15%; }
+
+#mobile-manhattan {
+  background-image: url("/wp-content/uploads/2017/03/home-drinks-manhattan.jpg"); }
+
+#mobile-cola {
+  background-image: url("/wp-content/uploads/2017/03/drinks-whiskeycola.jpg"); }
+
+#mobile-oldfashioned {
+  background-image: url("/wp-content/uploads/2017/03/drinks-oldfashioned.jpg"); }
+
+#mobile-cowboyjulep {
+  background-image: url("/wp-content/uploads/2017/03/drinks-cowboy.jpg"); }
+
+#mobile-ginger {
+  background-image: url("/wp-content/uploads/2017/03/drinks-whiskeyginger.jpg"); }
+
+#mobile-honeycinnamon {
+  background-image: url("/wp-content/uploads/2017/03/drinks-shooters.jpg"); }
+
+#mobile-neat {
+  background-image: url("/wp-content/uploads/2017/03/drinks-neat.jpg"); }
+
+@media all and (max-width: 991px) {
+  #recipes-back-to-top {
+    margin-top: 120%; } }
 
 .contact-form-container {
   width: 80%;
@@ -6532,7 +6669,7 @@ body {
     width: 49%;
     background: transparent;
     border: 1px solid #7f7f7f;
-    height: 3em;
+    height: 2.5em;
     font-size: 1em;
     font-family: "Barley Aged", "Sans Serif";
     color: #fff;
@@ -6563,11 +6700,11 @@ body {
   .wpcf7 #cmessage {
     resize: none;
     width: 100%;
-    height: 10em;
+    height: 7em;
     padding-top: 10px; }
     @media all and (max-width: 320px) {
       .wpcf7 #cmessage {
-        height: 6em; } }
+        height: 5em; } }
   .wpcf7 #form-submit {
     margin-top: 15px;
     width: 50%; }
@@ -6578,9 +6715,110 @@ body {
 .absolute-container {
   position: absolute;
   z-index: 10; }
+  @media screen and (max-width: 991px) {
+    .absolute-container {
+      position: relative; } }
 
 div.wpcf7-response-output {
   color: #fff; }
+
+/*oldlucky13*/
+.contact-form-container {
+  width: 80%;
+  margin: 0 auto;
+  height: 100vh; }
+  @media screen and (max-width: 991px) {
+    .contact-form-container {
+      width: 100%; } }
+
+.wpcf7 {
+  width: 70%;
+  margin: 0 auto !important;
+  text-align: center;
+  -webkit-transform: translate(-50%, 10%);
+  -moz-transform: translate(-50%, 10%);
+  -ms-transform: translate(-50%, 10%);
+  -o-transform: translate(-50%, 10%);
+  transform: translate(-50%, 10%);
+  top: 50%;
+  left: 50%;
+  position: absolute; }
+  @media screen and (max-width: 991px) {
+    .wpcf7 {
+      width: 70%;
+      -webkit-transform: translate(-50%, 10%);
+      -moz-transform: translate(-50%, 10%);
+      -ms-transform: translate(-50%, 10%);
+      -o-transform: translate(-50%, 10%);
+      transform: translate(-50%, 10%); } }
+
+.absolute-container img {
+  display: none; }
+  @media screen and (max-width: 991px) {
+    .absolute-container img {
+      width: 55%;
+      display: block;
+      margin: 40px auto; } }
+
+.social-container {
+  width: 80%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 15px; }
+  .social-container ul {
+    margin: 0;
+    padding: 0;
+    width: 70%;
+    text-align: center; }
+  .social-container li {
+    list-style-type: none;
+    display: inline-block;
+    width: 15%;
+    text-align: center; }
+  .social-container img {
+    width: 45px; }
+  @media screen and (max-width: 991px) {
+    .social-container {
+      display: none; } }
+
+.social-container-mobile {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 25.5%; }
+  .social-container-mobile ul {
+    margin: 0;
+    padding: 0;
+    width: 70%;
+    text-align: center; }
+  .social-container-mobile li {
+    list-style-type: none;
+    display: inline-block;
+    width: 25%;
+    text-align: center; }
+  .social-container-mobile img {
+    width: 45px; }
+  @media screen and (min-width: 991px) {
+    .social-container-mobile {
+      display: none; } }
 
 #ageGate {
   background-color: #000; }
@@ -6838,11 +7076,69 @@ div.wpcf7-response-output {
 #btn-contactfake {
   display: none !important; }
 
+#btn-homefake {
+  display: none !important; }
+
 @media all and (max-width: 991px) {
   .mobile-main-page-overlay {
     height: 100%;
     width: 100%;
     position: absolute;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3); } }
+
+.s-back-mobile {
+  display: none; }
+  @media all and (max-width: 991px) {
+    .s-back-mobile {
+      width: 110%;
+      background-color: #86754D;
+      height: 0px;
+      position: fixed;
+      top: 0px;
+      z-index: 999;
+      cursor: pointer; } }
+
+.last-mobile-s-text {
+  width: 75%;
+  padding-top: 0px; }
+
+@media all and (max-width: 991px) {
+  #cowboy-line {
+    height: 7%; } }
+
+@media all and (max-width: 991px) {
+  .ajaxSection .plus-button {
+    left: calc(50% - 2px);
+    padding: 2px 2px; } }
+@media all and (min-width: 992px) {
+  .ajaxSection .plus-button {
+    display: none !important; } }
+
+#btn-boots {
+  bottom: 18%; }
+
+.plus-button img {
+  width: 55px;
+  height: 55px; }
+
+.plus-button {
+  background: transparent;
+  border: transparent;
+  left: 50%;
+  -webkit-transform: translateX(-47%);
+  -moz-transform: translateX(-47%);
+  -ms-transform: translateX(-47%);
+  -o-transform: translateX(-47%);
+  transform: translateX(-47%); }
+
+#mobile-modal {
+  border-style: solid;
+  border-width: 50px 40px 46px;
+  -moz-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
+  -webkit-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
+  -o-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
+  border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 fill repeat;
+  z-index: 800;
+  background-color: rgba(0, 0, 0, 0.7); }
 
 /*# sourceMappingURL=style.css.map */

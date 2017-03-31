@@ -2,6 +2,9 @@
   display: flex;
   width: 90%;
   margin: 0 auto;
+  @media all and (max-width: 991px) {
+    display: none;
+  }
 }
 
 .drink-half {
@@ -23,4 +26,39 @@
 
 #first-recipe {
   margin-top: 15%;
+}
+
+#mobile-manhattan {
+  background-image: url("/wp-content/uploads/2017/03/home-drinks-manhattan.jpg");
+}
+
+#mobile-cola {
+  background-image: url("/wp-content/uploads/2017/03/drinks-whiskeycola.jpg");
+}
+
+#mobile-oldfashioned {
+  background-image: url("/wp-content/uploads/2017/03/drinks-oldfashioned.jpg");
+}
+
+#mobile-cowboyjulep {
+  background-image: url("/wp-content/uploads/2017/03/drinks-cowboy.jpg");
+}
+
+#mobile-ginger {
+  background-image: url("/wp-content/uploads/2017/03/drinks-whiskeyginger.jpg");
+}
+
+#mobile-honeycinnamon {
+  background-image: url("/wp-content/uploads/2017/03/drinks-shooters.jpg");
+}
+
+#mobile-neat {
+  background-image: url("/wp-content/uploads/2017/03/drinks-neat.jpg");
+}
+
+#recipes-back-to-top {
+  @media all and (max-width: 991px) {
+    margin-top: 120%;
+  }
+
 }
