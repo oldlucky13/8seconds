@@ -437,6 +437,7 @@ aboutAreaTlMobile.to($('#s-about-mobile-nav'), .2, {display: "none"}, 0);
 aboutAreaTlMobile.to($('.button_container'), .2, {display: "none"}, 0);
 aboutAreaTlMobile.to($('#about-btn-bk-mobile'), .2, {display: "block"}, 0);
 aboutAreaTlMobile.to($('#about-btn-bk-mobile'), 1, {ease: Power4.easeInOut, height: "62px"}, 1);
+aboutAreaTlMobile.to($('.mobile-back-arrow'), 1, {ease: Power4.easeInOut, opacity: 1}, 2);
 
 var recipesAreaTl = new TimelineMax({paused: true});
 recipesAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("recipes")}, 0);
@@ -459,6 +460,7 @@ recipesAreaTlMobile.to($('.button_container'), .2, {display: "none"}, 0);
 recipesAreaTlMobile.to($('#recipes-btn-bk-mobile'), .2, {display: "block"}, 0);
 recipesAreaTlMobile.to($('.story-plus'), .2, {display: "none"}, 0);
 recipesAreaTlMobile.to($('#recipes-btn-bk-mobile'), 1, {ease: Power4.easeInOut, height: "62px"}, 1);
+recipesAreaTlMobile.to($('.mobile-back-arrow'), 1, {ease: Power4.easeInOut, opacity: 1}, 2);
 
 var ajaxAboutTl = new TimelineMax({paused: true});
 ajaxAboutTl.to($ajaxAboutSection, 1.7, {ease: Power4.easeInOut, right: "-50%"}, 0);
@@ -570,6 +572,7 @@ $('#recipes-btn-fwd-mobile').click(function () {
   recipesAreaTlMobile.play();
   triggerSection("recipes");
   hammertime.destroy();
+  // var hammertime = new Hammer(mainPageContainerHammer);
 })
 
 $('#recipes-btn-bk-mobile').click(function () {

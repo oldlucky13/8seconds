@@ -146,5 +146,16 @@
   h3 {
     font-family: $baraged;
     color: $font-color;
+    font-size: 1.3em;
   }
+}
+
+.mobile-back-arrow {
+  vertical-align: middle;
+  width: 30px !important;
+  position: absolute !important;
+  // left: 50% !important;
+  left: calc(50% - 26px) !important;
+  top: 50% !important;
+  opacity: 0;
 }
