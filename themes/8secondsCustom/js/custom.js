@@ -697,6 +697,18 @@ function triggerSection(section) {
   }
 }
 
+$('#story-down').click(function () {
+  var matadorTag = (-($('#story-down').offset().top / 2));
+  TweenMax.to($('.ajaxAboutSection'), 1.5, {scrollTop: $(this).offset().top, ease: Power4.easeInOut});
+  aboutBreadcrumbTwo.reverse();
+  aboutBreadcrumbOne.play();
+  TweenMax.to($matador, 1, {opacity: 1, ease: Power1.easeOut});
+  TweenMax.to($bullrider, 1, {opacity: 0, ease: Power1.easeOut});
+
+  // , onComplete: handleOtherScrolling.bind($ajaxAboutSection, matadorTag, 2)
+  // var matadorTag = (-(aboutOne / 2));
+  // handleOtherScrolling($ajaxAboutSection, matadorTag, 2);
+})
 /***************
 Other scrolling
 ***************/
@@ -1177,7 +1189,7 @@ $('.plus-button').on('click', function(){
 			}
 
 
-			
+
 
 		$('#mobile-modal').modal({
 			escapeClose: true,      // Allows the user to close the modal by pressing `ESC`
