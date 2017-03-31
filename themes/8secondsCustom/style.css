@@ -6037,7 +6037,7 @@ body {
   width: 50%; }
   @media all and (max-width: 991px) {
     .s-text {
-      padding-top: 60%; } }
+      padding-top: 16%; } }
   @media all and (max-width: 425px) {
     .s-text {
       padding-top: 26%; } }
@@ -6048,7 +6048,7 @@ body {
 
 @media all and (max-width: 991px) {
   #first-story-s-text-mobile {
-    padding-top: 60%; } }
+    padding-top: 43%; } }
 
 .s-header {
   font-family: "Wheat Aged", "Sans Serif";
@@ -7073,7 +7073,7 @@ div.wpcf7-response-output {
     top: 25%;
     left: 29.5%;
     font-size: 2em; }
-  @media all and (max-width: 425px) {
+  @media all and (max-width: 991px) {
     .plus-button {
       bottom: 12%;
       left: calc(50% - 27.5px); } }
@@ -7193,9 +7193,12 @@ div.wpcf7-response-output {
 @media screen and (min-aspect-ratio: 143 / 100) {
   .main-page-txt .main-text-content {
     width: 75%; } }
-@media all and (max-width: 1098px) {
+@media all and (min-width: 992px) {
   .empty-button {
     width: 40%; } }
+@media all and (min-width: 1098px) {
+  .empty-button {
+    width: 33.33%; } }
 @media screen and (max-aspect-ratio: 150 / 100) {
   .main-page-txt .main-text-content {
     margin-top: 70%; } }
@@ -7243,5 +7246,8 @@ div.wpcf7-response-output {
   .wpcf7 {
     top: 30%;
     z-index: 10; } }
+@media all and (min-width: 992px) and (max-height: 502px) {
+  .social-container {
+    visibility: hidden; } }
 
 /*# sourceMappingURL=style.css.map */

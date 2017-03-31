@@ -891,7 +891,7 @@ Resize
 
 function checkSize(){
 
-  console.log($(window).width() / $(window).height());
+  // console.log($(window).width() / $(window).height());
 
 	sortMenu();
 
