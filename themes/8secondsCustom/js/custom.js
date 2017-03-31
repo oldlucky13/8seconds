@@ -417,7 +417,7 @@ function revealTitles(titles) {
 Ajax loading
 ***************/
 var aboutAreaTl = new TimelineMax({paused: true});
-console.log($mainPageAll);
+// console.log($mainPageAll);
 // console.log($mainPageAll[0, 2]);
 aboutAreaTl.to($($mainPageAll), 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("about")}, 0);
 // wip: weird title sliding, should just be able to include under $mainPageAll
