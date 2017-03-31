@@ -1223,15 +1223,7 @@ $('.plus-button').on('click', function(){
 				});
 			}
 
-		$('#mobile-modal').modal({
-			escapeClose: true,      // Allows the user to close the modal by pressing `ESC`
-  			clickClose: true,       // Allows the user to close the modal by clicking the overlay
-  			showClose: false,
-  			fadeDuration: 450,
-  			 fadeDelay: .8
-		});
-
-
+	
 	}else{
 		//$('.mobile-nav').css('z-index','20');
 
