@@ -5667,6 +5667,9 @@ body {
 #six-img {
   background-image: url("/wp-content/uploads/2017/03/home-contact.jpg"); }
 
+#zero-img {
+  background-image: url("/wp-content/uploads/2017/03/landingpagev1.jpg"); }
+
 .main-page-slide {
   height: 100vh;
   position: absolute; }
@@ -5786,7 +5789,8 @@ body {
   -moz-transform: translateY(0%);
   -ms-transform: translateY(0%);
   -o-transform: translateY(0%);
-  transform: translateY(0%); }
+  transform: translateY(0%);
+  opacity: 0; }
 
 #breadcrumb-group {
   position: absolute;
@@ -5819,31 +5823,41 @@ body {
   .desk-btn {
     display: none; } }
 
-@media screen and (min-width: 992px) {
-  .mobile-btn {
-    display: none; } }
+.mobile-btn {
+  display: block; }
+  @media screen and (min-width: 992px) {
+    .mobile-btn {
+      display: none; } }
 
 @media all and (max-width: 991px) {
-  #btn-recipes, #btn-about {
+  #btn-about, #btn-recipes {
+    display: none !important; } }
+
+@media all and (min-width: 992px) {
+  #about-btn-fwd-mobile, #recipes-btn-fwd-mobile {
+    display: none !important; } }
+
+@media all and (max-width: 991px) {
+  #recipes-btn-fwd-mobile, #about-btn-fwd-mobile {
     top: inherit;
     left: inherit;
     bottom: 4%;
     right: 8%;
     padding: 25px 25px;
     border-radius: 40px; }
-    #btn-recipes i, #btn-about i {
+    #recipes-btn-fwd-mobile i, #about-btn-fwd-mobile i {
       position: absolute;
       top: 28%;
       font-size: 1.8em; }
-    #btn-recipes .fwd i, #btn-about .fwd i {
+    #recipes-btn-fwd-mobile .fwd i, #about-btn-fwd-mobile .fwd i {
       left: 35%; }
-    #btn-recipes .bk i, #btn-about .bk i {
+    #recipes-btn-fwd-mobile .bk i, #about-btn-fwd-mobile .bk i {
       left: 37.8%; } }
 @media all and (max-width: 425px) {
-  #btn-recipes, #btn-about {
+  #recipes-btn-fwd-mobile, #about-btn-fwd-mobile {
     bottom: 12%; } }
 @media all and (max-width: 320px) {
-  #btn-recipes, #btn-about {
+  #recipes-btn-fwd-mobile, #about-btn-fwd-mobile {
     bottom: 14%; } }
 
 .slide-button {
@@ -5970,7 +5984,13 @@ body {
 
 .s-section {
   height: 80vh;
-  position: relative; }
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+  @media all and (max-width: 991px) {
+    .s-section {
+      height: 100vh; } }
 
 .s-title {
   height: 300px;
@@ -5978,6 +5998,9 @@ body {
   display: block;
   margin: 0 auto;
   margin-top: calc(14% - 82px); }
+  @media all and (max-width: 991px) {
+    .s-title {
+      display: none; } }
 
 .s-tagline {
   font-family: "Barley Aged", "Sans Serif";
@@ -6002,20 +6025,47 @@ body {
 .vertical-line {
   width: 50%;
   border-right: 1px solid #86754D; }
+  @media all and (max-width: 991px) {
+    .vertical-line {
+      border-right: 3px solid #86754D; } }
 
 .s-text {
   margin: 0 auto;
   color: white;
   text-align: center;
   width: 50%; }
+  @media all and (max-width: 991px) {
+    .s-text {
+      padding-top: 60%; } }
+  @media all and (max-width: 425px) {
+    .s-text {
+      padding-top: 26%; } }
+
+@media all and (max-width: 991px) {
+  .recipes-s-text {
+    display: none; } }
+
+@media all and (max-width: 991px) {
+  #first-story-s-text-mobile {
+    padding-top: 60%; } }
 
 .s-header {
   font-family: "Wheat Aged", "Sans Serif";
   font-size: 3em; }
+  @media all and (max-width: 991px) {
+    .s-header {
+      display: none; } }
 
 .s-paragraph {
   font-family: "Boton", "Sans Serif";
   font-size: 1em; }
+  @media all and (max-width: 991px) {
+    .s-paragraph {
+      display: none; } }
+
+@media all and (max-width: 991px) {
+  #first-s-story {
+    display: none; } }
 
 .v0 {
   height: 10%; }
@@ -6033,12 +6083,24 @@ body {
 
 .s-text-button {
   width: 12%; }
+  @media all and (max-width: 991px) {
+    .s-text-button {
+      width: 41%; } }
 
 #s-text-button-wide {
   width: 25%; }
+  @media all and (max-width: 991px) {
+    #s-text-button-wide {
+      width: 100%; } }
 
 .back-to-top {
   padding: 0px; }
+  @media all and (max-width: 991px) {
+    .back-to-top {
+      width: 50%; } }
+  @media all and (max-width: 425px) {
+    .back-to-top {
+      margin-top: 40px; } }
 
 .first-s-section {
   height: 100vh; }
@@ -6063,6 +6125,44 @@ div.wpcf7-mail-sent-ok {
   position: absolute;
   left: calc(50% - 143.04px);
   bottom: 16%; }
+
+@media all and (max-width: 991px) {
+  .mobile-first-v-line {
+    display: none; } }
+
+@media all and (max-width: 991px) {
+  #matador-section {
+    background-image: url("/wp-content/uploads/2017/03/story-matador.jpg"); } }
+
+@media all and (max-width: 991px) {
+  #bullrider-section {
+    background-image: url("/wp-content/uploads/2017/03/story-bullrider.jpg"); } }
+
+@media all and (max-width: 991px) {
+  #gloves-section {
+    background-image: url("/wp-content/uploads/2017/03/story-gloves.jpg"); } }
+
+@media all and (max-width: 991px) {
+  #vintagebull-section {
+    background-image: url("/wp-content/uploads/2017/03/story-vintagebull.jpg"); } }
+
+@media all and (max-width: 991px) {
+  #boots-section {
+    background-image: url("/wp-content/uploads/2017/03/home-story-boots.jpg");
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6); } }
+
+@media all and (max-width: 991px) {
+  .last-mobile-paragraph {
+    display: block; } }
+
+@media all and (max-width: 991px) {
+  #last-story-title {
+    display: block; } }
+@media all and (max-width: 425px) {
+  #last-story-title {
+    width: 300px;
+    height: 180px;
+    margin-top: 0%; } }
 
 .button_container {
   position: absolute;
@@ -6475,6 +6575,9 @@ body {
   display: flex;
   width: 90%;
   margin: 0 auto; }
+  @media all and (max-width: 991px) {
+    .drink-guide {
+      display: none; } }
 
 .drink-half {
   flex: 1;
@@ -6492,6 +6595,31 @@ body {
 
 #first-recipe {
   margin-top: 15%; }
+
+#mobile-manhattan {
+  background-image: url("/wp-content/uploads/2017/03/home-drinks-manhattan.jpg"); }
+
+#mobile-cola {
+  background-image: url("/wp-content/uploads/2017/03/drinks-whiskeycola.jpg"); }
+
+#mobile-oldfashioned {
+  background-image: url("/wp-content/uploads/2017/03/drinks-oldfashioned.jpg"); }
+
+#mobile-cowboyjulep {
+  background-image: url("/wp-content/uploads/2017/03/drinks-cowboy.jpg"); }
+
+#mobile-ginger {
+  background-image: url("/wp-content/uploads/2017/03/drinks-whiskeyginger.jpg"); }
+
+#mobile-honeycinnamon {
+  background-image: url("/wp-content/uploads/2017/03/drinks-shooters.jpg"); }
+
+#mobile-neat {
+  background-image: url("/wp-content/uploads/2017/03/drinks-neat.jpg"); }
+
+@media all and (max-width: 991px) {
+  #recipes-back-to-top {
+    margin-top: 120%; } }
 
 .contact-form-container {
   width: 80%;
@@ -6838,11 +6966,34 @@ div.wpcf7-response-output {
 #btn-contactfake {
   display: none !important; }
 
+#btn-homefake {
+  display: none !important; }
+
 @media all and (max-width: 991px) {
   .mobile-main-page-overlay {
     height: 100%;
     width: 100%;
     position: absolute;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3); } }
+
+.s-back-mobile {
+  display: none; }
+  @media all and (max-width: 991px) {
+    .s-back-mobile {
+      width: 110%;
+      background-color: #86754D;
+      height: 0px;
+      position: fixed;
+      top: 0px;
+      z-index: 999;
+      cursor: pointer; } }
+
+.last-mobile-s-text {
+  width: 75%;
+  padding-top: 20px; }
+
+@media all and (max-width: 991px) {
+  #cowboy-line {
+    height: 7%; } }
 
 /*# sourceMappingURL=style.css.map */
