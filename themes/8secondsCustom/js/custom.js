@@ -417,14 +417,18 @@ function revealTitles(titles) {
 Ajax loading
 ***************/
 var aboutAreaTl = new TimelineMax({paused: true});
-aboutAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("about")}, 0);
+// console.log($mainPageAll);
+// console.log($mainPageAll[0, 2]);
+aboutAreaTl.to($($mainPageAll), 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("about")}, 0);
 // wip: weird title sliding, should just be able to include under $mainPageAll
-aboutAreaTl.to($allTitles, 1.75, {ease: Power4.easeInOut, xPercent: -200}, 0);
+// aboutAreaTl.to($allTitles, 1.75, {ease: Power4.easeInOut, xPercent: -200}, 0);
 aboutAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
 aboutAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
 aboutAreaTl.to($aboutBreadcrumbs, .1, {display: "block"}, 0);
 aboutAreaTl.to($aboutBreadcrumbs, 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 aboutAreaTl.to($btnAbout, 1, {ease: Power4.easeInOut, left: "4%"}, 0);
+
+
 // aboutAreaTl.to($ajaxAboutSection, 1.75, {ease: Power4.easeOut, left: "50%"}, 1);
 // aboutAreaTl.to($ajaxAboutSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
 // aboutAreaTl.to($ajaxAboutSection[0], .1, {ease: Power4.easeOut, scrollTo: 0}, 0);
@@ -436,13 +440,14 @@ aboutAreaTlMobile.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLe
 aboutAreaTlMobile.to($('#s-about-mobile-nav'), .2, {display: "none"}, 0);
 aboutAreaTlMobile.to($('.button_container'), .2, {display: "none"}, 0);
 aboutAreaTlMobile.to($('#about-btn-bk-mobile'), .2, {display: "block"}, 0);
+aboutAreaTlMobile.to($('.mobile-main-title'), 1, {ease: Power4.easeInOut, opacity: 0}, 0);
 aboutAreaTlMobile.to($('#about-btn-bk-mobile'), 1, {ease: Power4.easeInOut, height: "62px"}, 1);
 aboutAreaTlMobile.to($('.mobile-back-arrow'), 1, {ease: Power4.easeInOut, opacity: 1}, 2);
 
 var recipesAreaTl = new TimelineMax({paused: true});
 recipesAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("recipes")}, 0);
 // wip: should just be able to include under $mainPageAll
-recipesAreaTl.to($allTitles, 1.75, {ease: Power4.easeInOut, xPercent: -200}, 0);
+// recipesAreaTl.to($allTitles, 1.75, {ease: Power4.easeInOut, xPercent: -200}, 0);
 recipesAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
 recipesAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
 recipesAreaTl.to($recipesBreadcrumbs, .1, {display: "block"}, 0);
@@ -459,6 +464,7 @@ recipesAreaTlMobile.to($('#s-recipes-mobile-nav'), .2, {display: "none"}, 0);
 recipesAreaTlMobile.to($('.button_container'), .2, {display: "none"}, 0);
 recipesAreaTlMobile.to($('#recipes-btn-bk-mobile'), .2, {display: "block"}, 0);
 recipesAreaTlMobile.to($('.story-plus'), .2, {display: "none"}, 0);
+recipesAreaTlMobile.to($('.mobile-main-title'), 1, {ease: Power4.easeInOut, opacity: 0}, 0);
 recipesAreaTlMobile.to($('#recipes-btn-bk-mobile'), 1, {ease: Power4.easeInOut, height: "62px"}, 1);
 recipesAreaTlMobile.to($('.mobile-back-arrow'), 1, {ease: Power4.easeInOut, opacity: 1}, 2);
 
@@ -591,6 +597,7 @@ $aboutBtn.click(function () {
 })
 
 $('#recipes-btn-fwd-mobile').click(function () {
+  // debugger;
   recipesAreaTlMobile.play();
   triggerSection("recipes");
   hammertime.destroy();
@@ -1155,7 +1162,7 @@ $('.plus-button').on('click', function(){
 
 		$(this).toggleClass('is-open is-closed')
 
-	
+
 
 	if($(this).hasClass('is-open')){
 		$(this).find('.btn-image').attr({src:'/wp-content/uploads/2017/03/module-minus.svg'}).addClass('close-modal-btn'); // find the button, make it minus, and add close class
@@ -1196,7 +1203,7 @@ $body.mousewheel(function(event) {
 		$(this).find('.close-modal-btn').attr({src:'/wp-content/uploads/2017/03/module-plus.svg'}).removeClass('close-modal-btn');// find the minus btn image, switch it to plus and remove close btn class
 		$('#mobile-modal').empty();
 	}
-	
+
 });
 
 

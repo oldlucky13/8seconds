@@ -152,6 +152,12 @@
     color: $font-color;
     font-size: 1.3em;
   }
+
+  @media all and (max-width: 425px) {
+    bottom: 75px;
+    left: calc(50% - 165px);
+  }
+
 }
 
 .mobile-back-arrow {

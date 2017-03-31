@@ -5645,7 +5645,7 @@ body {
   background-image: url("/wp-content/uploads/2017/03/home-bottle-premium.jpg"); }
 
 #two-img {
-  background-image: url("/wp-content/uploads/2017/03/home-bottle-black.jpg"); }
+  background-image: url("/wp-content/uploads/2017/03/finalblackv2.jpg"); }
 
 #three-img {
   background-image: url("/wp-content/uploads/2017/03/home-bottle-cinnamon.jpg"); }
@@ -6104,7 +6104,7 @@ body {
       margin-top: 50%; } }
   @media screen and (device-aspect-ratio: 40 / 71) {
     .back-to-top {
-      margin-top: 62px; } }
+      margin-top: 78px; } }
   @media screen and (device-aspect-ratio: 375 / 667) {
     .back-to-top {
       margin-top: 45%; } }
@@ -7157,6 +7157,10 @@ div.wpcf7-response-output {
     font-family: "Barley Aged", "Sans Serif";
     color: #EAE6DE;
     font-size: 1.3em; }
+  @media all and (max-width: 425px) {
+    #landing-text {
+      bottom: 75px;
+      left: calc(50% - 165px); } }
 
 .mobile-back-arrow {
   vertical-align: middle;
@@ -7248,6 +7252,9 @@ div.wpcf7-response-output {
 @media screen and (min-aspect-ratio: 185 / 100) {
   .main-page-txt .main-text-content {
     margin-top: 48%; } }
+@media screen and (min-aspect-ratio: 188 / 100) {
+  .icon-section {
+    width: 30%; } }
 @media all and (max-height: 700px) {
   #contact-desk-title {
     visibility: hidden !important; }
@@ -7258,5 +7265,9 @@ div.wpcf7-response-output {
 @media all and (min-width: 992px) and (max-height: 502px) {
   .social-container {
     visibility: hidden; } }
+.main-page-slide-group {
+  position: relative;
+  height: 100%;
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
