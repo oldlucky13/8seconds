@@ -1178,7 +1178,7 @@ $('.plus-button').on('click', function(){
 	if($(this).hasClass('is-open')){
 		$(this).find('.btn-image').attr({src:'/wp-content/uploads/2017/03/module-minus.svg'}).addClass('close-modal-btn'); // find the button, make it minus, and add close class
 
-		
+
 
 			if($(this).hasClass('whiskey-modal')){
 				//$('#mobile-modal').empty();
@@ -1223,13 +1223,6 @@ $('.plus-button').on('click', function(){
 				});
 			}
 
-		$('#mobile-modal').modal({
-			escapeClose: true,      // Allows the user to close the modal by pressing `ESC`
-  			clickClose: true,       // Allows the user to close the modal by clicking the overlay
-  			showClose: false,
-  			fadeDuration: 450,
-  			 fadeDelay: .8
-		});
 
 
 	}else{
