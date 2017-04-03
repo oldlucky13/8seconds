@@ -233,3 +233,15 @@
 .s-back-mobile {
   backface-visibility: hidden;
 }
+
+.toggle-desktop {
+  @media all and (max-width: 991px) {
+    display: none;
+  }
+}
+
+.toggle-mobile {
+  @media all and (min-width: 992px) {
+    display: none;
+  }
+}
