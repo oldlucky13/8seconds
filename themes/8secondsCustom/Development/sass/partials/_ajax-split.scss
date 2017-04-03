@@ -5,6 +5,7 @@
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  -ms-overflow-style: auto;
   background: $main-texture;
   background-position: center center;
   background-repeat: no-repeat;

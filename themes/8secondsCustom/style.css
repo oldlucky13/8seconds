@@ -5939,6 +5939,7 @@ body {
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  -ms-overflow-style: auto;
   background: url("/wp-content/uploads/2017/03/home-background-texture-grey.jpg");
   background-position: center center;
   background-repeat: no-repeat;
