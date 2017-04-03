@@ -7211,6 +7211,14 @@ div.wpcf7-response-output {
 .s-back-mobile {
   backface-visibility: hidden; }
 
+@media all and (max-width: 991px) {
+  .toggle-desktop {
+    display: none; } }
+
+@media all and (min-width: 992px) {
+  .toggle-mobile {
+    display: none; } }
+
 .plus-button {
   background: transparent;
   border: transparent;

@@ -29,7 +29,8 @@ get_header();
 
           </div>
           <div id="landing-text">
-            <h3>EXPLORE THE SITE</h3>
+            <h3 class="toggle-desktop">EXPLORE THE SITE</h3>
+            <h3 class="toggle-mobile">SWIPE TO EXPLORE THE SITE</h3>
             <button id="landing-button" type="button" class="s-down-btn btn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
           </div>
           <button id="btn-homefake" type="button" class="fake-btn p-btn plus-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
@@ -268,7 +269,7 @@ get_header();
             <!-- <button id="btn-boots" type="button" class="plus-button about-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button> -->
             <button type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
           </div> <!-- s-section -->
-          
+
           <!-- <button id="about-btn-bk-mobile" type="button" class="p-btn btn btn-primary mobile-btn">Go Back</button> -->
         </div>
          <div id="mobile-modal-story" class="modal" data-backdrop="false" >
