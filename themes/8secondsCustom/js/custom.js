@@ -1325,4 +1325,21 @@ $('body').on('touchmove', selScrollable, function(e) {
 });
 
 
+/***************
+animated chevrons - mobile
+***************/
+
+// TweenMax method :
+var chevys = $('.swipe-chevron-container').children(); 
+
+
+// var tl = new TimelineMax({ repeat: -1 });
+
+
+// tl.staggerTo(chevys,1,{opacity:1,yoyo:true,ease: Power4.easeOut},.75); 
+
+TweenMax.staggerFromTo(chevys,1.5,{opacity:0, scale:0},{opacity:1, scale:1.05, repeat: -1, repeatDelay: 0,ease: Power1.easeOut, yoyo:true}, .5)
+
+
+
 });// jquery document ready

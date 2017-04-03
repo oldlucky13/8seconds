@@ -6798,7 +6798,8 @@ div.wpcf7-response-output {
     width: 15%;
     text-align: center; }
   .social-container img {
-    width: 45px; }
+    width: 45px;
+    height: 45px; }
   @media screen and (max-width: 991px) {
     .social-container {
       display: none; } }
@@ -7178,6 +7179,9 @@ div.wpcf7-response-output {
     @media screen and (max-width: 480px) {
       #landing-text button {
         bottom: 12px; } }
+    @media screen and (max-width: 992px) {
+      #landing-text button {
+        display: none; } }
     #landing-text button:hover {
       color: #fff !important; }
   #landing-text h3 {
@@ -7218,6 +7222,20 @@ div.wpcf7-response-output {
 @media all and (min-width: 992px) {
   .toggle-mobile {
     display: none; } }
+
+.swipe-chevron-container {
+  text-align: center;
+  padding: 0; }
+  @media all and (min-width: 992px) {
+    .swipe-chevron-container {
+      display: none; } }
+  .swipe-chevron-container li {
+    list-style-type: none;
+    margin-bottom: -8px;
+    opacity: 0; }
+  .swipe-chevron-container img {
+    width: 20px;
+    height: 20px; }
 
 .plus-button {
   background: transparent;
