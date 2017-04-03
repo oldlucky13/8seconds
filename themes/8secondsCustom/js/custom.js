@@ -167,8 +167,9 @@ jQuery(document).ready(function( $ ) {
   /***************
   Hammer
   ***************/
-
   var mainPageContainerHammer = document.getElementById('the-container');
+  var ajaxAboutSectionHammer = document.getElementById('ajax-about');
+  var ajaxRecipesSectionHammer = document.getElementById('ajax-recipes');
   var hammertime = new Hammer(mainPageContainerHammer);
   hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
   hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
@@ -403,7 +404,6 @@ function previousSlide(idx, callback) {
 // }
 
 function jumpToSlide(oldIdx, newIdx) {
-  console.log("jumping");
   jumpScrollUnlocked = false;
   if (oldIdx < newIdx) {
     var nextTitles = $allTitles.find(".h2-child").slice(oldIdx + 1, newIdx);
@@ -453,7 +453,6 @@ function unlockMainScroll() {
 
 function unlockJumpScroll() {
   jumpScrollUnlocked = true;
-  console.log("unlocked jump");
 }
 
 $('.breadcrumb').click(function(e) {
@@ -566,21 +565,23 @@ function handleRecipesTrigger() {
     recipesFive = $('#recipes-five').offset().top;
     recipesSix = $('#recipes-six').offset().top;
     recipesSeven = $('#recipes-seven').offset().top;
-    // var mc = new Hammer(ajaxRecipesSection);
+    var mc = new Hammer(ajaxRecipesSectionHammer);
+    mc.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+    mc.on('swiperight', function(event) {
+      if ($(window).width() > 991) {
+        handleRecipesTrigger();
+        mc.destroy();
+      } else {
+        recipeBackMobile();
+        mc.destroy();
+      }
+    });
   } else if ($btnRecipes.hasClass("bk")) {
     $recipesImg.css('background-image','url(/wp-content/uploads/2017/03/home-drinks-manhattan.jpg)');
     if ($(window).width() > 991) {
       recipesAreaTl.reverse();
     } else if ($(window).width() <= 991) {
       recipesAreaTlMobile.reverse();
-      // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-      // hammertime.on('swipe', function(event) {
-      //   if (onMainPage) {
-      //     handleMainPageScroll(event.deltaY);
-      //   } else {
-      //     hammertime.destroy();
-      //   }
-      // })
     }
     var hammertime = new Hammer(mainPageContainerHammer);
     hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
@@ -594,7 +595,6 @@ function handleRecipesTrigger() {
     })
     hammertime.on('swipeleft', function(event) {
       if (mainIdx === 4) {
-        console.log("working");
         if ($(window).width() > 991) {
           handleAboutTrigger();
         } else {
@@ -638,6 +638,7 @@ function handleAboutTrigger() {
     } else if ($(window).width() <= 991) {
       aboutAreaTlMobile.play();
     }
+
     triggerSection("about");
     $aboutBtn.removeClass("fwd");
     $aboutBtn.addClass("bk");
@@ -723,14 +724,83 @@ $aboutBtn.click(function () {
 })
 
 $('#recipes-btn-fwd-mobile').click(function () {
-  // debugger;
   recipesAreaTlMobile.play();
   triggerSection("recipes");
   hammertime.destroy();
-  // var hammertime = new Hammer(mainPageContainerHammer);
+  var mc = new Hammer(ajaxRecipesSectionHammer);
+  mc.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+  mc.on('swiperight', function(event) {
+    if ($(window).width() > 991) {
+      handleRecipesTrigger();
+      mc.destroy();
+    } else {
+      recipeBackMobile();
+      mc.destroy();
+    }
+  });
+  // var mc = new Hammer('html');
+  // mc.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+  // mc.on('swipeleft', function(event) {
+  //   if ($(window).width() > 991) {
+  //     handleRecipesTrigger();
+  //     mc.destroy();
+  //   } else {
+  //     recipeBackMobile();
+  //     mc.destroy();
+  //   }
+  // })
 })
 
 $('#recipes-btn-bk-mobile').click(function () {
+  recipeBackMobile();
+  // TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
+  // recipesAreaTlMobile.reverse();
+  // triggerSection("main");
+  // TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+  // var hammertime = new Hammer(mainPageContainerHammer);
+  // hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+  // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+  // hammertime.on('swipeup swipedown', function(event) {
+  //     if (onMainPage) {
+  //     handleMainPageScroll(event.deltaY);
+  //   } else {
+  //     hammertime.destroy();
+  //   }
+  // })
+  // hammertime.on('swipeleft', function(event) {
+  //   if (mainIdx === 4) {
+  //     if ($(window).width() > 991) {
+  //       handleAboutTrigger();
+  //     } else {
+  //       aboutAreaTlMobile.play();
+  //       triggerSection("about");
+  //       hammertime.destroy();
+  //     }
+  //   } else if (mainIdx === 5) {
+  //     if ($(window).width() > 991) {
+  //       handleRecipesTrigger();
+  //     } else {
+  //       recipesAreaTlMobile.play();
+  //       triggerSection("recipes");
+  //       hammertime.destroy();
+  //     }
+  //   }
+  // })
+
+
+  // var hammertime = new Hammer(mainPageContainerHammer);
+  // hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+  // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+  // hammertime.on('swipe', function(event) {
+  //   if (onMainPage) {
+  //     handleMainPageScroll(event.deltaY);
+  //   } else {
+  //     hammertime.destroy();
+  //   }
+  // })
+})
+
+function recipeBackMobile() {
   TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
   recipesAreaTlMobile.reverse();
   triggerSection("main");
@@ -761,20 +831,22 @@ $('#recipes-btn-bk-mobile').click(function () {
         recipesAreaTlMobile.play();
         triggerSection("recipes");
         hammertime.destroy();
+        var mc = new Hammer(ajaxRecipesSectionHammer);
+        mc.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+        mc.on('swiperight', function(event) {
+          if ($(window).width() > 991) {
+            handleRecipesTrigger();
+            mc.destroy();
+          } else {
+            recipeBackMobile();
+            mc.destroy();
+          }
+        });
       }
     }
   })
-  // var hammertime = new Hammer(mainPageContainerHammer);
-  // hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-  // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-  // hammertime.on('swipe', function(event) {
-  //   if (onMainPage) {
-  //     handleMainPageScroll(event.deltaY);
-  //   } else {
-  //     hammertime.destroy();
-  //   }
-  // })
-})
+}
+
 
 // $('#about-btn-fwd-desk').click(function () {
 //   aboutAreaTl.play();
@@ -948,12 +1020,6 @@ recipesBreadcrumbSeven.to($recipesBreadcrumbText[6], 1, {ease: Power4.easeInOut,
 function handleOtherScrolling(section, dY, dF) {
   var scrollPosition = section[0].scrollTop += (-dY * dF);
   if (section === $ajaxAboutSection) {
-    // console.log(testvar = $('#about-two'));
-    // console.log(testvar.offset().top);
-    // console.log("------- scroll position is: ");
-    // console.log(scrollPosition);
-    // console.log("------- window height position is: ");
-    // console.log($(window).height());
     if ((scrollPosition + $(window).height()) > aboutFive) {
       aboutBreadcrumbFour.reverse();
       aboutBreadcrumbFive.play();
@@ -991,8 +1057,6 @@ function handleOtherScrolling(section, dY, dF) {
       // $aboutImg.css('background-image', 'url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
     // }
 
-    // console.log("sP = " + scrollPosition);
-    // console.log("dY = " + dY);
     // if (scrollPosition === 400 && dY > 0) {
     //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
     //   // $aboutImg.fadeOut(function() {

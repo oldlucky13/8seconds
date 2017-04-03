@@ -193,7 +193,7 @@ get_header();
             </li>
           </ol>
         </div> <!-- #four-img -->
-        <div class="ajaxSection ajaxAboutSection no-mobile-col col-md-6">
+        <div id="ajax-about" class="ajaxSection ajaxAboutSection no-mobile-col col-md-6">
 
           <div id="about-btn-bk-mobile" class="s-back-mobile">
             <img class="mobile-back-arrow" src="/wp-content/uploads/2017/03/mobilebackarrow.svg" alt="">
@@ -346,7 +346,7 @@ get_header();
             </li>
           </ol>
         </div> <!-- #five-img -->
-        <div class="ajaxSection ajaxRecipesSection no-mobile-col col-md-6">
+        <div id="ajax-recipes" class="ajaxSection ajaxRecipesSection no-mobile-col col-md-6">
           <div id="recipes-btn-bk-mobile" class="s-back-mobile">
             <img class="mobile-back-arrow" src="/wp-content/uploads/2017/03/mobilebackarrow.svg" alt="">
           </div>
