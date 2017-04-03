@@ -81,6 +81,7 @@
 //custom script
 
 mainScrollUnlocked = false;
+jumpScrollUnlocked = true;
 
 jQuery(window).on('load', function($) { // makes sure the whole site is loaded
   jQuery('#status').fadeOut(); // will first fade out the loading animation
@@ -250,13 +251,16 @@ Main Scroll Logic
 ***************/
 
 function handleMainPageScroll(scrollDir, newMainIdx) {
-  if (mainScrollUnlocked) {
+  if (mainScrollUnlocked && jumpScrollUnlocked) {
     mainScrollUnlocked = false;
     setTimeout(unlockMainScroll, 1200);
     if (mainIdx === 0 && scrollDir > 0) { // can't scroll up at first slide
       return;
     } else if (scrollDir > 0) { // scroll up
       if (newMainIdx >= 0) { // user clicked a breadcrumb
+        // delay(function(){
+        //     jumpToSlide(mainIdx, newMainIdx);
+        // },500);
         jumpToSlide(mainIdx, newMainIdx);
         mainIdx = newMainIdx;
       } else { // user scrolled normally
@@ -268,6 +272,9 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
       return;
     } else { // scroll down
       if (newMainIdx) { // user clicked a breadcrumb
+        // delay(function(){
+        //     jumpToSlide(mainIdx, newMainIdx);
+        // },500);
         jumpToSlide(mainIdx, newMainIdx);
         mainIdx = newMainIdx;
       } else { // user scrolled normally
@@ -352,6 +359,8 @@ function previousSlide(idx, callback) {
 // }
 
 function jumpToSlide(oldIdx, newIdx) {
+  console.log("jumping");
+  jumpScrollUnlocked = false;
   if (oldIdx < newIdx) {
     var nextTitles = $allTitles.find(".h2-child").slice(oldIdx + 1, newIdx);
     nextTitles.css("visibility", "hidden");
@@ -375,6 +384,7 @@ function jumpToSlide(oldIdx, newIdx) {
       nextButton(1, j);
     }
   }
+  setTimeout(unlockJumpScroll, 2000);
 }
 
 function nextTitle(idx, callback) {
@@ -397,6 +407,11 @@ function unlockMainScroll() {
   mainScrollUnlocked = true;
 }
 
+function unlockJumpScroll() {
+  jumpScrollUnlocked = true;
+  console.log("unlocked jump");
+}
+
 $('.breadcrumb').click(function(e) {
   var clickedIdx = $(this).index();
   if (mainIdx < clickedIdx) {
@@ -412,6 +427,19 @@ function revealTitles(titles) {
 
 // console.log($mainPageAll);
 // console.log($mainPageContainer.children());
+
+
+
+/*****************************
+Delay
+*****************************/
+var delay = (function(){
+        var timer = 0;
+        return function(callback, ms){
+            clearTimeout (timer);
+            timer = setTimeout(callback, ms);
+        };
+    })();
 
 /***************
 Ajax loading
@@ -910,7 +938,7 @@ Resize
 
 function checkSize(){
 
-  console.log($(window).width() / $(window).height());
+  // console.log($(window).width() / $(window).height());
 
 	sortMenu();
 
@@ -1045,21 +1073,39 @@ $('.square').click(function() {
     handleRecipesTrigger();
   }
   if (this.id === "premium-square") {
+    // delay(function(){
+    //     jumpToSlide(mainIdx, 1);
+    // },500);
     jumpToSlide(mainIdx, 1);
     mainIdx = 1;
   } else if (this.id === "black-square") {
+    // delay(function(){
+    //     jumpToSlide(mainIdx, 2);
+    // },500);
     jumpToSlide(mainIdx, 2);
     mainIdx = 2;
   } else if (this.id === "honey-cinnamon-square") {
+    // delay(function(){
+    //     jumpToSlide(mainIdx, 3);
+    // },500);
     jumpToSlide(mainIdx, 3);
     mainIdx = 3;
   } else if (this.id === "story-square") {
+    // delay(function(){
+    //     jumpToSlide(mainIdx, 4);
+    // },500);
     jumpToSlide(mainIdx, 4);
     mainIdx = 4;
-  } else if (this.id === "cocktails-square") {
+    } else if (this.id === "cocktails-square") {
+      // delay(function(){
+      //     jumpToSlide(mainIdx, 5);
+      // },500);
     jumpToSlide(mainIdx, 5);
     mainIdx = 5;
   } else if (this.id === "contact-square") {
+    // delay(function(){
+    //     jumpToSlide(mainIdx, 6);
+    // },500);
     jumpToSlide(mainIdx, 6);
     mainIdx = 6;
   }
