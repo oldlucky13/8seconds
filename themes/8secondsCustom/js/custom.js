@@ -168,6 +168,7 @@ jQuery(document).ready(function( $ ) {
   Hammer
   ***************/
   var mainPageContainerHammer = document.getElementById('the-container');
+  // var ajaxAboutSectionHammer = document.getElementById($(html)[0]));
   var ajaxAboutSectionHammer = document.getElementById('ajax-about');
   var ajaxRecipesSectionHammer = document.getElementById('ajax-recipes');
   var hammertime = new Hammer(mainPageContainerHammer);
@@ -652,20 +653,23 @@ function handleAboutTrigger() {
     aboutThree = $('#about-three').offset().top;
     aboutFour = $('#about-four').offset().top;
     aboutFive = $('#about-five').offset().top;
+    var hammerbros = new Hammer(ajaxAboutSectionHammer);
+    hammerbros.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+    hammerbros.on('swiperight', function(event) {
+      if ($(window).width() > 991) {
+        handleAboutTrigger();
+        hammerbros.destroy();
+      } else {
+        aboutBackMobile();
+        hammerbros.destroy();
+      }
+    });
   } else if ($btnAbout.hasClass("bk")) {
     $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
     if ($(window).width() > 991) {
       aboutAreaTl.reverse();
     } else if ($(window).width() <= 991) {
       aboutAreaTlMobile.reverse();
-      // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-      // hammertime.on('swipe', function(event) {
-      //   if (onMainPage) {
-      //     handleMainPageScroll(event.deltaY);
-      //   } else {
-      //     hammertime.destroy();
-      //   }
-      // })
     }
     var hammertime = new Hammer(mainPageContainerHammer);
     hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
@@ -738,17 +742,6 @@ $('#recipes-btn-fwd-mobile').click(function () {
       mc.destroy();
     }
   });
-  // var mc = new Hammer('html');
-  // mc.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
-  // mc.on('swipeleft', function(event) {
-  //   if ($(window).width() > 991) {
-  //     handleRecipesTrigger();
-  //     mc.destroy();
-  //   } else {
-  //     recipeBackMobile();
-  //     mc.destroy();
-  //   }
-  // })
 })
 
 $('#recipes-btn-bk-mobile').click(function () {
@@ -824,6 +817,17 @@ function recipeBackMobile() {
         triggerSection("about");
         hammertime.destroy();
       }
+      var hammerbros = new Hammer(ajaxAboutSectionHammer);
+      hammerbros.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+      hammerbros.on('swiperight', function(event) {
+        if ($(window).width() > 991) {
+          handleAboutTrigger();
+          hammerbros.destroy();
+        } else {
+          aboutBackMobile();
+          hammerbros.destroy();
+        }
+      });
     } else if (mainIdx === 5) {
       if ($(window).width() > 991) {
         handleRecipesTrigger();
@@ -831,18 +835,18 @@ function recipeBackMobile() {
         recipesAreaTlMobile.play();
         triggerSection("recipes");
         hammertime.destroy();
-        var mc = new Hammer(ajaxRecipesSectionHammer);
-        mc.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
-        mc.on('swiperight', function(event) {
-          if ($(window).width() > 991) {
-            handleRecipesTrigger();
-            mc.destroy();
-          } else {
-            recipeBackMobile();
-            mc.destroy();
-          }
-        });
       }
+      var mc = new Hammer(ajaxRecipesSectionHammer);
+      mc.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+      mc.on('swiperight', function(event) {
+        if ($(window).width() > 991) {
+          handleRecipesTrigger();
+          mc.destroy();
+        } else {
+          recipeBackMobile();
+          mc.destroy();
+        }
+      });
     }
   })
 }
@@ -857,6 +861,17 @@ $('#about-btn-fwd-mobile').click(function () {
   aboutAreaTlMobile.play();
   triggerSection("about");
   hammertime.destroy();
+  var hammerbros = new Hammer(ajaxAboutSectionHammer);
+  hammerbros.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+  hammerbros.on('swiperight', function(event) {
+    if ($(window).width() > 991) {
+      handleAboutTrigger();
+      hammerbros.destroy();
+    } else {
+      aboutBackMobile();
+      hammerbros.destroy();
+    }
+  });
 })
 
 // $('#about-btn-bk-desk').click(function () {
@@ -876,11 +891,62 @@ $('#about-btn-fwd-mobile').click(function () {
 // })
 
 $('#about-btn-bk-mobile').click(function () {
+  aboutBackMobile();
   // $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
   // $aboutImg.fadeOut(function() {
   //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
   // })
   // .fadeIn();
+
+
+  // TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
+  // aboutAreaTlMobile.reverse();
+  // triggerSection("main");
+  // TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+  // var hammertime = new Hammer(mainPageContainerHammer);
+  // hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+  // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+  // hammertime.on('swipeup swipedown', function(event) {
+  //     if (onMainPage) {
+  //     handleMainPageScroll(event.deltaY);
+  //   } else {
+  //     hammertime.destroy();
+  //   }
+  // })
+  // hammertime.on('swipeleft', function(event) {
+  //   if (mainIdx === 4) {
+  //     if ($(window).width() > 991) {
+  //       handleAboutTrigger();
+  //     } else {
+  //       aboutAreaTlMobile.play();
+  //       triggerSection("about");
+  //       hammertime.destroy();
+  //     }
+  //   } else if (mainIdx === 5) {
+  //     if ($(window).width() > 991) {
+  //       handleRecipesTrigger();
+  //     } else {
+  //       recipesAreaTlMobile.play();
+  //       triggerSection("recipes");
+  //       hammertime.destroy();
+  //     }
+  //   }
+  // })
+
+
+  // var hammertime = new Hammer(mainPageContainerHammer);
+  // hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+  // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+  // hammertime.on('swipe', function(event) {
+  //   if (onMainPage) {
+  //     handleMainPageScroll(event.deltaY);
+  //   } else {
+  //     hammertime.destroy();
+  //   }
+  // })
+})
+
+function aboutBackMobile() {
   TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
   aboutAreaTlMobile.reverse();
   triggerSection("main");
@@ -914,17 +980,7 @@ $('#about-btn-bk-mobile').click(function () {
       }
     }
   })
-  // var hammertime = new Hammer(mainPageContainerHammer);
-  // hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-  // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-  // hammertime.on('swipe', function(event) {
-  //   if (onMainPage) {
-  //     handleMainPageScroll(event.deltaY);
-  //   } else {
-  //     hammertime.destroy();
-  //   }
-  // })
-})
+}
 
 $('#landing-button').click(function() {
   handleMainPageScroll(-50);
