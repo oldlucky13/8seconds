@@ -93,7 +93,7 @@ jQuery(window).on('load', function($) { // makes sure the whole site is loaded
     AgeGateFadeIn.play();
 
     var ageGateVideo = document.getElementById('age-gate-video');
-    ageGateVideo.play();
+    ageGateVideo.play(); // ageGate won't automatically play on chrome unless forced to
   }); // will fade out the white DIV that covers the website.
 })
 
@@ -176,31 +176,6 @@ jQuery(document).ready(function( $ ) {
   var hammertime = new Hammer(mainPageContainerHammer);
   hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
   hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
-  // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-
-  // hammertime.on('swipe', function(event) {
-  //   if (onMainPage) {
-  //     handleMainPageScroll(event.deltaY);
-  //   } else {
-  //     hammertime.destroy();
-  //   }
-  // })
-  // hammertime.on('swipeup', function(event) {
-  //   console.log("swipeup");
-  //   if (onMainPage) {
-  //     handleMainPageScroll(event.deltaY);
-  //   } else {
-  //     hammertime.destroy();
-  //   }
-  // })
-  // hammertime.on('swipedown', function(event) {
-  //   console.log("swipe down!");
-  //   if (onMainPage) {
-  //     handleMainPageScroll(event.deltaY);
-  //   } else {
-  //     hammertime.destroy();
-  //   }
-  // })
   hammertime.on('swipeup swipedown', function(event) {
     if (onMainPage) {
       handleMainPageScroll(event.deltaY);
@@ -228,64 +203,13 @@ jQuery(document).ready(function( $ ) {
     }
   })
 
-  // function handleMobileScroll(section, event) {
-  //   section[0].scrollTop += (-(event.deltaY) * Math.abs(event.velocity));
-  //   console.log(section[0].scrollTop);
-  //   console.log(event);
-  // }
-  // (function(factory) {
-  //     if (typeof define === 'function' && define.amd) {
-  //         define(['jquery', 'hammerjs'], factory);
-  //     } else if (typeof exports === 'object') {
-  //         factory(require('jquery'), require('hammerjs'));
-  //     } else {
-  //         factory(jQuery, Hammer);
-  //     }
-  // }(function($, Hammer) {
-  //     function hammerify(el, options) {
-  //         var $el = $(el);
-  //         if(!$el.data("hammer")) {
-  //             $el.data("hammer", new Hammer($el[0], options));
-  //         }
-  //     }
-  //
-  //     $.fn.hammer = function(options) {
-  //         return this.each(function() {
-  //             hammerify(this, options);
-  //         });
-  //     };
-  //
-  //     // extend the emit method to also trigger jQuery events
-  //     Hammer.Manager.prototype.emit = (function(originalEmit) {
-  //         return function(type, data) {
-  //             originalEmit.call(this, type, data);
-  //             $(this.element).trigger({
-  //                 type: type,
-  //                 gesture: data
-  //             });
-  //         };
-  //     })(Hammer.Manager.prototype.emit);
-  // }));
-
-  // $("html, body").hammer().on("swipedown", function () {
-  //   console.log("swipedown");
-  // });
-  // $("html, body").hammer().on("swipeup", function () {
-  //   console.log("swipeup");
-  // });
-  // $("html, body").hammer().on("swipedown", handleMainPageScroll(-3));
-  // $("html, body").hammer().on("swipeup", handleMainPageScroll(3));
-
-  /***************
-  Mousewheel
-  ***************/
+/***************
+Mousewheel
+***************/
 
   $body.mousewheel(function(event) {
     if (onMainPage) {
       handleMainPageScroll(event.deltaY);
-      // mc.on("scroll", function() {
-      //   console.log("scrolling");
-      // })
     } else if (onAboutPage) {
       handleOtherScrolling($ajaxAboutSection, event.deltaY, event.deltaFactor);
     } else if (onRecipesPage) {
@@ -306,9 +230,6 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
       return;
     } else if (scrollDir > 0) { // scroll up
       if (newMainIdx >= 0) { // user clicked a breadcrumb
-        // delay(function(){
-        //     jumpToSlide(mainIdx, newMainIdx);
-        // },500);
         jumpToSlide(mainIdx, newMainIdx);
         mainIdx = newMainIdx;
       } else { // user scrolled normally
@@ -320,9 +241,6 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
       return;
     } else { // scroll down
       if (newMainIdx) { // user clicked a breadcrumb
-        // delay(function(){
-        //     jumpToSlide(mainIdx, newMainIdx);
-        // },500);
         jumpToSlide(mainIdx, newMainIdx);
         mainIdx = newMainIdx;
       } else { // user scrolled normally
@@ -334,6 +252,10 @@ function handleMainPageScroll(scrollDir, newMainIdx) {
     nextButton(scrollDir, mainIdx);
   }
 }
+
+/***************
+Main Scroll Functions
+***************/
 
 function nextButton(scrollDir, mainIdx) {
   if (scrollDir < 0) {
@@ -366,19 +288,11 @@ function nextButton(scrollDir, mainIdx) {
 function nextSlide(idx, callback) {
   TweenMax.to($allTitles.find(".h2-child").eq(idx - 1), 1.5, {y:"-100%", force3D: true, onComplete: nextTitle(idx, callback)});
   TweenMax.to($hideContainer.eq(idx - 1), .6, {opacity: 0, ease: Power4.easeInOut});
-  $('.main-page-slide-group').children().eq(idx).fadeIn(1200, function() {
-    // if (idx === 1) {
-    //   $('#zero').fadeOut();
-    // }
-  });
+  $('.main-page-slide-group').children().eq(idx).fadeIn(1200);
   TweenMax.to($hideContainer.eq(idx), 1.5, {opacity: 1, ease: Power4.easeIn});
-  // nextButton(1, mainIdx);
 }
 
 function previousSlide(idx, callback) {
-  // if (idx === 0) {
-  //   $('#zero').fadeIn();
-  // }
   if (idx === 0) {
     TweenMax.to($firstHtwo, .6, {opacity: 0, onComplete: nextTitle(idx, callback)});
   } else {
@@ -387,24 +301,8 @@ function previousSlide(idx, callback) {
   TweenMax.to($hideContainer.eq(idx + 1), .6, {opacity: 0, ease: Power4.easeInOut});
   $('.main-page-slide-group').children().eq(idx + 1).fadeOut(1200);
   TweenMax.to($hideContainer.eq(idx), 1.5, {opacity: 1, ease: Power4.easeIn});
-  // nextButton(-1, mainIdx);
 }
 
-// function nextSlide(idx, callback) {
-//   TweenMax.to($allTitles.find(".h2-child").eq(idx - 1), 1, {y:"-100%", force3D: true, onComplete: nextTitle(idx, callback)});
-//   TweenMax.to($hideContainer.eq(idx - 1), 1, {opacity: 0, ease: Power4.easeInOut});
-//   $('.main-page-slide-group').children().eq(idx).fadeIn(1000, function () {
-//     TweenMax.to($hideContainer.eq(idx), 1, {opacity: 1, ease: Power4.easeInOut});
-//   });
-// }
-//
-// function previousSlide(idx, callback) {
-//   TweenMax.to($allTitles.find(".h2-child").eq(idx + 1), 1, {y:"100%", force3D: true, onComplete: nextTitle(idx, callback)});
-//   TweenMax.to($hideContainer.eq(idx + 1), 1, {opacity: 0, ease: Power4.easeInOut});
-//   $('.main-page-slide-group').children().eq(idx + 1).fadeOut(1000, function () {
-//     TweenMax.to($hideContainer.eq(idx), 1, {opacity: 1, ease: Power4.easeInOut});
-//   });
-// }
 
 function jumpToSlide(oldIdx, newIdx) {
   jumpScrollUnlocked = false;
@@ -471,11 +369,6 @@ function revealTitles(titles) {
   titles.css("visibility", "visible");
 }
 
-// console.log($mainPageAll);
-// console.log($mainPageContainer.children());
-
-
-
 /*****************************
 Delay
 *****************************/
@@ -487,25 +380,16 @@ var delay = (function(){
         };
     })();
 
-/***************
-Ajax loading
-***************/
+/******************************
+Secondary Section Slide Tweens
+*******************************/
 var aboutAreaTl = new TimelineMax({paused: true});
-// console.log($mainPageAll);
-// console.log($mainPageAll[0, 2]);
 aboutAreaTl.to($($mainPageAll), 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("about")}, 0);
-// wip: weird title sliding, should just be able to include under $mainPageAll
-// aboutAreaTl.to($allTitles, 1.75, {ease: Power4.easeInOut, xPercent: -200}, 0);
 aboutAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
 aboutAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
 aboutAreaTl.to($aboutBreadcrumbs, .1, {display: "block"}, 0);
 aboutAreaTl.to($aboutBreadcrumbs, 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 aboutAreaTl.to($btnAbout, 1, {ease: Power4.easeInOut, left: "4%"}, 0);
-
-
-// aboutAreaTl.to($ajaxAboutSection, 1.75, {ease: Power4.easeOut, left: "50%"}, 1);
-// aboutAreaTl.to($ajaxAboutSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
-// aboutAreaTl.to($ajaxAboutSection[0], .1, {ease: Power4.easeOut, scrollTo: 0}, 0);
 
 var aboutAreaTlMobile = new TimelineMax({paused: true});
 aboutAreaTlMobile.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -100, onComplete: triggerSection.bind("about")}, 0);
@@ -520,15 +404,11 @@ aboutAreaTlMobile.to($('.mobile-back-arrow'), 1, {ease: Power4.easeInOut, opacit
 
 var recipesAreaTl = new TimelineMax({paused: true});
 recipesAreaTl.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -50, onComplete: triggerSection.bind("recipes")}, 0);
-// wip: should just be able to include under $mainPageAll
-// recipesAreaTl.to($allTitles, 1.75, {ease: Power4.easeInOut, xPercent: -200}, 0);
 recipesAreaTl.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
 recipesAreaTl.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
 recipesAreaTl.to($recipesBreadcrumbs, .1, {display: "block"}, 0);
 recipesAreaTl.to($recipesBreadcrumbs, 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 recipesAreaTl.to($btnRecipes, 1, {ease: Power4.easeInOut, left: "4%"}, 0);
-// recipesAreaTl.to($ajaxRecipesSection, .7, {ease: Power4.easeOut, right: "-50%"}, 0);
-// recipesAreaTl.to($ajaxRecipesSection[0], .1, {ease: Power4.easeOut, scrollTo: 0}, 0);
 
 var recipesAreaTlMobile = new TimelineMax({paused: true});
 recipesAreaTlMobile.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -100, onComplete: triggerSection.bind("recipes")}, 0);
@@ -542,96 +422,69 @@ recipesAreaTlMobile.to($('.mobile-main-title'), 1, {ease: Power4.easeInOut, opac
 recipesAreaTlMobile.to($('#recipes-btn-bk-mobile'), 1, {force3D: true, ease: Power4.easeInOut, height: "62px"}, 1);
 recipesAreaTlMobile.to($('.mobile-back-arrow'), 1, {ease: Power4.easeInOut, opacity: 1}, 2);
 
-var ajaxAboutTl = new TimelineMax({paused: true});
-ajaxAboutTl.to($ajaxAboutSection, 1.7, {ease: Power4.easeInOut, right: "-50%"}, 0);
+/******************************
+About - Main to Secondary Section
+*******************************/
 
-function handleRecipesTrigger() {
-  if ($recipesBtn.hasClass("fwd")) {
+$aboutBtn.click(function () {
+  handleAboutTrigger();
+})
+
+$('#about-btn-bk-mobile').click(function () {
+  aboutBackMobile();
+})
+
+$('#about-btn-fwd-mobile').click(function () {
+  aboutAreaTlMobile.play();
+  triggerSection("about");
+  hammertime.destroy();
+  var hammerbros = new Hammer(ajaxAboutSectionHammer);
+  hammerbros.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+  hammerbros.on('swiperight', function(event) {
     if ($(window).width() > 991) {
-      recipesAreaTl.play();
-    } else if ($(window).width() <= 991) {
-      recipesAreaTlMobile.play();
+      handleAboutTrigger();
+      hammerbros.destroy();
+    } else {
+      aboutBackMobile();
+      hammerbros.destroy();
     }
-    triggerSection("recipes");
-    // wip: all of these below should be in GSAP
-    $recipesBtn.removeClass("fwd");
-    $recipesBtn.addClass("bk");
-    $btnRecipes.children().removeClass("fa-chevron-right");
-    $btnRecipes.children().addClass("fa-chevron-left");
-    $recipesImg.addClass('lateral-img');
-    TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
-    // $recipesSection.addClass('initial-lateral-img');  removed because too choppy, although it does solve padding issue
-    recipesOne = $('#recipes-one').offset().top;
-    recipesTwo = $('#recipes-two').offset().top;
-    recipesThree = $('#recipes-three').offset().top;
-    recipesFour = $('#recipes-four').offset().top;
-    recipesFive = $('#recipes-five').offset().top;
-    recipesSix = $('#recipes-six').offset().top;
-    recipesSeven = $('#recipes-seven').offset().top;
-    var mc = new Hammer(ajaxRecipesSectionHammer);
-    mc.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
-    mc.on('swiperight', function(event) {
+  });
+})
+
+function aboutBackMobile() {
+  TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
+  aboutAreaTlMobile.reverse();
+  triggerSection("main");
+  TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+  var hammertime = new Hammer(mainPageContainerHammer);
+  hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+  hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+  hammertime.on('swipeup swipedown', function(event) {
+      if (onMainPage) {
+      handleMainPageScroll(event.deltaY);
+    } else {
+      hammertime.destroy();
+    }
+  })
+  hammertime.on('swipeleft', function(event) {
+    if (mainIdx === 4) {
       if ($(window).width() > 991) {
-        handleRecipesTrigger();
-        mc.destroy();
+        handleAboutTrigger();
       } else {
-        recipeBackMobile();
-        mc.destroy();
-      }
-    });
-  } else if ($btnRecipes.hasClass("bk")) {
-    $recipesImg.css('background-image','url(/wp-content/uploads/2017/03/home-drinks-manhattan.jpg)');
-    if ($(window).width() > 991) {
-      recipesAreaTl.reverse();
-    } else if ($(window).width() <= 991) {
-      recipesAreaTlMobile.reverse();
-    }
-    var hammertime = new Hammer(mainPageContainerHammer);
-    hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-    hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
-    hammertime.on('swipeup swipedown', function(event) {
-        if (onMainPage) {
-        handleMainPageScroll(event.deltaY);
-      } else {
+        aboutAreaTlMobile.play();
+        triggerSection("about");
         hammertime.destroy();
       }
-    })
-    hammertime.on('swipeleft', function(event) {
-      if (mainIdx === 4) {
-        if ($(window).width() > 991) {
-          handleAboutTrigger();
-        } else {
-          aboutAreaTlMobile.play();
-          triggerSection("about");
-          hammertime.destroy();
-        }
-      } else if (mainIdx === 5) {
-        if ($(window).width() > 991) {
-          handleRecipesTrigger();
-        } else {
-          recipesAreaTlMobile.play();
-          triggerSection("recipes");
-          hammertime.destroy();
-        }
+    } else if (mainIdx === 5) {
+      if ($(window).width() > 991) {
+        handleRecipesTrigger();
+      } else {
+        recipesAreaTlMobile.play();
+        triggerSection("recipes");
+        hammertime.destroy();
       }
-    })
-    triggerSection("main");
-    TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-    recipesBreadcrumbSeven.reverse();
-    recipesBreadcrumbSix.reverse();
-    recipesBreadcrumbFive.reverse();
-    recipesBreadcrumbFour.reverse();
-    recipesBreadcrumbThree.reverse();
-    recipesBreadcrumbTwo.reverse();
-    recipesBreadcrumbOne.reverse();
-    $recipesBtn.removeClass("bk");
-    $recipesBtn.addClass("fwd");
-    $btnRecipes.children().removeClass("fa-chevron-left");
-    $btnRecipes.children().addClass("fa-chevron-right");
-    $recipesImg.removeClass('lateral-img');
-    TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
-    // $recipesSection.removeClass('initial-lateral-img'); removed because too choppy, although it does solve padding issue
-  }
+    }
+  })
 }
 
 function handleAboutTrigger() {
@@ -649,7 +502,6 @@ function handleAboutTrigger() {
     $btnAbout.children().addClass("fa-chevron-left");
     $aboutImg.addClass('lateral-img');
     TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
-    // $aboutSection.addClass('initial-lateral-img');
     aboutOne = $('#about-one').offset().top;
     aboutTwo = $('#about-two').offset().top;
     aboutThree = $('#about-three').offset().top;
@@ -667,7 +519,6 @@ function handleAboutTrigger() {
       }
     });
   } else if ($btnAbout.hasClass("bk")) {
-    $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
     if ($(window).width() > 991) {
       aboutAreaTl.reverse();
     } else if ($(window).width() <= 991) {
@@ -715,18 +566,15 @@ function handleAboutTrigger() {
     $btnAbout.children().addClass("fa-chevron-right");
     $aboutImg.removeClass('lateral-img');
     TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
-    // $aboutSection.removeClass('initial-lateral-img');
   }
 }
 
-$recipesBtn.click(function () {
-  // triggerSection("recipes");
-  handleRecipesTrigger();
-})
+/******************************
+Recipes - Main to Secondary Section
+*******************************/
 
-$aboutBtn.click(function () {
-  // triggerSection("about");
-  handleAboutTrigger();
+$recipesBtn.click(function () {
+  handleRecipesTrigger();
 })
 
 $('#recipes-btn-fwd-mobile').click(function () {
@@ -748,51 +596,6 @@ $('#recipes-btn-fwd-mobile').click(function () {
 
 $('#recipes-btn-bk-mobile').click(function () {
   recipeBackMobile();
-  // TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
-  // recipesAreaTlMobile.reverse();
-  // triggerSection("main");
-  // TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-  // var hammertime = new Hammer(mainPageContainerHammer);
-  // hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-  // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
-  // hammertime.on('swipeup swipedown', function(event) {
-  //     if (onMainPage) {
-  //     handleMainPageScroll(event.deltaY);
-  //   } else {
-  //     hammertime.destroy();
-  //   }
-  // })
-  // hammertime.on('swipeleft', function(event) {
-  //   if (mainIdx === 4) {
-  //     if ($(window).width() > 991) {
-  //       handleAboutTrigger();
-  //     } else {
-  //       aboutAreaTlMobile.play();
-  //       triggerSection("about");
-  //       hammertime.destroy();
-  //     }
-  //   } else if (mainIdx === 5) {
-  //     if ($(window).width() > 991) {
-  //       handleRecipesTrigger();
-  //     } else {
-  //       recipesAreaTlMobile.play();
-  //       triggerSection("recipes");
-  //       hammertime.destroy();
-  //     }
-  //   }
-  // })
-
-
-  // var hammertime = new Hammer(mainPageContainerHammer);
-  // hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-  // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-  // hammertime.on('swipe', function(event) {
-  //   if (onMainPage) {
-  //     handleMainPageScroll(event.deltaY);
-  //   } else {
-  //     hammertime.destroy();
-  //   }
-  // })
 })
 
 function recipeBackMobile() {
@@ -853,140 +656,95 @@ function recipeBackMobile() {
   })
 }
 
-
-// $('#about-btn-fwd-desk').click(function () {
-//   aboutAreaTl.play();
-//   triggerSection("about");
-// })
-
-$('#about-btn-fwd-mobile').click(function () {
-  aboutAreaTlMobile.play();
-  triggerSection("about");
-  hammertime.destroy();
-  var hammerbros = new Hammer(ajaxAboutSectionHammer);
-  hammerbros.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
-  hammerbros.on('swiperight', function(event) {
+function handleRecipesTrigger() {
+  if ($recipesBtn.hasClass("fwd")) {
     if ($(window).width() > 991) {
-      handleAboutTrigger();
-      hammerbros.destroy();
-    } else {
-      aboutBackMobile();
-      hammerbros.destroy();
+      recipesAreaTl.play();
+    } else if ($(window).width() <= 991) {
+      recipesAreaTlMobile.play();
     }
-  });
-})
-
-// $('#about-btn-bk-desk').click(function () {
-//   $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
-//   // ==start old
-//   // $aboutImg.fadeOut(function() {
-//   //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
-//   // })
-//   // .fadeIn();
-//   // end old==
-//   aboutAreaTl.reverse();
-//   triggerSection("main");
-//   TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-//   aboutBreadcrumbThree.reverse();
-//   aboutBreadcrumbTwo.reverse();
-//   aboutBreadcrumbOne.reverse();
-// })
-
-$('#about-btn-bk-mobile').click(function () {
-  aboutBackMobile();
-  // $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
-  // $aboutImg.fadeOut(function() {
-  //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
-  // })
-  // .fadeIn();
-
-
-  // TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
-  // aboutAreaTlMobile.reverse();
-  // triggerSection("main");
-  // TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-  // var hammertime = new Hammer(mainPageContainerHammer);
-  // hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-  // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
-  // hammertime.on('swipeup swipedown', function(event) {
-  //     if (onMainPage) {
-  //     handleMainPageScroll(event.deltaY);
-  //   } else {
-  //     hammertime.destroy();
-  //   }
-  // })
-  // hammertime.on('swipeleft', function(event) {
-  //   if (mainIdx === 4) {
-  //     if ($(window).width() > 991) {
-  //       handleAboutTrigger();
-  //     } else {
-  //       aboutAreaTlMobile.play();
-  //       triggerSection("about");
-  //       hammertime.destroy();
-  //     }
-  //   } else if (mainIdx === 5) {
-  //     if ($(window).width() > 991) {
-  //       handleRecipesTrigger();
-  //     } else {
-  //       recipesAreaTlMobile.play();
-  //       triggerSection("recipes");
-  //       hammertime.destroy();
-  //     }
-  //   }
-  // })
-
-
-  // var hammertime = new Hammer(mainPageContainerHammer);
-  // hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-  // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-  // hammertime.on('swipe', function(event) {
-  //   if (onMainPage) {
-  //     handleMainPageScroll(event.deltaY);
-  //   } else {
-  //     hammertime.destroy();
-  //   }
-  // })
-})
-
-function aboutBackMobile() {
-  TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
-  aboutAreaTlMobile.reverse();
-  triggerSection("main");
-  TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-  var hammertime = new Hammer(mainPageContainerHammer);
-  hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-  hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
-  hammertime.on('swipeup swipedown', function(event) {
-      if (onMainPage) {
-      handleMainPageScroll(event.deltaY);
-    } else {
-      hammertime.destroy();
-    }
-  })
-  hammertime.on('swipeleft', function(event) {
-    if (mainIdx === 4) {
-      if ($(window).width() > 991) {
-        handleAboutTrigger();
-      } else {
-        aboutAreaTlMobile.play();
-        triggerSection("about");
-        hammertime.destroy();
-      }
-    } else if (mainIdx === 5) {
+    triggerSection("recipes");
+    // wip: all of these below should be in GSAP
+    $recipesBtn.removeClass("fwd");
+    $recipesBtn.addClass("bk");
+    $btnRecipes.children().removeClass("fa-chevron-right");
+    $btnRecipes.children().addClass("fa-chevron-left");
+    $recipesImg.addClass('lateral-img');
+    TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
+    recipesOne = $('#recipes-one').offset().top;
+    recipesTwo = $('#recipes-two').offset().top;
+    recipesThree = $('#recipes-three').offset().top;
+    recipesFour = $('#recipes-four').offset().top;
+    recipesFive = $('#recipes-five').offset().top;
+    recipesSix = $('#recipes-six').offset().top;
+    recipesSeven = $('#recipes-seven').offset().top;
+    var mc = new Hammer(ajaxRecipesSectionHammer);
+    mc.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+    mc.on('swiperight', function(event) {
       if ($(window).width() > 991) {
         handleRecipesTrigger();
+        mc.destroy();
       } else {
-        recipesAreaTlMobile.play();
-        triggerSection("recipes");
+        recipeBackMobile();
+        mc.destroy();
+      }
+    });
+  } else if ($btnRecipes.hasClass("bk")) {
+    if ($(window).width() > 991) {
+      recipesAreaTl.reverse();
+    } else if ($(window).width() <= 991) {
+      recipesAreaTlMobile.reverse();
+    }
+    var hammertime = new Hammer(mainPageContainerHammer);
+    hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+    hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+    hammertime.on('swipeup swipedown', function(event) {
+        if (onMainPage) {
+        handleMainPageScroll(event.deltaY);
+      } else {
         hammertime.destroy();
       }
-    }
-  })
+    })
+    hammertime.on('swipeleft', function(event) {
+      if (mainIdx === 4) {
+        if ($(window).width() > 991) {
+          handleAboutTrigger();
+        } else {
+          aboutAreaTlMobile.play();
+          triggerSection("about");
+          hammertime.destroy();
+        }
+      } else if (mainIdx === 5) {
+        if ($(window).width() > 991) {
+          handleRecipesTrigger();
+        } else {
+          recipesAreaTlMobile.play();
+          triggerSection("recipes");
+          hammertime.destroy();
+        }
+      }
+    })
+    triggerSection("main");
+    TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+    recipesBreadcrumbSeven.reverse();
+    recipesBreadcrumbSix.reverse();
+    recipesBreadcrumbFive.reverse();
+    recipesBreadcrumbFour.reverse();
+    recipesBreadcrumbThree.reverse();
+    recipesBreadcrumbTwo.reverse();
+    recipesBreadcrumbOne.reverse();
+    $recipesBtn.removeClass("bk");
+    $recipesBtn.addClass("fwd");
+    $btnRecipes.children().removeClass("fa-chevron-left");
+    $btnRecipes.children().addClass("fa-chevron-right");
+    $recipesImg.removeClass('lateral-img');
+    TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
+  }
 }
 
-$('#landing-button').click(function() {
-  handleMainPageScroll(-50);
-})
+/******************************
+General Logic - Main to Secondary Section
+*******************************/
 
 function triggerSection(section) {
   if (section === "main") {
@@ -999,7 +757,6 @@ function triggerSection(section) {
     onAboutPage = true;
     onRecipesPage =  false;
     startingSideWidth = $(window).width();
-    // handleAboutTrigger();
     var hammerbros = new Hammer(htmlHammer);
     hammerbros.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
     hammerbros.on('swiperight', function(event) {
@@ -1016,7 +773,6 @@ function triggerSection(section) {
     onAboutPage = false;
     onRecipesPage =  true;
     startingSideWidth = $(window).width();
-    // handleRecipesTrigger();
     var hammerbros = new Hammer(htmlHammer);
     hammerbros.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
     hammerbros.on('swiperight', function(event) {
@@ -1031,6 +787,14 @@ function triggerSection(section) {
   }
 }
 
+/******************************
+Click to Scroll buttons
+*******************************/
+$('#landing-button').click(function() {
+  handleMainPageScroll(-50);
+})
+
+
 $('#story-down').click(function () {
   var matadorTag = (-($('#story-down').offset().top / 2));
   TweenMax.to($('.ajaxAboutSection'), 1.5, {scrollTop: $(this).offset().top, ease: Power4.easeInOut});
@@ -1038,14 +802,11 @@ $('#story-down').click(function () {
   aboutBreadcrumbOne.play();
   TweenMax.to($matador, 1, {opacity: 1, ease: Power1.easeOut});
   TweenMax.to($bullrider, 1, {opacity: 0, ease: Power1.easeOut});
-
-  // , onComplete: handleOtherScrolling.bind($ajaxAboutSection, matadorTag, 2)
-  // var matadorTag = (-(aboutOne / 2));
-  // handleOtherScrolling($ajaxAboutSection, matadorTag, 2);
 })
-/***************
-Other scrolling
-***************/
+
+/******************************
+Breadcrumb Tweens
+*******************************/
 
 var aboutBreadcrumbOne = new TimelineMax({paused: true});
 aboutBreadcrumbOne.to($aboutBreadcrumbs.children()[0], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
@@ -1066,8 +827,6 @@ aboutBreadcrumbFour.to($aboutBreadcrumbText[3], 1, {ease: Power4.easeInOut, opac
 var aboutBreadcrumbFive = new TimelineMax({paused: true});
 aboutBreadcrumbFive.to($aboutBreadcrumbs.children()[4], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 aboutBreadcrumbFive.to($aboutBreadcrumbText[4], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
-// var aboutBreadcrumbTwo = $aboutBreadcrumbText[1];
-// var aboutBreadcrumbThree = $aboutBreadcrumbText[2];
 
 var recipesBreadcrumbOne = new TimelineMax({paused: true});
 recipesBreadcrumbOne.to($recipesBreadcrumbs.children()[0], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
@@ -1097,6 +856,10 @@ var recipesBreadcrumbSeven = new TimelineMax({paused: true});
 recipesBreadcrumbSeven.to($recipesBreadcrumbs.children()[6], 1, {ease: Power4.easeInOut, marginRight: 0, opacity: 1}, 0);
 recipesBreadcrumbSeven.to($recipesBreadcrumbText[6], 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 
+/***************
+Other scrolling
+***************/
+
 function handleOtherScrolling(section, dY, dF) {
   var scrollPosition = section[0].scrollTop += (-dY * dF);
   if (section === $ajaxAboutSection) {
@@ -1110,97 +873,73 @@ function handleOtherScrolling(section, dY, dF) {
       aboutBreadcrumbFour.play();
       TweenMax.to($vintagebull, 1, {opacity: 1, ease: Power1.easeOut});
       TweenMax.to($boots, 1, {opacity: 0, ease: Power1.easeOut});
-      // $aboutImg.css('background-image', 'url(/wp-content/uploads/2017/03/story-vintagebull.jpg);
     } else if ((scrollPosition + $(window).height()) > aboutThree) {
       aboutBreadcrumbTwo.reverse();
       aboutBreadcrumbFour.reverse();
       aboutBreadcrumbThree.play();
       TweenMax.to($gloves, 1, {opacity: 1, ease: Power1.easeOut});
       TweenMax.to($vintagebull, 1, {opacity: 0, ease: Power1.easeOut});
-      // $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/story-gloves.jpg);
     } else if ((scrollPosition + $(window).height()) > aboutTwo) {
       aboutBreadcrumbOne.reverse()
       aboutBreadcrumbThree.reverse();
       aboutBreadcrumbTwo.play();
       TweenMax.to($bullrider, 1, {opacity: 1, ease: Power1.easeOut});
       TweenMax.to($gloves, 1, {opacity: 0, ease: Power1.easeOut});
-      // $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/story-bullrider.jpg);
     } else if ((scrollPosition + $(window).height()) > aboutOne) {
       aboutBreadcrumbTwo.reverse();
       aboutBreadcrumbOne.play();
       TweenMax.to($matador, 1, {opacity: 1, ease: Power1.easeOut});
       TweenMax.to($bullrider, 1, {opacity: 0, ease: Power1.easeOut});
-      // $aboutImg.css('background-image', 'url(/wp-content/uploads/2017/03/story-matador.jpg);
     } else {
       aboutBreadcrumbOne.reverse();
       TweenMax.to($matador, 1, {opacity: 0, ease: Power1.easeOut});
-      // $aboutImg.css('background-image', 'url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
-    // }
-
-    // if (scrollPosition === 400 && dY > 0) {
-    //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
-    //   // $aboutImg.fadeOut(function() {
-    //   //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
-    //   // })
-    //   // .fadeIn();
-    // } else if (scrollPosition === 800) {
-    //   $aboutImg.css('background-image','url(http://media4.s-nbcnews.com/j/newscms/2016_36/1685951/ss-160826-twip-05_8cf6d4cb83758449fd400c7c3d71aa1f.nbcnews-ux-2880-1000.jpg)');
-    // } else if (scrollPosition === 1000 && dY < 0) {
-    //   $aboutImg.css('background-image','url(http://cdn.hexjam.com/editorial_service/bases/images/000/004/799/xlarge/pandarockinghorsefeature.jpg.jpg?1404188201)');
-
     }
   } else if (section === $ajaxRecipesSection) {
     if ((scrollPosition + $(window).height()) > recipesSeven){
       recipesBreadcrumbSix.reverse();
       recipesBreadcrumbSeven.play();
       TweenMax.to($neat, 1, {opacity: 1, ease: Power1.easeOut});
-      // TweenMax.to($recipesImg, 1, {backgroundImage: 'none', ease: Power2.easeInOut})
-      // TweenMax.to($recipesImg, 1.2, {backgroundImage: 'url(/wp-content/uploads/2017/03/drinks-neat.jpg)', ease: Power2.easeInOut})
-      // $recipesImg.css('background-image', 'url(/wp-content/uploads/2017/03/drinks-neat.jpg)');
     } else if ((scrollPosition + $(window).height()) > recipesSix) {
       recipesBreadcrumbSeven.reverse();
       recipesBreadcrumbFive.reverse();
       recipesBreadcrumbSix.play();
       TweenMax.to($shooter, 1, {opacity: 1, ease: Power1.easeOut});
       TweenMax.to($neat, 1, {opacity: 0, ease: Power1.easeOut});
-      // $recipesImg.css('background-image', 'url(/wp-content/uploads/2017/03/drinks-shooters.jpg)');
     } else if ((scrollPosition + $(window).height()) > recipesFive) {
       recipesBreadcrumbSix.reverse();
       recipesBreadcrumbFour.reverse();
       recipesBreadcrumbFive.play();
       TweenMax.to($ginger, 1, {opacity: 1, ease: Power1.easeOut});
       TweenMax.to($shooter, 1, {opacity: 0, ease: Power1.easeOut});
-      // $recipesImg.css('background-image', 'url(/wp-content/uploads/2017/03/drinks-whiskeyginger.jpg)');
     } else if ((scrollPosition + $(window).height()) > recipesFour) {
       recipesBreadcrumbFive.reverse();
       recipesBreadcrumbThree.reverse();
       recipesBreadcrumbFour.play();
       TweenMax.to($cowboyjulep, 1, {opacity: 1, ease: Power1.easeOut});
       TweenMax.to($ginger, 1, {opacity: 0, ease: Power1.easeOut});
-      // $recipesImg.css('background-image', 'url(/wp-content/uploads/2017/03/drinks-cowboy.jpg)');
     } else if ((scrollPosition + $(window).height()) > recipesThree) {
       recipesBreadcrumbFour.reverse();
       recipesBreadcrumbTwo.reverse();
       recipesBreadcrumbThree.play();
       TweenMax.to($oldfashioned, 1, {opacity: 1, ease: Power1.easeOut});
       TweenMax.to($cowboyjulep, 1, {opacity: 0, ease: Power1.easeOut});
-      // $recipesImg.css('background-image','url(/wp-content/uploads/2017/03/drinks-oldfashioned.jpg)');
     } else if ((scrollPosition + $(window).height()) > recipesTwo) {
       recipesBreadcrumbThree.reverse();
       recipesBreadcrumbOne.reverse()
       recipesBreadcrumbTwo.play();
       TweenMax.to($cola, 1, {opacity: 1, ease: Power1.easeOut});
       TweenMax.to($oldfashioned, 1, {opacity: 0, ease: Power1.easeOut});
-
-      // $recipesImg.css('background-image','url(/wp-content/uploads/2017/03/drinks-whiskeycola.jpg)');
     } else {
       recipesBreadcrumbTwo.reverse();
       recipesBreadcrumbOne.play();
       TweenMax.to($cola, 1, {opacity: 0, ease: Power1.easeOut});
-      // $recipesImg.css('background-image', 'url(/wp-content/uploads/2017/03/home-drinks-manhattan.jpg)');
     }
   }
 }
+
+/******************************
+Back to Top buttons
+*******************************/
 
 $('.back-to-top').click(function () {
   if (onAboutPage) {
@@ -1259,42 +998,12 @@ function checkSize(){
     deskClassAdded = true;
 	}
 
-  // if (onAboutPage && startingSideWidth < 992) {
-  //   if ($(window).width() >= 992) {
-  //     $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
-  //     aboutAreaTlMobile.progress(0).pause();
-  //     // aboutAreaTlMobile.reverse();
-  //     triggerSection("main");
-  //     TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-  //   }
-  // } else if (onAboutPage && startingSideWidth >= 992) {
-  //   if ($(window).width() < 992) {
-  //     $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
-  //     aboutAreaTl.reverse();
-  //     triggerSection("main");
-  //     TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-  //   }
-  // } else if (onRecipesPage && startingSideWidth < 992) {
-  //   if ($(window).width() >= 992) {
-  //     recipesAreaTlMobile.reverse();
-  //     triggerSection("main");
-  //     TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-  //   }
-  // } else if (onRecipesPage && startingSideWidth >= 992) {
-  //   if ($(window).width() < 992) {
-  //     recipesAreaTl.reverse();
-  //     triggerSection("main");
-  //     TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
-  //   }
-  // }
-
   if (onAboutPage) {
     handleAboutTrigger();
   } else if (onRecipesPage) {
     handleRecipesTrigger();
   }
-  // wip: these don't actually recalculate on resize. secondary image change on scroll is not responsive.
-  // update: as it currently stands these only work when you navigate to the secondary section and then navigate back to main. then you can resize, go back to secondary and it will work. if you resize first without loading secondary, aboutOne returns 0. if you resize while on secondary the whole page breaks.
+
   aboutOne = $('#about-one').offset().top;
   aboutTwo = $('#about-two').offset().top;
   aboutThree = $('#about-three').offset().top;
@@ -1312,53 +1021,32 @@ function checkSize(){
 /***************
 Menu
 ***************/
-// $menuContainer.fadeOut('ease');
 
 var menuOpened = false;
 
 var openMenu = new TimelineLite({paused: true});
-// openMenu.to($menuContainer, 0, {display: 'block'});
-// openMenu.to($menuContainer, .6, {ease: Power4.easeInOut, opacity: 1}, 1);
-// openMenu.to($menuContainer, 0, {display: 'block'});
-
-
-// openMenu.to($menuContainer, .4, {ease: Power4.easeInOut, opacity: 1}, 0);
 openMenu.to($menuLeft, 1.75, {ease: Power4.easeOut, left: "0%"}, 0);
 openMenu.to($menuContainer, 0, {display: "block"}, 0);
 openMenu.to($menuContainer, .2, {ease: Power4.easeInOut, opacity: 1, visibility: "visible"}, 0);
 openMenu.to($menuGrey, 1, {opacity: 1}, "-=1.2");
-// openMenu.to($menuContainer, .5, {ease: Power4.easeInOut, background: "rgba(0, 0, 0, 0.6)"}, 0);
 
-
-// openMenu.to($menuContainer, 1.75, {ease: Power4.easeInOut, left: "0%", opacity: 1, onComplete: function () {
-//   menuOpened = !menuOpened;
-// }}, 1);
-// openMenu.to($menuContainer, 0, {display: 'block'});
-// openMenu.to($menuContainer, .6, {ease: Power4.easeInOut, opacity: 1}, 1);
-// openMenu.to($menuLeft, 1.75, {ease: Power4.easeInOut, left: "0%", onComplete: function () {
-//   menuOpened = !menuOpened;
-// }}, 1);
-// openMenu.from($menuLeft, 1.75, {ease: Power4.easeInOut, left: "0%", onComplete: function() {
-//   menuOpened = !menuOpened;
-// }});
+var openMenuSecondary = new TimelineLite({paused: true});
+openMenuSecondary.to($menuContainer, 0, {display: "block"}, 0);
+openMenuSecondary.to($menuContainer, .2, {ease: Power4.easeInOut, opacity: 1, visibility: "visible"}, 0);
+openMenuSecondary.to($menuContainer, 1.75, {ease: Power4.easeOut, left: "50%"}, 1);
+openMenuSecondary.to($menuLeft, 1.75, {ease: Power4.easeOut, left: "0%"}, 1);
+openMenuSecondary.to($menuGrey, 1, {left: "50%"}, "-=1.2");
+openMenuSecondary.to($menuGrey, 1, {opacity: 1}, "-=1.2");
 
 function toggleMenu() {
   $('#toggle').toggleClass('active');
-  // $(this).toggleClass('active');
- //  $('#overlayMenu').toggleClass('open');
- //  TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
   mainScrollUnlocked = !mainScrollUnlocked;
- //  openMenu.reversed() ? openMenu.reverse() : openMenu.play();
- // menuOpened ? openMenu.reverse() : openMenu.play();
   if (menuOpened) {
-    openMenu.reverse();
-    menuOpened = !menuOpened;
+    onMainPage ? openMenu.reverse() : openMenuSecondary.reverse();
   } else {
-    openMenu.play();
-    menuOpened = !menuOpened;
+    onMainPage ? openMenu.play() : openMenuSecondary.play();
   }
- //  openMenu.reversed() ? openMenu.reverse() : openMenu.play();
- //  $menuContainer.fadeToggle('ease');
+  menuOpened = !menuOpened;
 }
 
 $('#toggle').click(function() {
@@ -1373,39 +1061,21 @@ $('.square').click(function() {
     handleRecipesTrigger();
   }
   if (this.id === "premium-square") {
-    // delay(function(){
-    //     jumpToSlide(mainIdx, 1);
-    // },500);
     jumpToSlide(mainIdx, 1);
     mainIdx = 1;
   } else if (this.id === "black-square") {
-    // delay(function(){
-    //     jumpToSlide(mainIdx, 2);
-    // },500);
     jumpToSlide(mainIdx, 2);
     mainIdx = 2;
   } else if (this.id === "honey-cinnamon-square") {
-    // delay(function(){
-    //     jumpToSlide(mainIdx, 3);
-    // },500);
     jumpToSlide(mainIdx, 3);
     mainIdx = 3;
   } else if (this.id === "story-square") {
-    // delay(function(){
-    //     jumpToSlide(mainIdx, 4);
-    // },500);
     jumpToSlide(mainIdx, 4);
     mainIdx = 4;
     } else if (this.id === "cocktails-square") {
-      // delay(function(){
-      //     jumpToSlide(mainIdx, 5);
-      // },500);
     jumpToSlide(mainIdx, 5);
     mainIdx = 5;
   } else if (this.id === "contact-square") {
-    // delay(function(){
-    //     jumpToSlide(mainIdx, 6);
-    // },500);
     jumpToSlide(mainIdx, 6);
     mainIdx = 6;
   }
