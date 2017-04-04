@@ -11,7 +11,7 @@
     width: 40%;
   }
 }
-@media all and (min-width: 1098px) {
+@media all and (min-width: 1164px) {
   .empty-button {
     width: 33.33%;
   }
@@ -94,6 +94,7 @@
 
 }
 
+
 @media screen and (min-aspect-ratio: 170 / 100) {
 
 
@@ -106,6 +107,17 @@
   _:-ms-fullscreen, :root .main-page-txt .main-text-content { margin-top:49%; }
 
 }
+
+// @media screen and (min-aspect-ratio: 170 / 100) {
+//   .main-page-txt {
+//     .main-text-content {
+//       margin-top: 52%;
+//     }
+//   }
+// }
+
+
+>>>>>>> 5857ed436d0fdbf6883e52b4c79201509cb0173f
 @media screen and (min-aspect-ratio: 170 / 100) and (min-width: 1640px) {
 
   .icon-section {
@@ -115,7 +127,20 @@
 }
 
 
-@media screen and (min-aspect-ratio: 185 / 100) {
+
+@media screen and (min-aspect-ratio: 185 / 100) and (min-width: 992px){
+  .main-page-txt {
+    .main-text-content {
+      margin-top: 58%;
+
+      .empty-button {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (min-aspect-ratio: 185 / 100) and (min-width: 1200px) {
   .main-page-txt {
     .main-text-content {
       margin-top: 48%;
@@ -123,7 +148,7 @@
   }
 }
 
-@media screen and (min-aspect-ratio: 188 / 100) and (min-height: 900px) {
+@media screen and (min-aspect-ratio: 188 / 100) and (min-height: 934px) {
   .icon-section {
     width: 30%;
   }
@@ -136,7 +161,7 @@
   }
 
   .wpcf7 {
-    // top: 30%;
+    top: 30%;
     z-index: 10;
   }
 }
