@@ -999,12 +999,34 @@ function triggerSection(section) {
     onRecipesPage =  false;
     startingSideWidth = $(window).width();
     // handleAboutTrigger();
+    var hammerbros = new Hammer(htmlHammer);
+    hammerbros.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+    hammerbros.on('swiperight', function(event) {
+      if ($(window).width() > 991) {
+        handleAboutTrigger();
+        hammerbros.destroy();
+      } else {
+        aboutBackMobile();
+        hammerbros.destroy();
+      }
+    });
   } else if (section === "recipes") {
     onMainPage = false;
     onAboutPage = false;
     onRecipesPage =  true;
     startingSideWidth = $(window).width();
     // handleRecipesTrigger();
+    var hammerbros = new Hammer(htmlHammer);
+    hammerbros.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+    hammerbros.on('swiperight', function(event) {
+      if ($(window).width() > 991) {
+        handleRecipesTrigger();
+        hammerbros.destroy();
+      } else {
+        recipeBackMobile();
+        hammerbros.destroy();
+      }
+    });
   }
 }
 
