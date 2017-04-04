@@ -172,7 +172,7 @@
   bottom: 1%;
   width: 100%;
   left: 50%;
-  top:75%;
+  top: 75%;
   height: 100px;
   @include transform(translateX(-50%));
 
@@ -194,6 +194,7 @@
     &:hover {
       color: #fff !important;
     }
+
   }
 
   h3 {
@@ -212,6 +213,10 @@
     bottom: 100px;
     top: inherit;
 
+  }
+
+  @media all and (min-width: 992px) {
+    top: inherit;
   }
 
 }
