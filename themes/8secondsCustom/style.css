@@ -7251,6 +7251,16 @@ div.wpcf7-response-output {
 .back-to-top:focus {
   color: #86754D !important; }
 
+#menu-veil {
+  position: fixed;
+  height: 100%;
+  width: 200%;
+  top: 0;
+  left: 0;
+  background: black;
+  display: none;
+  opacity: 0; }
+
 .plus-button {
   background: transparent;
   border: transparent;

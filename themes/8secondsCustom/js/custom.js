@@ -144,6 +144,7 @@ jQuery(document).ready(function( $ ) {
   $pMoBtn = $('.p-mobile-btn');
   $secondaryStoryImageGroup = $('#secondary-story-image-group');
   $secondaryDrinksImageGroup = $('#secondary-drinks-image-group');
+  $menuVeil = $('#menu-veil');
 
   var mainIdx = 0;
 
@@ -566,6 +567,7 @@ function handleAboutTrigger() {
     $btnAbout.children().addClass("fa-chevron-right");
     $aboutImg.removeClass('lateral-img');
     TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
+
   }
 }
 
@@ -752,6 +754,8 @@ function triggerSection(section) {
     onAboutPage = false;
     onRecipesPage = false;
     startingSideWidth = null;
+    TweenMax.to($menuContainer, 1.75, {ease: Power4.easeOut, left: 0});
+    TweenMax.to($menuLeft, 1.75, {ease: Power4.easeOut, left: "-100%"});
   } else if (section === "about") {
     onMainPage = false;
     onAboutPage = true;
@@ -768,6 +772,8 @@ function triggerSection(section) {
         hammerbros.destroy();
       }
     });
+    TweenMax.to($menuContainer, 1.75, {ease: Power4.easeOut, left: "50%"});
+    TweenMax.to($menuLeft, 1.75, {ease: Power4.easeOut, left: "-52%"});
   } else if (section === "recipes") {
     onMainPage = false;
     onAboutPage = false;
@@ -784,6 +790,8 @@ function triggerSection(section) {
         hammerbros.destroy();
       }
     });
+    TweenMax.to($menuContainer, 1.75, {ease: Power4.easeOut, left: "50%"});
+    TweenMax.to($menuLeft, 1.75, {ease: Power4.easeOut, left: "-52%"});
   }
 }
 
@@ -1024,6 +1032,10 @@ Menu
 
 var menuOpened = false;
 
+var toggleMenuVeil = new TimelineLite({paused: true});
+toggleMenuVeil.set($menuVeil, {display: "block"});
+toggleMenuVeil.to($menuVeil, .5, {ease: Power4.easeInOut, opacity: 1});
+
 var openMenu = new TimelineLite({paused: true});
 openMenu.to($menuLeft, 1.75, {ease: Power4.easeOut, left: "0%"}, 0);
 openMenu.to($menuContainer, 0, {display: "block"}, 0);
@@ -1033,10 +1045,21 @@ openMenu.to($menuGrey, 1, {opacity: 1}, "-=1.2");
 var openMenuSecondary = new TimelineLite({paused: true});
 openMenuSecondary.to($menuContainer, 0, {display: "block"}, 0);
 openMenuSecondary.to($menuContainer, .2, {ease: Power4.easeInOut, opacity: 1, visibility: "visible"}, 0);
-openMenuSecondary.to($menuContainer, 1.75, {ease: Power4.easeOut, left: "50%"}, 1);
+// openMenuSecondary.to($menuContainer, 1.75, {ease: Power4.easeOut, left: "50%"}, 1);
 openMenuSecondary.to($menuLeft, 1.75, {ease: Power4.easeOut, left: "0%"}, 1);
 openMenuSecondary.to($menuGrey, 1, {left: "50%"}, "-=1.2");
 openMenuSecondary.to($menuGrey, 1, {opacity: 1}, "-=1.2");
+
+
+
+function toggleVeil() {
+  if (onAboutPage || onRecipesPage) {
+    toggleMenuVeil.play();
+  } else {
+    toggleMenuVeil.reverse();
+  }
+}
+
 
 function toggleMenu() {
   $('#toggle').toggleClass('active');
@@ -1055,9 +1078,12 @@ $('#toggle').click(function() {
 
 $('.square').click(function() {
   toggleMenu();
+  toggleMenuVeil.play();
   if (onAboutPage) {
+    // toggleMenuVeil.play();
     handleAboutTrigger();
   } else if (onRecipesPage) {
+    // toggleMenuVeil.play();
     handleRecipesTrigger();
   }
   if (this.id === "premium-square") {

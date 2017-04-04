@@ -708,6 +708,7 @@ get_header();
       </div> <!-- #nav-menu -->
     </nav> <!-- menu-left -->
   </div> <!-- menu-container -->
+  <div id="menu-veil"></div>
   <div id="ageGate" class="modal fade">
     <video id="age-gate-video" playsinline autoplay loop muted >
       <source src="/wp-content/uploads/2017/03/agegatesmv4.webmhd.webm" type="video/webm">

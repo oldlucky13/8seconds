@@ -282,3 +282,14 @@
 .back-to-top:focus {
   color: $icon-color !important;
 }
+
+#menu-veil {
+  position: fixed;
+  height: 100%;
+  width: 200%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 1);
+  display: none;
+  opacity: 0;
+}
