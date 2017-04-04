@@ -1543,8 +1543,6 @@ $('.plus-button').on('click', function(){
 				});
 			}
 
-
-
 	}else{
 		//$('.mobile-nav').css('z-index','20');
 
