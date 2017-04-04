@@ -32,7 +32,7 @@ get_header();
             <h3 class="toggle-desktop">EXPLORE THE SITE</h3>
             <h3 class="toggle-mobile">SWIPE TO EXPLORE THE SITE</h3>
             <button id="landing-button" type="button" class="s-down-btn btn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
-            <ul class="swipe-chevron-container"> 
+            <ul class="swipe-chevron-container">
                 <li><img src="/wp-content/uploads/2017/04/single-chevron-white.svg"></li>
                 <li><img src="/wp-content/uploads/2017/04/single-chevron-white.svg"></li>
                 <li><img src="/wp-content/uploads/2017/04/single-chevron-white.svg"></li>
@@ -302,7 +302,7 @@ get_header();
           </div>
           <button id="btn-recipes" type="button" class="p-btn btn slide-button recipes-btn fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
           <button id="recipes-btn-fwd-mobile" type="button" class="p-mobile-btn btn slide-button fwd"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-          <div id="secondary-story-image-group" class="secondary-image-group">
+          <div id="secondary-drinks-image-group" class="secondary-image-group">
             <div id="cola" class="secondary-image"></div>
             <div id="oldfashioned" class="secondary-image"></div>
             <div id="cowboyjulep" class="secondary-image"></div>

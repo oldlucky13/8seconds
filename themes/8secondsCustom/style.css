@@ -7239,6 +7239,9 @@ div.wpcf7-response-output {
     width: 20px;
     height: 20px; }
 
+.back-to-top:focus {
+  color: #86754D !important; }
+
 .plus-button {
   background: transparent;
   border: transparent;

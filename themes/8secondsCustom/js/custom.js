@@ -142,6 +142,8 @@ jQuery(document).ready(function( $ ) {
   $pBtn = $('.p-btn');
   $firstHtwo = $('#first-h2-child');
   $pMoBtn = $('.p-mobile-btn');
+  $secondaryStoryImageGroup = $('#secondary-story-image-group');
+  $secondaryDrinksImageGroup = $('#secondary-drinks-image-group');
 
   var mainIdx = 0;
 
@@ -664,7 +666,6 @@ function handleAboutTrigger() {
         hammerbros.destroy();
       }
     });
-    console.log(hammerbros);
   } else if ($btnAbout.hasClass("bk")) {
     $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
     if ($(window).width() > 991) {
@@ -1209,7 +1210,7 @@ $('.back-to-top').click(function () {
     aboutBreadcrumbThree.reverse();
     aboutBreadcrumbTwo.reverse();
     aboutBreadcrumbOne.reverse();
-
+    TweenMax.to($secondaryStoryImageGroup.children(), 1.75, {ease: Power4.easeInOut, opacity: 0});
   } else if (onRecipesPage) {
     TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
     recipesBreadcrumbSeven.reverse();
@@ -1219,7 +1220,7 @@ $('.back-to-top').click(function () {
     recipesBreadcrumbThree.reverse();
     recipesBreadcrumbTwo.reverse();
     recipesBreadcrumbOne.reverse();
-
+    TweenMax.to($secondaryDrinksImageGroup.children(), 1.75, {ease: Power4.easeInOut, opacity: 0});
   }
 })
 
