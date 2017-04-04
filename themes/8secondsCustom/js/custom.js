@@ -142,6 +142,8 @@ jQuery(document).ready(function( $ ) {
   $pBtn = $('.p-btn');
   $firstHtwo = $('#first-h2-child');
   $pMoBtn = $('.p-mobile-btn');
+  $secondaryStoryImageGroup = $('#secondary-story-image-group');
+  $secondaryDrinksImageGroup = $('#secondary-drinks-image-group');
 
   var mainIdx = 0;
 
@@ -168,7 +170,7 @@ jQuery(document).ready(function( $ ) {
   Hammer
   ***************/
   var mainPageContainerHammer = document.getElementById('the-container');
-  // var ajaxAboutSectionHammer = document.getElementById($(html)[0]));
+  var htmlHammer = document.getElementById('html-id');
   var ajaxAboutSectionHammer = document.getElementById('ajax-about');
   var ajaxRecipesSectionHammer = document.getElementById('ajax-recipes');
   var hammertime = new Hammer(mainPageContainerHammer);
@@ -653,7 +655,7 @@ function handleAboutTrigger() {
     aboutThree = $('#about-three').offset().top;
     aboutFour = $('#about-four').offset().top;
     aboutFive = $('#about-five').offset().top;
-    var hammerbros = new Hammer(ajaxAboutSectionHammer);
+    var hammerbros = new Hammer(htmlHammer);
     hammerbros.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
     hammerbros.on('swiperight', function(event) {
       if ($(window).width() > 991) {
@@ -998,12 +1000,34 @@ function triggerSection(section) {
     onRecipesPage =  false;
     startingSideWidth = $(window).width();
     // handleAboutTrigger();
+    var hammerbros = new Hammer(htmlHammer);
+    hammerbros.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+    hammerbros.on('swiperight', function(event) {
+      if ($(window).width() > 991) {
+        handleAboutTrigger();
+        hammerbros.destroy();
+      } else {
+        aboutBackMobile();
+        hammerbros.destroy();
+      }
+    });
   } else if (section === "recipes") {
     onMainPage = false;
     onAboutPage = false;
     onRecipesPage =  true;
     startingSideWidth = $(window).width();
     // handleRecipesTrigger();
+    var hammerbros = new Hammer(htmlHammer);
+    hammerbros.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+    hammerbros.on('swiperight', function(event) {
+      if ($(window).width() > 991) {
+        handleRecipesTrigger();
+        hammerbros.destroy();
+      } else {
+        recipeBackMobile();
+        hammerbros.destroy();
+      }
+    });
   }
 }
 
@@ -1186,7 +1210,7 @@ $('.back-to-top').click(function () {
     aboutBreadcrumbThree.reverse();
     aboutBreadcrumbTwo.reverse();
     aboutBreadcrumbOne.reverse();
-
+    TweenMax.to($secondaryStoryImageGroup.children(), 1.75, {ease: Power4.easeInOut, opacity: 0});
   } else if (onRecipesPage) {
     TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
     recipesBreadcrumbSeven.reverse();
@@ -1196,7 +1220,7 @@ $('.back-to-top').click(function () {
     recipesBreadcrumbThree.reverse();
     recipesBreadcrumbTwo.reverse();
     recipesBreadcrumbOne.reverse();
-
+    TweenMax.to($secondaryDrinksImageGroup.children(), 1.75, {ease: Power4.easeInOut, opacity: 0});
   }
 })
 
@@ -1212,7 +1236,7 @@ Resize
 
 function checkSize(){
 
-  // console.log($(window).width() / $(window).height());
+  console.log($(window).width() / $(window).height());
 
 	sortMenu();
 
@@ -1604,7 +1628,7 @@ animated chevrons - mobile
 ***************/
 
 // TweenMax method :
-var chevys = $('.swipe-chevron-container').children(); 
+var chevys = $('.swipe-chevron-container').children();
 
 TweenMax.staggerFromTo(chevys,1.5,{opacity:0, scale:0},{opacity:1, scale:1.05, repeat: -1, repeatDelay: 0,ease: Power1.easeOut, yoyo:true}, .5)
 

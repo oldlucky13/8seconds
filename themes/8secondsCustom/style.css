@@ -7239,6 +7239,9 @@ div.wpcf7-response-output {
     width: 20px;
     height: 20px; }
 
+.back-to-top:focus {
+  color: #86754D !important; }
+
 .plus-button {
   background: transparent;
   border: transparent;
@@ -7357,7 +7360,7 @@ div.wpcf7-response-output {
 
   .icon-section span {
     font-size: 0.9em; } }
-@media screen and (min-aspect-ratio: 155 / 100) {
+@media screen and (min-aspect-ratio: 155 / 100) and (min-width: 1500px) {
   .main-page-txt .main-text-content {
     margin-top: 58%; }
 

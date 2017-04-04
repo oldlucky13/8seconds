@@ -71,7 +71,7 @@
   }
 }
 
-@media screen and (min-aspect-ratio: 155 / 100) {
+@media screen and (min-aspect-ratio: 155 / 100) and (min-width: 1500px) {
   .main-page-txt {
     .main-text-content {
       margin-top: 58%;
