@@ -1599,4 +1599,15 @@ $('body').on('touchmove', selScrollable, function(e) {
 });
 
 
+/***************
+animated chevrons - mobile
+***************/
+
+// TweenMax method :
+var chevys = $('.swipe-chevron-container').children(); 
+
+TweenMax.staggerFromTo(chevys,1.5,{opacity:0, scale:0},{opacity:1, scale:1.05, repeat: -1, repeatDelay: 0,ease: Power1.easeOut, yoyo:true}, .5)
+
+
+
 });// jquery document ready
