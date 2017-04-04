@@ -5733,7 +5733,7 @@ body {
 
 .main-page-title-group {
   position: absolute;
-  left: calc((100%/4) - 250px);
+  left: calc((100%/4) - 260px);
   top: 14%;
   box-sizing: border-box;
   z-index: 2; }
@@ -7335,7 +7335,7 @@ div.wpcf7-response-output {
 @media all and (min-width: 992px) {
   .empty-button {
     width: 40%; } }
-@media all and (min-width: 1098px) {
+@media all and (min-width: 1164px) {
   .empty-button {
     width: 33.33%; } }
 @media screen and (max-aspect-ratio: 150 / 100) {
@@ -7378,7 +7378,7 @@ div.wpcf7-response-output {
 @media screen and (min-aspect-ratio: 185 / 100) {
   .main-page-txt .main-text-content {
     margin-top: 48%; } }
-@media screen and (min-aspect-ratio: 188 / 100) and (min-height: 900px) {
+@media screen and (min-aspect-ratio: 188 / 100) and (min-height: 934px) {
   .icon-section {
     width: 30%; } }
 @media all and (max-height: 700px) {
