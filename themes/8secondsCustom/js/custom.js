@@ -168,7 +168,7 @@ jQuery(document).ready(function( $ ) {
   Hammer
   ***************/
   var mainPageContainerHammer = document.getElementById('the-container');
-  // var ajaxAboutSectionHammer = document.getElementById($(html)[0]));
+  var htmlHammer = document.getElementById('html-id');
   var ajaxAboutSectionHammer = document.getElementById('ajax-about');
   var ajaxRecipesSectionHammer = document.getElementById('ajax-recipes');
   var hammertime = new Hammer(mainPageContainerHammer);
@@ -653,7 +653,7 @@ function handleAboutTrigger() {
     aboutThree = $('#about-three').offset().top;
     aboutFour = $('#about-four').offset().top;
     aboutFive = $('#about-five').offset().top;
-    var hammerbros = new Hammer(ajaxAboutSectionHammer);
+    var hammerbros = new Hammer(htmlHammer);
     hammerbros.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
     hammerbros.on('swiperight', function(event) {
       if ($(window).width() > 991) {
@@ -664,6 +664,7 @@ function handleAboutTrigger() {
         hammerbros.destroy();
       }
     });
+    console.log(hammerbros);
   } else if ($btnAbout.hasClass("bk")) {
     $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
     if ($(window).width() > 991) {
@@ -1604,7 +1605,7 @@ animated chevrons - mobile
 ***************/
 
 // TweenMax method :
-var chevys = $('.swipe-chevron-container').children(); 
+var chevys = $('.swipe-chevron-container').children();
 
 TweenMax.staggerFromTo(chevys,1.5,{opacity:0, scale:0},{opacity:1, scale:1.05, repeat: -1, repeatDelay: 0,ease: Power1.easeOut, yoyo:true}, .5)
 
