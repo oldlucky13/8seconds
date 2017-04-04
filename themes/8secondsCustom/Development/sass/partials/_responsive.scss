@@ -112,13 +112,6 @@
 }
 
 
-@media screen and (min-aspect-ratio: 185 / 100) {
-  .main-page-txt {
-    .main-text-content {
-      margin-top: 48%;
-    }
-  }
-}
 
 @media screen and (min-aspect-ratio: 185 / 100) and (min-width: 992px){
   .main-page-txt {
@@ -128,6 +121,14 @@
       .empty-button {
         margin-top: 30px;
       }
+    }
+  }
+}
+
+@media screen and (min-aspect-ratio: 185 / 100) and (min-width: 1200px) {
+  .main-page-txt {
+    .main-text-content {
+      margin-top: 48%;
     }
   }
 }
