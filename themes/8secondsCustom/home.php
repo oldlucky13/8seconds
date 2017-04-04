@@ -196,7 +196,8 @@ get_header();
         <div id="ajax-about" class="ajaxSection ajaxAboutSection no-mobile-col col-md-6">
 
           <div id="about-btn-bk-mobile" class="s-back-mobile">
-            <img class="mobile-back-arrow" src="/wp-content/uploads/2017/03/mobilebackarrow.svg" alt="">
+            <img class="mobile-back-arrow" src="/wp-content/uploads/2017/04/arrow-left.svg" alt="">
+            <!-- <img class="mobile-back-arrow" src="/wp-content/uploads/2017/03/mobilebackarrow.svg" alt=""> -->
           </div>
 
           <div id="first-s-story" class="s-section first-s-section">
@@ -212,9 +213,6 @@ get_header();
             </div>
           </div> <!-- s-section -->
           <div id="matador-section" class="s-section">
-            <!-- <div id="about-btn-bk-mobile" class="s-back-mobile">
-              <img class="mobile-back-arrow" src="/wp-content/uploads/2017/03/mobilebackarrow.svg" alt="">
-            </div> -->
             <div class="v2 vertical-line mobile-first-v-line">
             </div>
             <div id="first-story-s-text-mobile" class="s-text">
@@ -348,7 +346,8 @@ get_header();
         </div> <!-- #five-img -->
         <div id="ajax-recipes" class="ajaxSection ajaxRecipesSection no-mobile-col col-md-6">
           <div id="recipes-btn-bk-mobile" class="s-back-mobile">
-            <img class="mobile-back-arrow" src="/wp-content/uploads/2017/03/mobilebackarrow.svg" alt="">
+            <img class="mobile-back-arrow" src="/wp-content/uploads/2017/04/arrow-left.svg" alt="">
+            <!-- <img class="mobile-back-arrow" src="/wp-content/uploads/2017/03/mobilebackarrow.svg" alt=""> -->
           </div>
           <div id="mobile-manhattan" class="s-section first-s-section">
             <div id="s-recipes-mobile-nav" class="mobile-nav">
@@ -726,7 +725,8 @@ get_header();
   </div>
 
   <div id="about-btn-bk-mobile" class="s-back-mobile">
-    <img class="mobile-back-arrow" src="/wp-content/uploads/2017/03/mobilebackarrow.svg" alt="">
+    <img class="mobile-back-arrow" src="/wp-content/uploads/2017/04/arrow-left.svg" alt="">
+    <!-- <img class="mobile-back-arrow" src="/wp-content/uploads/2017/03/mobilebackarrow.svg" alt=""> -->
   </div>
 </div> <!-- #main-content -->
 

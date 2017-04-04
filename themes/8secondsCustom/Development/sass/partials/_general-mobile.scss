@@ -216,10 +216,11 @@
   vertical-align: middle;
   width: 30px !important;
   position: absolute !important;
-  // left: 50% !important;
-  left: calc(50% - 26px) !important;
+  left: 50% !important;
   top: 50% !important;
+  // left: calc(50% - 26px) !important;
   opacity: 0;
+  transform: translate(-50%, -50%);
 }
 
 .ajaxSection {
