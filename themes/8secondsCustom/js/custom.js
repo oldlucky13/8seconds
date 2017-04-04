@@ -1240,7 +1240,9 @@ function checkSize(){
 
 	sortMenu();
 
-
+  if (mainIdx === 6) {
+    $('.slide-button').fadeOut();
+  }
 
 	if (deskClassAdded && $(window).innerWidth() <= 991){
 		$noMobileCol.each(function () {

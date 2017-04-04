@@ -94,16 +94,15 @@
 
 }
 
-@media screen and (min-aspect-ratio: 170 / 100) {
-  .main-page-txt {
-    .main-text-content {
-      margin-top: 52%;
-    }
-  }
+// @media screen and (min-aspect-ratio: 170 / 100) {
+//   .main-page-txt {
+//     .main-text-content {
+//       margin-top: 52%;
+//     }
+//   }
+// }
 
 
-
-}
 @media screen and (min-aspect-ratio: 170 / 100) and (min-width: 1640px) {
 
   .icon-section {
@@ -113,7 +112,20 @@
 }
 
 
-@media screen and (min-aspect-ratio: 185 / 100) {
+
+@media screen and (min-aspect-ratio: 185 / 100) and (min-width: 992px){
+  .main-page-txt {
+    .main-text-content {
+      margin-top: 58%;
+
+      .empty-button {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (min-aspect-ratio: 185 / 100) and (min-width: 1200px) {
   .main-page-txt {
     .main-text-content {
       margin-top: 48%;
@@ -134,7 +146,7 @@
   }
 
   .wpcf7 {
-    // top: 30%;
+    top: 30%;
     z-index: 10;
   }
 }
