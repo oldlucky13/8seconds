@@ -5733,7 +5733,7 @@ body {
 
 .main-page-title-group {
   position: absolute;
-  left: calc((100%/4) - 250px);
+  left: calc((100%/4) - 260px);
   top: 14%;
   box-sizing: border-box;
   z-index: 2; }
