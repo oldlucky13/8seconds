@@ -95,13 +95,15 @@
 }
 
 @media screen and (min-aspect-ratio: 170 / 100) {
+
+
   .main-page-txt {
     .main-text-content {
       margin-top: 52%;
     }
   }
 
-
+  _:-ms-fullscreen, :root .main-page-txt .main-text-content { margin-top:49%; }
 
 }
 @media screen and (min-aspect-ratio: 170 / 100) and (min-width: 1640px) {
@@ -162,11 +164,11 @@
     }
 
     @media all and (max-width: 425px) {
-      top: 10%;
+      top: 20%;
     }
 
     @media all and (max-width: 330px) {
-      top: 7%;
+      top: 14%;
     }
   }
 
@@ -187,3 +189,7 @@
   height: 100%;
   width: 100%;
 }
+
+
+
+

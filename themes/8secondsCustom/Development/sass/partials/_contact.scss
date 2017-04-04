@@ -198,7 +198,7 @@ div.wpcf7-response-output {
     padding: 0;
     position: absolute;
     // bottom: 25.5%;
-    bottom: 19.5%;
+    bottom: 29.5%;
 
      & ul{
       margin: 0;
@@ -222,4 +222,15 @@ div.wpcf7-response-output {
       display:none;
     }
 
+}
+
+
+@media screen and (max-width:480px){
+  input.wpcf7-form-control[placeholder="LAST NAME"],input.wpcf7-form-control[placeholder="PHONE"]  {
+    display: none;
+  }
+
+   .contact-form-container .absolute-container{
+      height: 50%;
+   } 
 }

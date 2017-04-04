@@ -6818,7 +6818,7 @@ div.wpcf7-response-output {
   margin: 0;
   padding: 0;
   position: absolute;
-  bottom: 19.5%; }
+  bottom: 29.5%; }
   .social-container-mobile ul {
     margin: 0;
     padding: 0;
@@ -6835,6 +6835,12 @@ div.wpcf7-response-output {
     .social-container-mobile {
       display: none; } }
 
+@media screen and (max-width: 480px) {
+  input.wpcf7-form-control[placeholder="LAST NAME"], input.wpcf7-form-control[placeholder="PHONE"] {
+    display: none; }
+
+  .contact-form-container .absolute-container {
+    height: 50%; } }
 #ageGate {
   background-color: #000;
   z-index: 2000; }
@@ -7371,7 +7377,10 @@ div.wpcf7-response-output {
     margin-top: 56%; } }
 @media screen and (min-aspect-ratio: 170 / 100) {
   .main-page-txt .main-text-content {
-    margin-top: 52%; } }
+    margin-top: 52%; }
+
+  _:-ms-fullscreen, :root .main-page-txt .main-text-content {
+    margin-top: 49%; } }
 @media screen and (min-aspect-ratio: 170 / 100) and (min-width: 1640px) {
   .icon-section {
     width: 34%; } }
@@ -7401,10 +7410,10 @@ div.wpcf7-response-output {
       top: 20%; } }
   @media all and (max-width: 425px) {
     .absolute-container .wpcf7 {
-      top: 10%; } }
+      top: 20%; } }
   @media all and (max-width: 330px) {
     .absolute-container .wpcf7 {
-      top: 7%; } }
+      top: 14%; } }
   @media all and (max-width: 330px) {
     .absolute-container img {
       width: 45%; } }
