@@ -74,7 +74,9 @@
 
 
 
+// hammertime
 
+!function(){var a=window.MutationObserver||window.WebKitMutationObserver,b="ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch,c=void 0!==document.documentElement.style["touch-action"]||document.documentElement.style["-ms-touch-action"];if(!c&&b&&a){window.Hammer=window.Hammer||{};var d=/touch-action[:][\s]*(none)[^;'"]*/,e=/touch-action[:][\s]*(manipulation)[^;'"]*/,f=/touch-action/,g=navigator.userAgent.match(/(iPad|iPhone|iPod)/g)?!0:!1,h=function(){try{var a=document.createElement("canvas");return!(!window.WebGLRenderingContext||!a.getContext("webgl")&&!a.getContext("experimental-webgl"))}catch(b){return!1}}(),i=h&&g;window.Hammer.time={getTouchAction:function(a){return this.checkStyleString(a.getAttribute("style"))},checkStyleString:function(a){return f.test(a)?d.test(a)?"none":e.test(a)?"manipulation":!0:void 0},shouldHammer:function(a){var b=this.hasParent(a.target);return b&&(!i||Date.now()-a.target.lastStart<125)?b:!1},touchHandler:function(a){var b=a.target.getBoundingClientRect(),c=b.top!==this.pos.top||b.left!==this.pos.left,d=this.shouldHammer(a);("none"===d||c===!1&&"manipulation"===d)&&("touchend"===a.type&&(a.target.focus(),setTimeout(function(){a.target.click()},0)),a.preventDefault()),this.scrolled=!1,delete a.target.lastStart},touchStart:function(a){this.pos=a.target.getBoundingClientRect(),i&&this.hasParent(a.target)&&(a.target.lastStart=Date.now())},styleWatcher:function(a){a.forEach(this.styleUpdater,this)},styleUpdater:function(a){if(a.target.updateNext)return void(a.target.updateNext=!1);var b=this.getTouchAction(a.target);return b?void("none"!==b&&(a.target.hadTouchNone=!1)):void(!b&&(a.oldValue&&this.checkStyleString(a.oldValue)||a.target.hadTouchNone)&&(a.target.hadTouchNone=!0,a.target.updateNext=!1,a.target.setAttribute("style",a.target.getAttribute("style")+" touch-action: none;")))},hasParent:function(a){for(var b,c=a;c&&c.parentNode;c=c.parentNode)if(b=this.getTouchAction(c))return b;return!1},installStartEvents:function(){document.addEventListener("touchstart",this.touchStart.bind(this)),document.addEventListener("mousedown",this.touchStart.bind(this))},installEndEvents:function(){document.addEventListener("touchend",this.touchHandler.bind(this),!0),document.addEventListener("mouseup",this.touchHandler.bind(this),!0)},installObserver:function(){this.observer=new a(this.styleWatcher.bind(this)).observe(document,{subtree:!0,attributes:!0,attributeOldValue:!0,attributeFilter:["style"]})},install:function(){this.installEndEvents(),this.installStartEvents(),this.installObserver()}},window.Hammer.time.install()}}();
 
 
 
@@ -165,18 +167,62 @@ jQuery(document).ready(function( $ ) {
   /***************
   Hammer
   ***************/
-
   var mainPageContainerHammer = document.getElementById('the-container');
+  // var ajaxAboutSectionHammer = document.getElementById($(html)[0]));
+  var ajaxAboutSectionHammer = document.getElementById('ajax-about');
+  var ajaxRecipesSectionHammer = document.getElementById('ajax-recipes');
   var hammertime = new Hammer(mainPageContainerHammer);
   hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-  hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+  hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+  // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
 
-  hammertime.on('swipe', function(event) {
+  // hammertime.on('swipe', function(event) {
+  //   if (onMainPage) {
+  //     handleMainPageScroll(event.deltaY);
+  //   } else {
+  //     hammertime.destroy();
+  //   }
+  // })
+  // hammertime.on('swipeup', function(event) {
+  //   console.log("swipeup");
+  //   if (onMainPage) {
+  //     handleMainPageScroll(event.deltaY);
+  //   } else {
+  //     hammertime.destroy();
+  //   }
+  // })
+  // hammertime.on('swipedown', function(event) {
+  //   console.log("swipe down!");
+  //   if (onMainPage) {
+  //     handleMainPageScroll(event.deltaY);
+  //   } else {
+  //     hammertime.destroy();
+  //   }
+  // })
+  hammertime.on('swipeup swipedown', function(event) {
     if (onMainPage) {
       handleMainPageScroll(event.deltaY);
     } else {
       hammertime.destroy();
-      // handleMobileScroll($ajaxAboutSection, event);
+    }
+  })
+  hammertime.on('swipeleft', function(event) {
+    if (mainIdx === 4) {
+      if ($(window).width() > 991) {
+        handleAboutTrigger();
+      } else {
+        aboutAreaTlMobile.play();
+        triggerSection("about");
+        hammertime.destroy();
+      }
+    } else if (mainIdx === 5) {
+      if ($(window).width() > 991) {
+        handleRecipesTrigger();
+      } else {
+        recipesAreaTlMobile.play();
+        triggerSection("recipes");
+        hammertime.destroy();
+      }
     }
   })
 
@@ -359,7 +405,6 @@ function previousSlide(idx, callback) {
 // }
 
 function jumpToSlide(oldIdx, newIdx) {
-  console.log("jumping");
   jumpScrollUnlocked = false;
   if (oldIdx < newIdx) {
     var nextTitles = $allTitles.find(".h2-child").slice(oldIdx + 1, newIdx);
@@ -409,7 +454,6 @@ function unlockMainScroll() {
 
 function unlockJumpScroll() {
   jumpScrollUnlocked = true;
-  console.log("unlocked jump");
 }
 
 $('.breadcrumb').click(function(e) {
@@ -522,24 +566,53 @@ function handleRecipesTrigger() {
     recipesFive = $('#recipes-five').offset().top;
     recipesSix = $('#recipes-six').offset().top;
     recipesSeven = $('#recipes-seven').offset().top;
+    var mc = new Hammer(ajaxRecipesSectionHammer);
+    mc.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+    mc.on('swiperight', function(event) {
+      if ($(window).width() > 991) {
+        handleRecipesTrigger();
+        mc.destroy();
+      } else {
+        recipeBackMobile();
+        mc.destroy();
+      }
+    });
   } else if ($btnRecipes.hasClass("bk")) {
     $recipesImg.css('background-image','url(/wp-content/uploads/2017/03/home-drinks-manhattan.jpg)');
     if ($(window).width() > 991) {
       recipesAreaTl.reverse();
     } else if ($(window).width() <= 991) {
       recipesAreaTlMobile.reverse();
-      var hammertime = new Hammer(mainPageContainerHammer);
-      hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-      hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-      hammertime.on('swipe', function(event) {
-        if (onMainPage) {
-          handleMainPageScroll(event.deltaY);
-        } else {
-          hammertime.destroy();
-          // handleMobileScroll($ajaxAboutSection, event);
-        }
-      })
     }
+    var hammertime = new Hammer(mainPageContainerHammer);
+    hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+    hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+    hammertime.on('swipeup swipedown', function(event) {
+        if (onMainPage) {
+        handleMainPageScroll(event.deltaY);
+      } else {
+        hammertime.destroy();
+      }
+    })
+    hammertime.on('swipeleft', function(event) {
+      if (mainIdx === 4) {
+        if ($(window).width() > 991) {
+          handleAboutTrigger();
+        } else {
+          aboutAreaTlMobile.play();
+          triggerSection("about");
+          hammertime.destroy();
+        }
+      } else if (mainIdx === 5) {
+        if ($(window).width() > 991) {
+          handleRecipesTrigger();
+        } else {
+          recipesAreaTlMobile.play();
+          triggerSection("recipes");
+          hammertime.destroy();
+        }
+      }
+    })
     triggerSection("main");
     TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
     recipesBreadcrumbSeven.reverse();
@@ -566,6 +639,7 @@ function handleAboutTrigger() {
     } else if ($(window).width() <= 991) {
       aboutAreaTlMobile.play();
     }
+
     triggerSection("about");
     $aboutBtn.removeClass("fwd");
     $aboutBtn.addClass("bk");
@@ -579,24 +653,53 @@ function handleAboutTrigger() {
     aboutThree = $('#about-three').offset().top;
     aboutFour = $('#about-four').offset().top;
     aboutFive = $('#about-five').offset().top;
+    var hammerbros = new Hammer(ajaxAboutSectionHammer);
+    hammerbros.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+    hammerbros.on('swiperight', function(event) {
+      if ($(window).width() > 991) {
+        handleAboutTrigger();
+        hammerbros.destroy();
+      } else {
+        aboutBackMobile();
+        hammerbros.destroy();
+      }
+    });
   } else if ($btnAbout.hasClass("bk")) {
     $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
     if ($(window).width() > 991) {
       aboutAreaTl.reverse();
     } else if ($(window).width() <= 991) {
       aboutAreaTlMobile.reverse();
-      var hammertime = new Hammer(mainPageContainerHammer);
-      hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-      hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-      hammertime.on('swipe', function(event) {
-        if (onMainPage) {
-          handleMainPageScroll(event.deltaY);
-        } else {
-          hammertime.destroy();
-          // handleMobileScroll($ajaxAboutSection, event);
-        }
-      })
     }
+    var hammertime = new Hammer(mainPageContainerHammer);
+    hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+    hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+    hammertime.on('swipeup swipedown', function(event) {
+        if (onMainPage) {
+        handleMainPageScroll(event.deltaY);
+      } else {
+        hammertime.destroy();
+      }
+    })
+    hammertime.on('swipeleft', function(event) {
+      if (mainIdx === 4) {
+        if ($(window).width() > 991) {
+          handleAboutTrigger();
+        } else {
+          aboutAreaTlMobile.play();
+          triggerSection("about");
+          hammertime.destroy();
+        }
+      } else if (mainIdx === 5) {
+        if ($(window).width() > 991) {
+          handleRecipesTrigger();
+        } else {
+          recipesAreaTlMobile.play();
+          triggerSection("recipes");
+          hammertime.destroy();
+        }
+      }
+    })
     triggerSection("main");
     TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
     aboutBreadcrumbFive.reverse();
@@ -625,30 +728,129 @@ $aboutBtn.click(function () {
 })
 
 $('#recipes-btn-fwd-mobile').click(function () {
-  // debugger;
   recipesAreaTlMobile.play();
   triggerSection("recipes");
   hammertime.destroy();
-  // var hammertime = new Hammer(mainPageContainerHammer);
+  var mc = new Hammer(ajaxRecipesSectionHammer);
+  mc.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+  mc.on('swiperight', function(event) {
+    if ($(window).width() > 991) {
+      handleRecipesTrigger();
+      mc.destroy();
+    } else {
+      recipeBackMobile();
+      mc.destroy();
+    }
+  });
 })
 
 $('#recipes-btn-bk-mobile').click(function () {
+  recipeBackMobile();
+  // TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
+  // recipesAreaTlMobile.reverse();
+  // triggerSection("main");
+  // TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+  // var hammertime = new Hammer(mainPageContainerHammer);
+  // hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+  // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+  // hammertime.on('swipeup swipedown', function(event) {
+  //     if (onMainPage) {
+  //     handleMainPageScroll(event.deltaY);
+  //   } else {
+  //     hammertime.destroy();
+  //   }
+  // })
+  // hammertime.on('swipeleft', function(event) {
+  //   if (mainIdx === 4) {
+  //     if ($(window).width() > 991) {
+  //       handleAboutTrigger();
+  //     } else {
+  //       aboutAreaTlMobile.play();
+  //       triggerSection("about");
+  //       hammertime.destroy();
+  //     }
+  //   } else if (mainIdx === 5) {
+  //     if ($(window).width() > 991) {
+  //       handleRecipesTrigger();
+  //     } else {
+  //       recipesAreaTlMobile.play();
+  //       triggerSection("recipes");
+  //       hammertime.destroy();
+  //     }
+  //   }
+  // })
+
+
+  // var hammertime = new Hammer(mainPageContainerHammer);
+  // hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+  // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+  // hammertime.on('swipe', function(event) {
+  //   if (onMainPage) {
+  //     handleMainPageScroll(event.deltaY);
+  //   } else {
+  //     hammertime.destroy();
+  //   }
+  // })
+})
+
+function recipeBackMobile() {
   TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
   recipesAreaTlMobile.reverse();
   triggerSection("main");
   TweenMax.to($ajaxRecipesSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
   var hammertime = new Hammer(mainPageContainerHammer);
   hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-  hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-  hammertime.on('swipe', function(event) {
-    if (onMainPage) {
+  hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+  hammertime.on('swipeup swipedown', function(event) {
+      if (onMainPage) {
       handleMainPageScroll(event.deltaY);
     } else {
       hammertime.destroy();
-      // handleMobileScroll($ajaxAboutSection, event);
     }
   })
-})
+  hammertime.on('swipeleft', function(event) {
+    if (mainIdx === 4) {
+      if ($(window).width() > 991) {
+        handleAboutTrigger();
+      } else {
+        aboutAreaTlMobile.play();
+        triggerSection("about");
+        hammertime.destroy();
+      }
+      var hammerbros = new Hammer(ajaxAboutSectionHammer);
+      hammerbros.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+      hammerbros.on('swiperight', function(event) {
+        if ($(window).width() > 991) {
+          handleAboutTrigger();
+          hammerbros.destroy();
+        } else {
+          aboutBackMobile();
+          hammerbros.destroy();
+        }
+      });
+    } else if (mainIdx === 5) {
+      if ($(window).width() > 991) {
+        handleRecipesTrigger();
+      } else {
+        recipesAreaTlMobile.play();
+        triggerSection("recipes");
+        hammertime.destroy();
+      }
+      var mc = new Hammer(ajaxRecipesSectionHammer);
+      mc.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+      mc.on('swiperight', function(event) {
+        if ($(window).width() > 991) {
+          handleRecipesTrigger();
+          mc.destroy();
+        } else {
+          recipeBackMobile();
+          mc.destroy();
+        }
+      });
+    }
+  })
+}
+
 
 // $('#about-btn-fwd-desk').click(function () {
 //   aboutAreaTl.play();
@@ -659,6 +861,17 @@ $('#about-btn-fwd-mobile').click(function () {
   aboutAreaTlMobile.play();
   triggerSection("about");
   hammertime.destroy();
+  var hammerbros = new Hammer(ajaxAboutSectionHammer);
+  hammerbros.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+  hammerbros.on('swiperight', function(event) {
+    if ($(window).width() > 991) {
+      handleAboutTrigger();
+      hammerbros.destroy();
+    } else {
+      aboutBackMobile();
+      hammerbros.destroy();
+    }
+  });
 })
 
 // $('#about-btn-bk-desk').click(function () {
@@ -678,27 +891,96 @@ $('#about-btn-fwd-mobile').click(function () {
 // })
 
 $('#about-btn-bk-mobile').click(function () {
+  aboutBackMobile();
   // $aboutImg.css('background-image','url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
   // $aboutImg.fadeOut(function() {
   //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
   // })
   // .fadeIn();
+
+
+  // TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
+  // aboutAreaTlMobile.reverse();
+  // triggerSection("main");
+  // TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
+  // var hammertime = new Hammer(mainPageContainerHammer);
+  // hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+  // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+  // hammertime.on('swipeup swipedown', function(event) {
+  //     if (onMainPage) {
+  //     handleMainPageScroll(event.deltaY);
+  //   } else {
+  //     hammertime.destroy();
+  //   }
+  // })
+  // hammertime.on('swipeleft', function(event) {
+  //   if (mainIdx === 4) {
+  //     if ($(window).width() > 991) {
+  //       handleAboutTrigger();
+  //     } else {
+  //       aboutAreaTlMobile.play();
+  //       triggerSection("about");
+  //       hammertime.destroy();
+  //     }
+  //   } else if (mainIdx === 5) {
+  //     if ($(window).width() > 991) {
+  //       handleRecipesTrigger();
+  //     } else {
+  //       recipesAreaTlMobile.play();
+  //       triggerSection("recipes");
+  //       hammertime.destroy();
+  //     }
+  //   }
+  // })
+
+
+  // var hammertime = new Hammer(mainPageContainerHammer);
+  // hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+  // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+  // hammertime.on('swipe', function(event) {
+  //   if (onMainPage) {
+  //     handleMainPageScroll(event.deltaY);
+  //   } else {
+  //     hammertime.destroy();
+  //   }
+  // })
+})
+
+function aboutBackMobile() {
   TweenMax.to($('.secondary-image-group').children(), 1, {opacity: 0});
   aboutAreaTlMobile.reverse();
   triggerSection("main");
   TweenMax.to($ajaxAboutSection[0], 1.75, {ease: Power4.easeInOut, scrollTop: 0});
   var hammertime = new Hammer(mainPageContainerHammer);
   hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-  hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-  hammertime.on('swipe', function(event) {
-    if (onMainPage) {
+  hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+  hammertime.on('swipeup swipedown', function(event) {
+      if (onMainPage) {
       handleMainPageScroll(event.deltaY);
     } else {
       hammertime.destroy();
-      // handleMobileScroll($ajaxAboutSection, event);
     }
   })
-})
+  hammertime.on('swipeleft', function(event) {
+    if (mainIdx === 4) {
+      if ($(window).width() > 991) {
+        handleAboutTrigger();
+      } else {
+        aboutAreaTlMobile.play();
+        triggerSection("about");
+        hammertime.destroy();
+      }
+    } else if (mainIdx === 5) {
+      if ($(window).width() > 991) {
+        handleRecipesTrigger();
+      } else {
+        recipesAreaTlMobile.play();
+        triggerSection("recipes");
+        hammertime.destroy();
+      }
+    }
+  })
+}
 
 $('#landing-button').click(function() {
   handleMainPageScroll(-50);
@@ -794,12 +1076,6 @@ recipesBreadcrumbSeven.to($recipesBreadcrumbText[6], 1, {ease: Power4.easeInOut,
 function handleOtherScrolling(section, dY, dF) {
   var scrollPosition = section[0].scrollTop += (-dY * dF);
   if (section === $ajaxAboutSection) {
-    // console.log(testvar = $('#about-two'));
-    // console.log(testvar.offset().top);
-    // console.log("------- scroll position is: ");
-    // console.log(scrollPosition);
-    // console.log("------- window height position is: ");
-    // console.log($(window).height());
     if ((scrollPosition + $(window).height()) > aboutFive) {
       aboutBreadcrumbFour.reverse();
       aboutBreadcrumbFive.play();
@@ -837,8 +1113,6 @@ function handleOtherScrolling(section, dY, dF) {
       // $aboutImg.css('background-image', 'url(/wp-content/uploads/2017/03/home-story-boots.jpg)');
     // }
 
-    // console.log("sP = " + scrollPosition);
-    // console.log("dY = " + dY);
     // if (scrollPosition === 400 && dY > 0) {
     //   $aboutImg.css('background-image','url(http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/giant-panda-eating.jpg.adapt.945.1.jpg)');
     //   // $aboutImg.fadeOut(function() {
