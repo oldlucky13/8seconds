@@ -305,7 +305,7 @@ function previousSlide(idx, callback) {
 }
 
 
-function jumpToSlide(oldIdx, newIdx) {
+function jumpToSlide(oldIdx, newIdx, callback) {
   jumpScrollUnlocked = false;
   if (oldIdx < newIdx) {
     var nextTitles = $allTitles.find(".h2-child").slice(oldIdx + 1, newIdx);
@@ -329,6 +329,9 @@ function jumpToSlide(oldIdx, newIdx) {
       }
       nextButton(1, j);
     }
+  }
+  if (typeof callback === "function") {
+    setTimeout(callback, 1000);
   }
   setTimeout(unlockJumpScroll, 2000);
 }
@@ -989,6 +992,8 @@ function checkSize(){
 
   if (mainIdx === 6) {
     $('.slide-button').fadeOut();
+  } else if (mainIdx === 5) {
+    $btnAbout.fadeOut();
   }
 
 	if (deskClassAdded && $(window).innerWidth() <= 991){
@@ -1033,8 +1038,8 @@ Menu
 var menuOpened = false;
 
 var toggleMenuVeil = new TimelineLite({paused: true});
-toggleMenuVeil.set($menuVeil, {display: "block"});
-toggleMenuVeil.to($menuVeil, .5, {ease: Power4.easeInOut, opacity: 1});
+toggleMenuVeil.to($menuVeil, 0, {display: "block"});
+toggleMenuVeil.to($menuVeil, .2, {ease: Power4.easeInOut, opacity: 1});
 
 var openMenu = new TimelineLite({paused: true});
 openMenu.to($menuLeft, 1.75, {ease: Power4.easeOut, left: "0%"}, 0);
@@ -1052,12 +1057,8 @@ openMenuSecondary.to($menuGrey, 1, {opacity: 1}, "-=1.2");
 
 
 
-function toggleVeil() {
-  // if (onAboutPage || onRecipesPage) {
-  //   toggleMenuVeil.play();
-  // } else {
-  //   toggleMenuVeil.reverse();
-  // }
+function removeMenuVeil() {
+  toggleMenuVeil.reverse();
 }
 
 
@@ -1078,31 +1079,29 @@ $('#toggle').click(function() {
 
 $('.square').click(function() {
   toggleMenu();
-  // toggleMenuVeil.play();
+  toggleMenuVeil.play();
   if (onAboutPage) {
-    // toggleMenuVeil.play();
     handleAboutTrigger();
   } else if (onRecipesPage) {
-    // toggleMenuVeil.play();
     handleRecipesTrigger();
   }
   if (this.id === "premium-square") {
-    jumpToSlide(mainIdx, 1);
+    jumpToSlide(mainIdx, 1, removeMenuVeil);
     mainIdx = 1;
   } else if (this.id === "black-square") {
-    jumpToSlide(mainIdx, 2);
+    jumpToSlide(mainIdx, 2, removeMenuVeil);
     mainIdx = 2;
   } else if (this.id === "honey-cinnamon-square") {
-    jumpToSlide(mainIdx, 3);
+    jumpToSlide(mainIdx, 3, removeMenuVeil);
     mainIdx = 3;
   } else if (this.id === "story-square") {
-    jumpToSlide(mainIdx, 4);
+    jumpToSlide(mainIdx, 4, removeMenuVeil);
     mainIdx = 4;
     } else if (this.id === "cocktails-square") {
-    jumpToSlide(mainIdx, 5);
+    jumpToSlide(mainIdx, 5, removeMenuVeil);
     mainIdx = 5;
   } else if (this.id === "contact-square") {
-    jumpToSlide(mainIdx, 6);
+    jumpToSlide(mainIdx, 6, removeMenuVeil);
     mainIdx = 6;
   }
   updateBreadcrumb(mainIdx);

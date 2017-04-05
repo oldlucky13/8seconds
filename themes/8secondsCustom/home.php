@@ -221,7 +221,7 @@ get_header();
             <div class="v2 vertical-line mobile-first-v-line">
             </div>
             <div id="first-story-s-text-mobile" class="s-text">
-              <img id="s-text-button-wide" class="s-text-button" src="wp-content/uploads/2017/03/story-16cen.svg" alt="">
+              <img id="s-text-button-wide" class="s-text-button" src="wp-content/uploads/2017/04/story-16cen-v2.svg" alt="">
               <h2 class="s-header">SPANISH ORIGINS</h2>
               <a id="about-one"></a>
               <p class="s-paragraph">The origin of the rodeo, as we have come to know it today, can be traced back to the 16th century influence from Spanish conquistadors. Spanish-Mexican settlers introduced horse and cattle breeding to the Southwest. What initially started out as daily practices of Spanish ranchers evolved into ranch and horsemanship skill contests featured at charreadas.</p>
@@ -232,7 +232,7 @@ get_header();
           <div id="bullrider-section" class="s-section">
             <div class="v2 vertical-line"></div>
             <div class="s-text">
-              <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-1850.svg" alt="">
+              <img class="s-text-button" src="wp-content/uploads/2017/04/story-button-1850-v2.svg" alt="">
               <h2 class="s-header">GAINING POPULARITY</h2>
               <p class="s-paragraph">Charreada-style competition gained popularity in the Southwest, particularly Texas and California. The 1852 Lone Star Fair became the first-ever Anglo-American event to host this still bull fighting.</p>
             </div>
@@ -243,7 +243,7 @@ get_header();
           <div id="gloves-section" class="s-section">
             <div class="v2 vertical-line"></div>
             <div class="s-text">
-              <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-1936.svg" alt="">
+              <img class="s-text-button" src="wp-content/uploads/2017/04/story-button-1936-v2.svg" alt="">
               <h2 class="s-header">STANDARDIZATION</h2>
               <a id="about-three"></a>
               <p class="s-paragraph">Like most rodeo events at the time, bull riding lacked standardized rules and regulations. A group of cowboys decided to create their own organization, the Cowboy Turtle’s Association, after striking the Boston Garden Rodeo. They established many of the qualifying rules, such as the 8 second ride, still in effect today and hugely increased the popularity of rodeos and bull riding.</p>
@@ -254,7 +254,7 @@ get_header();
           <div id="vintagebull-section" class="s-section">
             <div class="v2 vertical-line"></div>
             <div class="s-text">
-              <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-1992.svg" alt="">
+              <img class="s-text-button" src="wp-content/uploads/2017/04/story-button-1992-v2.svg" alt="">
               <h2 class="s-header">BREAKING AWAY</h2>
               <a id="about-four"></a>
               <p class="s-paragraph">20 bull riders gathered to contribute in the creation of the Professional Bull Riders, Inc. Believing that bull riding was popular enough to break away from the traditional rodeo, this organization created their own governing rules and events.</p>

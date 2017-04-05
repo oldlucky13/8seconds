@@ -6086,13 +6086,13 @@ body {
   height: 22%; }
 
 .s-text-button {
-  width: 12%; }
+  width: 18%; }
   @media all and (max-width: 991px) {
     .s-text-button {
       width: 41%; } }
 
 #s-text-button-wide {
-  width: 25%; }
+  width: 35%; }
   @media all and (max-width: 991px) {
     #s-text-button-wide {
       width: 100%; } }
@@ -7314,7 +7314,8 @@ div.wpcf7-response-output {
   #mobile-modal-story p {
     font-family: "Boton", "Sans Serif";
     font-size: 1em;
-    color: white; }
+    color: white;
+    text-align: center; }
   #mobile-modal-story .icon-section {
     color: #EAE6DE;
     width: 95%; }
@@ -7342,7 +7343,8 @@ div.wpcf7-response-output {
     font-family: "Boton", "Sans Serif";
     font-size: .8em;
     color: white;
-    text-align: center; }
+    text-align: center;
+    margin: 0 0 3px; }
   #mobile-modal-drinks .icon-section {
     color: #EAE6DE;
     width: 95%; }
