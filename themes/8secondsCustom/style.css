@@ -6640,6 +6640,18 @@ body {
 @media all and (max-width: 991px) {
   #recipes-back-to-top {
     margin-top: 120%; } }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  #recipes-back-to-top {
+    margin-top: 100%; } }
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  #recipes-back-to-top {
+    margin-top: 100%; } }
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  #recipes-back-to-top {
+    margin-top: 100%; } }
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  #recipes-back-to-top {
+    margin-top: 100%; } }
 
 .contact-form-container {
   width: 80%;
@@ -7261,6 +7273,32 @@ div.wpcf7-response-output {
   background: black;
   display: none;
   opacity: 0; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  #btn-neat {
+    bottom: 20%; } }
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  #btn-neat {
+    bottom: 20%; } }
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  #btn-neat {
+    bottom: 20%; } }
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  #btn-neat {
+    bottom: 20%; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  #story-back-to-top {
+    margin-top: 10%; } }
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  #story-back-to-top {
+    margin-top: 10%; } }
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  #story-back-to-top {
+    margin-top: 10%; } }
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  #story-back-to-top {
+    margin-top: 10%; } }
 
 .plus-button {
   background: transparent;
