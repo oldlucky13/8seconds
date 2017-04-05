@@ -6830,7 +6830,8 @@ div.wpcf7-response-output {
     width: 25%;
     text-align: center; }
   .social-container-mobile img {
-    width: 45px; }
+    width: 45px;
+    height: 45px; }
   @media screen and (min-width: 991px) {
     .social-container-mobile {
       display: none; } }
