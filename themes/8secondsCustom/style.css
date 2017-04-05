@@ -7344,6 +7344,9 @@ div.wpcf7-response-output {
     width: 40%;
     display: block;
     margin: 0 auto; }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+      #mobile-modal-story > img {
+        width: 30%; } }
   #mobile-modal-story h1 {
     font-family: "Wheat Aged", "Sans Serif";
     font-size: 2.5em;

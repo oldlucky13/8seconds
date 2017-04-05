@@ -55,6 +55,13 @@
 		width: 40%;
     	display: block;
     	margin: 0 auto;
+			// iphone 5
+			  @media only screen
+			    and (min-device-width: 320px)
+			    and (max-device-width: 568px)
+			    and (-webkit-min-device-pixel-ratio: 2) {
+			      width: 30%;
+			  }
 	}
 
 	& h1{
