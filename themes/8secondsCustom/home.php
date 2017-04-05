@@ -269,11 +269,8 @@ get_header();
             <div class="last-mobile-s-text s-text">
               <p class="last-mobile-paragraph s-paragraph">The PBR now hosts over 300 events across America where their World Finals brings in over 700,000 fans. Bull riding is now considered the fastest growing sport in the US. </p>
             </div>
-            <!-- <button id="btn-boots" type="button" class="plus-button about-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button> -->
-            <button type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
+            <button id="story-back-to-top" type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
           </div> <!-- s-section -->
-
-          <!-- <button id="about-btn-bk-mobile" type="button" class="p-btn btn btn-primary mobile-btn">Go Back</button> -->
         </div>
          <div id="mobile-modal-story" class="modal" data-backdrop="false" >
 

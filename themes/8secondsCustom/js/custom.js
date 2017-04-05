@@ -1079,10 +1079,11 @@ $('#toggle').click(function() {
 
 $('.square').click(function() {
   toggleMenu();
-  toggleMenuVeil.play();
   if (onAboutPage) {
+    toggleMenuVeil.play();
     handleAboutTrigger();
   } else if (onRecipesPage) {
+    toggleMenuVeil.play();
     handleRecipesTrigger();
   }
   if (this.id === "premium-square") {
