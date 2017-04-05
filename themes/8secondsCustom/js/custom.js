@@ -989,6 +989,8 @@ function checkSize(){
 
   if (mainIdx === 6) {
     $('.slide-button').fadeOut();
+  } else if (mainIdx === 5) {
+    $btnAbout.fadeOut();
   }
 
 	if (deskClassAdded && $(window).innerWidth() <= 991){
