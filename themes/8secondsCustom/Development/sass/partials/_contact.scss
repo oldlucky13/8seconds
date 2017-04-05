@@ -230,7 +230,11 @@ div.wpcf7-response-output {
     display: none;
   }
 
-   .contact-form-container .absolute-container{
+   
+}
+
+@media screen and (max-width:480px){
+  .contact-form-container .absolute-container{
       height: 50%;
    } 
 }
