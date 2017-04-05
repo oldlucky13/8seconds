@@ -7204,6 +7204,9 @@ div.wpcf7-response-output {
     #landing-text {
       bottom: 100px;
       top: inherit; } }
+  @media all and (min-width: 992px) {
+    #landing-text {
+      top: inherit; } }
 
 .mobile-back-arrow {
   vertical-align: middle;
@@ -7247,6 +7250,16 @@ div.wpcf7-response-output {
 
 .back-to-top:focus {
   color: #86754D !important; }
+
+#menu-veil {
+  position: fixed;
+  height: 100%;
+  width: 200%;
+  top: 0;
+  left: 0;
+  background: black;
+  display: none;
+  opacity: 0; }
 
 .plus-button {
   background: transparent;
@@ -7355,11 +7368,11 @@ div.wpcf7-response-output {
     margin-top: 70%; } }
 @media screen and (min-aspect-ratio: 128 / 100) {
   .icon-section {
-    width: 44%; } }
+    width: 45%; } }
 @media screen and (min-aspect-ratio: 135 / 100) {
   .main-page-txt .main-text-content {
     margin-top: 63%; } }
-@media screen and (min-aspect-ratio: 148 / 100) {
+@media screen and (min-aspect-ratio: 148 / 100) and (min-width: 1270px) {
   .main-page-txt .main-text-content {
     margin-top: 63%;
     font-size: 1.1em; }
