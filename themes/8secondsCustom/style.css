@@ -6645,7 +6645,7 @@ body {
     margin-top: 100%; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   #recipes-back-to-top {
-    margin-top: 100%; } }
+    margin-top: 90%; } }
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
   #recipes-back-to-top {
     margin-top: 100%; } }
@@ -7279,7 +7279,7 @@ div.wpcf7-response-output {
     bottom: 20%; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   #btn-neat {
-    bottom: 20%; } }
+    bottom: 25%; } }
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
   #btn-neat {
     bottom: 20%; } }
@@ -7292,7 +7292,7 @@ div.wpcf7-response-output {
     margin-top: 10%; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   #story-back-to-top {
-    margin-top: 10%; } }
+    margin-top: 2%; } }
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
   #story-back-to-top {
     margin-top: 10%; } }
@@ -7383,6 +7383,9 @@ div.wpcf7-response-output {
     color: white;
     text-align: center;
     margin: 0 0 3px; }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+      #mobile-modal-drinks p {
+        margin: 0 0 0.5px; } }
   #mobile-modal-drinks .icon-section {
     color: #EAE6DE;
     width: 95%; }
