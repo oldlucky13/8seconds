@@ -7314,7 +7314,8 @@ div.wpcf7-response-output {
   #mobile-modal-story p {
     font-family: "Boton", "Sans Serif";
     font-size: 1em;
-    color: white; }
+    color: white;
+    text-align: center; }
   #mobile-modal-story .icon-section {
     color: #EAE6DE;
     width: 95%; }
@@ -7342,7 +7343,8 @@ div.wpcf7-response-output {
     font-family: "Boton", "Sans Serif";
     font-size: .8em;
     color: white;
-    text-align: center; }
+    text-align: center;
+    margin: 0 0 3px; }
   #mobile-modal-drinks .icon-section {
     color: #EAE6DE;
     width: 95%; }
