@@ -1053,11 +1053,11 @@ openMenuSecondary.to($menuGrey, 1, {opacity: 1}, "-=1.2");
 
 
 function toggleVeil() {
-  if (onAboutPage || onRecipesPage) {
-    toggleMenuVeil.play();
-  } else {
-    toggleMenuVeil.reverse();
-  }
+  // if (onAboutPage || onRecipesPage) {
+  //   toggleMenuVeil.play();
+  // } else {
+  //   toggleMenuVeil.reverse();
+  // }
 }
 
 
@@ -1078,7 +1078,7 @@ $('#toggle').click(function() {
 
 $('.square').click(function() {
   toggleMenu();
-  toggleMenuVeil.play();
+  // toggleMenuVeil.play();
   if (onAboutPage) {
     // toggleMenuVeil.play();
     handleAboutTrigger();
