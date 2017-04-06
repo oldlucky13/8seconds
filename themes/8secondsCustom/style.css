@@ -7316,6 +7316,17 @@ div.wpcf7-response-output {
   #story-back-to-top {
     margin-top: 10%; } }
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 800px) and (orientation: landscape) {
+  #six-img .absolute-container img {
+    display: none; }
+  #six-img .absolute-container .wpcf7 {
+    top: 0%; }
+
+  .social-container-mobile {
+    display: block;
+    left: 0; }
+    .social-container-mobile ul li {
+      display: block; } }
 .plus-button {
   background: transparent;
   border: transparent;
