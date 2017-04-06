@@ -225,7 +225,7 @@
   vertical-align: middle;
   width: 30px !important;
   position: absolute !important;
-  left: 50% !important;
+  left: 48% !important;
   top: 50% !important;
   // left: calc(50% - 26px) !important;
   opacity: 0;
@@ -354,5 +354,35 @@
       and (-webkit-min-device-pixel-ratio: 3) {
         margin-top: 10%;
     }
+
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 800px)
+and (orientation : landscape) {
+
+  #six-img {
+    .absolute-container {
+      img {
+        display: none;
+      }
+
+      .wpcf7 {
+        top: 0%;
+      }
+    }
+  }
+
+  .social-container-mobile {
+    display: block;
+    left: 0;
+
+    ul {
+      li {
+        display: block;
+      }
+    }
+  }
 
 }

@@ -133,10 +133,11 @@
 }
 
 .vertical-line {
-  width: 50%;
+  width: calc(50% + 0.5px);
   border-right: 1px solid $icon-color;
   @media all and (max-width: 991px) {
     border-right: 3px solid $icon-color;
+    width: calc(50% + 1.5px);
   }
 }
 
