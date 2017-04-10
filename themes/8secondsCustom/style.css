@@ -7328,6 +7328,17 @@ div.wpcf7-response-output {
     left: 0; }
     .social-container-mobile ul li {
       display: block; } }
+@media all and (max-width: 991px) and (max-height: 380px) and (min-aspect-ratio: 76 / 100) {
+  #six-img .absolute-container img {
+    display: none; }
+  #six-img .absolute-container .wpcf7 {
+    top: 0%; }
+
+  .social-container-mobile {
+    display: block;
+    left: 0; }
+    .social-container-mobile ul li {
+      display: block; } }
 .plus-button {
   background: transparent;
   border: transparent;

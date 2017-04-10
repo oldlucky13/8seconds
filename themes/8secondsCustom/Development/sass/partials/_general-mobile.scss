@@ -386,3 +386,29 @@ and (orientation : landscape) {
   }
 
 }
+
+@media all and (max-width: 991px) and (max-height: 380px) and (min-aspect-ratio: 76 / 100 ) {
+  #six-img {
+    .absolute-container {
+      img {
+        display: none;
+      }
+
+      .wpcf7 {
+        top: 0%;
+      }
+    }
+  }
+
+  .social-container-mobile {
+    display: block;
+    left: 0;
+
+    ul {
+      li {
+        display: block;
+      }
+    }
+  }
+
+}
