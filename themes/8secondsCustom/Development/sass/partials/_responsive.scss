@@ -104,7 +104,10 @@
     }
   }
 
-  _:-ms-fullscreen, :root .main-page-txt .main-text-content { margin-top:49%; }
+  _:-ms-fullscreen, :root .main-page-txt .main-text-content {
+    margin-top:49%;
+    margin-top: 350px;
+   }
 
 }
 
@@ -156,7 +159,17 @@
 }
 
 // contact form
-@media all and (max-height: 700px) {
+// @media all and (max-height: 700px) {
+//   #contact-desk-title {
+//     visibility: hidden !important;
+//   }
+//
+//   .wpcf7 {
+//     top: 30%;
+//     z-index: 10;
+//   }
+// }
+@media all and (max-height: 500px) {
   #contact-desk-title {
     visibility: hidden !important;
   }
@@ -216,3 +229,20 @@
   height: 100%;
   width: 100%;
 }
+
+
+
+ @media all and (min-width: 992px) and (max-width: 1280px) {
+    #contact-desk-title {
+      width: 60%;
+      height: 60%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .wpcf7 {
+      transform: translate(-50%, -14%);
+    }
+
+
+  }

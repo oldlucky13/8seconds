@@ -7479,7 +7479,8 @@ div.wpcf7-response-output {
     margin-top: 52%; }
 
   _:-ms-fullscreen, :root .main-page-txt .main-text-content {
-    margin-top: 49%; } }
+    margin-top: 49%;
+    margin-top: 350px; } }
 @media screen and (min-aspect-ratio: 170 / 100) and (min-width: 1640px) {
   .icon-section {
     width: 34%; } }
@@ -7494,7 +7495,7 @@ div.wpcf7-response-output {
 @media screen and (min-aspect-ratio: 188 / 100) and (min-height: 934px) {
   .icon-section {
     width: 30%; } }
-@media all and (max-height: 700px) {
+@media all and (max-height: 500px) {
   #contact-desk-title {
     visibility: hidden !important; }
 
@@ -7527,5 +7528,15 @@ div.wpcf7-response-output {
   position: relative;
   height: 100%;
   width: 100%; }
+
+@media all and (min-width: 992px) and (max-width: 1280px) {
+  #contact-desk-title {
+    width: 60%;
+    height: 60%;
+    display: block;
+    margin: 0 auto; }
+
+  .wpcf7 {
+    transform: translate(-50%, -14%); } }
 
 /*# sourceMappingURL=style.css.map */
