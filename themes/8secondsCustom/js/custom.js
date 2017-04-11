@@ -787,7 +787,7 @@ function triggerSection(section) {
     });
     TweenMax.to($menuContainer, 1.75, {ease: Power4.easeOut, left: "50%"});
     TweenMax.to($menuLeft, 1.75, {ease: Power4.easeOut, left: "-52%"});
-    // AOS.refreshHard();
+    AOS.refreshHard();
     // console.log(AOS);
     // var newAos = AOS.init();
   } else if (section === "recipes") {
@@ -808,7 +808,7 @@ function triggerSection(section) {
     });
     TweenMax.to($menuContainer, 1.75, {ease: Power4.easeOut, left: "50%"});
     TweenMax.to($menuLeft, 1.75, {ease: Power4.easeOut, left: "-52%"});
-    // AOS.refreshHard();
+    AOS.refreshHard();
   }
 }
 
@@ -1351,7 +1351,9 @@ AOS
 ****************/
 
 // AOS.init();
-var newAos = AOS.init();
+var newAos = AOS.init({
+  disable: 'phone'
+});
 
 
 });// jquery document ready
