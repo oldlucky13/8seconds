@@ -210,7 +210,7 @@ get_header();
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
 
-            <img class="s-title" src="wp-content/uploads/2017/03/home-story-title_v2.png" alt="">
+            <img class="s-title" src="wp-content/uploads/2017/03/notdots-contact-v1.png" alt="">
             <p id="story-s-tagline" class="s-tagline">THE MOST DANGEROUS 8 SECONDS IN SPORTS</p>
             <button id="story-down" type="button" class="s-down-btn s-btn btn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
             <div class="v1 vertical-line">
@@ -220,7 +220,7 @@ get_header();
           <div id="matador-section" class="s-section">
             <div class="v2 vertical-line mobile-first-v-line">
             </div>
-            <div id="first-story-s-text-mobile" class="s-text">
+            <div id="first-story-s-text-mobile" class="s-text" data-aos="fade-up" data-aos-offset="-50" data-aos-duration="1000" data-aos-anchor="#about-one">
               <img id="s-text-button-wide" class="s-text-button" src="wp-content/uploads/2017/04/story-16cen-v2.svg" alt="">
               <h2 class="s-header">SPANISH ORIGINS</h2>
               <a id="about-one"></a>
@@ -231,7 +231,7 @@ get_header();
           </div> <!-- s-section matador-section-->
           <div id="bullrider-section" class="s-section">
             <div class="v2 vertical-line"></div>
-            <div class="s-text">
+            <div class="s-text" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#about-two">
               <img class="s-text-button" src="wp-content/uploads/2017/04/story-button-1850-v2.svg" alt="">
               <h2 class="s-header">GAINING POPULARITY</h2>
               <p class="s-paragraph">Charreada-style competition gained popularity in the Southwest, particularly Texas and California. The 1852 Lone Star Fair became the first-ever Anglo-American event to host this still bull fighting.</p>
@@ -242,7 +242,7 @@ get_header();
           </div> <!-- s-section -->
           <div id="gloves-section" class="s-section">
             <div class="v2 vertical-line"></div>
-            <div class="s-text">
+            <div class="s-text" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#about-three">
               <img class="s-text-button" src="wp-content/uploads/2017/04/story-button-1936-v2.svg" alt="">
               <h2 class="s-header">STANDARDIZATION</h2>
               <a id="about-three"></a>
@@ -253,7 +253,7 @@ get_header();
           </div> <!-- s-section -->
           <div id="vintagebull-section" class="s-section">
             <div class="v2 vertical-line"></div>
-            <div class="s-text">
+            <div class="s-text" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#about-four">
               <img class="s-text-button" src="wp-content/uploads/2017/04/story-button-1992-v2.svg" alt="">
               <h2 class="s-header">BREAKING AWAY</h2>
               <a id="about-four"></a>
@@ -263,13 +263,15 @@ get_header();
             <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="boots-section" class="s-section">
-            <div class="v2 vertical-line"></div>
-            <img id="last-story-title" class="s-title" src="wp-content/uploads/2017/03/story-pasttopresent2.svg" alt="">
-            <a id="about-five"></a>
-            <div class="last-mobile-s-text s-text">
-              <p class="last-mobile-paragraph s-paragraph">The PBR now hosts over 300 events across America where their World Finals brings in over 700,000 fans. Bull riding is now considered the fastest growing sport in the US. </p>
+            <div class="" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#about-five">
+              <div class="v2 vertical-line"></div>
+              <img id="last-story-title" class="s-title" src="wp-content/uploads/2017/03/story-pasttopresent2.svg" alt="">
+              <a id="about-five"></a>
+              <div class="last-mobile-s-text s-text">
+                <p class="last-mobile-paragraph s-paragraph">The PBR now hosts over 300 events across America where their World Finals brings in over 700,000 fans. Bull riding is now considered the fastest growing sport in the US. </p>
+              </div>
+              <button id="story-back-to-top" type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
             </div>
-            <button id="story-back-to-top" type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
           </div> <!-- s-section -->
         </div>
          <div id="mobile-modal-story" class="modal" data-backdrop="false" >

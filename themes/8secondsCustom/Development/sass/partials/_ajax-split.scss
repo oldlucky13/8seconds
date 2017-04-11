@@ -84,7 +84,8 @@
 }
 
 .s-section {
-  height: 80vh;
+  // height: 80vh;
+  height: 65vh;
   position: relative;
   background-size: cover;
   background-position: center center;
@@ -194,11 +195,17 @@
 
 .v0 {
   height: 10%;
+  @media all and (min-width: 992px) {
+    height: 0%;
+  }
 }
 .v1 {
   position: absolute;
   height: 10%;
   bottom: 0;
+  @media all and (min-width: 992px) {
+    height: 0%;
+  }
 }
 // .v1 {
 //   margin-top: 3%;
@@ -207,10 +214,16 @@
 
 .v2 {
   height: 20%;
+  @media all and (min-width: 992px) {
+    height: 0%;
+  }
 }
 
 .v3 {
   height: 22%;
+  @media all and (min-width: 992px) {
+    height: 0%;
+  }
 }
 
 .s-text-button {
