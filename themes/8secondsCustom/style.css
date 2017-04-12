@@ -7259,6 +7259,7 @@ body {
 .icon-text {
   padding-left: 10px;
   font-size: 0.6em;
+  letter-spacing: 0.3px;
   font-family: "Barley Aged", "Sans Serif"; }
   @media all and (min-width: 1004px) {
     .icon-text {

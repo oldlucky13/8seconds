@@ -21,7 +21,8 @@ get_header();
     <div class="main-page-slide-group">
       <div id="zero" class="row main-page-slide">
         <div id="zero-img" class="main-page-img col-md-12">
-          <img id="landing-title" src="/wp-content/uploads/2017/03/landingpagetitle.png" alt="">
+          <!-- <img id="landing-title" src="/wp-content/uploads/2017/03/landingpagetitle.png" alt=""> -->
+          <img id="landing-title" src="/wp-content/uploads/2017/04/title-landing-v4.png" alt="">
           <div class="filler">
 
           </div>
@@ -210,7 +211,7 @@ get_header();
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
 
-            <img class="s-title" src="wp-content/uploads/2017/03/notdots-contact-v1.png" alt="">
+            <img class="s-title" src="wp-content/uploads/2017/04/title-story-v4.png" alt="">
             <p id="story-s-tagline" class="s-tagline">THE MOST DANGEROUS 8 SECONDS IN SPORTS</p>
             <button id="story-down" type="button" class="s-down-btn s-btn btn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
             <div class="v1 vertical-line">
@@ -265,7 +266,8 @@ get_header();
           <div id="boots-section" class="s-section">
             <div class="fade-top" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#about-five">
               <div class="v2 vertical-line"></div>
-              <img id="last-story-title" class="s-title" src="wp-content/uploads/2017/03/story-pasttopresent2.svg" alt="">
+              <!-- <img id="last-story-title" class="s-title" src="wp-content/uploads/2017/03/story-pasttopresent2.svg" alt=""> -->
+              <img id="last-story-title" class="s-title" src="wp-content/uploads/2017/04/past-to-present-v4.png" alt="">
               <a id="about-five"></a>
               <div class="last-mobile-s-text s-text">
                 <p class="last-mobile-paragraph s-paragraph">The PBR now hosts over 300 events across America where their World Finals brings in over 700,000 fans. Bull riding is now considered the fastest growing sport in the US. </p>
