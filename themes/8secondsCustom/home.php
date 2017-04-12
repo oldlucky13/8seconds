@@ -593,38 +593,38 @@ get_header();
     </div>
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
-        <img id="first-h2-child" class="h2-child" src="wp-content/uploads/2017/03/nodots-premium-v1.png" alt="">
-        <!-- <img id="first-h2-child" class="h2-child" src="wp-content/uploads/2017/03/home-premium-title_v4.png" alt=""> -->
+        <!-- <img id="first-h2-child" class="h2-child" src="wp-content/uploads/2017/03/nodots-premium-v1.png" alt=""> -->
+        <img id="first-h2-child" class="h2-child" src="wp-content/uploads/2017/04/title-premium-v4.png" alt="">
       </div>
     </div>
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
-        <img class="h2-child" src="wp-content/uploads/2017/03/nodots-black-v3.png" alt="">
-        <!-- <img class="h2-child" src="wp-content/uploads/2017/03/home-black-title_v2-1.png" alt=""> -->
+        <!-- <img class="h2-child" src="wp-content/uploads/2017/03/nodots-black-v3.png" alt=""> -->
+        <img class="h2-child" src="wp-content/uploads/2017/04/title-black-v4.png" alt="">
       </div>
     </div>
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
-        <img class="h2-child" src="wp-content/uploads/2017/03/nodots-honeycinnamon-v1.png" alt="">
-        <!-- <img class="h2-child" src="wp-content/uploads/2017/03/home-honey-cinnamon-title_v2.png" alt=""> -->
+        <!-- <img class="h2-child" src="wp-content/uploads/2017/03/nodots-honeycinnamon-v1.png" alt=""> -->
+        <img class="h2-child" src="wp-content/uploads/2017/04/title-honeycinnamon-v4.png" alt="">
       </div>
     </div>
     <div class="mobile-main-title main-page-title-group">
       <div class="main-page-slide-title">
-        <img class="h2-child" src="wp-content/uploads/2017/03/nodots-story-v1.png" alt="">
-        <!-- <img class="h2-child" src="wp-content/uploads/2017/03/home-story-title_v2.png" alt=""> -->
+        <!-- <img class="h2-child" src="wp-content/uploads/2017/03/nodots-story-v1.png" alt=""> -->
+        <img class="h2-child" src="wp-content/uploads/2017/04/title-story-v4.png" alt="">
       </div>
     </div>
     <div class="mobile-main-title main-page-title-group">
       <div class="main-page-slide-title">
-        <img class="h2-child" src="wp-content/uploads/2017/03/nodots-cocktail-v1.png" alt="">
-        <!-- <img class="h2-child" src="wp-content/uploads/2017/03/home-recipes-title_v2.png" alt=""> -->
+        <!-- <img class="h2-child" src="wp-content/uploads/2017/03/nodots-cocktail-v1.png" alt=""> -->
+        <img class="h2-child" src="wp-content/uploads/2017/04/title-drinks-v4.png" alt="">
       </div>
     </div>
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
-        <img id="contact-desk-title" class="h2-child" src="wp-content/uploads/2017/03/notdots-contact-v1.png" alt="">
-        <!-- <img class="h2-child" src="wp-content/uploads/2017/03/home-contact-title_v2.png" alt=""> -->
+        <!-- <img id="contact-desk-title" class="h2-child" src="wp-content/uploads/2017/03/notdots-contact-v1.png" alt=""> -->
+        <img id="contact-desk-title" class="h2-child" src="wp-content/uploads/2017/04/title-contact-v4.png" alt="">
       </div>
     </div>
 

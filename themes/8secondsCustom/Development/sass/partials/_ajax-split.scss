@@ -163,6 +163,10 @@
 }
 
 #first-story-s-text-mobile {
+  @media all and (min-width: 992px) {
+    padding-top: 50px;
+  }
+
   @media all and (max-width: 991px) {
     padding-top: 43%;
   }
@@ -330,6 +334,10 @@ div.wpcf7-mail-sent-ok {
     background-image: url("/wp-content/uploads/2017/03/home-story-boots.jpg");
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);
   }
+  @media all and (min-width: 992px) {
+    height: 80vh;
+  }
+
 }
 
 .last-mobile-paragraph {
