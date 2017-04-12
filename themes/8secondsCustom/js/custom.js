@@ -887,6 +887,7 @@ Other scrolling
 
 function handleOtherScrolling(section, dY, dF) {
   AOS.refresh();
+  // $(".fade-top").css("opacity", 1 - $(window).scrollTop() / 250);
   // AOS.refreshHard();
   var scrollPosition = section[0].scrollTop += (-dY * dF);
   if (section === $ajaxAboutSection) {
@@ -1354,6 +1355,10 @@ AOS
 var newAos = AOS.init({
   disable: 'phone'
 });
+
+// $(window).scroll(function(){
+//     $(".fade-top").css("opacity", 1 - $(window).scrollTop() / 250);
+//   });
 
 
 });// jquery document ready

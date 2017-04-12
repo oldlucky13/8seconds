@@ -263,7 +263,7 @@ get_header();
             <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="boots-section" class="s-section">
-            <div class="" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#about-five">
+            <div class="fade-top" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#about-five">
               <div class="v2 vertical-line"></div>
               <img id="last-story-title" class="s-title" src="wp-content/uploads/2017/03/story-pasttopresent2.svg" alt="">
               <a id="about-five"></a>
@@ -385,7 +385,7 @@ get_header();
           <div id="mobile-cola" class="s-section">
             <div class="vertical-line v2">
             </div>
-            <div class=""  data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-two">
+            <div class="fade-top"  data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-two">
               <div class="s-text recipes-s-text">
                 <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-2.svg" alt="">
                 <h2 class="s-header">8 SECONDS COLA</h2>
@@ -411,7 +411,7 @@ get_header();
           <div id="mobile-oldfashioned" class="s-section">
             <div class="vertical-line v2">
             </div>
-            <div class="" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-three">
+            <div class="fade-top" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-three">
               <div class="s-text recipes-s-text">
                 <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-3.svg" alt="">
                 <h2 class="s-header">OLD FASHIONED</h2>
@@ -442,7 +442,7 @@ get_header();
           <div id="mobile-cowboyjulep" class="s-section">
             <div id="cowboy-line" class="v2 vertical-line">
             </div>
-            <div class="" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-four">
+            <div class="fade-top" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-four">
               <div class="s-text recipes-s-text">
                 <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-4.svg" alt="">
                 <h2 class="s-header">COWBOY JULEP</h2>
@@ -473,7 +473,7 @@ get_header();
           </div> <!-- s-section -->
           <div id="mobile-ginger" class="s-section">
             <div class="v2 vertical-line"></div>
-            <div class="" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-five">
+            <div class="fade-top" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-five">
               <div class="s-text recipes-s-text">
                 <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-5.svg" alt="">
                 <h2 class="s-header">8 SECONDS GINGER</h2>
@@ -499,7 +499,7 @@ get_header();
           </div> <!-- s-section -->
           <div id="mobile-honeycinnamon" class="s-section">
             <div class="v2 vertical-line"></div>
-            <div class="" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-six">
+            <div class="fade-top" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-six">
               <div class="s-text recipes-s-text">
                 <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-6.svg" alt="">
                 <h2 class="s-header">HONEY CINNAMON SHO0TER</h2>
@@ -512,7 +512,7 @@ get_header();
           </div> <!-- s-section -->
           <div id="mobile-neat" class="s-section">
             <div class="v2 vertical-line"></div>
-            <div class="" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-seven">
+            <div class="fade-top" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-seven">
               <div class="s-text recipes-s-text">
                 <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-7.svg" alt="">
                 <h2 class="s-header">8 SECONDS NEAT</h2>

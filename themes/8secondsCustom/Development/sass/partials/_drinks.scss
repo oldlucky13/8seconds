@@ -123,4 +123,9 @@
       width: 200px
   }
 
+  margin-top: 200px;
+  @media all and (min-width: 1600px) {
+    margin-top: 400px;
+  }
+
 }
