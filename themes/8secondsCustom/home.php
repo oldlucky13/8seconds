@@ -221,10 +221,9 @@ get_header();
           <div id="matador-section" class="s-section">
             <div class="v2 vertical-line mobile-first-v-line">
             </div>
-            <div id="first-story-s-text-mobile" class="s-text" data-aos="fade-up" data-aos-offset="-50" data-aos-duration="1000" data-aos-anchor="#about-one">
+            <div id="first-story-s-text-mobile" class="s-text" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor="#about-one">
               <img id="s-text-button-wide" class="s-text-button" src="wp-content/uploads/2017/04/story-16cen-v2.svg" alt="">
-              <h2 class="s-header">SPANISH ORIGINS</h2>
-              <a id="about-one"></a>
+              <a id="about-one"><h2 class="s-header">SPANISH ORIGINS</h2></a>
               <p class="s-paragraph">The origin of the rodeo, as we have come to know it today, can be traced back to the 16th century influence from Spanish conquistadors. Spanish-Mexican settlers introduced horse and cattle breeding to the Southwest. What initially started out as daily practices of Spanish ranchers evolved into ranch and horsemanship skill contests featured at charreadas.</p>
             </div>
             <button id="btn-matador" type="button" class="plus-button about-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
@@ -232,21 +231,19 @@ get_header();
           </div> <!-- s-section matador-section-->
           <div id="bullrider-section" class="s-section">
             <div class="v2 vertical-line"></div>
-            <div class="s-text" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#about-two">
+            <div class="s-text" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor="#about-two">
               <img class="s-text-button" src="wp-content/uploads/2017/04/story-button-1850-v2.svg" alt="">
-              <h2 class="s-header">GAINING POPULARITY</h2>
+              <a id="about-two"><h2 class="s-header">GAINING POPULARITY</h2></a>
               <p class="s-paragraph">Charreada-style competition gained popularity in the Southwest, particularly Texas and California. The 1852 Lone Star Fair became the first-ever Anglo-American event to host this still bull fighting.</p>
             </div>
-            <a id="about-two"></a>
             <button id="btn-bullrider" type="button" class="plus-button about-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="gloves-section" class="s-section">
             <div class="v2 vertical-line"></div>
-            <div class="s-text" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#about-three">
+            <div class="s-text" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor="#about-three">
               <img class="s-text-button" src="wp-content/uploads/2017/04/story-button-1936-v2.svg" alt="">
-              <h2 class="s-header">STANDARDIZATION</h2>
-              <a id="about-three"></a>
+              <a id="about-three"><h2 class="s-header">STANDARDIZATION</h2></a>
               <p class="s-paragraph">Like most rodeo events at the time, bull riding lacked standardized rules and regulations. A group of cowboys decided to create their own organization, the Cowboy Turtle’s Association, after striking the Boston Garden Rodeo. They established many of the qualifying rules, such as the 8 second ride, still in effect today and hugely increased the popularity of rodeos and bull riding.</p>
             </div>
             <button id="btn-gloves" type="button" class="plus-button about-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
@@ -254,23 +251,22 @@ get_header();
           </div> <!-- s-section -->
           <div id="vintagebull-section" class="s-section">
             <div class="v2 vertical-line"></div>
-            <div class="s-text" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#about-four">
+            <div class="s-text" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor="#about-four">
               <img class="s-text-button" src="wp-content/uploads/2017/04/story-button-1992-v2.svg" alt="">
-              <h2 class="s-header">BREAKING AWAY</h2>
-              <a id="about-four"></a>
+              <a id="about-four"><h2 class="s-header">BREAKING AWAY</h2></a>
               <p class="s-paragraph">20 bull riders gathered to contribute in the creation of the Professional Bull Riders, Inc. Believing that bull riding was popular enough to break away from the traditional rodeo, this organization created their own governing rules and events.</p>
             </div>
             <button id="btn-vintagebull" type="button" class="plus-button about-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="boots-section" class="s-section">
-            <div class="fade-top" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#about-five">
+            <div class="fade-top" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor="#about-five">
               <div class="v2 vertical-line"></div>
               <!-- <img id="last-story-title" class="s-title" src="wp-content/uploads/2017/03/story-pasttopresent2.svg" alt=""> -->
               <img id="last-story-title" class="s-title" src="wp-content/uploads/2017/04/past-to-present-v4.png" alt="">
-              <a id="about-five"></a>
+
               <div class="last-mobile-s-text s-text">
-                <p class="last-mobile-paragraph s-paragraph">The PBR now hosts over 300 events across America where their World Finals brings in over 700,000 fans. Bull riding is now considered the fastest growing sport in the US. </p>
+                <a id="about-five"><p class="last-mobile-paragraph s-paragraph">The PBR now hosts over 300 events across America where their World Finals brings in over 700,000 fans. Bull riding is now considered the fastest growing sport in the US. </p></a>
               </div>
               <button id="story-back-to-top" type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
             </div>
@@ -361,8 +357,7 @@ get_header();
             </div>
             <div id="first-recipe" class="s-text recipes-s-text">
               <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-1.svg" alt="">
-              <h2 class="s-header">MANHATTAN</h2>
-              <a id="recipes-one"></a>
+              <a id="recipes-one"><h2 class="s-header">MANHATTAN</h2></a>
               <p class="s-paragraph">A classic with a twist.</p>
             </div> <!--#first-recipe -->
             <div class="drink-guide">
@@ -387,11 +382,10 @@ get_header();
           <div id="mobile-cola" class="s-section">
             <div class="vertical-line v2">
             </div>
-            <div class="fade-top"  data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-two">
+            <div class="fade-top"  data-aos="fade-up" data-aos-duration="1000" data-aos-anchor="#recipes-two">
               <div class="s-text recipes-s-text">
                 <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-2.svg" alt="">
-                <h2 class="s-header">8 SECONDS COLA</h2>
-                <a id="recipes-two"></a>
+                <a id="recipes-two"><h2 class="s-header">8 SECONDS COLA</h2></a>
                 <p class="s-paragraph">Nothing wrong with a go-to.</p>
               </div>
               <div class="drink-guide">
@@ -413,11 +407,10 @@ get_header();
           <div id="mobile-oldfashioned" class="s-section">
             <div class="vertical-line v2">
             </div>
-            <div class="fade-top" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-three">
+            <div class="fade-top" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor="#recipes-three">
               <div class="s-text recipes-s-text">
                 <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-3.svg" alt="">
-                <h2 class="s-header">OLD FASHIONED</h2>
-                <a id="recipes-three"></a>
+                <a id="recipes-three"><h2 class="s-header">OLD FASHIONED</h2></a>
                 <p class="s-paragraph">For channeling your inner Mad Men.</p>
               </div>
               <div class="drink-guide">
@@ -444,11 +437,10 @@ get_header();
           <div id="mobile-cowboyjulep" class="s-section">
             <div id="cowboy-line" class="v2 vertical-line">
             </div>
-            <div class="fade-top" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-four">
+            <div class="fade-top" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor="#recipes-four">
               <div class="s-text recipes-s-text">
                 <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-4.svg" alt="">
-                <h2 class="s-header">COWBOY JULEP</h2>
-                <a id="recipes-four"></a>
+                <a id="recipes-four"><h2 class="s-header">COWBOY JULEP</h2></a>
                 <p class="s-paragraph">Cool with a kick.</p>
               </div>
               <div class="drink-guide">
@@ -475,11 +467,10 @@ get_header();
           </div> <!-- s-section -->
           <div id="mobile-ginger" class="s-section">
             <div class="v2 vertical-line"></div>
-            <div class="fade-top" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-five">
+            <div class="fade-top" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor="#recipes-five">
               <div class="s-text recipes-s-text">
                 <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-5.svg" alt="">
-                <h2 class="s-header">8 SECONDS GINGER</h2>
-                <a id="recipes-five"></a>
+                <a id="recipes-five"><h2 class="s-header">8 SECONDS GINGER</h2></a>
                 <p class="s-paragraph">Not for the urban cowboy.</p>
               </div>
               <div class="drink-guide">
@@ -501,11 +492,10 @@ get_header();
           </div> <!-- s-section -->
           <div id="mobile-honeycinnamon" class="s-section">
             <div class="v2 vertical-line"></div>
-            <div class="fade-top" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-six">
+            <div class="fade-top" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor="#recipes-six">
               <div class="s-text recipes-s-text">
                 <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-6.svg" alt="">
-                <h2 class="s-header">HONEY CINNAMON SHO0TER</h2>
-                <a id="recipes-six"></a>
+                <a id="recipes-six"><h2 class="s-header">HONEY CINNAMON SHO0TER</h2></a>
                 <p class="s-paragraph">Shootin' it straight.</p>
               </div>
               <button id="btn-honeycinnamon" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
@@ -514,11 +504,10 @@ get_header();
           </div> <!-- s-section -->
           <div id="mobile-neat" class="s-section">
             <div class="v2 vertical-line"></div>
-            <div class="fade-top" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-seven">
+            <div class="fade-top" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor="#recipes-seven">
               <div class="s-text recipes-s-text">
                 <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-7.svg" alt="">
-                <h2 class="s-header">8 SECONDS NEAT</h2>
-                <a id="recipes-seven"></a>
+                <a id="recipes-seven"><h2 class="s-header">8 SECONDS NEAT</h2></a>
                 <p class="s-paragraph">No need to complicate.</p>
               </div>
               <button id="btn-neat" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
