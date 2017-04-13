@@ -372,8 +372,8 @@ get_header();
               <div class="drink-half">
                 <h5 class="drink-guide-title">DIRECTIONS</h5>
                 <p>Combine 8 Seconds Canadian Whiskey, Vermouth, and bitters with 2-3 ice cubes in a mixing glass &amp; stir.</p>
-                <p>Place the cherry in a chilled cocktail glass and strain whiskey mixture over the cheery.</p>
-                <p>Rub the cut edge of the orange peel over the rim of the glass and twist it over the dirnk to release the oils. Do not drop it in.</p>
+                <p>Place the cherry in a chilled cocktail glass and strain whiskey mixture over the cherry.</p>
+                <p>Rub the cut edge of the orange peel over the rim of the glass and twist it over the drink to release the oils. Do not drop it in.</p>
               </div>
             </div> <!-- drink-guide -->
             <button id="btn-manhattan" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
@@ -425,7 +425,7 @@ get_header();
                 </div>
                 <div class="drink-half">
                   <h5 class="drink-guide-title">DIRECTIONS</h5>
-                  <p>Pour 8 Seconds Whisky In an old-fashioned or rocks glass, add sugar cube to bottom of glass with water and bitters. Muddle ingredients together.</p>
+                  <p>Pour 8 Seconds Whisky in an old-fashioned or rocks glass, add sugar cube to bottom of glass with water and bitters. Muddle ingredients together.</p>
                   <p>Add ice cubes. Fill with 8 Seconds Whisky and stir well.</p>
                   <p>Garnish with orange twist and cherry.</p>
                 </div>
