@@ -18,47 +18,47 @@
 }
 
 
-@media screen and (max-aspect-ratio: 150 / 100) {
-  .main-page-txt {
-    .main-text-content {
-      margin-top: 70%;
-    }
-  }
-}
+// @media screen and (max-aspect-ratio: 150 / 100) {
+//   .main-page-txt {
+//     .main-text-content {
+      // margin-top: 70%;
+//     }
+//   }
+// }
 
-@media screen and (min-aspect-ratio: 101 / 100) {
-  .main-page-txt {
-    .main-text-content {
-      margin-top: 85%;
-    }
-  }
-}
+// @media screen and (min-aspect-ratio: 101 / 100) {
+//   .main-page-txt {
+//     .main-text-content {
+//       margin-top: 85%;
+//     }
+//   }
+// }
 
-@media screen and (min-aspect-ratio: 120 / 100) {
-  .main-page-txt {
-    .main-text-content {
-      margin-top: 70%;
-    }
-  }
-}
+// @media screen and (min-aspect-ratio: 120 / 100) {
+//   .main-page-txt {
+//     .main-text-content {
+//       margin-top: 70%;
+//     }
+//   }
+// }
 
 @media screen and (min-aspect-ratio: 128 / 100) {
   .icon-section {
-    width: 45%;
+    // width: 45%;
   }
 }
-@media screen and (min-aspect-ratio: 135 / 100) {
-  .main-page-txt {
-    .main-text-content {
-      margin-top: 63%;
-    }
-  }
-}
+// @media screen and (min-aspect-ratio: 135 / 100) {
+//   .main-page-txt {
+//     .main-text-content {
+//       margin-top: 63%;
+//     }
+//   }
+// }
 
 @media screen and (min-aspect-ratio: 148 / 100) and (min-width: 1270px) {
   .main-page-txt {
     .main-text-content {
-      margin-top: 63%;
+      // margin-top: 63%;
       font-size: 1.1em;
     }
   }
@@ -72,39 +72,43 @@
 }
 
 @media screen and (min-aspect-ratio: 155 / 100) and (min-width: 1500px) {
-  .main-page-txt {
-    .main-text-content {
-      margin-top: 58%;
-    }
-  }
+  // .main-page-txt {
+  //   .main-text-content {
+  //     margin-top: 58%;
+  //   }
+  // }
 
   .icon-section {
-    width: 38%;
+    // width: 38%;
+    width: 42%;
   }
 
 }
 
-@media screen and (min-aspect-ratio: 160 / 100) {
-  .main-page-txt {
-    .main-text-content {
-      margin-top: 56%;
-    }
-  }
-
-
-}
+// @media screen and (min-aspect-ratio: 160 / 100) {
+//   .main-page-txt {
+//     .main-text-content {
+//       margin-top: 56%;
+//     }
+//   }
+//
+//
+// }
 
 
 @media screen and (min-aspect-ratio: 170 / 100) {
 
 
-  .main-page-txt {
-    .main-text-content {
-      margin-top: 52%;
-    }
-  }
+  // .main-page-txt {
+  //   .main-text-content {
+  //     margin-top: 52%;
+  //   }
+  // }
 
-  _:-ms-fullscreen, :root .main-page-txt .main-text-content { margin-top:49%; }
+  _:-ms-fullscreen, :root .main-page-txt .main-text-content {
+    margin-top:49%;
+    margin-top: 350px;
+   }
 
 }
 
@@ -122,7 +126,8 @@
 @media screen and (min-aspect-ratio: 170 / 100) and (min-width: 1640px) {
 
   .icon-section {
-    width: 34%;
+    // width: 34%;
+    width: 38%;
   }
 
 }
@@ -132,7 +137,7 @@
 @media screen and (min-aspect-ratio: 185 / 100) and (min-width: 992px){
   .main-page-txt {
     .main-text-content {
-      margin-top: 58%;
+      // margin-top: 58%;
 
       .empty-button {
         margin-top: 30px;
@@ -141,22 +146,33 @@
   }
 }
 
-@media screen and (min-aspect-ratio: 185 / 100) and (min-width: 1200px) {
-  .main-page-txt {
-    .main-text-content {
-      margin-top: 48%;
-    }
-  }
-}
+// @media screen and (min-aspect-ratio: 185 / 100) and (min-width: 1200px) {
+//   .main-page-txt {
+//     .main-text-content {
+//       margin-top: 48%;
+//     }
+//   }
+// }
 
 @media screen and (min-aspect-ratio: 188 / 100) and (min-height: 934px) {
   .icon-section {
-    width: 30%;
+    // width: 30%;
+    width: 35%;
   }
 }
 
 // contact form
-@media all and (max-height: 700px) {
+// @media all and (max-height: 700px) {
+//   #contact-desk-title {
+//     visibility: hidden !important;
+//   }
+//
+//   .wpcf7 {
+//     top: 30%;
+//     z-index: 10;
+//   }
+// }
+@media all and (max-height: 500px) {
   #contact-desk-title {
     visibility: hidden !important;
   }
@@ -167,11 +183,12 @@
   }
 }
 
-@media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) {
-  .main-page-txt .main-text-content {
-    margin-top: 120%;
-  }
-}
+// @media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) {
+//   .main-page-txt .main-text-content {
+//     margin-top: 120%;
+//     margin-top: 48%;
+//   }
+// }
 
 
 @media all and (min-width: 992px) and (max-height: 502px) {
@@ -215,3 +232,64 @@
   height: 100%;
   width: 100%;
 }
+
+
+
+ @media all and (min-width: 992px) and (max-width: 1280px) {
+    #contact-desk-title {
+      width: 60%;
+      height: 60%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .wpcf7 {
+      transform: translate(-50%, -14%);
+    }
+
+
+  }
+
+
+
+  .about-btn, .recipes-btn {
+    margin-top: 40px;
+  }
+
+  @media all and (min-width: 992px) and (min-height: 730px) {
+    .main-page-title-group {
+      top: 16%;
+    }
+
+    .main-page-txt .main-text-content {
+      margin-top: calc((16vh - 74px) + 320px);
+    }
+  }
+
+  @media all and (min-width: 1600px) and (min-height: 900px) {
+    .main-page-title-group {
+      top: 18%;
+    }
+
+    .main-page-txt .main-text-content {
+      margin-top: calc((18vh - 74px) + 320px);
+    }
+  }
+  @media all and (min-width: 1750px) and (min-height: 900px) {
+    .main-page-title-group {
+      top: 20%;
+    }
+
+    .main-page-txt .main-text-content {
+      margin-top: calc((20vh - 74px) + 320px);
+    }
+  }
+  @media all and (min-width: 1850px) and (min-height: 900px) {
+    .main-page-title-group {
+      top: 22%;
+    }
+
+    .main-page-txt .main-text-content {
+      margin-top: calc((22vh - 74px) + 320px);
+    }
+  }

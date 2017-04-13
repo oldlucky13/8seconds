@@ -106,6 +106,7 @@
     margin: 0 auto;
     margin-top: 60%;
     font-size: 1em;
+    margin-top: calc((14vh - 74px) + 320px);
     // EXPERIMENTAL, NEED TO USE SCREEN WIDTH:HEIGHT RATIO MEDIA QUERIES
     // @media all and (max-width: 1500px) {
     //   margin-top: 50%;
