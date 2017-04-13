@@ -6368,7 +6368,7 @@ body {
   background-image: url("/wp-content/uploads/2017/03/finalhoneycinnamonv2.jpg"); }
 
 #four-img {
-  background-image: url("/wp-content/uploads/2017/03/home-story-boots.jpg");
+  background-image: url("/wp-content/uploads/2017/04/home-story-boots-v2.jpg");
   background-color: #000;
   -webkit-transition: all 500ms ease-out;
   -moz-transition: all 500ms ease-out;
@@ -6896,7 +6896,7 @@ div.wpcf7-mail-sent-ok {
 
 @media all and (max-width: 991px) {
   #boots-section {
-    background-image: url("/wp-content/uploads/2017/03/home-story-boots.jpg");
+    background-image: url("/wp-content/uploads/2017/03/home-story-boots-v2.jpg");
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6); } }
 @media all and (min-width: 992px) {
   #boots-section {
@@ -7781,7 +7781,7 @@ div.wpcf7-response-output {
   height: 2px; }
 
 #boots {
-  background-image: url("/wp-content/uploads/2017/03/home-story-boots.jpg"); }
+  background-image: url("/wp-content/uploads/2017/04/home-story-boots-v2.jpg"); }
 
 #vintagebull {
   background-image: url("/wp-content/uploads/2017/03/story-vintagebull.jpg"); }
@@ -8290,5 +8290,14 @@ div.wpcf7-response-output {
 
   .wpcf7 {
     transform: translate(-50%, -14%); } }
+.about-btn, .recipes-btn {
+  margin-top: 40px; }
+
+@media all and (min-width: 992px) and (min-height: 730px) {
+  .main-page-title-group {
+    top: 16%; }
+
+  .main-text-content {
+    margin-top: calc((16vh - 74px) + 320px) !important; } }
 
 /*# sourceMappingURL=style.css.map */

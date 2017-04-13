@@ -246,3 +246,19 @@
 
 
   }
+
+
+
+  .about-btn, .recipes-btn {
+    margin-top: 40px;
+  }
+
+  @media all and (min-width: 992px) and (min-height: 730px) {
+    .main-page-title-group {
+      top: 16%;
+    }
+
+    .main-text-content {
+      margin-top: calc((16vh - 74px) + 320px) !important;
+    }
+  }
