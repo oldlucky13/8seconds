@@ -827,6 +827,7 @@ $('#story-down').click(function () {
   aboutBreadcrumbOne.play();
   TweenMax.to($matador, 1, {opacity: 1, ease: Power1.easeOut});
   TweenMax.to($bullrider, 1, {opacity: 0, ease: Power1.easeOut});
+  $('#first-story-s-text-mobile').attr('data-aos', '');
 })
 
 /******************************
