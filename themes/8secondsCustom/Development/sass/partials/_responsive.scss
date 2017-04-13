@@ -156,7 +156,8 @@
 
 @media screen and (min-aspect-ratio: 188 / 100) and (min-height: 934px) {
   .icon-section {
-    width: 30%;
+    // width: 30%;
+    width: 35%;
   }
 }
 
@@ -274,12 +275,21 @@
       margin-top: calc((18vh - 74px) + 320px);
     }
   }
-  @media all and (min-width: 1900px) and (min-height: 900px) {
+  @media all and (min-width: 1750px) and (min-height: 900px) {
     .main-page-title-group {
       top: 20%;
     }
 
     .main-page-txt .main-text-content {
       margin-top: calc((20vh - 74px) + 320px);
+    }
+  }
+  @media all and (min-width: 1850px) and (min-height: 900px) {
+    .main-page-title-group {
+      top: 22%;
+    }
+
+    .main-page-txt .main-text-content {
+      margin-top: calc((22vh - 74px) + 320px);
     }
   }
