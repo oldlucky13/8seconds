@@ -6437,7 +6437,8 @@ body {
     width: 50%;
     margin: 0 auto;
     margin-top: 60%;
-    font-size: 1em; }
+    font-size: 1em;
+    margin-top: calc((14vh - 74px) + 320px) !important; }
     @media all and (max-width: 1300px) {
       .main-page-txt .main-text-content {
         width: 65%; } }
@@ -6718,7 +6719,8 @@ body {
   width: 500px;
   display: block;
   margin: 0 auto;
-  margin-top: calc(14% - 82px); }
+  margin-top: calc(14% - 82px);
+  margin-top: calc(14vh - 74px); }
   @media all and (max-width: 991px) {
     .s-title {
       display: none; } }
