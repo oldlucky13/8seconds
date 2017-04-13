@@ -21,7 +21,8 @@ get_header();
     <div class="main-page-slide-group">
       <div id="zero" class="row main-page-slide">
         <div id="zero-img" class="main-page-img col-md-12">
-          <img id="landing-title" src="/wp-content/uploads/2017/03/landingpagetitle.png" alt="">
+          <!-- <img id="landing-title" src="/wp-content/uploads/2017/03/landingpagetitle.png" alt=""> -->
+          <img id="landing-title" src="/wp-content/uploads/2017/04/title-landing-v4.png" alt="">
           <div class="filler">
 
           </div>
@@ -210,7 +211,7 @@ get_header();
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
 
-            <img class="s-title" src="wp-content/uploads/2017/03/home-story-title_v2.png" alt="">
+            <img class="s-title" src="wp-content/uploads/2017/04/title-story-v4.png" alt="">
             <p id="story-s-tagline" class="s-tagline">THE MOST DANGEROUS 8 SECONDS IN SPORTS</p>
             <button id="story-down" type="button" class="s-down-btn s-btn btn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
             <div class="v1 vertical-line">
@@ -220,7 +221,7 @@ get_header();
           <div id="matador-section" class="s-section">
             <div class="v2 vertical-line mobile-first-v-line">
             </div>
-            <div id="first-story-s-text-mobile" class="s-text">
+            <div id="first-story-s-text-mobile" class="s-text" data-aos="fade-up" data-aos-offset="-50" data-aos-duration="1000" data-aos-anchor="#about-one">
               <img id="s-text-button-wide" class="s-text-button" src="wp-content/uploads/2017/04/story-16cen-v2.svg" alt="">
               <h2 class="s-header">SPANISH ORIGINS</h2>
               <a id="about-one"></a>
@@ -231,7 +232,7 @@ get_header();
           </div> <!-- s-section matador-section-->
           <div id="bullrider-section" class="s-section">
             <div class="v2 vertical-line"></div>
-            <div class="s-text">
+            <div class="s-text" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#about-two">
               <img class="s-text-button" src="wp-content/uploads/2017/04/story-button-1850-v2.svg" alt="">
               <h2 class="s-header">GAINING POPULARITY</h2>
               <p class="s-paragraph">Charreada-style competition gained popularity in the Southwest, particularly Texas and California. The 1852 Lone Star Fair became the first-ever Anglo-American event to host this still bull fighting.</p>
@@ -242,7 +243,7 @@ get_header();
           </div> <!-- s-section -->
           <div id="gloves-section" class="s-section">
             <div class="v2 vertical-line"></div>
-            <div class="s-text">
+            <div class="s-text" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#about-three">
               <img class="s-text-button" src="wp-content/uploads/2017/04/story-button-1936-v2.svg" alt="">
               <h2 class="s-header">STANDARDIZATION</h2>
               <a id="about-three"></a>
@@ -253,7 +254,7 @@ get_header();
           </div> <!-- s-section -->
           <div id="vintagebull-section" class="s-section">
             <div class="v2 vertical-line"></div>
-            <div class="s-text">
+            <div class="s-text" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#about-four">
               <img class="s-text-button" src="wp-content/uploads/2017/04/story-button-1992-v2.svg" alt="">
               <h2 class="s-header">BREAKING AWAY</h2>
               <a id="about-four"></a>
@@ -263,13 +264,16 @@ get_header();
             <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="boots-section" class="s-section">
-            <div class="v2 vertical-line"></div>
-            <img id="last-story-title" class="s-title" src="wp-content/uploads/2017/03/story-pasttopresent2.svg" alt="">
-            <a id="about-five"></a>
-            <div class="last-mobile-s-text s-text">
-              <p class="last-mobile-paragraph s-paragraph">The PBR now hosts over 300 events across America where their World Finals brings in over 700,000 fans. Bull riding is now considered the fastest growing sport in the US. </p>
+            <div class="fade-top" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#about-five">
+              <div class="v2 vertical-line"></div>
+              <!-- <img id="last-story-title" class="s-title" src="wp-content/uploads/2017/03/story-pasttopresent2.svg" alt=""> -->
+              <img id="last-story-title" class="s-title" src="wp-content/uploads/2017/04/past-to-present-v4.png" alt="">
+              <a id="about-five"></a>
+              <div class="last-mobile-s-text s-text">
+                <p class="last-mobile-paragraph s-paragraph">The PBR now hosts over 300 events across America where their World Finals brings in over 700,000 fans. Bull riding is now considered the fastest growing sport in the US. </p>
+              </div>
+              <button id="story-back-to-top" type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
             </div>
-            <button id="story-back-to-top" type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
           </div> <!-- s-section -->
         </div>
          <div id="mobile-modal-story" class="modal" data-backdrop="false" >
@@ -383,131 +387,143 @@ get_header();
           <div id="mobile-cola" class="s-section">
             <div class="vertical-line v2">
             </div>
-            <div class="s-text recipes-s-text">
-              <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-2.svg" alt="">
-              <h2 class="s-header">8 SECONDS COLA</h2>
-              <a id="recipes-two"></a>
-              <p class="s-paragraph">Nothing wrong with a go-to.</p>
-            </div>
-            <div class="drink-guide">
-              <div class="drink-half">
-                <h5 class="drink-guide-title">INGREDIENTS</h5>
-                <p>2<sup>1</sup>&frasl;<sub>2</sub> parts 8 Seconds Whisky</p>
-                <p>4 parts Cola</p>
+            <div class="fade-top"  data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-two">
+              <div class="s-text recipes-s-text">
+                <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-2.svg" alt="">
+                <h2 class="s-header">8 SECONDS COLA</h2>
+                <a id="recipes-two"></a>
+                <p class="s-paragraph">Nothing wrong with a go-to.</p>
               </div>
-              <div class="drink-half">
-                <h5 class="drink-guide-title">DIRECTIONS</h5>
-                <p>Pour 8 Seconds Whisky over ice and add cola.</p>
-                <p>Enjoy!</p>
+              <div class="drink-guide">
+                <div class="drink-half">
+                  <h5 class="drink-guide-title">INGREDIENTS</h5>
+                  <p>2<sup>1</sup>&frasl;<sub>2</sub> parts 8 Seconds Whisky</p>
+                  <p>4 parts Cola</p>
+                </div>
+                <div class="drink-half">
+                  <h5 class="drink-guide-title">DIRECTIONS</h5>
+                  <p>Pour 8 Seconds Whisky over ice and add cola.</p>
+                  <p>Enjoy!</p>
+                </div>
               </div>
+              <button id="btn-cola" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+              <div class="v1 vertical-line"></div>
             </div>
-            <button id="btn-cola" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
-            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="mobile-oldfashioned" class="s-section">
             <div class="vertical-line v2">
             </div>
-            <div class="s-text recipes-s-text">
-              <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-3.svg" alt="">
-              <h2 class="s-header">OLD FASHIONED</h2>
-              <a id="recipes-three"></a>
-              <p class="s-paragraph">For channeling your inner Mad Men.</p>
-            </div>
-            <div class="drink-guide">
-              <div class="drink-half">
-                <h5 class="drink-guide-title">INGREDIENTS</h5>
-                <p>2 oz 8 Seconds Canadian Whisky</p>
-                <p>1 sugar cube</p>
-                <p>1 teaspoon water</p>
-                <p>2 dashes Angostura&reg; Bitters</p>
-                <p>Lemon or Orange Twist</p>
-                <p>1 Maraschino Cherry</p>
+            <div class="fade-top" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-three">
+              <div class="s-text recipes-s-text">
+                <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-3.svg" alt="">
+                <h2 class="s-header">OLD FASHIONED</h2>
+                <a id="recipes-three"></a>
+                <p class="s-paragraph">For channeling your inner Mad Men.</p>
               </div>
-              <div class="drink-half">
-                <h5 class="drink-guide-title">DIRECTIONS</h5>
-                <p>Pour 8 Seconds Whisky In an old-fashioned or rocks glass, add sugar cube to bottom of glass with water and bitters. Muddle ingredients together.</p>
-                <p>Add ice cubes. Fill with 8 Seconds Whisky and stir well.</p>
-                <p>Garnish with orange twist and cherry.</p>
+              <div class="drink-guide">
+                <div class="drink-half">
+                  <h5 class="drink-guide-title">INGREDIENTS</h5>
+                  <p>2 oz 8 Seconds Canadian Whisky</p>
+                  <p>1 sugar cube</p>
+                  <p>1 teaspoon water</p>
+                  <p>2 dashes Angostura&reg; Bitters</p>
+                  <p>Lemon or Orange Twist</p>
+                  <p>1 Maraschino Cherry</p>
+                </div>
+                <div class="drink-half">
+                  <h5 class="drink-guide-title">DIRECTIONS</h5>
+                  <p>Pour 8 Seconds Whisky In an old-fashioned or rocks glass, add sugar cube to bottom of glass with water and bitters. Muddle ingredients together.</p>
+                  <p>Add ice cubes. Fill with 8 Seconds Whisky and stir well.</p>
+                  <p>Garnish with orange twist and cherry.</p>
+                </div>
               </div>
+              <button id="btn-oldfashioned" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+              <div class="v1 vertical-line"></div>
             </div>
-            <button id="btn-oldfashioned" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
-            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="mobile-cowboyjulep" class="s-section">
             <div id="cowboy-line" class="v2 vertical-line">
             </div>
-            <div class="s-text recipes-s-text">
-              <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-4.svg" alt="">
-              <h2 class="s-header">COWBOY JULEP</h2>
-              <a id="recipes-four"></a>
-              <p class="s-paragraph">Cool with a kick.</p>
-            </div>
-            <div class="drink-guide">
-              <div class="drink-half">
-                <h5 class="drink-guide-title">INGREDIENTS</h5>
-                <p>2 sugar cubes (+ splash of water) or 1 oz simple syrup</p>
-                <p>4-5 mint sprigs</p>
-                <p>2<sup>1</sup>&frasl;<sub>2</sub> oz 8 Seconds Whisky</p>
-                <p>Splash of pomegranate juice</p>
-                <p>Crushed Ice</p>
-                <p>Mint for garnish</p>
+            <div class="fade-top" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-four">
+              <div class="s-text recipes-s-text">
+                <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-4.svg" alt="">
+                <h2 class="s-header">COWBOY JULEP</h2>
+                <a id="recipes-four"></a>
+                <p class="s-paragraph">Cool with a kick.</p>
               </div>
-              <div class="drink-half">
-                <h5 class="drink-guide-title">DIRECTIONS</h5>
-                <p>In a Collins glass/highball glass place sugar cubes or simple syrup with mint.</p>
-                <p>Muddle well to dissolve the sugar and release the mint aroma.</p>
-                <p>Add 8 Seconds Whisky and a splash of pomegranate juice, then fill with crushed ice. Stir well.</p>
-                <p>Garnish with a mint sprig.</p>
+              <div class="drink-guide">
+                <div class="drink-half">
+                  <h5 class="drink-guide-title">INGREDIENTS</h5>
+                  <p>2 sugar cubes (+ splash of water) or 1 oz simple syrup</p>
+                  <p>4-5 mint sprigs</p>
+                  <p>2<sup>1</sup>&frasl;<sub>2</sub> oz 8 Seconds Whisky</p>
+                  <p>Splash of pomegranate juice</p>
+                  <p>Crushed Ice</p>
+                  <p>Mint for garnish</p>
+                </div>
+                <div class="drink-half">
+                  <h5 class="drink-guide-title">DIRECTIONS</h5>
+                  <p>In a Collins glass/highball glass place sugar cubes or simple syrup with mint.</p>
+                  <p>Muddle well to dissolve the sugar and release the mint aroma.</p>
+                  <p>Add 8 Seconds Whisky and a splash of pomegranate juice, then fill with crushed ice. Stir well.</p>
+                  <p>Garnish with a mint sprig.</p>
+                </div>
               </div>
+              <button id="btn-cowboyjulep" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+              <div class="v1 vertical-line"></div>
             </div>
-            <button id="btn-cowboyjulep" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
-            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="mobile-ginger" class="s-section">
             <div class="v2 vertical-line"></div>
-            <div class="s-text recipes-s-text">
-              <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-5.svg" alt="">
-              <h2 class="s-header">8 SECONDS GINGER</h2>
-              <a id="recipes-five"></a>
-              <p class="s-paragraph">Not for the urban cowboy.</p>
-            </div>
-            <div class="drink-guide">
-              <div class="drink-half">
-                <h5 class="drink-guide-title">INGREDIENTS</h5>
-                <p>1 part 8 Seconds Whisky</p>
-                <p>3 parts Ginger Ale</p>
-                <p>Lime wedge to garnish</p>
+            <div class="fade-top" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-five">
+              <div class="s-text recipes-s-text">
+                <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-5.svg" alt="">
+                <h2 class="s-header">8 SECONDS GINGER</h2>
+                <a id="recipes-five"></a>
+                <p class="s-paragraph">Not for the urban cowboy.</p>
               </div>
-              <div class="drink-half">
-                <h5 class="drink-guide-title">DIRECTIONS</h5>
-                <p>In a glass with ice, add 8 Seconds Whisky & ginger ale.</p>
-                <p>Garnish with lime wedge.</p>
+              <div class="drink-guide">
+                <div class="drink-half">
+                  <h5 class="drink-guide-title">INGREDIENTS</h5>
+                  <p>1 part 8 Seconds Whisky</p>
+                  <p>3 parts Ginger Ale</p>
+                  <p>Lime wedge to garnish</p>
+                </div>
+                <div class="drink-half">
+                  <h5 class="drink-guide-title">DIRECTIONS</h5>
+                  <p>In a glass with ice, add 8 Seconds Whisky & ginger ale.</p>
+                  <p>Garnish with lime wedge.</p>
+                </div>
               </div>
+              <button id="btn-ginger" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+              <div class="v1 vertical-line"></div>
             </div>
-            <button id="btn-ginger" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
-            <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="mobile-honeycinnamon" class="s-section">
             <div class="v2 vertical-line"></div>
-            <div class="s-text recipes-s-text">
-              <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-6.svg" alt="">
-              <h2 class="s-header">HONEY CINNAMON SHO0TER</h2>
-              <a id="recipes-six"></a>
-              <p class="s-paragraph">Shootin' it straight.</p>
+            <div class="fade-top" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-six">
+              <div class="s-text recipes-s-text">
+                <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-6.svg" alt="">
+                <h2 class="s-header">HONEY CINNAMON SHO0TER</h2>
+                <a id="recipes-six"></a>
+                <p class="s-paragraph">Shootin' it straight.</p>
+              </div>
+              <button id="btn-honeycinnamon" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             </div>
-            <button id="btn-honeycinnamon" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="v1 vertical-line"></div>
           </div> <!-- s-section -->
           <div id="mobile-neat" class="s-section">
             <div class="v2 vertical-line"></div>
-            <div class="s-text recipes-s-text">
-              <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-7.svg" alt="">
-              <h2 class="s-header">8 SECONDS NEAT</h2>
-              <a id="recipes-seven"></a>
-              <p class="s-paragraph">No need to complicate.</p>
+            <div class="fade-top" data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000" data-aos-anchor="#recipes-seven">
+              <div class="s-text recipes-s-text">
+                <img class="s-text-button" src="wp-content/uploads/2017/03/story-button-7.svg" alt="">
+                <h2 class="s-header">8 SECONDS NEAT</h2>
+                <a id="recipes-seven"></a>
+                <p class="s-paragraph">No need to complicate.</p>
+              </div>
+              <button id="btn-neat" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
+              <button id="recipes-back-to-top" type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
             </div>
-            <button id="btn-neat" type="button" class="plus-button drink-modal s-drink-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
-            <button id="recipes-back-to-top" type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
 
           </div> <!-- s-section -->
         </div> <!-- ajaxRecipesSection -->
@@ -579,38 +595,38 @@ get_header();
     </div>
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
-        <img id="first-h2-child" class="h2-child" src="wp-content/uploads/2017/03/nodots-premium-v1.png" alt="">
-        <!-- <img id="first-h2-child" class="h2-child" src="wp-content/uploads/2017/03/home-premium-title_v4.png" alt=""> -->
+        <!-- <img id="first-h2-child" class="h2-child" src="wp-content/uploads/2017/03/nodots-premium-v1.png" alt=""> -->
+        <img id="first-h2-child" class="h2-child" src="wp-content/uploads/2017/04/title-premium-v4.png" alt="">
       </div>
     </div>
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
-        <img class="h2-child" src="wp-content/uploads/2017/03/nodots-black-v3.png" alt="">
-        <!-- <img class="h2-child" src="wp-content/uploads/2017/03/home-black-title_v2-1.png" alt=""> -->
+        <!-- <img class="h2-child" src="wp-content/uploads/2017/03/nodots-black-v3.png" alt=""> -->
+        <img class="h2-child" src="wp-content/uploads/2017/04/title-black-v4.png" alt="">
       </div>
     </div>
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
-        <img class="h2-child" src="wp-content/uploads/2017/03/nodots-honeycinnamon-v1.png" alt="">
-        <!-- <img class="h2-child" src="wp-content/uploads/2017/03/home-honey-cinnamon-title_v2.png" alt=""> -->
+        <!-- <img class="h2-child" src="wp-content/uploads/2017/03/nodots-honeycinnamon-v1.png" alt=""> -->
+        <img class="h2-child" src="wp-content/uploads/2017/04/title-honeycinnamon-v4.png" alt="">
       </div>
     </div>
     <div class="mobile-main-title main-page-title-group">
       <div class="main-page-slide-title">
-        <img class="h2-child" src="wp-content/uploads/2017/03/nodots-story-v1.png" alt="">
-        <!-- <img class="h2-child" src="wp-content/uploads/2017/03/home-story-title_v2.png" alt=""> -->
+        <!-- <img class="h2-child" src="wp-content/uploads/2017/03/nodots-story-v1.png" alt=""> -->
+        <img class="h2-child" src="wp-content/uploads/2017/04/title-story-v4.png" alt="">
       </div>
     </div>
     <div class="mobile-main-title main-page-title-group">
       <div class="main-page-slide-title">
-        <img class="h2-child" src="wp-content/uploads/2017/03/nodots-cocktail-v1.png" alt="">
-        <!-- <img class="h2-child" src="wp-content/uploads/2017/03/home-recipes-title_v2.png" alt=""> -->
+        <!-- <img class="h2-child" src="wp-content/uploads/2017/03/nodots-cocktail-v1.png" alt=""> -->
+        <img class="h2-child" src="wp-content/uploads/2017/04/title-drinks-v4.png" alt="">
       </div>
     </div>
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
-        <img id="contact-desk-title" class="h2-child" src="wp-content/uploads/2017/03/notdots-contact-v1.png" alt="">
-        <!-- <img class="h2-child" src="wp-content/uploads/2017/03/home-contact-title_v2.png" alt=""> -->
+        <!-- <img id="contact-desk-title" class="h2-child" src="wp-content/uploads/2017/03/notdots-contact-v1.png" alt=""> -->
+        <img id="contact-desk-title" class="h2-child" src="wp-content/uploads/2017/04/title-contact-v4.png" alt="">
       </div>
     </div>
 

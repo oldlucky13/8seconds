@@ -59,6 +59,10 @@
 }
 
 #mobile-honeycinnamon {
+  @media all and (min-width: 992px) {
+    height: 50vh;
+  }
+
   @media all and (max-width: 991px) {
     background-image: url("/wp-content/uploads/2017/03/drinks-shooters.jpg");
   }
@@ -121,6 +125,11 @@
       bottom: 72px;
       left: calc(50% - 100px);
       width: 200px
+  }
+
+  margin-top: 200px;
+  @media all and (min-width: 1600px) {
+    margin-top: 400px;
   }
 
 }
