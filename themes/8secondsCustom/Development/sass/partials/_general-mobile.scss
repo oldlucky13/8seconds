@@ -150,9 +150,11 @@
 
 #landing-title {
   position: absolute;
-  height: 300px;
+  // height: 300px;
   padding: 20px;
-  width: 500px;
+  // width: 500px;
+  //v2
+  width: 600px;
   top: 50%;
   left: 50%;
    @include  transform(translate(-50%,-70%));
@@ -245,6 +247,8 @@
 }
 
 .toggle-desktop {
+  letter-spacing: 0.3px;
+  font-size: 1.5em !important;
   @media all and (max-width: 991px) {
     display: none;
   }
@@ -256,11 +260,16 @@
   }
 }
 
+#landing-button {
+  //v2
+  display: none !important;
+}
 
 .swipe-chevron-container{
-  @media all and (min-width: 992px) {
-    display: none;
-  }
+  //v2
+  // @media all and (min-width: 992px) {
+  //   display: none;
+  // }
 
   text-align: center;
   padding: 0;

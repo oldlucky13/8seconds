@@ -22,7 +22,8 @@ get_header();
       <div id="zero" class="row main-page-slide">
         <div id="zero-img" class="main-page-img col-md-12">
           <!-- <img id="landing-title" src="/wp-content/uploads/2017/03/landingpagetitle.png" alt=""> -->
-          <img id="landing-title" src="/wp-content/uploads/2017/04/title-landing-v4.png" alt="">
+          <!-- <img id="landing-title" src="/wp-content/uploads/2017/04/title-landing-v4.png" alt=""> -->
+          <img id="landing-title" src="/wp-content/uploads/2017/04/title-landing-v5.png" alt="">
           <div class="filler">
 
           </div>
@@ -591,13 +592,13 @@ get_header();
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
         <!-- <img class="h2-child" src="wp-content/uploads/2017/03/nodots-black-v3.png" alt=""> -->
-        <img class="h2-child" src="wp-content/uploads/2017/04/title-black-v4.png" alt="">
+        <img class="h2-child" src="wp-content/uploads/2017/04/title-black-v4-sans.png" alt="">
       </div>
     </div>
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
         <!-- <img class="h2-child" src="wp-content/uploads/2017/03/nodots-honeycinnamon-v1.png" alt=""> -->
-        <img class="h2-child" src="wp-content/uploads/2017/04/title-honeycinnamon-v4.png" alt="">
+        <img class="h2-child" src="wp-content/uploads/2017/04/title-hc-v4-sans.png" alt="">
       </div>
     </div>
     <div class="mobile-main-title main-page-title-group">
@@ -609,13 +610,13 @@ get_header();
     <div class="mobile-main-title main-page-title-group">
       <div class="main-page-slide-title">
         <!-- <img class="h2-child" src="wp-content/uploads/2017/03/nodots-cocktail-v1.png" alt=""> -->
-        <img class="h2-child" src="wp-content/uploads/2017/04/title-drinks-v4.png" alt="">
+        <img class="h2-child" src="wp-content/uploads/2017/04/title-drinks-v4-md-1.png" alt="">
       </div>
     </div>
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
         <!-- <img id="contact-desk-title" class="h2-child" src="wp-content/uploads/2017/03/notdots-contact-v1.png" alt=""> -->
-        <img id="contact-desk-title" class="h2-child" src="wp-content/uploads/2017/04/title-contact-v4.png" alt="">
+        <img id="contact-desk-title" class="h2-child" src="wp-content/uploads/2017/04/title-contact-v4-md-1.png" alt="">
       </div>
     </div>
 

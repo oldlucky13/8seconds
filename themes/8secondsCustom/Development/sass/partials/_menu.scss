@@ -4,6 +4,9 @@
   left: 2%;
   height: 27px;
   width: 35px;
+  @media all and (min-width: 992px) {
+    width: 40px; //v2  
+  }
   cursor: pointer;
   z-index: 100;
   @include transition(opacity .25s ease);
@@ -35,6 +38,9 @@
     background: $icon-color;
     border: none;
     height: 2px;
+    @media all and (min-width: 992px) {
+      height: 4px; //v2
+    }
     width: 100%;
     position: absolute;
     top: 0;
@@ -551,5 +557,5 @@ body{
     font-size: 1.75em;
   }
 
-  
-} 
+
+}

@@ -223,10 +223,13 @@
 
 #breadcrumb-group {
   position: absolute;
-  right: 1.5%;
+  // right: 1.5%;
   width: 50px;
   top: 44%;
   z-index: 3;
+  //v2
+  left: 1.5%;
+  padding-left: 0px;
 
   @media all and (max-width: 991px) {
     display: none !important;

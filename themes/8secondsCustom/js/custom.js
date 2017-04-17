@@ -406,7 +406,7 @@ aboutAreaTl.to($aboutBreadcrumbs, 1, {ease: Power4.easeInOut, opacity: 1}, 0);
 aboutAreaTl.to($btnAbout, 1, {ease: Power4.easeInOut, left: "4%"}, 0);
 
 var aboutAreaTlMobile = new TimelineMax({paused: true});
-aboutAreaTlMobile.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -100, onComplete: triggerSection.bind("about")}, 0);
+aboutAreaTlMobile.to($mainPageAll, 1.25, {ease: Power4.easeInOut, xPercent: -100, onComplete: triggerSection.bind("about")}, 0);
 aboutAreaTlMobile.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
 aboutAreaTlMobile.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
 aboutAreaTlMobile.to($('#s-about-mobile-nav'), .2, {display: "none"}, 0);
@@ -425,7 +425,7 @@ recipesAreaTl.to($recipesBreadcrumbs, 1, {ease: Power4.easeInOut, opacity: 1}, 0
 recipesAreaTl.to($btnRecipes, 1, {ease: Power4.easeInOut, left: "4%"}, 0);
 
 var recipesAreaTlMobile = new TimelineMax({paused: true});
-recipesAreaTlMobile.to($mainPageAll, 1.75, {ease: Power4.easeInOut, xPercent: -100, onComplete: triggerSection.bind("recipes")}, 0);
+recipesAreaTlMobile.to($mainPageAll, 1.25, {ease: Power4.easeInOut, xPercent: -100, onComplete: triggerSection.bind("recipes")}, 0);
 recipesAreaTlMobile.to($breadcrumbGroup, .2, {ease: Power4.easeInOut, display: "none"}, 0);
 recipesAreaTlMobile.to($mainPageContainer, 1.7, {ease: Power4.easeInOut, paddingLeft: 0, marginLeft: 0}, 0);
 recipesAreaTlMobile.to($('#s-recipes-mobile-nav'), .2, {display: "none"}, 0);

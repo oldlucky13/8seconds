@@ -6515,10 +6515,11 @@ body {
 
 #breadcrumb-group {
   position: absolute;
-  right: 1.5%;
   width: 50px;
   top: 44%;
-  z-index: 3; }
+  z-index: 3;
+  left: 1.5%;
+  padding-left: 0px; }
   @media all and (max-width: 991px) {
     #breadcrumb-group {
       display: none !important; } }
@@ -6934,6 +6935,9 @@ div.wpcf7-mail-sent-ok {
   -ms-transform: scale(0.7);
   -o-transform: scale(0.7);
   transform: scale(0.7); }
+  @media all and (min-width: 992px) {
+    .button_container {
+      width: 40px; } }
   .button_container:hover {
     opacity: .7; }
   .button_container.active .top {
@@ -6962,6 +6966,9 @@ div.wpcf7-mail-sent-ok {
     -moz-transition: all 0.35s ease;
     transition: all 0.35s ease;
     cursor: pointer; }
+    @media all and (min-width: 992px) {
+      .button_container span {
+        height: 4px; } }
     .button_container span:nth-of-type(2) {
       top: 11px; }
     .button_container span:nth-of-type(3) {
@@ -7923,9 +7930,8 @@ div.wpcf7-response-output {
 
 #landing-title {
   position: absolute;
-  height: 300px;
   padding: 20px;
-  width: 500px;
+  width: 600px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -70%);
@@ -8005,20 +8011,23 @@ div.wpcf7-response-output {
 .s-back-mobile {
   backface-visibility: hidden; }
 
-@media all and (max-width: 991px) {
-  .toggle-desktop {
-    display: none; } }
+.toggle-desktop {
+  letter-spacing: 0.3px;
+  font-size: 1.5em !important; }
+  @media all and (max-width: 991px) {
+    .toggle-desktop {
+      display: none; } }
 
 @media all and (min-width: 992px) {
   .toggle-mobile {
     display: none; } }
 
+#landing-button {
+  display: none !important; }
+
 .swipe-chevron-container {
   text-align: center;
   padding: 0; }
-  @media all and (min-width: 992px) {
-    .swipe-chevron-container {
-      display: none; } }
   .swipe-chevron-container li {
     list-style-type: none;
     margin-bottom: -8px;
@@ -8164,7 +8173,8 @@ div.wpcf7-response-output {
   -webkit-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
   -o-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
   border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 fill repeat;
-  background-color: rgba(0, 0, 0, 0.7); }
+  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8); }
   #mobile-modal-drinks > img {
     width: 15%;
     display: block;
