@@ -7930,9 +7930,8 @@ div.wpcf7-response-output {
 
 #landing-title {
   position: absolute;
-  height: 300px;
   padding: 20px;
-  width: 500px;
+  width: 600px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -70%);
@@ -8023,12 +8022,12 @@ div.wpcf7-response-output {
   .toggle-mobile {
     display: none; } }
 
+#landing-button {
+  display: none !important; }
+
 .swipe-chevron-container {
   text-align: center;
   padding: 0; }
-  @media all and (min-width: 992px) {
-    .swipe-chevron-container {
-      display: none; } }
   .swipe-chevron-container li {
     list-style-type: none;
     margin-bottom: -8px;

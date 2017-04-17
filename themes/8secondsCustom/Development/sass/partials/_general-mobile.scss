@@ -150,9 +150,11 @@
 
 #landing-title {
   position: absolute;
-  height: 300px;
+  // height: 300px;
   padding: 20px;
-  width: 500px;
+  // width: 500px;
+  //chrissy
+  width: 600px;
   top: 50%;
   left: 50%;
    @include  transform(translate(-50%,-70%));
@@ -258,11 +260,16 @@
   }
 }
 
+#landing-button {
+  //chrissy
+  display: none !important;
+}
 
 .swipe-chevron-container{
-  @media all and (min-width: 992px) {
-    display: none;
-  }
+  //chrissy
+  // @media all and (min-width: 992px) {
+  //   display: none;
+  // }
 
   text-align: center;
   padding: 0;

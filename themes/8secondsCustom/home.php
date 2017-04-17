@@ -22,7 +22,8 @@ get_header();
       <div id="zero" class="row main-page-slide">
         <div id="zero-img" class="main-page-img col-md-12">
           <!-- <img id="landing-title" src="/wp-content/uploads/2017/03/landingpagetitle.png" alt=""> -->
-          <img id="landing-title" src="/wp-content/uploads/2017/04/title-landing-v4.png" alt="">
+          <!-- <img id="landing-title" src="/wp-content/uploads/2017/04/title-landing-v4.png" alt=""> -->
+          <img id="landing-title" src="/wp-content/uploads/2017/04/title-landing-v5.png" alt="">
           <div class="filler">
 
           </div>
