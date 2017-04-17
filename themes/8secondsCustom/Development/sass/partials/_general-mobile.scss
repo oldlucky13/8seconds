@@ -245,6 +245,8 @@
 }
 
 .toggle-desktop {
+  letter-spacing: 0.3px;
+  font-size: 1.5em !important;
   @media all and (max-width: 991px) {
     display: none;
   }
