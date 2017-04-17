@@ -815,7 +815,7 @@ function triggerSection(section) {
 /******************************
 Click to Scroll buttons
 *******************************/
-$('#landing-button').click(function() {
+$('.swipe-chevron-container').click(function() {
   handleMainPageScroll(-50);
 })
 

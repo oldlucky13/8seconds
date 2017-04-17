@@ -8027,7 +8027,8 @@ div.wpcf7-response-output {
 
 .swipe-chevron-container {
   text-align: center;
-  padding: 0; }
+  padding: 0;
+  cursor: pointer; }
   .swipe-chevron-container li {
     list-style-type: none;
     margin-bottom: -8px;
