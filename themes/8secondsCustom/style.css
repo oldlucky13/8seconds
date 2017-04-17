@@ -8174,7 +8174,8 @@ div.wpcf7-response-output {
   -webkit-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
   -o-border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 repeat;
   border-image: url(/wp-content/uploads/2017/03/module-border-1.png) 50 40 46 fill repeat;
-  background-color: rgba(0, 0, 0, 0.7); }
+  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8); }
   #mobile-modal-drinks > img {
     width: 15%;
     display: block;
