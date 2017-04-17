@@ -609,13 +609,13 @@ get_header();
     <div class="mobile-main-title main-page-title-group">
       <div class="main-page-slide-title">
         <!-- <img class="h2-child" src="wp-content/uploads/2017/03/nodots-cocktail-v1.png" alt=""> -->
-        <img class="h2-child" src="wp-content/uploads/2017/04/title-drinks-v4-md.png" alt="">
+        <img class="h2-child" src="wp-content/uploads/2017/04/title-drinks-v4-md-1.png" alt="">
       </div>
     </div>
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
         <!-- <img id="contact-desk-title" class="h2-child" src="wp-content/uploads/2017/03/notdots-contact-v1.png" alt=""> -->
-        <img id="contact-desk-title" class="h2-child" src="wp-content/uploads/2017/04/title-contact-v4-md.png" alt="">
+        <img id="contact-desk-title" class="h2-child" src="wp-content/uploads/2017/04/title-contact-v4-md-1.png" alt="">
       </div>
     </div>
 
