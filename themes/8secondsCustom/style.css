@@ -6873,11 +6873,15 @@ div.wpcf7-mail-sent-ok {
 
 #story-s-tagline {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   font-size: 1.2em;
-  bottom: 16%;
-  width: 100%; }
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 0; }
+
+#tagline-parent {
+  height: calc(100% - 560px);
+  position: relative; }
 
 @media all and (max-width: 991px) {
   .mobile-first-v-line {

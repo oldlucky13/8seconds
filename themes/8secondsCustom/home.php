@@ -213,7 +213,7 @@ get_header();
             </div>
 
             <img class="s-title" src="wp-content/uploads/2017/04/title-story-v5.png" alt="">
-            <p id="story-s-tagline" class="s-tagline">THE MOST DANGEROUS 8 SECONDS IN SPORTS</p>
+            <div id="tagline-parent"><p id="story-s-tagline" class="s-tagline">THE MOST DANGEROUS 8 SECONDS IN SPORTS</p></div>
             <button id="story-down" type="button" class="s-down-btn s-btn btn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
             <div class="v1 vertical-line">
   <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
