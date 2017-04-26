@@ -212,7 +212,7 @@ get_header();
               <img src="wp-content/uploads/2017/03/8seconds-logo-mini.svg" class="icon-mini" alt="8 seconds whiskey bull logo">
             </div>
 
-            <img class="s-title" src="wp-content/uploads/2017/04/title-story-v4.png" alt="">
+            <img class="s-title" src="wp-content/uploads/2017/04/title-story-v5.png" alt="">
             <p id="story-s-tagline" class="s-tagline">THE MOST DANGEROUS 8 SECONDS IN SPORTS</p>
             <button id="story-down" type="button" class="s-down-btn s-btn btn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
             <div class="v1 vertical-line">
@@ -604,7 +604,7 @@ get_header();
     <div class="mobile-main-title main-page-title-group">
       <div class="main-page-slide-title">
         <!-- <img class="h2-child" src="wp-content/uploads/2017/03/nodots-story-v1.png" alt=""> -->
-        <img class="h2-child" src="wp-content/uploads/2017/04/title-story-v4.png" alt="">
+        <img class="h2-child" src="wp-content/uploads/2017/04/title-story-v5.png" alt="">
       </div>
     </div>
     <div class="mobile-main-title main-page-title-group">

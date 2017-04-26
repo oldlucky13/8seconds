@@ -6876,7 +6876,8 @@ div.wpcf7-mail-sent-ok {
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.2em;
-  bottom: 16%; }
+  bottom: 16%;
+  width: 100%; }
 
 @media all and (max-width: 991px) {
   .mobile-first-v-line {
@@ -8297,6 +8298,7 @@ div.wpcf7-response-output {
     top: 22%; }
 
   .main-page-txt .main-text-content {
+    margin-top: 500px;
     margin-top: calc((22vh - 74px) + 320px); } }
 a {
   color: inherit; }
