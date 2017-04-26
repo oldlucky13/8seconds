@@ -327,7 +327,7 @@ a {
 
   .main-page-txt .main-text-content {
     font-size: 1.3em;
-    margin-top:  calc((22vh - 74px) + 380px);
+    margin-top:  calc((22vh - 84px) + 380px);
   }
 
   .icon-section span {
@@ -392,6 +392,22 @@ a {
   .wpcf7-submit {
     font-size: 1.3em;
   }
+
+  .breadcrumb {
+    height: 10px;
+    width: 10px;
+  }
+
+  .icon-mini {
+    height: 60px;
+  }
+
+  .buton_container {
+    width: 50px;
+    span: {
+      height: 5px;
+    }
+  }
 }
 
 @media all and (min-width: 2200px) {
@@ -411,7 +427,7 @@ a {
 
   .main-page-txt .main-text-content {
     font-size: 1.5em;
-    margin-top:  calc((22vh - 74px) + 380px);
+    margin-top:  calc((22vh - 94px) + 380px);
   }
 
   .icon-section span {
@@ -450,6 +466,10 @@ a {
     h5 {
       font-size: 1.4em;
     }
+  }
+
+  .icon-mini {
+    height: 70px;
   }
 }
 
