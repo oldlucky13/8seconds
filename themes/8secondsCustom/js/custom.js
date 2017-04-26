@@ -228,6 +228,42 @@ Mousewheel
     }
   });
 
+  /***************
+  remove aos for ie
+  ***************/
+
+  // function msieversion() {
+  //
+  //    var ua = window.navigator.userAgent;
+  //    var msie = ua.indexOf(“MSIE “);
+  //
+  //    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer, return version number
+  //    {
+  //        $('.s-text').removeAttr("data-aos");
+  //    }
+  //    else  // If another browser, return 0
+  //    {
+  //      //
+  //    }
+  //
+  //    return false;
+  // }
+
+  var ms_ie = false;
+    var ua = window.navigator.userAgent;
+    var old_ie = ua.indexOf('MSIE ');
+    var new_ie = ua.indexOf('Trident/');
+
+    if ((old_ie > -1) || (new_ie > -1)) {
+        ms_ie = true;
+    }
+
+    if ( ms_ie ) {
+      $('.s-text').removeAttr("data-aos");
+        //IE specific code goes here
+    } else {
+    }
+
 
 /***************
 Main Scroll Logic
