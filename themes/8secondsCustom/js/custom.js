@@ -91,7 +91,14 @@ mainScrollUnlocked = false;
 jumpScrollUnlocked = true;
 
 jQuery(window).on('load', function($) { // makes sure the whole site is loaded
-  jQuery('#zero-content').css({'height':(jQuery('#overlay-content').height()+'px')});
+  // var heightsAligned = false;
+  function alignHeights() {
+    jQuery('#zero-content').css({'height':(jQuery('#overlay-content').height()+'px')});
+    // heightsAligned = true;
+    // console.log("second");
+    // console.log(heightsAligned);
+  }
+  setTimeout(alignHeights, 0500);
   // setTimeout(jQuery('#zero-content').css({'height':(jQuery('#modal-content').height()+'px')}), 0250);
   jQuery('#status').fadeOut(); // will first fade out the loading animation
   jQuery('#preloader').delay(350).fadeOut('slow', function () {
@@ -107,6 +114,8 @@ jQuery(window).on('load', function($) { // makes sure the whole site is loaded
   // ****************/
   //
   // AOS.init();
+  // console.log("first");
+  // console.log(heightsAligned);
 })
 
 jQuery(document).ready(function( $ ) {
