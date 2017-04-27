@@ -265,6 +265,8 @@ Mousewheel
 
     if ( ms_ie ) {
       $('.s-text').removeAttr("data-aos");
+      $('#about-five').removeAttr("data-aos");
+      $('.fade-top').removeAttr("data-aos");
         //IE specific code goes here
     } else {
     }
