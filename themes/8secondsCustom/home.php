@@ -721,7 +721,7 @@ get_header();
   </div> <!-- menu-container -->
   <div id="menu-veil"></div>
   <div id="ageGate" class="modal fade">
-    <div id="modal-content" class="age-gate-content">
+    <div id="overlay-content" class="age-gate-content">
       <img id="modal-icon" src="/wp-content/uploads/2017/03/age-gate-icon.png" class="age-gate-icon-v2" alt="8 seconds whiskey bull logo">
       <h1>ARE YOU ABLE TO RIDE?</h1>
       <h3>(OVER 21 YEARS OLD)</h3>

@@ -91,7 +91,8 @@ mainScrollUnlocked = false;
 jumpScrollUnlocked = true;
 
 jQuery(window).on('load', function($) { // makes sure the whole site is loaded
-  jQuery('#zero-content').css({'height':(jQuery('#modal-content').height()+'px')});
+  jQuery('#zero-content').css({'height':(jQuery('#overlay-content').height()+'px')});
+  // setTimeout(jQuery('#zero-content').css({'height':(jQuery('#modal-content').height()+'px')}), 0250);
   jQuery('#status').fadeOut(); // will first fade out the loading animation
   jQuery('#preloader').delay(350).fadeOut('slow', function () {
     var AgeGateFadeIn = new TimelineMax({paused: true});
@@ -157,7 +158,7 @@ jQuery(document).ready(function( $ ) {
   $secondaryDrinksImageGroup = $('#secondary-drinks-image-group');
   $menuVeil = $('#menu-veil');
   $zeroContent = $('#zero-content');
-  $modalContent = $('#modal-content');
+  $modalContent = $('#overlay-content');
 
 
 
@@ -1419,5 +1420,9 @@ var newAos = AOS.init({
 //     $(".fade-top").css("opacity", 1 - $(window).scrollTop() / 250);
 //   });
 
+// $('.age-gate-content').click(function (e) {
+//   e.preventDefault();
+//   return false;
+// })
 
 });// jquery document ready
