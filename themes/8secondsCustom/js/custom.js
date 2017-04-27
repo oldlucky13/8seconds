@@ -91,6 +91,7 @@ mainScrollUnlocked = false;
 jumpScrollUnlocked = true;
 
 jQuery(window).on('load', function($) { // makes sure the whole site is loaded
+  jQuery('#zero-content').css({'height':(jQuery('#modal-content').height()+'px')});
   jQuery('#status').fadeOut(); // will first fade out the loading animation
   jQuery('#preloader').delay(350).fadeOut('slow', function () {
     var AgeGateFadeIn = new TimelineMax({paused: true});
@@ -155,6 +156,10 @@ jQuery(document).ready(function( $ ) {
   $secondaryStoryImageGroup = $('#secondary-story-image-group');
   $secondaryDrinksImageGroup = $('#secondary-drinks-image-group');
   $menuVeil = $('#menu-veil');
+  $zeroContent = $('#zero-content');
+  $modalContent = $('#modal-content');
+
+
 
   var mainIdx = 0;
 
@@ -260,6 +265,8 @@ Mousewheel
 
     if ( ms_ie ) {
       $('.s-text').removeAttr("data-aos");
+      $('#about-five').removeAttr("data-aos");
+      $('.fade-top').removeAttr("data-aos");
         //IE specific code goes here
     } else {
     }
@@ -1038,12 +1045,14 @@ Resize
 // // run test on resize of the window
  $(window).resize(checkSize);
 
+
+
 function checkSize(){
 
  // console.log($(window).width() / $(window).height());
-
 	sortMenu();
 
+  $zeroContent.css({'height':($modalContent.height()+'px')});
   if (mainIdx === 6) {
     $('.slide-button').fadeOut();
   } else if (mainIdx === 5) {
@@ -1208,12 +1217,19 @@ else{
 
 	$('#over21, #under21').click(function () {
 		if (this.id == 'over21') {
+      var oldHeight = $zeroContent.height();
 			Cookies.set('drinkingAge','over21', { expires: 31 });
 			// $(".fullpage-wrapper,#the-nav").removeClass('blur');
 			$.modal.close();
+      TweenMax.to($('#landing-text'), 1.5, {opacity: 1, ease: Power4.easeInOut});
+      TweenMax.to($breadcrumbGroup, 1.5, {opacity: 1, ease: Power4.easeInOut});
+      TweenMax.to($('.button_container'), 1.5, {opacity: 1, ease: Power4.easeInOut});
+      TweenMax.set($zeroContent, {height: 'auto'});
+      TweenMax.from($zeroContent, 1.5, {height: oldHeight, ease: Power4.easeInOut});
 			// $.fn.fullpage.setAllowScrolling(true);
 			// $.fn.fullpage.setKeyboardScrolling(true);
       mainScrollUnlocked = true;
+      // debugger;
 
 		}
 		else if (this.id == 'under21') {
@@ -1392,6 +1408,12 @@ AOS
 var newAos = AOS.init({
   disable: 'phone'
 });
+
+// var modalIcon = $('#modal-icon');
+// console.log(modalContent.height());
+// console.log(modalContent.width());
+// console.log(modalIcon.position());
+// console.log(modalIcon.outerWidth());
 
 // $(window).scroll(function(){
 //     $(".fade-top").css("opacity", 1 - $(window).scrollTop() / 250);

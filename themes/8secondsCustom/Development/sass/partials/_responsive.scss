@@ -97,19 +97,52 @@
 
 
 @media screen and (min-aspect-ratio: 170 / 100) {
-
-
-  // .main-page-txt {
-  //   .main-text-content {
-  //     margin-top: 52%;
-  //   }
-  // }
-
   _:-ms-fullscreen, :root .main-page-txt .main-text-content {
     margin-top:49%;
     margin-top: 350px;
-   }
-
+  }
+}
+@media screen and (min-aspect-ratio: 170 / 100) and (min-width: 1200px) {
+  _:-ms-fullscreen, :root .main-page-txt .main-text-content {
+    margin-top: 450px;
+  }
+}
+@media screen and (min-aspect-ratio: 170 / 100) and (min-width: 2000px) {
+  _:-ms-fullscreen, :root .main-page-txt .main-text-content {
+    margin-top: 520px;
+  }
+}
+@media screen and (min-aspect-ratio: 170 / 100) and (min-width: 992px) and (min-height: 730px) {
+  _:-ms-fullscreen, :root .main-page-txt .main-text-content {
+    margin-top: calc((16vh - 74px) + 320px);
+  }
+}
+@media screen and (min-aspect-ratio: 170 / 100) and (min-width: 1600px) and (min-height: 900px) {
+  _:-ms-fullscreen, :root .main-page-txt .main-text-content {
+    margin-top: calc((18vh - 74px) + 320px);
+  }
+}
+@media screen and (min-aspect-ratio: 170 / 100) and (min-width: 1750px) and (min-height: 900px) {
+  _:-ms-fullscreen, :root .main-page-txt .main-text-content {
+    margin-top: calc((20vh - 74px) + 320px);
+  }
+}
+@media screen and (min-aspect-ratio: 170 / 100) and (min-width: 1850px) and (min-height: 900px) {
+  _:-ms-fullscreen, :root .main-page-txt .main-text-content {
+    margin-top: calc((22vh - 74px) + 320px);
+  }
+}
+@media screen and (min-aspect-ratio: 170 / 100) and (min-width: 2000px) {
+  _:-ms-fullscreen, :root .main-page-txt .main-text-content {
+    font-size: 1.3em;
+    margin-top:  calc((22vh - 84px) + 380px);
+  }
+}
+@media screen and (min-aspect-ratio: 170 / 100) and (min-width: 2200px) {
+  _:-ms-fullscreen, :root .main-page-txt .main-text-content {
+    font-size: 1.5em;
+    margin-top:  calc((22vh - 94px) + 380px);
+  }
 }
 
 
@@ -292,6 +325,7 @@
     }
 
     .main-page-txt .main-text-content {
+      margin-top: 500px;
       margin-top: calc((22vh - 74px) + 320px);
     }
   }
@@ -491,3 +525,8 @@ a {
 //       left: calc((100%/4) - 308px);
 //     }
 // 	}
+
+
+#story-down {
+
+}

@@ -300,10 +300,19 @@ div.wpcf7-mail-sent-ok {
 
 #story-s-tagline {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   font-size: 1.2em;
-  bottom: 16%;
+  width: 100%;
+  // left: 50%;
+  // transform: translateX(-50%);
+  // bottom: 16%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 0;
+}
+
+#tagline-parent {
+  height: calc(100% - 560px);
+  position: relative;
 }
 
 .mobile-first-v-line {
@@ -334,7 +343,7 @@ div.wpcf7-mail-sent-ok {
 }
 #boots-section {
   @media all and (max-width: 991px) {
-    background-image: url("/wp-content/uploads/2017/03/home-story-boots-v2.jpg");
+    background-image: url("/wp-content/uploads/2017/04/home-story-boots-v2.jpg");
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);
   }
   @media all and (min-width: 992px) {
