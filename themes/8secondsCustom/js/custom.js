@@ -1221,11 +1221,11 @@ else{
 			Cookies.set('drinkingAge','over21', { expires: 31 });
 			// $(".fullpage-wrapper,#the-nav").removeClass('blur');
 			$.modal.close();
-      TweenMax.to($('#landing-text'), 1, {opacity: 1, ease: Power4.easeInOut});
-      TweenMax.to($breadcrumbGroup, 1, {opacity: 1, ease: Power4.easeInOut});
-      TweenMax.to($('.button_container'), 1, {opacity: 1, ease: Power4.easeInOut});
+      TweenMax.to($('#landing-text'), 1.5, {opacity: 1, ease: Power4.easeInOut});
+      TweenMax.to($breadcrumbGroup, 1.5, {opacity: 1, ease: Power4.easeInOut});
+      TweenMax.to($('.button_container'), 1.5, {opacity: 1, ease: Power4.easeInOut});
       TweenMax.set($zeroContent, {height: 'auto'});
-      TweenMax.from($zeroContent, 1, {height: oldHeight, ease: Power4.easeInOut});
+      TweenMax.from($zeroContent, 1.5, {height: oldHeight, ease: Power4.easeInOut});
 			// $.fn.fullpage.setAllowScrolling(true);
 			// $.fn.fullpage.setKeyboardScrolling(true);
       mainScrollUnlocked = true;
