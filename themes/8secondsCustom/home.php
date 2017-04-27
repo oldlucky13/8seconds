@@ -21,9 +21,17 @@ get_header();
     <div class="main-page-slide-group">
       <div id="zero" class="row main-page-slide">
         <div id="zero-img" class="main-page-img col-md-12">
+          <video id="age-gate-video" playsinline autoplay loop muted >
+            <source src="/wp-content/uploads/2017/03/agegatesmv4.webmhd.webm" type="video/webm">
+            <!-- <source src="/wp-content/uploads/2017/03/agegatesmv4.webmsd.webm" type="video/webm"> -->
+            <source src="/wp-content/uploads/2017/03/agegatesmv4.mp4" type="video/mp4">
+          </video>
           <!-- <img id="landing-title" src="/wp-content/uploads/2017/03/landingpagetitle.png" alt=""> -->
           <!-- <img id="landing-title" src="/wp-content/uploads/2017/04/title-landing-v4.png" alt=""> -->
-          <img id="landing-title" src="/wp-content/uploads/2017/04/title-landing-v5.png" alt="">
+          <div id="zero-content" class="age-gate-content">
+            <img src="/wp-content/uploads/2017/03/age-gate-icon.png" class="age-gate-icon-v2" alt="8 seconds whiskey bull logo">
+          </div>
+          <!-- <img id="landing-title" src="/wp-content/uploads/2017/04/title-landing-v5.png" alt=""> -->
           <div class="filler">
 
           </div>
@@ -713,13 +721,8 @@ get_header();
   </div> <!-- menu-container -->
   <div id="menu-veil"></div>
   <div id="ageGate" class="modal fade">
-    <video id="age-gate-video" playsinline autoplay loop muted >
-      <source src="/wp-content/uploads/2017/03/agegatesmv4.webmhd.webm" type="video/webm">
-      <!-- <source src="/wp-content/uploads/2017/03/agegatesmv4.webmsd.webm" type="video/webm"> -->
-      <source src="/wp-content/uploads/2017/03/agegatesmv4.mp4" type="video/mp4">
-    </video>
-    <div class="age-gate-content">
-      <img src="/wp-content/uploads/2017/03/age-gate-icon.png" id="age-gate-icon" alt="8 seconds whiskey bull logo">
+    <div id="modal-content" class="age-gate-content">
+      <img id="modal-icon" src="/wp-content/uploads/2017/03/age-gate-icon.png" class="age-gate-icon-v2" alt="8 seconds whiskey bull logo">
       <h1>ARE YOU ABLE TO RIDE?</h1>
       <h3>(OVER 21 YEARS OLD)</h3>
       <div class="button-wrapper">
