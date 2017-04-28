@@ -154,7 +154,8 @@ get_header();
           <div class="hide-container">
 
             <p class="main-text-content">
-              When cowboys originally would ride a bull to death,<br>the 8 seconds standard has helped bull riding evolve<br>into America’s fastest growing sport.
+              From small town rodeos to the PBR World Finals,<br>the 8 second standard has turned bull riding<br>into the fastest growing sport in America.
+
             </p>
             <div class="empty-button about-btn fwd">
               SEE THE HISTORY
@@ -233,7 +234,7 @@ get_header();
             <div id="first-story-s-text-mobile" class="s-text" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor="#about-one">
               <img id="s-text-button-wide" class="s-text-button" src="wp-content/uploads/2017/04/story-16cen-v2.svg" alt="">
               <a id="about-one"><h2 class="s-header">SPANISH ORIGINS</h2></a>
-              <p class="s-paragraph">The origin of the rodeo, as we have come to know it today, can be traced back to the 16th century influence from Spanish conquistadors. Spanish-Mexican settlers introduced horse and cattle breeding to the Southwest. What initially started out as daily practices of Spanish ranchers evolved into ranch and horsemanship skill contests featured at charreadas.</p>
+              <p class="s-paragraph">The origin of the rodeo can be tracked back to the 16th century influence from Spanish conquistadors. What initially started out as daily practices of Spanish ranchers, evolved into ranch and horsemanship skill contests featured at charreadas.</p>
             </div>
             <button id="btn-matador" type="button" class="plus-button about-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="v1 vertical-line"></div>
@@ -243,7 +244,7 @@ get_header();
             <div class="s-text" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor="#about-two">
               <img class="s-text-button" src="wp-content/uploads/2017/04/story-button-1850-v2.svg" alt="">
               <a id="about-two"><h2 class="s-header">GAINING POPULARITY</h2></a>
-              <p class="s-paragraph">Charreada-style competition gained popularity in the Southwest, particularly Texas and California. The 1852 Lone Star Fair became the first-ever Anglo-American event to host this still bull fighting.</p>
+              <p class="s-paragraph">Charreada-style competition gained popularity in the Southwest and California. Competitions became more of an event and the Lone Star Fair became the first-ever Anglo-American event to host this style of bull fighting.</p>
             </div>
             <button id="btn-bullrider" type="button" class="plus-button about-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="v1 vertical-line"></div>
@@ -253,7 +254,7 @@ get_header();
             <div class="s-text" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor="#about-three">
               <img class="s-text-button" src="wp-content/uploads/2017/04/story-button-1936-v2.svg" alt="">
               <a id="about-three"><h2 class="s-header">STANDARDIZATION</h2></a>
-              <p class="s-paragraph">Like most rodeo events at the time, bull riding lacked standardized rules and regulations. A group of cowboys decided to create their own organization, the Cowboy Turtle’s Association, after striking the Boston Garden Rodeo. They established many of the qualifying rules, such as the 8 second ride, still in effect today and hugely increased the popularity of rodeos and bull riding.</p>
+              <p class="s-paragraph">A group of cowboys decided to create the Cowboys’ Turtle Association after walking out of the Boston Garden Rodeo in a strike. They went on to established many of the qualifying rules, such as the 8 second ride.</p>
             </div>
             <button id="btn-gloves" type="button" class="plus-button about-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="v1 vertical-line"></div>
@@ -263,7 +264,7 @@ get_header();
             <div class="s-text" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor="#about-four">
               <img class="s-text-button" src="wp-content/uploads/2017/04/story-button-1992-v2.svg" alt="">
               <a id="about-four"><h2 class="s-header">BREAKING AWAY</h2></a>
-              <p class="s-paragraph">20 bull riders gathered to contribute in the creation of the Professional Bull Riders, Inc. Believing that bull riding was popular enough to break away from the traditional rodeo, this organization created their own governing rules and events.</p>
+              <p class="s-paragraph">20 bull riders gathered to contribute in the creation of the Professional Bull Riders, Inc. Believing that bull riding was popular enough to break away from the traditional rodeo, they created their own governing rules and event schedule.</p>
             </div>
             <button id="btn-vintagebull" type="button" class="plus-button about-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="v1 vertical-line"></div>
@@ -275,7 +276,7 @@ get_header();
               <img id="last-story-title" class="s-title" src="wp-content/uploads/2017/04/past-to-present-v4.png" alt="">
 
               <div class="last-mobile-s-text s-text">
-                <a id="about-five"><p class="last-mobile-paragraph s-paragraph s-text">The PBR now hosts over 300 events across America where their World Finals brings in over 700,000 fans. Bull riding is now considered the fastest growing sport in the US. </p></a>
+                <a id="about-five"><p class="last-mobile-paragraph s-paragraph s-text">The PBR now hosts over 300 events across America and their World Finals bring in over 700,000 fans. Bull riding is now considered the fastest growing sport in the US. </p></a>
               </div>
               <button id="story-back-to-top" type="button" class="empty-button back-to-top btn">BACK TO TOP</button>
             </div>
@@ -600,7 +601,7 @@ get_header();
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
         <!-- <img class="h2-child" src="wp-content/uploads/2017/03/nodots-black-v3.png" alt=""> -->
-        <img class="h2-child" src="wp-content/uploads/2017/04/title-black-v4-sans.png" alt="">
+        <img class="h2-child" src="wp-content/uploads/2017/04/title-black-v6.png" alt="">
       </div>
     </div>
     <div class="main-page-title-group">
@@ -721,7 +722,7 @@ get_header();
   </div> <!-- menu-container -->
   <div id="menu-veil"></div>
   <div id="ageGate" class="modal fade">
-    <div id="modal-content" class="age-gate-content">
+    <div id="overlay-content" class="age-gate-content">
       <img id="modal-icon" src="/wp-content/uploads/2017/03/age-gate-icon.png" class="age-gate-icon-v2" alt="8 seconds whiskey bull logo">
       <h1>ARE YOU ABLE TO RIDE?</h1>
       <h3>(OVER 21 YEARS OLD)</h3>

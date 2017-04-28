@@ -91,7 +91,15 @@ mainScrollUnlocked = false;
 jumpScrollUnlocked = true;
 
 jQuery(window).on('load', function($) { // makes sure the whole site is loaded
-  jQuery('#zero-content').css({'height':(jQuery('#modal-content').height()+'px')});
+  // var heightsAligned = false;
+  function alignHeights() {
+    jQuery('#zero-content').css({'height':(jQuery('#overlay-content').height()+'px')});
+    // heightsAligned = true;
+    // console.log("second");
+    // console.log(heightsAligned);
+  }
+  setTimeout(alignHeights, 0500);
+  // setTimeout(jQuery('#zero-content').css({'height':(jQuery('#modal-content').height()+'px')}), 0250);
   jQuery('#status').fadeOut(); // will first fade out the loading animation
   jQuery('#preloader').delay(350).fadeOut('slow', function () {
     var AgeGateFadeIn = new TimelineMax({paused: true});
@@ -106,6 +114,8 @@ jQuery(window).on('load', function($) { // makes sure the whole site is loaded
   // ****************/
   //
   // AOS.init();
+  // console.log("first");
+  // console.log(heightsAligned);
 })
 
 jQuery(document).ready(function( $ ) {
@@ -157,7 +167,7 @@ jQuery(document).ready(function( $ ) {
   $secondaryDrinksImageGroup = $('#secondary-drinks-image-group');
   $menuVeil = $('#menu-veil');
   $zeroContent = $('#zero-content');
-  $modalContent = $('#modal-content');
+  $modalContent = $('#overlay-content');
 
 
 
@@ -1419,5 +1429,9 @@ var newAos = AOS.init({
 //     $(".fade-top").css("opacity", 1 - $(window).scrollTop() / 250);
 //   });
 
+// $('.age-gate-content').click(function (e) {
+//   e.preventDefault();
+//   return false;
+// })
 
 });// jquery document ready
