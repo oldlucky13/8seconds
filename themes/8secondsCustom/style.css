@@ -6922,7 +6922,7 @@ div.wpcf7-mail-sent-ok {
   #last-story-title {
     width: 300px;
     height: 180px;
-    margin-top: 0%; } }
+    margin-top: 10%; } }
 
 .button_container {
   opacity: 0;
@@ -7909,9 +7909,12 @@ div.wpcf7-response-output {
       z-index: 999;
       cursor: pointer; } }
 
-.last-mobile-s-text {
-  width: 75%;
+.last-mobile-s-text, .last-mobile-paragraph {
+  width: 75% !important;
   padding-top: 0px; }
+  @media all and (min-width: 992px) {
+    .last-mobile-s-text, .last-mobile-paragraph {
+      width: 50% !important; } }
 
 @media all and (max-width: 991px) {
   #cowboy-line {

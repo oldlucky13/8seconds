@@ -119,10 +119,16 @@
 //   }
 // }
 
-.last-mobile-s-text {
-  width: 75%;
+.last-mobile-s-text, .last-mobile-paragraph {
+  width: 75% !important;
   padding-top: 0px;
+
+  @media all and (min-width: 992px) {
+    width: 50% !important;
+  }
+
 }
+
 
 #cowboy-line {
   @media all and (max-width: 991px) {
