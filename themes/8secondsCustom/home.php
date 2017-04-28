@@ -22,9 +22,9 @@ get_header();
       <div id="zero" class="row main-page-slide">
         <div id="zero-img" class="main-page-img col-md-12">
           <video id="age-gate-video" playsinline autoplay loop muted >
-            <source src="/wp-content/uploads/2017/03/agegatesmv4.webmhd.webm" type="video/webm">
+            <source src="/wp-content/uploads/2017/04/8-Seconds-Bottle-v2-compressed.webmhd.webm" type="video/webm">
             <!-- <source src="/wp-content/uploads/2017/03/agegatesmv4.webmsd.webm" type="video/webm"> -->
-            <source src="/wp-content/uploads/2017/03/agegatesmv4.mp4" type="video/mp4">
+            <source src="/wp-content/uploads/2017/04/8-Seconds-Bottle-v2-compressed.mp4" type="video/mp4">
           </video>
           <!-- <img id="landing-title" src="/wp-content/uploads/2017/03/landingpagetitle.png" alt=""> -->
           <!-- <img id="landing-title" src="/wp-content/uploads/2017/04/title-landing-v4.png" alt=""> -->
