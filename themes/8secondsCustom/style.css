@@ -7771,6 +7771,27 @@ div.wpcf7-response-output {
   .age-gate-icon-v2 {
     max-width: 200px; } }
 
+div#zero-content {
+  position: absolute;
+  z-index: 2001;
+  height: 300px !important;
+  width: 100%;
+  -webkit-transform: translate(-50%, -75%);
+  -moz-transform: translate(-50%, -75%);
+  -ms-transform: translate(-50%, -75%);
+  -o-transform: translate(-50%, -75%);
+  transform: translate(-50%, -75%); }
+  @media screen and (max-width: 480px) {
+    div#zero-content {
+      -webkit-transform: translate(-50%, -90%);
+      -moz-transform: translate(-50%, -90%);
+      -ms-transform: translate(-50%, -90%);
+      -o-transform: translate(-50%, -90%);
+      transform: translate(-50%, -90%); } }
+
+img#modal-icon {
+  visibility: hidden; }
+
 .pace {
   -webkit-pointer-events: none;
   pointer-events: none;
@@ -7912,9 +7933,6 @@ div.wpcf7-response-output {
 .last-mobile-s-text, .last-mobile-paragraph {
   width: 75% !important;
   padding-top: 0px; }
-  @media all and (min-width: 992px) {
-    .last-mobile-s-text, .last-mobile-paragraph {
-      width: 50% !important; } }
 
 @media all and (max-width: 991px) {
   #cowboy-line {

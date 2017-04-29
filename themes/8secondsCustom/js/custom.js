@@ -92,13 +92,13 @@ jumpScrollUnlocked = true;
 
 jQuery(window).on('load', function($) { // makes sure the whole site is loaded
   // var heightsAligned = false;
-  function alignHeights() {
-    jQuery('#zero-content').css({'height':(jQuery('#overlay-content').height()+'px')});
-    // heightsAligned = true;
-    // console.log("second");
-    // console.log(heightsAligned);
-  }
-  setTimeout(alignHeights, 0500);
+  // function alignHeights() {
+  //   jQuery('#zero-content').css({'height':(jQuery('#overlay-content').height()+'px')});
+  //   // heightsAligned = true;
+  //   // console.log("second");
+  //   // console.log(heightsAligned);
+  // }
+  // setTimeout(alignHeights, 0500);
   // setTimeout(jQuery('#zero-content').css({'height':(jQuery('#modal-content').height()+'px')}), 0250);
   jQuery('#status').fadeOut(); // will first fade out the loading animation
   jQuery('#preloader').delay(350).fadeOut('slow', function () {
@@ -326,6 +326,7 @@ function nextButton(scrollDir, mainIdx) {
     $pBtn.eq(mainIdx - 1).fadeOut();
     if (mainIdx === 6) {
       $pMoBtn.eq(1).fadeOut();
+
     } else {
       $pBtn.eq(mainIdx).fadeIn();
     }
@@ -349,22 +350,37 @@ function nextButton(scrollDir, mainIdx) {
   }
 }
 
+
+
 function nextSlide(idx, callback) {
-  TweenMax.to($allTitles.find(".h2-child").eq(idx - 1), 1.5, {y:"-100%", force3D: true, onComplete: nextTitle(idx, callback)});
+  TweenMax.to($allTitles.find(".h2-child").eq(idx - 1), 1.5, {yPercent:-100, force3D: true, onComplete: nextTitle(idx, callback)});
   TweenMax.to($hideContainer.eq(idx - 1), .6, {opacity: 0, ease: Power4.easeInOut});
   $('.main-page-slide-group').children().eq(idx).fadeIn(1200);
   TweenMax.to($hideContainer.eq(idx), 1.5, {opacity: 1, ease: Power4.easeIn});
+
+  if(TweenMax.isTweening( $(".h2-child.zero"))){
+  		TweenMax.to($('.age-gate-icon-v2'), 1.5, {autoAlpha: 0, ease: Power4.easeInOut, onComplete: function(){
+  			TweenMax.set($zeroContent,{display:"none"});
+  		}});
+  	}
 }
 
 function previousSlide(idx, callback) {
   if (idx === 0) {
     TweenMax.to($firstHtwo, .6, {opacity: 0, onComplete: nextTitle(idx, callback)});
   } else {
-    TweenMax.to($allTitles.find(".h2-child").eq(idx + 1), 1.5, {y:"100%", force3D: true, onComplete: nextTitle(idx, callback)});
+    TweenMax.to($allTitles.find(".h2-child").eq(idx + 1), 1.5, {yPercent:100, force3D: true, onComplete: nextTitle(idx, callback)});
   }
   TweenMax.to($hideContainer.eq(idx + 1), .6, {opacity: 0, ease: Power4.easeInOut});
   $('.main-page-slide-group').children().eq(idx + 1).fadeOut(1200);
   TweenMax.to($hideContainer.eq(idx), 1.5, {opacity: 1, ease: Power4.easeIn});
+
+
+    if(TweenMax.isTweening( $(".h2-child.zero"))){
+  		TweenMax.to($('.age-gate-icon-v2'), 1.5, {autoAlpha: 1, ease: Power4.easeInOut, onStart:function(){
+  			TweenMax.set($zeroContent,{display:"block"});
+  		}});
+  	}
 }
 
 
@@ -1062,7 +1078,10 @@ function checkSize(){
  // console.log($(window).width() / $(window).height());
 	sortMenu();
 
-  $zeroContent.css({'height':($modalContent.height()+'px')});
+  //$zeroContent.css({'height':($modalContent.height()+'px')});
+
+
+
   if (mainIdx === 6) {
     $('.slide-button').fadeOut();
   } else if (mainIdx === 5) {
@@ -1234,10 +1253,13 @@ else{
       TweenMax.to($('#landing-text'), 1.5, {opacity: 1, ease: Power4.easeInOut});
       TweenMax.to($breadcrumbGroup, 1.5, {opacity: 1, ease: Power4.easeInOut});
       TweenMax.to($('.button_container'), 1.5, {opacity: 1, ease: Power4.easeInOut});
-      TweenMax.set($zeroContent, {height: 'auto'});
-      TweenMax.from($zeroContent, 1.5, {height: oldHeight, ease: Power4.easeInOut});
-			// $.fn.fullpage.setAllowScrolling(true);
-			// $.fn.fullpage.setKeyboardScrolling(true);
+     // TweenMax.set($zeroContent, {height: 'auto'});
+     // TweenMax.from($zeroContent, 1.5, {height: oldHeight, ease: Power4.easeInOut});
+     	TweenMax.to($('.age-gate-icon-v2'), 1.5, {yPercent: 50, ease: Power4.easeInOut, onComplete: function(){
+
+     		//$zeroContent.attr('style','z-index: 0');
+     	}});
+
       mainScrollUnlocked = true;
       // debugger;
 
