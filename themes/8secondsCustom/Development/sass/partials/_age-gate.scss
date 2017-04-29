@@ -220,3 +220,20 @@
   }
 
 }
+
+
+div#zero-content {
+    position: absolute;
+    z-index: 2001;
+    height: 300px !important;
+    width: 100%;
+    @include transform(translate(-50%,-75%));
+
+    @media screen and (max-width:480px){
+      @include transform(translate(-50%,-90%));
+    }
+}
+
+img#modal-icon{
+  visibility: hidden;
+}

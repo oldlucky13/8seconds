@@ -28,7 +28,7 @@ get_header();
           </video>
           <!-- <img id="landing-title" src="/wp-content/uploads/2017/03/landingpagetitle.png" alt=""> -->
           <!-- <img id="landing-title" src="/wp-content/uploads/2017/04/title-landing-v4.png" alt=""> -->
-          <div id="zero-content" class="age-gate-content">
+          <div id="zero-content" class="age-gate-content col-md-12">
             <img src="/wp-content/uploads/2017/03/age-gate-icon.png" class="age-gate-icon-v2" alt="8 seconds whiskey bull logo">
           </div>
           <!-- <img id="landing-title" src="/wp-content/uploads/2017/04/title-landing-v5.png" alt=""> -->
@@ -586,7 +586,7 @@ get_header();
 
     <div class="main-page-title-group">
       <div class="main-page-slide-title">
-        <div class="h2-child">
+        <div class="h2-child zero">
 
         </div>
         <!-- <img id="first-h2-child" class="h2-child" src="wp-content/uploads/2017/03/home-premium-title_v4.png" alt=""> -->
