@@ -6420,7 +6420,7 @@ body {
 .main-page-txt {
   display: none;
   height: 100vh;
-  background: url("/wp-content/uploads/2017/03/home-background-texture-grey.jpg");
+  background: url("/wp-content/uploads/2017/05/home-background-texture-v2.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -6660,7 +6660,7 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   -ms-overflow-style: auto;
-  background: url("/wp-content/uploads/2017/03/home-background-texture-grey.jpg");
+  background: url("/wp-content/uploads/2017/05/home-background-texture-v2.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -8244,7 +8244,7 @@ img#modal-icon {
   _:-ms-fullscreen, :root .main-page-txt .main-text-content {
     margin-top: 49%;
     margin-top: 350px; } }
-@media screen and (min-aspect-ratio: 170 / 100) and (min-width: 1200px) {
+@media screen and (min-aspect-ratio: 170 / 100) and (min-width: 1900px) {
   _:-ms-fullscreen, :root .main-page-txt .main-text-content {
     margin-top: 450px; } }
 @media screen and (min-aspect-ratio: 170 / 100) and (min-width: 2000px) {
