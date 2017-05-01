@@ -8244,7 +8244,7 @@ img#modal-icon {
   _:-ms-fullscreen, :root .main-page-txt .main-text-content {
     margin-top: 49%;
     margin-top: 350px; } }
-@media screen and (min-aspect-ratio: 170 / 100) and (min-width: 1200px) {
+@media screen and (min-aspect-ratio: 170 / 100) and (min-width: 1900px) {
   _:-ms-fullscreen, :root .main-page-txt .main-text-content {
     margin-top: 450px; } }
 @media screen and (min-aspect-ratio: 170 / 100) and (min-width: 2000px) {
