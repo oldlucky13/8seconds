@@ -123,7 +123,7 @@ get_header();
           <div class="hide-container">
 
             <p class="main-text-content">
-              With the curative powers of honey-cinnamon in mind,<br>we took aged Canadian Whisky, blended it with<br>natural honey-cinnamon extract and provided you<br>a superb, smooth tasting blend.
+              With the curative powers of honey-cinnamon in mind,<br>we took aged Canadian Whisky, blended it with<br>natural honey-cinnamon and provided you<br>a superb, smooth tasting blend.
             </p>
             <div class="icon-section">
               <p><img class="drink-icon" src="/wp-content/uploads/2017/03/home-icon-raindrop.svg" alt=""><span class="icon-text">LIGHT AMBER</span></p>
@@ -154,7 +154,7 @@ get_header();
           <div class="hide-container">
 
             <p class="main-text-content">
-              From small town rodeos to the PBR World Finals,<br>the 8 second standard has turned bull riding<br>into the fastest growing sport in America.
+              The bull ride is an 8 second long contest of strength<br>and endurance which requires a hand in the bull rope<br>and the other in the air while remaining on the bull.
 
             </p>
             <div class="empty-button about-btn fwd">
@@ -234,7 +234,7 @@ get_header();
             <div id="first-story-s-text-mobile" class="s-text" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor="#about-one">
               <img id="s-text-button-wide" class="s-text-button" src="wp-content/uploads/2017/04/story-16cen-v2.svg" alt="">
               <a id="about-one"><h2 class="s-header">SPANISH ORIGINS</h2></a>
-              <p class="s-paragraph">The origin of the rodeo can be tracked back to the 16th century influence from Spanish conquistadors. What initially started out as daily practices of Spanish ranchers, evolved into ranch and horsemanship skill contests featured at charreadas.</p>
+              <p class="s-paragraph">The origin of the rodeo can be traced back to the 16th century influence from Spanish conquistadors. What initially started out as daily practices of Spanish ranchers, evolved into ranch and horsemanship skill contests featured at charreadas.</p>
             </div>
             <button id="btn-matador" type="button" class="plus-button about-modal story-plus"><img class="btn-image" src="/wp-content/uploads/2017/03/module-plus.svg"></button>
             <div class="v1 vertical-line"></div>
